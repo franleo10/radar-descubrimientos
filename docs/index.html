@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar de Descubrimientos</title>
+<meta name="description" content="Secretos, easter eggs, lugares ocultos y guías de GTA 6 que encuentra la comunidad, actualizados todos los días. Guía no oficial.">
+<style>
+:root{
+  --bg:#0d0b14; --panel:#17131f; --panel2:#1f1a2b; --line:#2c2540;
+  --text:#ece8f5; --muted:#9a91ad; --accent:#ff3d8b; --accent2:#2ee6d6;
+  --warn:#ffb547; --radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent2)}
+header{padding:28px 16px 18px;background:linear-gradient(160deg,#2a0f2e 0%,#0d0b14 60%);border-bottom:1px solid var(--line)}
+.wrap{max-width:1100px;margin:0 auto}
+h1{margin:0;font-size:clamp(26px,5vw,40px);letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,var(--accent),var(--warn));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);margin:6px 0 0}
+.toolbar{position:sticky;top:0;z-index:5;background:rgba(13,11,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 16px}
+.search{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:16px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-top:10px;scrollbar-width:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 12px;border-radius:999px;cursor:pointer;font-size:14px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:18px 16px 40px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.media{position:relative;aspect-ratio:16/9;background:var(--panel2);display:grid;place-items:center;color:var(--muted);font-size:13px;cursor:pointer;border:0;padding:0;width:100%}
+.media img{width:100%;height:100%;object-fit:cover;display:block}
+.media iframe{width:100%;height:100%;border:0}
+.play{position:absolute;width:62px;height:44px;border-radius:12px;background:rgba(0,0,0,.7);display:grid;place-items:center}
+.play::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.spoiler .media img,.spoiler .body h2,.spoiler .body p,.spoiler .body .how{filter:blur(10px)}
+.spoiler-btn{position:absolute;inset:0;background:rgba(13,11,20,.55);color:#fff;border:0;font-weight:600;cursor:pointer;z-index:2}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;position:relative}
+.tags{display:flex;gap:6px;flex-wrap:wrap;font-size:12px}
+.tag{padding:2px 8px;border-radius:6px;background:var(--panel2);color:var(--muted)}
+.tag.cat{color:var(--accent2)}
+.tag.media-conf{color:var(--warn)}
+.card h2{font-size:18px;line-height:1.3;margin:0}
+.card p{margin:0;color:#cfc8de;font-size:15px}
+.how{font-size:14px;color:var(--muted)}
+.how b{color:var(--text)}
+.src{margin-top:auto;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;padding-top:8px;border-top:1px solid var(--line)}
+.empty{color:var(--muted);text-align:center;padding:60px 0}
+.demo-banner{background:var(--warn);color:#1a1200;padding:8px 16px;text-align:center;font-weight:600;font-size:14px}
+footer{color:var(--muted);font-size:13px;padding:24px 16px 40px;border-top:1px solid var(--line);text-align:center}
+</style>
+</head>
+<body>
+<div id="demo" class="demo-banner" hidden>Datos de ejemplo: el bot todavía no corrió con las claves reales.</div>
+<header><div class="wrap">
+  <h1><span id="site-name">Radar de Descubrimientos</span></h1>
+  <p class="sub">Secretos, lugares ocultos y guías de GTA 6 que encuentra la comunidad. Se actualiza solo.</p>
+</div></header>
+
+<div class="toolbar"><div class="wrap">
+  <input id="q" class="search" type="search" placeholder="Buscar: muelle, auto, dinero…" aria-label="Buscar">
+  <div id="chips" class="chips" role="toolbar" aria-label="Categorías"></div>
+</div></div>
+
+<main><div class="wrap">
+  <div id="meta" class="meta"></div>
+  <div id="grid" class="grid"></div>
+</div></main>
+
+<footer>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive.<br>
+Los videos y publicaciones son de sus autores y se muestran con el reproductor o el enlace original.</footer>
+
+<script>
+const CATS = {
+  todos:"Todos", easter_egg:"Easter eggs", ubicacion_secreta:"Lugares secretos",
+  coleccionable:"Coleccionables", vehiculo:"Vehículos", arma:"Armas", dinero:"Dinero",
+  mision:"Misiones", mecanica_truco:"Mecánicas y tips", otro:"Otros"
+};
+let all = [], cat = "todos", q = "";
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmtNum = n => n >= 1e6 ? (n/1e6).toFixed(1)+" M" : n >= 1e3 ? Math.round(n/1e3)+" k" : String(n);
+function ago(iso){
+  const h = (Date.now() - new Date(iso)) / 36e5;
+  if (h < 1) return "hace minutos";
+  if (h < 24) return `hace ${Math.floor(h)} h`;
+  const d = Math.floor(h/24); return d === 1 ? "ayer" : `hace ${d} días`;
+}
+
+function renderChips(){
+  const counts = all.reduce((m,e) => (m[e.categoria]=(m[e.categoria]||0)+1, m), {});
+  document.getElementById("chips").innerHTML = Object.entries(CATS)
+    .filter(([k]) => k === "todos" || counts[k])
+    .map(([k,v]) => `<button class="chip" data-cat="${k}" aria-pressed="${k===cat}">${v}${k!=="todos"?` · ${counts[k]}`:""}</button>`)
+    .join("");
+}
+
+function mediaHtml(e){
+  if (e.video_id) {
+    const thumb = e.thumbnail || `https://i.ytimg.com/vi/${encodeURIComponent(e.video_id)}/hqdefault.jpg`;
+    return `<button class="media" data-yt="${esc(e.video_id)}" aria-label="Reproducir video">
+      <img loading="lazy" src="${esc(thumb)}" alt=""><span class="play"></span></button>`;
+  }
+  if (e.thumbnail) return `<a class="media" href="${esc(e.url)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(e.thumbnail)}" alt=""></a>`;
+  return `<div class="media">${e.source === "reddit" ? "Publicación de Reddit" : "Sin vista previa"}</div>`;
+}
+
+function card(e){
+  const src = e.source === "youtube" ? `▶ ${fmtNum(e.popularity)} vistas` : `▲ ${fmtNum(e.popularity)} votos`;
+  return `<article class="card${e.spoiler ? " spoiler" : ""}">
+    ${mediaHtml(e)}
+    <div class="body">
+      ${e.spoiler ? `<button class="spoiler-btn">Contiene spoilers · tocá para ver</button>` : ""}
+      <div class="tags">
+        <span class="tag cat">${esc(CATS[e.categoria] || "Otros")}</span>
+        ${e.zona ? `<span class="tag">📍 ${esc(e.zona)}</span>` : ""}
+        ${e.confianza === "media" ? `<span class="tag media-conf">Sin confirmar</span>` : ""}
+      </div>
+      <h2>${esc(e.titulo)}</h2>
+      <p>${esc(e.resumen)}</p>
+      ${e.como_conseguirlo ? `<div class="how"><b>Cómo:</b> ${esc(e.como_conseguirlo)}</div>` : ""}
+      <div class="src"><span>${esc(e.author)} · ${ago(e.published_at)}</span>
+        <a href="${esc(e.url)}" target="_blank" rel="noopener">${src}</a></div>
+    </div></article>`;
+}
+
+function render(){
+  const needle = q.trim().toLowerCase();
+  const list = all.filter(e => (cat === "todos" || e.categoria === cat) &&
+    (!needle || [e.titulo,e.resumen,e.zona,e.como_conseguirlo,e.title_original].join(" ").toLowerCase().includes(needle)));
+  document.getElementById("grid").innerHTML = list.length ? list.map(card).join("")
+    : `<div class="empty">No hay nada con ese filtro todavía. El bot revisa nuevas publicaciones varias veces por día.</div>`;
+}
+
+document.getElementById("chips").addEventListener("click", ev => {
+  const b = ev.target.closest(".chip"); if (!b) return;
+  cat = b.dataset.cat; renderChips(); render();
+});
+document.getElementById("q").addEventListener("input", ev => { q = ev.target.value; render(); });
+document.getElementById("grid").addEventListener("click", ev => {
+  const sp = ev.target.closest(".spoiler-btn");
+  if (sp) { sp.closest(".card").classList.remove("spoiler"); sp.remove(); return; }
+  const m = ev.target.closest(".media[data-yt]");
+  if (m && !m.closest(".spoiler")) {
+    m.outerHTML = `<div class="media"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(m.dataset.yt)}?autoplay=1"
+      allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Video"></iframe></div>`;
+  }
+});
+
+fetch("data.json", {cache: "no-store"}).then(r => r.json()).then(d => {
+  all = d.entries || [];
+  if (d.site_name) { document.getElementById("site-name").textContent = d.site_name; document.title = d.site_name; }
+  document.getElementById("demo").hidden = !all.some(e => e.demo);
+  document.getElementById("meta").textContent =
+    `${all.length} descubrimientos · actualizado ${ago(d.updated_at)}`;
+  renderChips(); render();
+}).catch(() => {
+  document.getElementById("grid").innerHTML = `<div class="empty">No se pudieron cargar los datos.</div>`;
+});
+</script>
+</body>
+</html>

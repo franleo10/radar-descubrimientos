@@ -1,0 +1,40 @@
+name: Bot de descubrimientos
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # cada 6 horas (hora UTC)
+  workflow_dispatch: {}      # botón "Run workflow" para correrlo a mano
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Correr el bot
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
+        run: python -m bot.main
+      - name: Guardar resultados
+        run: |
+          git config user.name "discoveries-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json state/seen.json
+          git diff --cached --quiet || git commit -m "Actualizar descubrimientos"
+          git push
