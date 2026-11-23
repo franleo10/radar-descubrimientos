@@ -161,3 +161,22 @@ img{max-width:100%}
 .foot nav{display:flex;gap:16px;flex-wrap:wrap}
 .foot nav a{color:var(--soft);text-decoration:none;font-weight:600}
 .foot nav a:hover{color:#fff}
+
+/* ---------- Telegram ---------- */
+.tg{display:inline-flex;align-items:center;gap:7px}
+.nav .tg{color:#fff;background:#229ed9;box-shadow:0 4px 16px rgba(34,158,217,.3)}
+.nav .tg:hover{background:#1c8fc6;color:#fff}
+.tg svg,.tgbtn svg{width:17px;height:17px;flex:none}
+@media (max-width:640px){.nav .tg span{display:none}.nav .tg{padding:8px 9px}}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.hero-ctas .tg{font:700 14px var(--body);text-decoration:none;color:#fff;background:rgba(34,158,217,.9);padding:10px 16px;border-radius:12px}
+.hero-ctas .tg:hover{background:#229ed9}
+.cta-tg{display:flex;align-items:center;gap:16px;margin:30px 0 6px;padding:18px 20px;border-radius:16px;background:linear-gradient(120deg,rgba(34,158,217,.16),rgba(139,92,246,.1));border:1px solid rgba(34,158,217,.45)}
+.cta-tg > svg{width:42px;height:42px;flex:none;color:#fff;background:#229ed9;border-radius:50%;padding:9px 10px 9px 8px;box-shadow:0 0 22px rgba(34,158,217,.45)}
+.cta-tg div{flex:1;display:flex;flex-direction:column;gap:2px}
+.cta-tg b{color:#fff;font-size:16px}
+.cta-tg span{color:var(--soft);font-size:14px}
+.tgbtn{background:#229ed9;border:0;color:#fff;white-space:nowrap}
+.tgbtn:hover{background:#1c8fc6}
+@media (max-width:640px){.cta-tg{flex-wrap:wrap}.cta-tg .tgbtn{width:100%;justify-content:center}}
+.foot .tg{color:#4fc3f7}

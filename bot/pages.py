@@ -19,7 +19,7 @@ from html import escape
 from urllib.parse import quote
 
 from . import config
-from .brand import logo
+from .brand import logo, tg_cta, tg_link
 
 CATS = {
     "easter_egg": ("easter-eggs", "Easter eggs"),
@@ -122,14 +122,14 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 </head>
 <body>
 <header class="topbar"><div class="wrap">{logo(root, "lg")}
-<nav class="nav"><a class="hide-sm" href="{root}#explorar">Explorar</a><a class="pill" href="{root}semana/">🔥 Top de la semana</a></nav></div></header>
+<nav class="nav"><a class="hide-sm" href="{root}#explorar">Explorar</a>{tg_link()}<a class="pill" href="{root}semana/">🔥 Top de la semana</a></nav></div></header>
 <main class="page"><div class="wrap">
 {body}
 </div></main>
 <footer class="foot"><div class="wrap">
 <div>{logo(root, "lg2")}
 <p>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.</p></div>
-<nav><a href="{root}semana/">Top de la semana</a><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
+<nav><a href="{root}semana/">Top de la semana</a>{tg_link("tg", "Telegram")}<a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
 </div></footer>
 <script>
 document.addEventListener("click", ev => {{
@@ -210,6 +210,7 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
     <p class="lead">{escape(e.get("resumen", ""))}</p>
     {detail}{zona}{how}
   </div>
+  {tg_cta()}
   <h2>Fuentes</h2><ul class="sources">{"".join(sources)}</ul>
   <p class="note">Resumen hecho automáticamente a partir del video original. Si algo no coincide con tu partida, mirá el video.</p>
 </article>
@@ -278,7 +279,8 @@ def _week_page(entries: list[dict]) -> str:
     body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Lo mejor de la semana</nav>
 <h1>Lo mejor de la semana en GTA 6</h1>
 <p class="lead">{escape(intro)}</p>
-<ol class="ranking">{items or "<li>Todavía no hay descubrimientos esta semana.</li>"}</ol>"""
+<ol class="ranking">{items or "<li>Todavía no hay descubrimientos esta semana.</li>"}</ol>
+{tg_cta("Recibí el top de cada semana en Telegram")}"""
     return _layout(title=f"Lo mejor de la semana en GTA 6 | {config.SITE_NAME}", description=intro,
                    canonical=url, root=root, body=body)
 
