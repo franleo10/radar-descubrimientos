@@ -1,25 +1,7 @@
 {
  "site_name": "Radar de Descubrimientos",
- "updated_at": "2026-11-23T15:53:08Z",
+ "updated_at": "2026-11-23T15:56:31Z",
  "entries": [
-  {
-   "id": "yt:puhksjX8F2k",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=puhksjX8F2k",
-   "video_id": "puhksjX8F2k",
-   "author": "Chris Chem",
-   "published_at": "2026-11-23T14:08:16Z",
-   "title_original": "GTA 6 TOMMY VIRCETTI VICE CITY EASTER EGG... #shorts #gta #gta6 #grandtheftauto #playstation #xbox",
-   "popularity": 4989,
-   "thumbnail": "https://i.ytimg.com/vi/puhksjX8F2k/hqdefault.jpg",
-   "categoria": "easter_egg",
-   "titulo": "Easter egg de Tommy Vercetti en GTA 6",
-   "resumen": "Un short muestra un easter egg que hace referencia a Tommy Vercetti de GTA Vice City. El texto no explica con detalle cómo activarlo.",
-   "zona": "",
-   "como_conseguirlo": "",
-   "spoiler": true,
-   "confianza": "media"
-  },
   {
    "id": "yt:4zVYLPSTvao",
    "source": "youtube",
@@ -36,7 +18,17 @@
    "zona": "",
    "como_conseguirlo": "Completar las 12 centrales eléctricas (Powerstations) que muestra el video.",
    "spoiler": true,
-   "confianza": "alta"
+   "confianza": "alta",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=puhksjX8F2k",
+     "video_id": "puhksjX8F2k",
+     "author": "Chris Chem",
+     "popularity": 4989,
+     "published_at": "2026-11-23T14:08:16Z"
+    }
+   ]
   },
   {
    "id": "yt:jO-0JuxmNlQ",
@@ -93,24 +85,6 @@
    "confianza": "media"
   },
   {
-   "id": "yt:J_mPb4af5Y0",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=J_mPb4af5Y0",
-   "video_id": "J_mPb4af5Y0",
-   "author": "Eckinox",
-   "published_at": "2026-11-23T09:07:15Z",
-   "title_original": "GTA 6 : COMMENT AVOIR LE CLONEUR DE CLÉ (pour voler n'importe quelle voiture moderne / rare )",
-   "popularity": 11036,
-   "thumbnail": "https://i.ytimg.com/vi/J_mPb4af5Y0/hqdefault.jpg",
-   "categoria": "mecanica_truco",
-   "titulo": "Cómo conseguir el clonador de llaves",
-   "resumen": "Guía para obtener el clonador de llaves, que permite robar cualquier auto moderno o raro.",
-   "zona": "",
-   "como_conseguirlo": "",
-   "spoiler": false,
-   "confianza": "media"
-  },
-  {
    "id": "yt:eZEaz6Uqy4Q",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=eZEaz6Uqy4Q",
@@ -144,24 +118,6 @@
    "zona": "",
    "como_conseguirlo": "Robar tiendas y estaciones de servicio, vender cada tipo de botín a su reducidor, escanear autos con WAiNK y venderlos (Moses sin rastreador en el Cap. 2, Pay 'n' Spray con rastreador, Randy superautos en el Cap. 3). Depositar la plata en un cajero.",
    "spoiler": false,
-   "confianza": "alta"
-  },
-  {
-   "id": "yt:jVV7tmOXuGM",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=jVV7tmOXuGM",
-   "video_id": "jVV7tmOXuGM",
-   "author": "TheGamingRevolution",
-   "published_at": "2026-11-23T07:15:06Z",
-   "title_original": "GTA 6's Secret Satan Boss Fight Easter Egg (Enter HELL)",
-   "popularity": 3312,
-   "thumbnail": "https://i.ytimg.com/vi/jVV7tmOXuGM/hqdefault.jpg",
-   "categoria": "mision",
-   "titulo": "Pelea secreta contra Satanás",
-   "resumen": "Jason encuentra la guarida de una secta y participa en su ritual. Eso lo transporta a una dimensión infernal donde enfrenta a un jefe demoníaco.",
-   "zona": "",
-   "como_conseguirlo": "Entrar a la guarida de la secta, hablar con Elabub y Dave, esperar a Steve the Serpent y hacer el ritual (beber y fumar).",
-   "spoiler": true,
    "confianza": "alta"
   },
   {
@@ -235,24 +191,6 @@
    "como_conseguirlo": "",
    "spoiler": true,
    "confianza": "media"
-  },
-  {
-   "id": "yt:axR-PS-sa0M",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=axR-PS-sa0M",
-   "video_id": "axR-PS-sa0M",
-   "author": "Dynasty",
-   "published_at": "2026-11-23T04:35:31Z",
-   "title_original": "GTA 6 Easter Eggs & Secrets – Dominic Toretto's FAST & FURIOUS Charger Location! (Bravado Gauntlet)",
-   "popularity": 2339,
-   "thumbnail": "https://i.ytimg.com/vi/axR-PS-sa0M/hqdefault.jpg",
-   "categoria": "vehiculo",
-   "titulo": "El Charger de Toretto: Bravado Driveshaft Gauntlet",
-   "resumen": "Easter egg de Rápido y Furioso: un Bravado Driveshaft Gauntlet con blower sobre el capó, abandonado y oxidado, que se puede pintar de negro para recrear el Charger de Dom. Tiene patente \"UR 372\".",
-   "zona": "Norte del mapa, cerca de Lumx County, junto a un puerto y vías de tren",
-   "como_conseguirlo": "Buscalo abandonado detrás de una casa en la zona, llevalo a un Pay 'n' Spray cercano y pintalo de negro.",
-   "spoiler": false,
-   "confianza": "alta"
   },
   {
    "id": "yt:wZbR4SZDoiI",
@@ -342,7 +280,17 @@
    "zona": "Norte de Port Gellhorn",
    "como_conseguirlo": "Ir de noche a la casa con el graffiti 'Welcome to Hell-Hole', juntarte con Beelzebub y Dave, subir a su camioneta y mirar la fogata. Si el garaje está cerrado, alejate unos 800 metros y volvé a la siguiente hora del juego, repitiendo hasta que abra.",
    "spoiler": false,
-   "confianza": "alta"
+   "confianza": "alta",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=jVV7tmOXuGM",
+     "video_id": "jVV7tmOXuGM",
+     "author": "TheGamingRevolution",
+     "popularity": 3312,
+     "published_at": "2026-11-23T07:15:06Z"
+    }
+   ]
   },
   {
    "id": "yt:BgHEX8IpviA",
@@ -540,7 +488,17 @@
    "zona": "Leonida",
    "como_conseguirlo": "Ir a la ubicación indicada en el mapa y registrar el vehículo para guardarlo en el garaje.",
    "spoiler": false,
-   "confianza": "alta"
+   "confianza": "alta",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=axR-PS-sa0M",
+     "video_id": "axR-PS-sa0M",
+     "author": "Dynasty",
+     "popularity": 2339,
+     "published_at": "2026-11-23T04:35:31Z"
+    }
+   ]
   },
   {
    "id": "yt:YIHoJBaUACE",
@@ -595,24 +553,6 @@
    "como_conseguirlo": "Ir a la entrada, ubicar el teclado e ingresar el código que se muestra en el video.",
    "spoiler": false,
    "confianza": "alta"
-  },
-  {
-   "id": "yt:rF2HHqay6jE",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=rF2HHqay6jE",
-   "video_id": "rF2HHqay6jE",
-   "author": "eliaas",
-   "published_at": "2026-11-23T00:58:30Z",
-   "title_original": "COCHE SECRETO EN GTA6 (Coche de Paul Walker)",
-   "popularity": 41303,
-   "thumbnail": "https://i.ytimg.com/vi/rF2HHqay6jE/hqdefault.jpg",
-   "categoria": "vehiculo",
-   "titulo": "El auto de Paul Walker",
-   "resumen": "Short que muestra el auto secreto inspirado en el Mitsubishi Eclipse verde de Paul Walker en Rápido y Furioso.",
-   "zona": "",
-   "como_conseguirlo": "",
-   "spoiler": false,
-   "confianza": "media"
   },
   {
    "id": "yt:zyWszhA3Upw",
@@ -1224,7 +1164,25 @@
    "zona": "",
    "como_conseguirlo": "Andá a la ubicación del video y reclamá el auto. Para conservar el diseño, usá el truco con Moses o Vice Vinyl.",
    "spoiler": false,
-   "confianza": "alta"
+   "confianza": "alta",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=omOUm4wxGRs",
+     "video_id": "omOUm4wxGRs",
+     "author": "Maxqub",
+     "popularity": 49195,
+     "published_at": "2026-11-22T19:00:56Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=rF2HHqay6jE",
+     "video_id": "rF2HHqay6jE",
+     "author": "eliaas",
+     "popularity": 41303,
+     "published_at": "2026-11-23T00:58:30Z"
+    }
+   ]
   },
   {
    "id": "yt:VddZCEpCL8Y",
@@ -1278,7 +1236,25 @@
    "zona": "",
    "como_conseguirlo": "",
    "spoiler": false,
-   "confianza": "media"
+   "confianza": "media",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=MktVJRzKLBs",
+     "video_id": "MktVJRzKLBs",
+     "author": "LegoUnlocked",
+     "popularity": 32350,
+     "published_at": "2026-11-22T17:12:15Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=AUYehTwXWmw",
+     "video_id": "AUYehTwXWmw",
+     "author": "GiosephTheGamer",
+     "popularity": 10574,
+     "published_at": "2026-11-22T17:00:33Z"
+    }
+   ]
   },
   {
    "id": "yt:7SzYZRsoCo0",
@@ -1347,24 +1323,6 @@
    "categoria": "easter_egg",
    "titulo": "El sombrero de Arthur Morgan",
    "resumen": "Video que muestra la ubicación secreta del sombrero de Arthur Morgan (Red Dead Redemption 2). No hay descripción con detalles.",
-   "zona": "",
-   "como_conseguirlo": "",
-   "spoiler": false,
-   "confianza": "media"
-  },
-  {
-   "id": "yt:omOUm4wxGRs",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=omOUm4wxGRs",
-   "video_id": "omOUm4wxGRs",
-   "author": "Maxqub",
-   "published_at": "2026-11-22T19:00:56Z",
-   "title_original": "Le Regalo Un Auto EXCLUSIVO a Lucia! GTA VI",
-   "popularity": 49195,
-   "thumbnail": "https://i.ytimg.com/vi/omOUm4wxGRs/hqdefault.jpg",
-   "categoria": "vehiculo",
-   "titulo": "Maibatsu Penumbra FF, el Eclipse de Rápido y furioso",
-   "resumen": "Ubicación del Maibatsu Penumbra FF (1997), homenaje al Eclipse de Brian O'Conner. El video también muestra un evento aleatorio con un oso polar.",
    "zona": "",
    "como_conseguirlo": "",
    "spoiler": false,
@@ -1443,24 +1401,6 @@
    "confianza": "media"
   },
   {
-   "id": "yt:3yvv6aOYK-U",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=3yvv6aOYK-U",
-   "video_id": "3yvv6aOYK-U",
-   "author": "Ewiee",
-   "published_at": "2026-11-22T18:00:14Z",
-   "title_original": "How to Find the Rarest Car in GTA 6! (Truffade Thrax Location) #gta6  #TruffadeThrax #gtavi",
-   "popularity": 15153,
-   "thumbnail": "https://i.ytimg.com/vi/3yvv6aOYK-U/hqdefault.jpg",
-   "categoria": "vehiculo",
-   "titulo": "Cómo conseguir el Truffade Thrax",
-   "resumen": "Guía para conseguir el Truffade Thrax, un superauto biplaza con tracción integral basado en el Bugatti Divo.",
-   "zona": "",
-   "como_conseguirlo": "",
-   "spoiler": false,
-   "confianza": "media"
-  },
-  {
    "id": "yt:xxRIYLUYFFc",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=xxRIYLUYFFc",
@@ -1494,7 +1434,17 @@
    "zona": "",
    "como_conseguirlo": "El video muestra la ubicación y cómo hacer que aparezca; conviene guardar la partida antes de salir.",
    "spoiler": false,
-   "confianza": "media"
+   "confianza": "media",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=3yvv6aOYK-U",
+     "video_id": "3yvv6aOYK-U",
+     "author": "Ewiee",
+     "popularity": 15153,
+     "published_at": "2026-11-22T18:00:14Z"
+    }
+   ]
   },
   {
    "id": "yt:FhCM721iKMk",
@@ -1530,7 +1480,17 @@
    "zona": "Hathaway Apartments, Ocean Beach (Vice Beach)",
    "como_conseguirlo": "Completar Crosstown Traffic y las primeras misiones de Randy en el capítulo 3. Llegar al estacionamiento de Hathaway Apartments y llamar a Randy, que envía el software al teléfono. Luego usar Clonar llave sobre el Zorrusso en la planta baja y entregarlo a Randy.",
    "spoiler": true,
-   "confianza": "alta"
+   "confianza": "alta",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=J_mPb4af5Y0",
+     "video_id": "J_mPb4af5Y0",
+     "author": "Eckinox",
+     "popularity": 11036,
+     "published_at": "2026-11-23T09:07:15Z"
+    }
+   ]
   },
   {
    "id": "yt:y6kVhh5-qb4",
@@ -1548,42 +1508,6 @@
    "zona": "",
    "como_conseguirlo": "Robar vehículos de alto valor y venderlos al taller de Moses cumpliendo sus requisitos.",
    "spoiler": false,
-   "confianza": "media"
-  },
-  {
-   "id": "yt:MktVJRzKLBs",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=MktVJRzKLBs",
-   "video_id": "MktVJRzKLBs",
-   "author": "LegoUnlocked",
-   "published_at": "2026-11-22T17:12:15Z",
-   "title_original": "We Completed the ENTIRE Alien Easter Egg in GTA 6 (All Rewards)",
-   "popularity": 32350,
-   "thumbnail": "https://i.ytimg.com/vi/MktVJRzKLBs/hqdefault.jpg",
-   "categoria": "mision",
-   "titulo": "Easter egg alienígena completo con todas las recompensas",
-   "resumen": "Recorrido completo del easter egg de los aliens, mostrando todas las recompensas que da.",
-   "zona": "",
-   "como_conseguirlo": "",
-   "spoiler": true,
-   "confianza": "media"
-  },
-  {
-   "id": "yt:AUYehTwXWmw",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=AUYehTwXWmw",
-   "video_id": "AUYehTwXWmw",
-   "author": "GiosephTheGamer",
-   "published_at": "2026-11-22T17:00:33Z",
-   "title_original": "La MISSIONE SEGRETA degli ALIENI su GTA 6 è ASSURDA 👽😱 GTA VI Miti, Misteri e Easter Egg ITA",
-   "popularity": 10574,
-   "thumbnail": "https://i.ytimg.com/vi/AUYehTwXWmw/hqdefault.jpg",
-   "categoria": "mision",
-   "titulo": "Misión secreta de los aliens y laboratorio subterráneo",
-   "resumen": "Misión secundaria oculta que arranca con un avistamiento nocturno de un OVNI en el campo, sigue con sueños, pistas y acertijos, y termina en una base subterránea al estilo Área 51.",
-   "zona": "Zonas rurales de Leonida",
-   "como_conseguirlo": "De noche, buscar el encuentro con el OVNI en el campo de Leonida, seguir las pistas y resolver los acertijos hasta llegar a la base secreta.",
-   "spoiler": true,
    "confianza": "media"
   },
   {
