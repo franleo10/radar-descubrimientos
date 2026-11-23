@@ -1,6 +1,6 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-23T21:36:58Z",
+ "updated_at": "2026-11-23T21:46:05Z",
  "entries": [
   {
    "id": "yt:GByO53W1-fI",
@@ -105,6 +105,100 @@
    "slug": "como-desbloquear-dos-emisoras-de-radio-secretas-bf974"
   },
   {
+   "id": "yt:5BW8LOnL1GE",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=5BW8LOnL1GE",
+   "video_id": "5BW8LOnL1GE",
+   "author": "TmarTn2",
+   "published_at": "2026-11-23T17:41:02Z",
+   "title_original": "GTA 6 - Play as Tommy Vercetti GTA Multiverse Easter Egg Guide",
+   "popularity": 81653,
+   "thumbnail": "https://i.ytimg.com/vi/5BW8LOnL1GE/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Multiverso de Vice City: jugar como Tommy",
+   "resumen": "Easter egg del multiverso que abre un portal a la Vice City de 2002 y deja jugar en el Malibu Club. Como recompensa se obtienen la camisa de botones de Tommy y la bici Malibu Zombie Bobber.",
+   "zona": "Central eléctrica (Power Station), Vice City",
+   "como_conseguirlo": "Completar las 12 centrales eléctricas del easter egg y luego abrir el portal multiverso. El video tiene capítulos con cada central y la apertura del portal (14:10).",
+   "spoiler": true,
+   "confianza": "alta",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=4zVYLPSTvao",
+     "video_id": "4zVYLPSTvao",
+     "author": "ZacCoxTV",
+     "popularity": 28302,
+     "published_at": "2026-11-23T13:17:44Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=t3zvakxz0js",
+     "video_id": "t3zvakxz0js",
+     "author": "Misleading",
+     "popularity": 28265,
+     "published_at": "2026-11-23T12:44:53Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=bxWAygrBsIs",
+     "video_id": "bxWAygrBsIs",
+     "author": "GameRiot",
+     "popularity": 17680,
+     "published_at": "2026-11-23T14:39:33Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=4KwBs_RkilM",
+     "video_id": "4KwBs_RkilM",
+     "author": "Dan Allen Gaming",
+     "popularity": 12463,
+     "published_at": "2026-11-23T15:48:36Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=Bwfks9dGUy8",
+     "video_id": "Bwfks9dGUy8",
+     "author": "ZoneX",
+     "popularity": 5876,
+     "published_at": "2026-11-23T14:53:23Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=puhksjX8F2k",
+     "video_id": "puhksjX8F2k",
+     "author": "Chris Chem",
+     "popularity": 4989,
+     "published_at": "2026-11-23T14:08:16Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=ftMow0Pc-PY",
+     "video_id": "ftMow0Pc-PY",
+     "author": "MarleyThirteen",
+     "popularity": 3934,
+     "published_at": "2026-11-23T19:06:19Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=8fmuqGMWgJA",
+     "video_id": "8fmuqGMWgJA",
+     "author": "Genie",
+     "popularity": 3470,
+     "published_at": "2026-11-23T13:53:31Z"
+    }
+   ],
+   "enriched": true,
+   "detalle": "Es un easter egg del multiverso que abre un portal a la Vice City de 2002 y permite jugar como Tommy en el Malibu Club. Para activarlo hay que completar las 12 centrales eléctricas del easter egg (Power Station) y después abrir el portal multiverso.\n\nComo recompensa se obtienen la camisa de botones de Tommy y la bici Malibu Zombie Bobber.",
+   "pasos": [
+    "Completar las 12 centrales eléctricas del easter egg en Vice City.",
+    "Abrir el portal multiverso al terminar las centrales.",
+    "Entrar al portal para jugar en la Vice City de 2002, en el Malibu Club.",
+    "Recoger las recompensas: la camisa de botones de Tommy y la bici Malibu Zombie Bobber."
+   ],
+   "region": "Vice City",
+   "slug": "multiverso-de-vice-city-jugar-como-tommy-11349"
+  },
+  {
    "id": "yt:tjp9WItqejs",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=tjp9WItqejs",
@@ -160,6 +254,33 @@
    ],
    "region": "Vice City",
    "slug": "10-000-dolares-y-un-mclaren-gratis-188e6"
+  },
+  {
+   "id": "yt:pVqhnF-oUEs",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=pVqhnF-oUEs",
+   "video_id": "pVqhnF-oUEs",
+   "author": "Plumm Games",
+   "published_at": "2026-11-23T16:48:18Z",
+   "title_original": "GTA 6 Hidden Underground Lab",
+   "popularity": 2978,
+   "thumbnail": "https://i.ytimg.com/vi/pVqhnF-oUEs/hqdefault.jpg",
+   "categoria": "ubicacion_secreta",
+   "titulo": "Laboratorio submarino oculto (Burg)",
+   "resumen": "Primer laboratorio submarino secreto de los cinco que se mencionan, escondido bajo una boya amarilla. Ahí hay chats de laptop, un meteorito y una pulsera antigua.",
+   "zona": "Al este de Little Hardin Island",
+   "como_conseguirlo": "Bucear bajo la boya amarilla al este de Little Hardin Island y entrar al laboratorio.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es el primer laboratorio submarino secreto de los cinco que se mencionan en el juego. Está escondido bajo una boya amarilla justo al este de Little Hardin Island.\n\nAdentro hay chats de laptop, un meteorito y una pulsera antigua. El meteorito es parte de un misterio que todavía nadie resolvió.",
+   "pasos": [
+    "Buscar la boya amarilla al este de Little Hardin Island.",
+    "Bucear bajo la boya.",
+    "Entrar al laboratorio submarino."
+   ],
+   "region": "Little Hardin Island",
+   "slug": "laboratorio-submarino-oculto-burg-b2cc0"
   },
   {
    "id": "yt:-mzJSlSHK-A",
@@ -360,65 +481,6 @@
    ],
    "region": "",
    "slug": "truco-de-respawn-de-cocaina-en-un-deposito-3f7ab"
-  },
-  {
-   "id": "yt:4zVYLPSTvao",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=4zVYLPSTvao",
-   "video_id": "4zVYLPSTvao",
-   "author": "ZacCoxTV",
-   "published_at": "2026-11-23T13:17:44Z",
-   "title_original": "GTA 6 PLAY AS TOMMY VERCETTI EASTER EGG! (GTA MULTIVERSE)",
-   "popularity": 28302,
-   "thumbnail": "https://i.ytimg.com/vi/4zVYLPSTvao/hqdefault.jpg",
-   "categoria": "easter_egg",
-   "titulo": "Easter egg para jugar como Tommy Vercetti",
-   "resumen": "Activando 12 centrales eléctricas, Jason viaja a una versión de Vice City y se convierte en Tommy Vercetti, con la aparición de Kent Paul. También desbloquea la camisa floral azul de Tommy y su moto característica.",
-   "zona": "",
-   "como_conseguirlo": "Completar las 12 centrales eléctricas (Powerstations) que muestra el video.",
-   "spoiler": true,
-   "confianza": "alta",
-   "fuentes_extra": [
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=t3zvakxz0js",
-     "video_id": "t3zvakxz0js",
-     "author": "Misleading",
-     "popularity": 28265,
-     "published_at": "2026-11-23T12:44:53Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=4KwBs_RkilM",
-     "video_id": "4KwBs_RkilM",
-     "author": "Dan Allen Gaming",
-     "popularity": 12463,
-     "published_at": "2026-11-23T15:48:36Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=puhksjX8F2k",
-     "video_id": "puhksjX8F2k",
-     "author": "Chris Chem",
-     "popularity": 4989,
-     "published_at": "2026-11-23T14:08:16Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=8fmuqGMWgJA",
-     "video_id": "8fmuqGMWgJA",
-     "author": "Genie",
-     "popularity": 3470,
-     "published_at": "2026-11-23T13:53:31Z"
-    }
-   ],
-   "slug": "easter-egg-para-jugar-como-tommy-vercetti-37e64",
-   "enriched": true,
-   "detalle": "Al activar 12 centrales eléctricas, Jason viaja a una versión de Vice City y se convierte en Tommy Vercetti. En el easter egg aparece Kent Paul, y también se desbloquea la camisa floral azul de Tommy y su moto característica.\n\nEl video muestra las 12 centrales eléctricas (Powerstations) con sus marcas de tiempo.",
-   "pasos": [
-    "Completar las 12 centrales eléctricas (Powerstations) que muestra el video."
-   ],
-   "region": ""
   },
   {
    "id": "yt:HjOQOdTg4mQ",
