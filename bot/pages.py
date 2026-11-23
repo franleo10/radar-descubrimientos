@@ -19,7 +19,7 @@ from html import escape
 from urllib.parse import quote
 
 from . import config
-from .brand import logo, tg_cta, tg_link
+from .brand import bsky_link, logo, tg_cta, tg_link
 
 CATS = {
     "easter_egg": ("easter-eggs", "Easter eggs"),
@@ -122,14 +122,14 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 </head>
 <body>
 <header class="topbar"><div class="wrap">{logo(root, "lg")}
-<nav class="nav"><a class="hide-sm" href="{root}#explorar">Explorar</a>{tg_link()}<a class="pill" href="{root}semana/">🔥 Top de la semana</a></nav></div></header>
+<nav class="nav"><a class="hide-sm" href="{root}#explorar">Explorar</a>{tg_link()}{bsky_link()}<a class="pill" href="{root}semana/">🔥 Top de la semana</a></nav></div></header>
 <main class="page"><div class="wrap">
 {body}
 </div></main>
 <footer class="foot"><div class="wrap">
 <div>{logo(root, "lg2")}
 <p>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.</p></div>
-<nav><a href="{root}semana/">Top de la semana</a>{tg_link("tg", "Telegram")}<a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
+<nav><a href="{root}semana/">Top de la semana</a>{tg_link("tg", "Telegram")}{bsky_link()}<a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
 </div></footer>
 <script>
 document.addEventListener("click", ev => {{

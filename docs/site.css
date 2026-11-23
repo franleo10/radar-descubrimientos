@@ -178,5 +178,22 @@ img{max-width:100%}
 .cta-tg span{color:var(--soft);font-size:14px}
 .tgbtn{background:#229ed9;border:0;color:#fff;white-space:nowrap}
 .tgbtn:hover{background:#1c8fc6}
-@media (max-width:640px){.cta-tg{flex-wrap:wrap}.cta-tg .tgbtn{width:100%;justify-content:center}}
+@media (max-width:640px){.cta-tg{flex-wrap:wrap}}
 .foot .tg{color:#4fc3f7}
+
+/* ---------- Bluesky ---------- */
+.bsky{display:inline-flex;align-items:center;gap:7px}
+.bsky svg,.bskybtn svg{width:17px;height:17px;flex:none}
+.nav .bsky{color:#fff;background:#1185fe;box-shadow:0 4px 16px rgba(17,133,254,.3)}
+.nav .bsky:hover{background:#0b6fd8;color:#fff}
+@media (max-width:640px){.nav .bsky span{display:none}.nav .bsky{padding:8px 9px}}
+.hero-ctas .bsky{font:700 14px var(--body);text-decoration:none;color:#fff;background:rgba(17,133,254,.9);padding:10px 16px;border-radius:12px}
+.hero-ctas .bsky:hover{background:#1185fe}
+.cta-btns{display:flex;gap:8px;flex-wrap:wrap}
+.cta-btns .btn svg{width:17px;height:17px}
+.bskybtn{background:#1185fe;border:0;color:#fff;white-space:nowrap}
+.bskybtn:hover{background:#0b6fd8}
+.foot .bsky{color:#6fb3ff}
+@media (max-width:640px){.cta-btns{width:100%}.cta-btns .btn{flex:1;justify-content:center}}
+.cta-tg .cta-btns{flex:none;flex-direction:row;gap:8px}
+@media (max-width:640px){.cta-tg .cta-btns{flex:1 1 100%}}

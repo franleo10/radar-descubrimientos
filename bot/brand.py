@@ -30,7 +30,23 @@ def tg_link(cls: str = "tg", text: str = "Telegram") -> str:
             f'aria-label="Canal de Telegram de WastedMap">{PLANE}<span>{text}</span></a>')
 
 
+# El enlace usa el identificador fijo de la cuenta: sigue andando aunque cambie el usuario.
+BLUESKY_URL = "https://bsky.app/profile/did:plc:kscmn2ekud6h7eyhbfym3gz4"
+
+# Mariposa simple (dibujo propio).
+BUTTERFLY = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 11.2C10.6 8.4 6.9 4 3.6 '
+             '4 2 4 1.6 5.6 2 7.6c.5 2.7 2.3 4.4 5.4 4.6-3.6.7-4.6 2.9-2.4 5.1 3.6 3.7 6.2.2 7-2.6.8 2.8 3.4 6.3 7 2.6 '
+             '2.2-2.2 1.2-4.4-2.4-5.1 3.1-.2 4.9-1.9 5.4-4.6.4-2-.1-3.6-1.6-3.6-3.3 0-7 4.4-8.4 7.2z"/></svg>')
+
+
+def bsky_link(cls: str = "bsky", text: str = "Bluesky") -> str:
+    return (f'<a class="{cls}" href="{BLUESKY_URL}" target="_blank" rel="noopener" '
+            f'aria-label="WastedMap en Bluesky">{BUTTERFLY}<span>{text}</span></a>')
+
+
 def tg_cta(title: str = "¿Te sirvió? Enterate primero de cada secreto nuevo") -> str:
     return (f'<aside class="cta-tg">{PLANE}<div><b>{title}</b>'
             f'<span>Publicamos los hallazgos confirmados apenas aparecen, sin spoilers.</span></div>'
-            f'<a class="btn tgbtn" href="{TELEGRAM_URL}" target="_blank" rel="noopener">Unirme al canal</a></aside>')
+            f'<div class="cta-btns"><a class="btn tgbtn" href="{TELEGRAM_URL}" target="_blank" rel="noopener">'
+            f'{PLANE}Telegram</a><a class="btn bskybtn" href="{BLUESKY_URL}" target="_blank" rel="noopener">'
+            f'{BUTTERFLY}Bluesky</a></div></aside>')
