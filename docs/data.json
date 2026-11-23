@@ -1,6 +1,6 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-23T16:42:33Z",
+ "updated_at": "2026-11-23T16:44:58Z",
  "entries": [
   {
    "id": "yt:4zVYLPSTvao",
@@ -64,7 +64,7 @@
    "author": "Spawn And Tell",
    "published_at": "2026-11-23T12:07:22Z",
    "title_original": "6 hidden cars in GTA 6",
-   "popularity": 10622,
+   "popularity": 10639,
    "thumbnail": "https://i.ytimg.com/vi/8oxKAffn_Jc/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Seis autos ocultos en GTA 6",
@@ -73,7 +73,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "seis-autos-ocultos-en-gta-6-04cc9"
+   "slug": "seis-autos-ocultos-en-gta-6-04cc9",
+   "enriched": true,
+   "detalle": "Hay autos raros escondidos en mansiones, astilleros y garajes del mapa. Según la descripción, entre ellos están el Penumbra FF de la temática Fast & Furious, dos Emerus especiales, los Charred Toros y un Copperheads Gauntlet. Algunos de estos autos se pueden quedar.\n\nEl video también menciona un Tempesta dorado, que la descripción recomienda dejar tranquilo. La publicación no indica ubicaciones exactas.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:eLqnjkmVRnA",
@@ -121,7 +125,7 @@
    "author": "Misleading",
    "published_at": "2026-11-23T10:51:19Z",
    "title_original": "Get a PERMANENT Focus Boost in GTA 6!",
-   "popularity": 7616,
+   "popularity": 9696,
    "thumbnail": "https://i.ytimg.com/vi/mith8Uhw3lg/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "Aumento permanente de Enfoque en el campo de tiro",
@@ -130,7 +134,14 @@
    "como_conseguirlo": "Entrar al campo de tiro de Rodgers Ranch y completar los desafíos del lugar.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "aumento-permanente-de-enfoque-en-el-campo-de-tiro-7f8e3"
+   "slug": "aumento-permanente-de-enfoque-en-el-campo-de-tiro-7f8e3",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [
+    "Entrar al campo de tiro de Rodgers Ranch.",
+    "Completar los desafíos del lugar."
+   ],
+   "region": ""
   },
   {
    "id": "yt:eZEaz6Uqy4Q",
@@ -207,7 +218,7 @@
    "author": "dkdynamite",
    "published_at": "2026-11-23T07:11:57Z",
    "title_original": "ALL Secret Rooms in GTA 6 and How To Find Them… (INSANE LOOT)",
-   "popularity": 11707,
+   "popularity": 14486,
    "thumbnail": "https://i.ytimg.com/vi/ybLbnrwU7vY/hqdefault.jpg",
    "categoria": "ubicacion_secreta",
    "titulo": "Todas las habitaciones secretas con botín",
@@ -216,7 +227,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "todas-las-habitaciones-secretas-con-botin-b18d5"
+   "slug": "todas-las-habitaciones-secretas-con-botin-b18d5",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:xU3VMbon1PU",
@@ -249,7 +264,7 @@
    "author": "MokkaCommentry 2",
    "published_at": "2026-11-23T06:16:05Z",
    "title_original": "GTA 6 Hidden Car Features #gta6 #gameplay #grandtheftauto6 #tipsandtricks",
-   "popularity": 75068,
+   "popularity": 83602,
    "thumbnail": "https://i.ytimg.com/vi/u9G0LA-wg40/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Funciones ocultas de los autos en GTA 6",
@@ -258,7 +273,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "funciones-ocultas-de-los-autos-en-gta-6-98462"
+   "slug": "funciones-ocultas-de-los-autos-en-gta-6-98462",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:4FIrv84RhDo",
@@ -268,7 +287,7 @@
    "author": "Gamers Heroes",
    "published_at": "2026-11-23T04:36:34Z",
    "title_original": "How To Get Max Money On The Cartel Heist In GTA 6",
-   "popularity": 30842,
+   "popularity": 36223,
    "thumbnail": "https://i.ytimg.com/vi/4FIrv84RhDo/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "Máximo botín en el golpe al cartel",
@@ -277,7 +296,11 @@
    "como_conseguirlo": "",
    "spoiler": true,
    "confianza": "media",
-   "slug": "maximo-botin-en-el-golpe-al-cartel-e1061"
+   "slug": "maximo-botin-en-el-golpe-al-cartel-e1061",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:wZbR4SZDoiI",
@@ -303,7 +326,7 @@
     "Ir a la obra de noche, idealmente cerca de las 3:00 AM.",
     "Entrar al ascensor que tiene el globo al lado."
    ],
-   "region": "Complejo de departamentos en construcción"
+   "region": ""
   },
   {
    "id": "yt:7vBHXYbx5Zg",
@@ -345,7 +368,7 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": "Industrial Weed Grow"
+   "region": ""
   },
   {
    "id": "yt:WWzQJBIwpQM",
@@ -355,7 +378,7 @@
    "author": "GAMERLLIL Games",
    "published_at": "2026-11-23T02:08:09Z",
    "title_original": "+11 SUPER CARROS Secretos, Únicos e LENDÁRIOS de GTA 6!!! Você PRECISA Pegar TAMBÉM!!!",
-   "popularity": 22115,
+   "popularity": 23529,
    "thumbnail": "https://i.ytimg.com/vi/WWzQJBIwpQM/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "11 autos secretos y únicos",
@@ -364,7 +387,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "11-autos-secretos-y-unicos-d5f2f"
+   "slug": "11-autos-secretos-y-unicos-d5f2f",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:WqrXp44o530",
@@ -476,7 +503,7 @@
     "Completar la misión secreta \"¡Dale Mamba!\" en Leaf Links para robar el Declasse Mamba GT '64.",
     "Con eso habilitado, registrar el exótico en el Pay 'n' Spray."
    ],
-   "region": "Leonida Auto World, Leaf Links"
+   "region": ""
   },
   {
    "id": "yt:0OagpFy3SDc",
@@ -486,7 +513,7 @@
    "author": "Tenax",
    "published_at": "2026-11-23T01:42:59Z",
    "title_original": "6 Hidden Mechanics You Didn't Know in GTA 6😱 #gta #gta6 #grandtheftauto #gtavi #grandtheftauto6",
-   "popularity": 10407,
+   "popularity": 10501,
    "thumbnail": "https://i.ytimg.com/vi/0OagpFy3SDc/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Seis mecánicas ocultas de GTA 6",
@@ -495,7 +522,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "seis-mecanicas-ocultas-de-gta-6-eead2"
+   "slug": "seis-mecanicas-ocultas-de-gta-6-eead2",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:4W5aSkPq5Cg",
@@ -522,7 +553,7 @@
     "Ubicar el bloque flotante sobre el arroyo",
     "Saltar debajo para golpearlo"
    ],
-   "region": "Mina MacAlister"
+   "region": ""
   },
   {
    "id": "yt:2r-ejiWtmj8",
@@ -532,7 +563,7 @@
    "author": "LeonidaChaosGTA",
    "published_at": "2026-11-23T01:34:06Z",
    "title_original": "GTA 6's Secret Toilet Gives You MAX Stamina 🚽 #Shorts",
-   "popularity": 7596,
+   "popularity": 7938,
    "thumbnail": "https://i.ytimg.com/vi/2r-ejiWtmj8/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Aumento permanente de resistencia en el baño",
@@ -541,7 +572,15 @@
    "como_conseguirlo": "Escanear el cartel QR \"Don't Flush\" en el baño de Corsair Key; seguir al Dr. Merle hasta la planta de aguas residuales; saltar en la cámara tóxica.",
    "spoiler": true,
    "confianza": "media",
-   "slug": "aumento-permanente-de-resistencia-en-el-bano-daa2d"
+   "slug": "aumento-permanente-de-resistencia-en-el-bano-daa2d",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [
+    "Escanear el cartel QR \"Don't Flush\" en el baño de Corsair Key.",
+    "Seguir al Dr. Merle hasta la planta de aguas residuales.",
+    "Saltar en la cámara tóxica."
+   ],
+   "region": "Corsair Key"
   },
   {
    "id": "yt:oejK0_fCg-s",
@@ -690,7 +729,7 @@
     "Ir a la ubicación indicada en el mapa.",
     "Registrar el vehículo para guardarlo en el garaje."
    ],
-   "region": "Leonida"
+   "region": ""
   },
   {
    "id": "yt:YIHoJBaUACE",
@@ -719,7 +758,7 @@
     "Atravesar la zona bajo el agua",
     "Llegar hasta el final para volver al mundo normal"
    ],
-   "region": "Millport"
+   "region": "Lummox County"
   },
   {
    "id": "yt:yfvXnuY5YrU",
@@ -745,7 +784,7 @@
     "Ir a la ubicación indicada en el mapa",
     "Registrar el vehículo para guardarlo en el garaje"
    ],
-   "region": "Leonida"
+   "region": ""
   },
   {
    "id": "yt:FpKSDSGVTGg",
@@ -782,7 +821,7 @@
    "author": "Born Wanted",
    "published_at": "2026-11-23T01:00:28Z",
    "title_original": "8 Rare Vehicles In GTA 6 (And Exactly Where To Find Them).",
-   "popularity": 31085,
+   "popularity": 31262,
    "thumbnail": "https://i.ytimg.com/vi/Qw2roxJHM2o/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Ocho vehículos raros y dónde encontrarlos",
@@ -791,7 +830,15 @@
    "como_conseguirlo": "Ir al garaje de la comisaría en el nivel 7 y salir por un salto acrobático desde el techo para el Infernus; los demás autos se ubican en los lugares indicados en el video.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "ocho-vehiculos-raros-y-donde-encontrarlos-b2e66"
+   "slug": "ocho-vehiculos-raros-y-donde-encontrarlos-b2e66",
+   "enriched": true,
+   "detalle": "Es una lista de ocho vehículos raros del juego, cada uno con su ubicación exacta y los obstáculos para conseguirlo, como cerraduras, alarmas, rastreadores, pandillas o comisarías. Algunos de los autos mencionados son el Pegassi Infernus, el Penumbra FF y el Emerus Royal Ruby, además del Turbo Ruiner, el Gauntlet Hellfire y un auto de drift de Gellhorn.\n\nEl Infernus (modelo 1996) está estacionado en el nivel 7 de un garaje de comisaría, y la única salida es un salto acrobático desde el techo. El Turbo Ruiner está en Key Lento, el Penumbra FF en Vespucci Island y el Gauntlet Hellfire en el depósito de chatarra M7.\n\nLa descripción también aclara que tener un auto implica costos de mantenimiento una vez que Moses completa los trámites. Los lugares y precios provienen de guías del lanzamiento y reportes de jugadores, y algunos autos solo aparecen de día.",
+   "pasos": [
+    "Ir al garaje de la comisaría en el nivel 7 para encontrar el Pegassi Infernus.",
+    "Salir del garaje con un salto acrobático desde el techo.",
+    "Si el auto no está en el lugar indicado, volver en otro momento del día, ya que algunos solo aparecen de día."
+   ],
+   "region": ""
   },
   {
    "id": "yt:zyWszhA3Upw",
@@ -814,7 +861,7 @@
    "enriched": true,
    "detalle": "Recorrido por todas las instalaciones de investigación submarinas de Leonida y la ubicación de un meteorito misterioso, con las pistas que los conectan. El video no detalla pasos concretos para llegar a cada una.",
    "pasos": [],
-   "region": "Leonida, bajo el mar"
+   "region": ""
   },
   {
    "id": "yt:FEBCk0oEChQ",
@@ -843,7 +890,7 @@
    "author": "Vexies",
    "published_at": "2026-11-23T00:05:50Z",
    "title_original": "15 Secret SUPERCARS Nobody Told Me About... (GTA 6)",
-   "popularity": 54911,
+   "popularity": 56614,
    "thumbnail": "https://i.ytimg.com/vi/8hQqKFpxO0Q/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "15 superautos secretos que podés robar sin avanzar la historia",
@@ -852,7 +899,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "15-superautos-secretos-que-podes-robar-sin-avanzar-la-histor-da096"
+   "slug": "15-superautos-secretos-que-podes-robar-sin-avanzar-la-histor-da096",
+   "enriched": true,
+   "detalle": "Guía de 15 superautos raros que se pueden conseguir sin avanzar la historia. Entre ellos aparecen un McLaren púrpura, un Emerus rojo rubí, un Pegassi Infernus, un Lamborghini dorado y un patrullero especial de edición limitada. La descripción no indica en qué zona están todos.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:3mRAn0JoAQo",
@@ -862,7 +913,7 @@
    "author": "Kloud GTA",
    "published_at": "2026-11-23T00:01:55Z",
    "title_original": "J'ai trouvé 3 nouvelles voitures cachées dans GTA 6… et je te montre où les trouver",
-   "popularity": 8670,
+   "popularity": 9074,
    "thumbnail": "https://i.ytimg.com/vi/3mRAn0JoAQo/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Tres autos escondidos",
@@ -871,7 +922,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "tres-autos-escondidos-a12bf"
+   "slug": "tres-autos-escondidos-a12bf",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:CdYIk_8AEC8",
@@ -904,7 +959,7 @@
    "author": "Reviews de Games",
    "published_at": "2026-11-22T23:54:02Z",
    "title_original": "OS EASTER EGGS MAIS ASSUSTADORES DO GTA 6!",
-   "popularity": 16688,
+   "popularity": 17827,
    "thumbnail": "https://i.ytimg.com/vi/mUL7QDiHzIE/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Easter eggs de terror: Pie Grande, mujer sobre un auto y criatura demoníaca",
@@ -913,7 +968,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "easter-eggs-de-terror-pie-grande-mujer-sobre-un-auto-y-criat-077b9"
+   "slug": "easter-eggs-de-terror-pie-grande-mujer-sobre-un-auto-y-criat-077b9",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:X54pK6784-c",
@@ -1045,7 +1104,7 @@
    "author": "TagBackTV",
    "published_at": "2026-11-22T22:58:51Z",
    "title_original": "Get RICH EASY IN GTA 6 - PROFESSIONAL Jewelry Heists, No Cops, Clean Getaway",
-   "popularity": 67093,
+   "popularity": 73412,
    "thumbnail": "https://i.ytimg.com/vi/suVVXEOLsOs/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Robos de joyerías sin policía",
@@ -1054,7 +1113,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "robos-de-joyerias-sin-policia-78bed"
+   "slug": "robos-de-joyerias-sin-policia-78bed",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:nZktTCqKU_o",
@@ -1064,7 +1127,7 @@
    "author": "Taggy Gamer",
    "published_at": "2026-11-22T22:52:59Z",
    "title_original": "Police Ke Saamne Rare Car Chori 😱 #gta6",
-   "popularity": 11341,
+   "popularity": 11435,
    "thumbnail": "https://i.ytimg.com/vi/nZktTCqKU_o/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Robo de auto clásico frente a la policía",
@@ -1073,7 +1136,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "robo-de-auto-clasico-frente-a-la-policia-41057"
+   "slug": "robo-de-auto-clasico-frente-a-la-policia-41057",
+   "enriched": true,
+   "detalle": "El clip muestra a un jugador robando un auto clásico muy raro de Vice City mientras la policía estaba presente. Según la descripción, la policía intentaba ponerle una multa al auto y el jugador esperó a que se fueran para robarlo frente a ellos.\n\nEs un momento de gameplay, y los datos no explican un procedimiento para repetirlo.",
+   "pasos": [],
+   "region": "Vice City"
   },
   {
    "id": "yt:KY1mMAMjomA",
@@ -1083,7 +1150,7 @@
    "author": "Vander",
    "published_at": "2026-11-22T22:38:41Z",
    "title_original": "25 COISAS QUE GTA 6 NÃO TE ENSINA! (DICAS E TRUQUES SECRETOS)",
-   "popularity": 59102,
+   "popularity": 63442,
    "thumbnail": "https://i.ytimg.com/vi/KY1mMAMjomA/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "25 trucos y mecánicas que el juego no explica",
@@ -1092,7 +1159,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "25-trucos-y-mecanicas-que-el-juego-no-explica-6e9c2"
+   "slug": "25-trucos-y-mecanicas-que-el-juego-no-explica-6e9c2",
+   "enriched": true,
+   "detalle": "Recopilación de 25 trucos y mecánicas del juego sin spoilers de la historia: movimientos poco conocidos, funciones ocultas de los vehículos, formas de ganar dinero y cómo robar cajeros automáticos. El video la ubica en el mundo de Leonida.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:avPpY0IIgPY",
@@ -1119,7 +1190,7 @@
     "Buscá el escondite con el dinero.",
     "Mirá detrás de la escalera para ver a la serpiente."
    ],
-   "region": "Casa quemada de Jason"
+   "region": ""
   },
   {
    "id": "yt:r4eRjMuXc5g",
@@ -1129,7 +1200,7 @@
    "author": "MZC",
    "published_at": "2026-11-22T22:28:11Z",
    "title_original": "Obscure GTA 6 Easter Eggs YOU DON'T KNOW Part 5!",
-   "popularity": 14018,
+   "popularity": 14188,
    "thumbnail": "https://i.ytimg.com/vi/r4eRjMuXc5g/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Easter eggs poco conocidos, parte 5",
@@ -1138,7 +1209,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "easter-eggs-poco-conocidos-parte-5-67305"
+   "slug": "easter-eggs-poco-conocidos-parte-5-67305",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:uTXSQDudREI",
@@ -1177,7 +1252,7 @@
    "author": "Misleading",
    "published_at": "2026-11-22T22:22:41Z",
    "title_original": "Get This SECRET Legendary LMG in GTA 6!",
-   "popularity": 26771,
+   "popularity": 27953,
    "thumbnail": "https://i.ytimg.com/vi/ilppoOSDZbc/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "LMG mercenario en un contenedor",
@@ -1186,7 +1261,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "lmg-mercenario-en-un-contenedor-ef554"
+   "slug": "lmg-mercenario-en-un-contenedor-ef554",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:dzVi7AGxnsw",
@@ -1223,7 +1302,7 @@
    "author": "CtrlAltPlay",
    "published_at": "2026-11-22T22:15:15Z",
    "title_original": "Secret Money Locations in GTA 6!",
-   "popularity": 10341,
+   "popularity": 10813,
    "thumbnail": "https://i.ytimg.com/vi/oWriR3nUhgE/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Lugares con dinero escondido en Leonida",
@@ -1232,7 +1311,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "lugares-con-dinero-escondido-en-leonida-e2259"
+   "slug": "lugares-con-dinero-escondido-en-leonida-e2259",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:_QIIZoMqJuo",
@@ -1242,7 +1325,7 @@
    "author": "NyxVice",
    "published_at": "2026-11-22T22:09:00Z",
    "title_original": "HOW TO GET 3 BEST CARS IN GTA 6 (AND WHERE TO FIND THEM)",
-   "popularity": 24125,
+   "popularity": 25113,
    "thumbnail": "https://i.ytimg.com/vi/_QIIZoMqJuo/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Tres autos top en GTA 6",
@@ -1251,7 +1334,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "tres-autos-top-en-gta-6-04589"
+   "slug": "tres-autos-top-en-gta-6-04589",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:A3q0ip2sg2U",
@@ -1261,7 +1348,7 @@
    "author": "Nerpah",
    "published_at": "2026-11-22T22:04:35Z",
    "title_original": "GTA 6 - 10 FASTEST CARS & HOW TO GET THEM! (Free Car Locations)",
-   "popularity": 37933,
+   "popularity": 40595,
    "thumbnail": "https://i.ytimg.com/vi/A3q0ip2sg2U/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Los 10 autos más rápidos y dónde encontrarlos",
@@ -1270,7 +1357,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "los-10-autos-mas-rapidos-y-donde-encontrarlos-f0a4e"
+   "slug": "los-10-autos-mas-rapidos-y-donde-encontrarlos-f0a4e",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:HB386XvCkVg",
@@ -1322,7 +1413,7 @@
    "author": "Hazard",
    "published_at": "2026-11-22T22:00:01Z",
    "title_original": "GTA 6: 12 Things You MUST Do in Chapter 2 to Get RICH FAST! (Complete Money Guide)",
-   "popularity": 74295,
+   "popularity": 78142,
    "thumbnail": "https://i.ytimg.com/vi/W1zKJHp9WPo/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Guía de dinero para el capítulo 2",
@@ -1331,7 +1422,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "guia-de-dinero-para-el-capitulo-2-8b518"
+   "slug": "guia-de-dinero-para-el-capitulo-2-8b518",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:k7UaLqTKFlI",
@@ -1367,7 +1462,7 @@
    "author": "ChizPlays",
    "published_at": "2026-11-22T21:52:01Z",
    "title_original": "Visiting 24 Secret Locations in GTA 6 in 24 Hours",
-   "popularity": 17002,
+   "popularity": 17566,
    "thumbnail": "https://i.ytimg.com/vi/b2iIu_WEb4s/hqdefault.jpg",
    "categoria": "ubicacion_secreta",
    "titulo": "24 lugares secretos visitados",
@@ -1376,7 +1471,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "24-lugares-secretos-visitados-ae263"
+   "slug": "24-lugares-secretos-visitados-ae263",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:REfc5kkhLA8",
@@ -1405,7 +1504,7 @@
    "author": "Obverse",
    "published_at": "2026-11-22T21:11:47Z",
    "title_original": "GTA 6 Secret Haunted Hotel 🤫",
-   "popularity": 18678,
+   "popularity": 18772,
    "thumbnail": "https://i.ytimg.com/vi/0CJSsFqwtOs/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Hotel embrujado secreto",
@@ -1414,7 +1513,11 @@
    "como_conseguirlo": "",
    "spoiler": true,
    "confianza": "media",
-   "slug": "hotel-embrujado-secreto-2963c"
+   "slug": "hotel-embrujado-secreto-2963c",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:5yW4B4PnVc8",
@@ -1464,7 +1567,7 @@
    "enriched": true,
    "detalle": "Guía de cinco secretos en Leonida que dan mejoras permanentes de estadísticas: la abducción alienígena (todas las stats), el easter egg de Doom/Stranger Things (salud máxima), el de Red Hulk (resistencia máxima), un desafío de parkour secreto (resistencia máxima) y The Final Flush (resistencia máxima).\n\nEl video recorre la ubicación y los pasos de cada uno, y explica cómo reclamar las recompensas para no perdérselas.",
    "pasos": [],
-   "region": "Leonida"
+   "region": ""
   },
   {
    "id": "yt:rDpLhLnFLwk",
@@ -1474,7 +1577,7 @@
    "author": "GameBroo",
    "published_at": "2026-11-22T21:00:33Z",
    "title_original": "How to Make MILLIONS in GTA 6 by Robbing THESE Places!",
-   "popularity": 15062,
+   "popularity": 15688,
    "thumbnail": "https://i.ytimg.com/vi/rDpLhLnFLwk/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Los robos que más pagan",
@@ -1483,7 +1586,16 @@
    "como_conseguirlo": "Avanzar al Capítulo 3 para desbloquear los encargos de Randy y Yasmani, vender lo robado al reducidor correcto y luego encarar las bóvedas de bancos.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "los-robos-que-mas-pagan-e54d9"
+   "slug": "los-robos-que-mas-pagan-e54d9",
+   "enriched": true,
+   "detalle": "Para ganar mucho dinero, el video recomienda priorizar robos rentables en lugar de tiendas de bajo pago. Menciona autos de alta gama de Randy, trabajos de joyería de Yasmani, botín escondido y bóvedas de bancos de final de juego, que pagan hasta $205.000.\n\nTambién indica que hay que vender lo robado al reducidor correcto. La guía se centra en el orden de progreso de la historia.",
+   "pasos": [
+    "Avanzar en la historia hasta el Capítulo 3 para desbloquear los encargos de Randy y Yasmani.",
+    "Robar autos de alta gama para Randy y joyerías para Yasmani.",
+    "Vender lo robado al reducidor correcto.",
+    "Encarar los robos de bóvedas de bancos de final de juego, que pagan hasta $205.000."
+   ],
+   "region": ""
   },
   {
    "id": "yt:xvncn7HS9Mg",
@@ -1520,7 +1632,7 @@
    "author": "El Gallagher",
    "published_at": "2026-11-22T20:59:24Z",
    "title_original": "todos los EASTER EGGS y MISTERIOS de TERROR de GTA 6 | ALIENS, FANTASMAS, DIABLOS (ICEBERG GTA 6)",
-   "popularity": 25903,
+   "popularity": 28007,
    "thumbnail": "https://i.ytimg.com/vi/_xE_OI6_rt0/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Iceberg de easter eggs y misterios de terror",
@@ -1529,7 +1641,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "iceberg-de-easter-eggs-y-misterios-de-terror-5f4e4"
+   "slug": "iceberg-de-easter-eggs-y-misterios-de-terror-5f4e4",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:dnSryvUd2zQ",
@@ -1562,7 +1678,7 @@
    "author": "GameCraft",
    "published_at": "2026-11-22T20:52:36Z",
    "title_original": "11 Legendary Silenced Weapons You NEED to Get in GTA 6",
-   "popularity": 57592,
+   "popularity": 61867,
    "thumbnail": "https://i.ytimg.com/vi/QVT66Ule-qs/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "11 armas con silenciador recomendadas",
@@ -1571,7 +1687,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "11-armas-con-silenciador-recomendadas-13890"
+   "slug": "11-armas-con-silenciador-recomendadas-13890",
+   "enriched": true,
+   "detalle": "Repaso de 11 armas silenciadas que sirven para evitar el nivel de búsqueda, como la Assassin Nipper .38, la La Polilla Negra VF-G1 y la Black Eagle Import M306 TMR. La idea es hacer menos ruido para que la policía no aparezca.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:cF-75dgztG0",
@@ -1625,7 +1745,7 @@
     "Llevá equipo de buceo.",
     "Explorá el fondo marino hasta llegar a la base."
    ],
-   "region": "Leonida, bajo el mar"
+   "region": ""
   },
   {
    "id": "yt:evWlZieBkV8",
@@ -1679,7 +1799,7 @@
    "author": "KogarHD",
    "published_at": "2026-11-22T20:17:31Z",
    "title_original": "¡El MAPA de GTA 6 ESCONDE este SECRETO!",
-   "popularity": 16425,
+   "popularity": 17174,
    "thumbnail": "https://i.ytimg.com/vi/VddZCEpCL8Y/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Cómo saber qué edificios se pueden visitar",
@@ -1688,7 +1808,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "como-saber-que-edificios-se-pueden-visitar-8d117"
+   "slug": "como-saber-que-edificios-se-pueden-visitar-8d117",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:45B_EjE6IlY",
@@ -1698,7 +1822,7 @@
    "author": "SNIR",
    "published_at": "2026-11-22T20:15:34Z",
    "title_original": "2 Voitures LOW RIDER uniques et RARES à obtenir dès le Début de GTA 6 ! Albany Manana en OR",
-   "popularity": 7866,
+   "popularity": 8098,
    "thumbnail": "https://i.ytimg.com/vi/45B_EjE6IlY/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Dos lowriders raros desde el inicio, incluido el Albany Manana dorado",
@@ -1707,7 +1831,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "dos-lowriders-raros-desde-el-inicio-incluido-el-albany-manan-d02e1"
+   "slug": "dos-lowriders-raros-desde-el-inicio-incluido-el-albany-manan-d02e1",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:Qt4J-mEVafU",
@@ -1717,7 +1845,7 @@
    "author": "KackisHD",
    "published_at": "2026-11-22T20:00:19Z",
    "title_original": "GTA 6: ALIEN ABDUCTION EASTER EGG & SECRET MISSION! (Insane Rewards!)",
-   "popularity": 41301,
+   "popularity": 43899,
    "thumbnail": "https://i.ytimg.com/vi/Qt4J-mEVafU/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "Abducción alienígena y misión secreta Alien Dream",
@@ -1744,7 +1872,11 @@
      "published_at": "2026-11-22T17:00:33Z"
     }
    ],
-   "slug": "abduccion-alienigena-y-mision-secreta-alien-dream-b2ed3"
+   "slug": "abduccion-alienigena-y-mision-secreta-alien-dream-b2ed3",
+   "enriched": true,
+   "detalle": "Guía del easter egg de abducción alienígena y de la misión secreta Alien Dream que lo acompaña. Según el video, completar la misión da una mejora permanente de salud, resistencia y concentración.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:7SzYZRsoCo0",
@@ -1754,7 +1886,7 @@
    "author": "BLA 1420",
    "published_at": "2026-11-22T19:50:00Z",
    "title_original": "GTA 6 - 18 Voitures Rares & Unique À Ne Pas Rater",
-   "popularity": 15292,
+   "popularity": 15830,
    "thumbnail": "https://i.ytimg.com/vi/7SzYZRsoCo0/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "18 autos raros y únicos para no perderte",
@@ -1763,7 +1895,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "18-autos-raros-y-unicos-para-no-perderte-36797"
+   "slug": "18-autos-raros-y-unicos-para-no-perderte-36797",
+   "enriched": true,
+   "detalle": "El video es una recopilación de 18 variantes raras y únicas de autos del juego. Entre los ejemplos que menciona están el Pegassi Tempesta Valiant, el Progen Emerus Royal Ruby y el Pegassi Infernus dorado.\n\nLa descripción solo lista los modelos con marca de tiempo, sin indicar dónde se consiguen ni cómo desbloquearlos.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:Bon9YIs1eeU",
@@ -1773,7 +1909,7 @@
    "author": "MrBossFTW",
    "published_at": "2026-11-22T19:30:29Z",
    "title_original": "25+ HIDDEN Features In GTA 6 That The Game DOESN'T Tell You About!",
-   "popularity": 16494,
+   "popularity": 17449,
    "thumbnail": "https://i.ytimg.com/vi/Bon9YIs1eeU/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Más de 25 funciones ocultas que el juego no explica",
@@ -1782,7 +1918,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "mas-de-25-funciones-ocultas-que-el-juego-no-explica-c8bea"
+   "slug": "mas-de-25-funciones-ocultas-que-el-juego-no-explica-c8bea",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:NMGmJT3uNZ0",
@@ -1792,7 +1932,7 @@
    "author": "Kronos XP",
    "published_at": "2026-11-22T19:21:13Z",
    "title_original": "GTA 6 carros secretos parte 1",
-   "popularity": 20992,
+   "popularity": 21685,
    "thumbnail": "https://i.ytimg.com/vi/NMGmJT3uNZ0/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Christine, el auto asesino escondido",
@@ -1801,7 +1941,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "christine-el-auto-asesino-escondido-f1d3d"
+   "slug": "christine-el-auto-asesino-escondido-f1d3d",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:f0DBLY-wK90",
@@ -1820,7 +1964,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "el-sombrero-de-arthur-morgan-9c767"
+   "slug": "el-sombrero-de-arthur-morgan-9c767",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:llpeLlGwzsk",
@@ -1830,7 +1978,7 @@
    "author": "Naillyk",
    "published_at": "2026-11-22T19:00:36Z",
    "title_original": "5 voitures ULTRA RARES cachées dans GTA 6 ! #gta6 #gta",
-   "popularity": 37050,
+   "popularity": 37262,
    "thumbnail": "https://i.ytimg.com/vi/llpeLlGwzsk/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Cinco autos ultra raros ocultos",
@@ -1839,7 +1987,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "cinco-autos-ultra-raros-ocultos-c22ab"
+   "slug": "cinco-autos-ultra-raros-ocultos-c22ab",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:Lwep1R_oufQ",
@@ -1849,7 +2001,7 @@
    "author": "SubscribeForTacos",
    "published_at": "2026-11-22T19:00:22Z",
    "title_original": "Make Money Fast in GTA 6! Chapter 1",
-   "popularity": 27282,
+   "popularity": 28446,
    "thumbnail": "https://i.ytimg.com/vi/Lwep1R_oufQ/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Ganar dinero rápido en el capítulo 1",
@@ -1858,7 +2010,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "ganar-dinero-rapido-en-el-capitulo-1-30fd5"
+   "slug": "ganar-dinero-rapido-en-el-capitulo-1-30fd5",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:MXMw7g_V_E4",
@@ -1933,7 +2089,7 @@
    "author": "play.gtasix | GTA 6 Tips & News",
    "published_at": "2026-11-22T18:12:40Z",
    "title_original": "GTA 6 Hidden Loot Spots 💰 $30M on the Map (Part 2)",
-   "popularity": 21143,
+   "popularity": 21883,
    "thumbnail": "https://i.ytimg.com/vi/Pae-nCJK22Q/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Escondites con botín (parte 2)",
@@ -1942,7 +2098,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "escondites-con-botin-parte-2-bddde"
+   "slug": "escondites-con-botin-parte-2-bddde",
+   "enriched": true,
+   "detalle": "El video lista supuestos lugares con dinero escondido: un búnker enterrado en Lummox County, un yate hundido en la costa atlántica, una caja fuerte de un viejo hipódromo, el Hangar 13 en VCIA y una bóveda en una isla privada en el golfo de Leonida.\n\nLos lugares y los valores son rumores, así que conviene comprobarlos uno mismo.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:xxRIYLUYFFc",
@@ -1952,7 +2112,7 @@
    "author": "GTA 6 Radar",
    "published_at": "2026-11-22T17:59:26Z",
    "title_original": "GTA 6’s Secret Jet Ski Dog Gives You $1,218! 🐕🚤 #gta6 #gta6radared",
-   "popularity": 22285,
+   "popularity": 22447,
    "thumbnail": "https://i.ytimg.com/vi/xxRIYLUYFFc/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Perro en moto de agua que lleva a una isla secreta",
@@ -1961,7 +2121,16 @@
    "como_conseguirlo": "Quedar varado en Gambit Bay; dejar que el perro con moto de agua te rescate; alabarlo, subirse a su espalda y no saltar antes de llegar a Dog Island; jugar a buscar con la manada y desenterrar la billetera.",
    "spoiler": true,
    "confianza": "media",
-   "slug": "perro-en-moto-de-agua-que-lleva-a-una-isla-secreta-44294"
+   "slug": "perro-en-moto-de-agua-que-lleva-a-una-isla-secreta-44294",
+   "enriched": true,
+   "detalle": "Si quedás varado en Gambit Bay, un perro con gafas y chaleco salvavidas te rescata con una moto de agua y te lleva a una isla secreta llamada Dog Island.\n\nAllí podés jugar a buscar con la manada y desenterrar una billetera escondida con $1218 en efectivo.",
+   "pasos": [
+    "Quedar varado en Gambit Bay.",
+    "Dejar que el perro con moto de agua te rescate.",
+    "Alabarlo, subirte a su espalda y no saltar antes de llegar a Dog Island.",
+    "Jugar a buscar con la manada y desenterrar la billetera."
+   ],
+   "region": "Gambit Bay"
   },
   {
    "id": "yt:JQYtIl9aJr0",
@@ -1971,7 +2140,7 @@
    "author": "Ewiee",
    "published_at": "2026-11-22T17:42:10Z",
    "title_original": "How to Find the Rarest Car in GTA 6! (Truffade Thrax Location)",
-   "popularity": 23517,
+   "popularity": 24485,
    "thumbnail": "https://i.ytimg.com/vi/JQYtIl9aJr0/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Dónde encontrar el Truffade Thrax",
@@ -1990,7 +2159,11 @@
      "published_at": "2026-11-22T18:00:14Z"
     }
    ],
-   "slug": "donde-encontrar-el-truffade-thrax-95ec5"
+   "slug": "donde-encontrar-el-truffade-thrax-95ec5",
+   "enriched": true,
+   "detalle": "El Truffade Thrax es un superdeportivo de dos asientos con tracción integral, basado en el Bugatti Divo y el Italdesign Zerouno. Según el video, también aparece en GTA Online.\n\nLa guía muestra dónde aparece y cómo hacer que se genere. El consejo práctico es guardar la partida antes de salir del juego para no perder progreso.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:FhCM721iKMk",
@@ -2062,7 +2235,7 @@
    "author": "Craszy",
    "published_at": "2026-11-22T17:15:01Z",
    "title_original": "BEST Way to Make Money in GTA 6",
-   "popularity": 26518,
+   "popularity": 27092,
    "thumbnail": "https://i.ytimg.com/vi/y6kVhh5-qb4/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Robo de autos para Moses en el Capítulo 2",
@@ -2071,7 +2244,14 @@
    "como_conseguirlo": "Robar vehículos de alto valor y venderlos al taller de Moses cumpliendo sus requisitos.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "robo-de-autos-para-moses-en-el-capitulo-2-ceef2"
+   "slug": "robo-de-autos-para-moses-en-el-capitulo-2-ceef2",
+   "enriched": true,
+   "detalle": "Es una estrategia para ganar dinero en el Capítulo 2: robar vehículos de alto valor y venderlos al taller de Moses cumpliendo sus requisitos. La descripción no detalla rutas, precios ni los requisitos concretos del taller.",
+   "pasos": [
+    "Robar vehículos de alto valor.",
+    "Venderlos al taller de Moses cumpliendo sus requisitos."
+   ],
+   "region": ""
   },
   {
    "id": "yt:gJT2L_cJIok",
@@ -2081,7 +2261,7 @@
    "author": "Dan Allen Gaming",
    "published_at": "2026-11-22T16:38:43Z",
    "title_original": "GTA 6 - All Easter Eggs and Secrets (Part 1)",
-   "popularity": 8839,
+   "popularity": 9096,
    "thumbnail": "https://i.ytimg.com/vi/gJT2L_cJIok/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Recopilación de easter eggs y referencias (parte 1)",
@@ -2090,7 +2270,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "recopilacion-de-easter-eggs-y-referencias-parte-1-c2ffa"
+   "slug": "recopilacion-de-easter-eggs-y-referencias-parte-1-c2ffa",
+   "enriched": true,
+   "detalle": "Recopilación de referencias y secretos de GTA 6 que van desde RDR2, GTA 5 y Vice City hasta Silent Hill, Dexter, Mario & Luigi y Fast & Furious. Entre los hallazgos mencionados aparecen un barco pirata fantasma, el Kraken, el Skunk Ape, un ritual demoníaco y una abducción alienígena por OVNI.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:qCtJ6IOhT_Y",
