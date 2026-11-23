@@ -88,7 +88,8 @@ def _safe_json(data) -> str:
 def _layout(*, title: str, description: str, canonical: str, root: str, body: str,
             image: str = "", jsonld: list | None = None, noindex: bool = False) -> str:
     robots = '<meta name="robots" content="noindex, follow">' if noindex else ""
-    og_image = f'<meta property="og:image" content="{escape(image)}">' if image else ""
+    # Sin imagen propia (inicio, categorías, zonas...) se usa la de la marca.
+    og_image = f'<meta property="og:image" content="{escape(image or config.SITE_URL + "/og.png")}">'
     ld = "".join(f'<script type="application/ld+json">{_safe_json(x)}</script>' for x in (jsonld or []))
     return f"""<!doctype html>
 <html lang="es">
@@ -105,6 +106,10 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <meta property="og:url" content="{escape(canonical)}">
 {og_image}
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{root}favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
+<meta name="theme-color" content="#0d0b14">
 <link rel="stylesheet" href="{root}page.css">
 {ld}
 </head>
