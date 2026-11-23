@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad | WastedMap</title>
+<meta name="description" content="Qué datos se recopilan al visitar WastedMap y cómo se usan.">
+<link rel="canonical" href="https://wastedmap.com/privacidad/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Política de privacidad | WastedMap">
+<meta property="og:description" content="Qué datos se recopilan al visitar WastedMap y cómo se usan.">
+<meta property="og:url" content="https://wastedmap.com/privacidad/">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../page.css">
+
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="../">WastedMap</a></div></header>
+<main><div class="wrap">
+<nav class="crumbs"><a href="../">Inicio</a> › Política de privacidad</nav>
+<h1>Política de privacidad</h1>
+<p class="note">Última actualización: 23 de noviembre de 2026.</p>
+<p class="lead">WastedMap no tiene cuentas de usuario ni formularios: no te pedimos ningún dato personal para usar el sitio.</p>
+<h2>Estadísticas de visitas</h2>
+<p>Usamos Cloudflare Web Analytics para saber cuántas personas visitan el sitio y qué páginas leen. Esta herramienta no usa cookies, no guarda tu dirección IP y no te sigue entre sitios: solo recibimos números agregados (visitas, páginas, país, tipo de dispositivo).</p>
+<h2>Alojamiento</h2>
+<p>El sitio está alojado en Cloudflare. Como cualquier servidor web, Cloudflare procesa datos técnicos de cada conexión (como la dirección IP) para entregar las páginas y proteger el sitio de ataques. Podés leer su política en <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">cloudflare.com/privacypolicy</a>.</p>
+<h2>Videos de YouTube</h2>
+<p>Los videos se cargan con el modo de privacidad mejorada de YouTube (youtube-nocookie.com) y recién cuando tocás el botón de reproducir. Hasta ese momento solo se muestra la imagen de portada, que se descarga de los servidores de YouTube sin cookies. Al reproducir un video, YouTube (Google) puede guardar cookies según su <a href="https://policies.google.com/privacy" rel="noopener">política de privacidad</a>.</p>
+<h2>Enlaces externos</h2>
+<p>Las páginas enlazan a los videos y publicaciones originales en otros sitios. Al entrar a esos sitios, se aplican sus propias políticas de privacidad.</p>
+<h2>Publicidad y enlaces de afiliados</h2>
+<p>Por ahora el sitio no muestra publicidad. Si en el futuro sumamos anuncios o enlaces de afiliados, vamos a actualizar esta página antes, explicar qué cookies usan y, cuando corresponda, pedirte el consentimiento.</p>
+<h2>Tus derechos</h2>
+<p>Como no guardamos datos personales tuyos, no hay información para consultar ni borrar. Igual, si tenés cualquier pregunta sobre privacidad, escribinos a <a href="mailto:contacto@wastedmap.com">contacto@wastedmap.com</a>.</p>
+</div></main>
+<footer>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive.<br>
+Los videos y publicaciones son de sus autores y se muestran con el reproductor o el enlace original.<br>
+<a href="../acerca/">Acerca de</a> · <a href="../privacidad/">Privacidad</a> · <a href="../contacto/">Contacto</a></footer>
+<script>
+document.addEventListener("click", ev => {
+  const sp = ev.target.closest(".spoiler-btn");
+  if (sp) { document.querySelectorAll(".spoiler").forEach(x => x.classList.remove("spoiler")); sp.remove(); return; }
+  const m = ev.target.closest(".media[data-yt]");
+  if (m && !m.closest(".spoiler")) {
+    m.outerHTML = `<div class="media"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(m.dataset.yt)}?autoplay=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Video"></iframe></div>`;
+  }
+});
+</script>
+</body>
+</html>

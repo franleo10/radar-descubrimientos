@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acerca de WastedMap | WastedMap</title>
+<meta name="description" content="Qué es WastedMap, cómo se arma y quién está detrás. Guía no oficial de GTA 6.">
+<link rel="canonical" href="https://wastedmap.com/acerca/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Acerca de WastedMap | WastedMap">
+<meta property="og:description" content="Qué es WastedMap, cómo se arma y quién está detrás. Guía no oficial de GTA 6.">
+<meta property="og:url" content="https://wastedmap.com/acerca/">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../page.css">
+
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="../">WastedMap</a></div></header>
+<main><div class="wrap">
+<nav class="crumbs"><a href="../">Inicio</a> › Acerca de WastedMap</nav>
+<h1>Acerca de WastedMap</h1>
+<p class="lead">WastedMap junta en un solo lugar los secretos, easter eggs, lugares ocultos y guías de GTA 6 que descubre la comunidad.</p>
+<h2>Cómo funciona</h2>
+<p>Varias veces por día revisamos los videos más vistos y recientes sobre descubrimientos del juego. Cada uno se clasifica por categoría y se resume en español con ayuda de inteligencia artificial. Los que no aportan un hallazgo concreto (noticias, opiniones, memes) se descartan, y cuando varios creadores muestran lo mismo, los juntamos en una sola página.</p>
+<p>Los resúmenes son automáticos y pueden tener errores. Por eso cada página enlaza el video original: si algo no coincide con tu partida, el video es la referencia. Las páginas marcadas como "Sin confirmar" son hallazgos que todavía no están del todo claros.</p>
+<h2>Los creadores</h2>
+<p>Los videos pertenecen a sus autores y se muestran con el reproductor oficial de YouTube, así que las reproducciones cuentan para su canal. Siempre citamos al autor y enlazamos el original. Si sos creador y preferís que tu video no aparezca, escribinos a <a href="mailto:contacto@wastedmap.com">contacto@wastedmap.com</a> y lo retiramos.</p>
+<h2>Aviso legal</h2>
+<p>WastedMap es una guía no oficial hecha por fans. No tiene relación con Rockstar Games ni con Take-Two Interactive, ni cuenta con su respaldo. Grand Theft Auto y GTA son marcas de Take-Two Interactive; se mencionan solo para indicar de qué juego habla el contenido.</p>
+<p>Para consultas, correcciones o pedidos de retiro: <a href="mailto:contacto@wastedmap.com">contacto@wastedmap.com</a>.</p>
+</div></main>
+<footer>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive.<br>
+Los videos y publicaciones son de sus autores y se muestran con el reproductor o el enlace original.<br>
+<a href="../acerca/">Acerca de</a> · <a href="../privacidad/">Privacidad</a> · <a href="../contacto/">Contacto</a></footer>
+<script>
+document.addEventListener("click", ev => {
+  const sp = ev.target.closest(".spoiler-btn");
+  if (sp) { document.querySelectorAll(".spoiler").forEach(x => x.classList.remove("spoiler")); sp.remove(); return; }
+  const m = ev.target.closest(".media[data-yt]");
+  if (m && !m.closest(".spoiler")) {
+    m.outerHTML = `<div class="media"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(m.dataset.yt)}?autoplay=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Video"></iframe></div>`;
+  }
+});
+</script>
+</body>
+</html>

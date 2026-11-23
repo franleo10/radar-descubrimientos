@@ -100,7 +100,8 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 {body}
 </div></main>
 <footer>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive.<br>
-Los videos y publicaciones son de sus autores y se muestran con el reproductor o el enlace original.</footer>
+Los videos y publicaciones son de sus autores y se muestran con el reproductor o el enlace original.<br>
+<a href="{root}acerca/">Acerca de</a> · <a href="{root}privacidad/">Privacidad</a> · <a href="{root}contacto/">Contacto</a></footer>
 <script>
 document.addEventListener("click", ev => {{
   const sp = ev.target.closest(".spoiler-btn");
@@ -215,6 +216,63 @@ def _home_static(entries: list[dict], counts: dict[str, int]) -> str:
     items = "".join(f'<li><a href="d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></li>' for e in entries)
     return f'<p>{cats}</p><ul class="static-list">{items}</ul>'
 
+CONTACT_EMAIL = "contacto@wastedmap.com"
+_MAIL = f'<a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>'
+
+STATIC_PAGES = {
+    "acerca": ("Acerca de WastedMap",
+               "Qué es WastedMap, cómo se arma y quién está detrás. Guía no oficial de GTA 6.",
+               f"""<h1>Acerca de WastedMap</h1>
+<p class="lead">WastedMap junta en un solo lugar los secretos, easter eggs, lugares ocultos y guías de GTA 6 que descubre la comunidad.</p>
+<h2>Cómo funciona</h2>
+<p>Varias veces por día revisamos los videos más vistos y recientes sobre descubrimientos del juego. Cada uno se clasifica por categoría y se resume en español con ayuda de inteligencia artificial. Los que no aportan un hallazgo concreto (noticias, opiniones, memes) se descartan, y cuando varios creadores muestran lo mismo, los juntamos en una sola página.</p>
+<p>Los resúmenes son automáticos y pueden tener errores. Por eso cada página enlaza el video original: si algo no coincide con tu partida, el video es la referencia. Las páginas marcadas como "Sin confirmar" son hallazgos que todavía no están del todo claros.</p>
+<h2>Los creadores</h2>
+<p>Los videos pertenecen a sus autores y se muestran con el reproductor oficial de YouTube, así que las reproducciones cuentan para su canal. Siempre citamos al autor y enlazamos el original. Si sos creador y preferís que tu video no aparezca, escribinos a {_MAIL} y lo retiramos.</p>
+<h2>Aviso legal</h2>
+<p>WastedMap es una guía no oficial hecha por fans. No tiene relación con Rockstar Games ni con Take-Two Interactive, ni cuenta con su respaldo. Grand Theft Auto y GTA son marcas de Take-Two Interactive; se mencionan solo para indicar de qué juego habla el contenido.</p>
+<p>Para consultas, correcciones o pedidos de retiro: {_MAIL}.</p>"""),
+    "privacidad": ("Política de privacidad",
+                   "Qué datos se recopilan al visitar WastedMap y cómo se usan.",
+                   f"""<h1>Política de privacidad</h1>
+<p class="note">Última actualización: 23 de noviembre de 2026.</p>
+<p class="lead">WastedMap no tiene cuentas de usuario ni formularios: no te pedimos ningún dato personal para usar el sitio.</p>
+<h2>Estadísticas de visitas</h2>
+<p>Usamos Cloudflare Web Analytics para saber cuántas personas visitan el sitio y qué páginas leen. Esta herramienta no usa cookies, no guarda tu dirección IP y no te sigue entre sitios: solo recibimos números agregados (visitas, páginas, país, tipo de dispositivo).</p>
+<h2>Alojamiento</h2>
+<p>El sitio está alojado en Cloudflare. Como cualquier servidor web, Cloudflare procesa datos técnicos de cada conexión (como la dirección IP) para entregar las páginas y proteger el sitio de ataques. Podés leer su política en <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">cloudflare.com/privacypolicy</a>.</p>
+<h2>Videos de YouTube</h2>
+<p>Los videos se cargan con el modo de privacidad mejorada de YouTube (youtube-nocookie.com) y recién cuando tocás el botón de reproducir. Hasta ese momento solo se muestra la imagen de portada, que se descarga de los servidores de YouTube sin cookies. Al reproducir un video, YouTube (Google) puede guardar cookies según su <a href="https://policies.google.com/privacy" rel="noopener">política de privacidad</a>.</p>
+<h2>Enlaces externos</h2>
+<p>Las páginas enlazan a los videos y publicaciones originales en otros sitios. Al entrar a esos sitios, se aplican sus propias políticas de privacidad.</p>
+<h2>Publicidad y enlaces de afiliados</h2>
+<p>Por ahora el sitio no muestra publicidad. Si en el futuro sumamos anuncios o enlaces de afiliados, vamos a actualizar esta página antes, explicar qué cookies usan y, cuando corresponda, pedirte el consentimiento.</p>
+<h2>Tus derechos</h2>
+<p>Como no guardamos datos personales tuyos, no hay información para consultar ni borrar. Igual, si tenés cualquier pregunta sobre privacidad, escribinos a {_MAIL}.</p>"""),
+    "contacto": ("Contacto",
+                 "Cómo comunicarte con WastedMap: correcciones, sugerencias y pedidos de retiro de contenido.",
+                 f"""<h1>Contacto</h1>
+<p class="lead">Escribinos a {_MAIL}.</p>
+<h2>Te respondemos por</h2>
+<ul class="sources">
+<li><b>Correcciones:</b> si un resumen tiene un error o un hallazgo no funciona como dice, contanos en qué página y qué viste.</li>
+<li><b>Creadores:</b> si querés que retiremos tu video o que corrijamos cómo te citamos, mandanos el enlace y lo resolvemos en 72 horas como máximo.</li>
+<li><b>Sugerencias:</b> descubrimientos que nos faltan, ideas para el sitio o cualquier otra cosa.</li>
+</ul>
+<p class="note">WastedMap es una guía no oficial: no podemos ayudar con problemas de cuenta, compras o soporte técnico del juego.</p>"""),
+}
+
+
+def _write_static_pages() -> None:
+    for slug, (title, desc, body) in STATIC_PAGES.items():
+        root = "../"
+        page = _layout(title=f"{title} | {config.SITE_NAME}", description=desc,
+                       canonical=f"{config.SITE_URL}/{slug}/", root=root,
+                       body=f'<nav class="crumbs"><a href="{root}">Inicio</a> › {escape(title)}</nav>\n{body}')
+        out = config.DOCS_DIR / slug / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page, encoding="utf-8")
+
 
 def build(entries: list[dict]) -> None:
     """Regenera todas las páginas a partir de las entradas (y agrega 'slug' a cada una)."""
@@ -225,6 +283,8 @@ def build(entries: list[dict]) -> None:
     by_cat: dict[str, list[dict]] = {}
     for e in entries:
         by_cat.setdefault(e.get("categoria") if e.get("categoria") in CATS else "otro", []).append(e)
+
+    _write_static_pages()
 
     # Se regeneran desde cero: así desaparecen las que ya no están (duplicados juntados, etc.).
     for folder in ("d", "c"):
@@ -254,6 +314,7 @@ def build(entries: list[dict]) -> None:
     urls = [(f"{config.SITE_URL}/", entries[0]["published_at"] if entries else "")]
     urls += [(f"{config.SITE_URL}/c/{CATS[k][0]}/", v[0].get("published_at", "")) for k, v in by_cat.items()]
     urls += [(f"{config.SITE_URL}/d/{e['slug']}/", e.get("published_at", "")) for e in entries]
+    urls += [(f"{config.SITE_URL}/{slug}/", "") for slug in STATIC_PAGES]
     sitemap = "".join(f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d[:10]}</lastmod>" if d else "") + "</url>"
                       for u, d in urls)
     (docs / "sitemap.xml").write_text(
