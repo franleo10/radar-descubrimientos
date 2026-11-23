@@ -74,6 +74,15 @@ SCHEMA = {
 }
 
 
+def model_extras() -> dict:
+    """Parámetros que dependen del modelo elegido."""
+    if "haiku" in config.CLAUDE_MODEL:
+        # Haiku no tiene reintento automático en otro modelo (pedirlo da error 400).
+        return {}
+    # Si un filtro de seguridad rechaza la tanda, la API la reintenta sola en otro modelo.
+    return {"betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default"}
+
+
 class Classifier:
     def __init__(self) -> None:
         self.client = anthropic.Anthropic()  # lee ANTHROPIC_API_KEY del entorno
@@ -118,15 +127,10 @@ class Classifier:
             }
             for c in batch
         ]
-        extra = {}
-        if "haiku" not in config.CLAUDE_MODEL:
-            # Si un filtro de seguridad rechaza la tanda, la API la reintenta sola en otro
-            # modelo. Haiku no tiene este reintento (pedirlo da error 400).
-            extra = {"betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default"}
         response = self.client.beta.messages.create(
             model=config.CLAUDE_MODEL,
             max_tokens=16000,
-            **extra,
+            **model_extras(),
             output_config={
                 "effort": "low",  # tarea simple: clasificar y resumir
                 "format": {"type": "json_schema", "schema": SCHEMA},

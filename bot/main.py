@@ -33,6 +33,29 @@ def merge(existing: list[dict], new: list[dict]) -> list[dict]:
     return entries[: config.MAX_ENTRIES]
 
 
+def save_site(entries: list[dict]) -> None:
+    save_json(
+        config.DATA_FILE,
+        {
+            "site_name": config.SITE_NAME,
+            "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "entries": entries,
+        },
+    )
+
+
+def dedupe_all() -> None:
+    """Limpieza única: junta los duplicados que ya están publicados."""
+    from .dedupe import find_duplicates, merge_duplicates
+
+    entries = load_json(config.DATA_FILE, {"entries": []}).get("entries", [])
+    # Del más viejo al más nuevo, para que cada uno se compare con los anteriores.
+    ordered = sorted(entries, key=lambda e: e.get("published_at", ""))
+    merged = merge_duplicates(entries, find_duplicates([], ordered))
+    save_site(merge([], merged))
+    print(f"[bot] limpieza de duplicados: {len(entries)} -> {len(merged)} tarjetas")
+
+
 def run(demo: bool) -> None:
     site = load_json(config.DATA_FILE, {"entries": []})
     # Los datos de ejemplo se borran apenas corre el bot de verdad.
@@ -67,19 +90,29 @@ def run(demo: bool) -> None:
             entry["demo"] = True
         new_entries.append(entry)
 
-    entries = merge(existing, new_entries)
-    save_json(
-        config.DATA_FILE,
-        {
-            "site_name": config.SITE_NAME,
-            "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "entries": entries,
-        },
-    )
-    print(f"[bot] {len(new_entries)} descubrimientos nuevos, {len(entries)} en total")
+    if new_entries and not demo:
+        from .dedupe import find_duplicates, merge_duplicates
+
+        # Los que repiten un hallazgo ya publicado se suman como fuente extra.
+        new_ids = {e["id"] for e in new_entries}
+        combined = merge_duplicates(existing + new_entries, find_duplicates(existing, new_entries))
+        entries = merge([], combined)
+        added = sum(1 for e in entries if e["id"] in new_ids)
+    else:
+        entries = merge(existing, new_entries)
+        added = len(new_entries)
+
+    save_site(entries)
+    print(f"[bot] {added} descubrimientos nuevos, {len(entries)} en total")
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true", help="usar datos de ejemplo")
-    run(ap.parse_args().demo)
+    ap.add_argument("--dedupe-all", action="store_true",
+                    help="juntar los duplicados que ya están publicados (sin buscar nada nuevo)")
+    args = ap.parse_args()
+    if args.dedupe_all:
+        dedupe_all()
+    else:
+        run(args.demo)

@@ -44,6 +44,8 @@ main{padding:18px 16px 40px}
 .card p{margin:0;color:#cfc8de;font-size:15px}
 .how{font-size:14px;color:var(--muted)}
 .how b{color:var(--text)}
+.also{font-size:13px;color:var(--muted)}
+.also a{white-space:nowrap}
 .src{margin-top:auto;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;padding-top:8px;border-top:1px solid var(--line)}
 .empty{color:var(--muted);text-align:center;padding:60px 0}
 .demo-banner{background:var(--warn);color:#1a1200;padding:8px 16px;text-align:center;font-weight:600;font-size:14px}
@@ -105,6 +107,14 @@ function mediaHtml(e){
   return `<div class="media">${e.source === "reddit" ? "Publicación de Reddit" : "Sin vista previa"}</div>`;
 }
 
+function alsoHtml(e){
+  const extra = (e.fuentes_extra || []).filter(s => /^https?:/.test(s.url || ""));
+  if (!extra.length) return "";
+  const links = extra.slice(0, 4).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.author)}</a>`).join(", ");
+  const more = extra.length > 4 ? ` y ${extra.length - 4} más` : "";
+  return `<div class="also">También lo mostraron: ${links}${more}</div>`;
+}
+
 function card(e){
   const src = e.source === "youtube" ? `▶ ${fmtNum(e.popularity)} vistas` : `▲ ${fmtNum(e.popularity)} votos`;
   return `<article class="card${e.spoiler ? " spoiler" : ""}">
@@ -119,6 +129,7 @@ function card(e){
       <h2>${esc(e.titulo)}</h2>
       <p>${esc(e.resumen)}</p>
       ${e.como_conseguirlo ? `<div class="how"><b>Cómo:</b> ${esc(e.como_conseguirlo)}</div>` : ""}
+      ${alsoHtml(e)}
       <div class="src"><span>${esc(e.author)} · ${ago(e.published_at)}</span>
         <a href="${esc(e.url)}" target="_blank" rel="noopener">${src}</a></div>
     </div></article>`;

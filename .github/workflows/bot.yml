@@ -3,7 +3,12 @@ name: Bot de descubrimientos
 on:
   schedule:
     - cron: "0 */6 * * *"   # cada 6 horas (hora UTC)
-  workflow_dispatch: {}      # botón "Run workflow" para correrlo a mano
+  workflow_dispatch:         # botón "Run workflow" para correrlo a mano
+    inputs:
+      limpiar_duplicados:
+        description: "Solo juntar los duplicados ya publicados (no busca nada nuevo)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,7 +35,9 @@ jobs:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
-        run: python -m bot.main
+          DEDUPE_ALL: ${{ inputs.limpiar_duplicados }}
+        run: |
+          if [ "$DEDUPE_ALL" = "true" ]; then python -m bot.main --dedupe-all; else python -m bot.main; fi
       - name: Guardar resultados
         run: |
           git config user.name "discoveries-bot"
