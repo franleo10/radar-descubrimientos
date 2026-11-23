@@ -118,12 +118,15 @@ class Classifier:
             }
             for c in batch
         ]
+        extra = {}
+        if "haiku" not in config.CLAUDE_MODEL:
+            # Si un filtro de seguridad rechaza la tanda, la API la reintenta sola en otro
+            # modelo. Haiku no tiene este reintento (pedirlo da error 400).
+            extra = {"betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default"}
         response = self.client.beta.messages.create(
             model=config.CLAUDE_MODEL,
             max_tokens=16000,
-            # Si un filtro de seguridad rechaza la tanda, la API la reintenta sola en otro modelo.
-            betas=["server-side-fallback-2026-07-01"],
-            fallbacks="default",
+            **extra,
             output_config={
                 "effort": "low",  # tarea simple: clasificar y resumir
                 "format": {"type": "json_schema", "schema": SCHEMA},

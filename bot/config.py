@@ -53,7 +53,7 @@ REDDIT_KEYWORDS = _list(
 )
 
 # --- Claude ---
-CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-opus-5-5")
+CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-haiku-5-5")
 CLAUDE_BATCH_SIZE = int(os.environ.get("CLAUDE_BATCH_SIZE", "15"))
 
 # --- Web ---

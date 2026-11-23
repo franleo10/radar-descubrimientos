@@ -43,7 +43,7 @@ Para una corrida real en tu PC, copiá `.env.example` como `.env` y completalo.
 - `YOUTUBE_QUERIES`: búsquedas separadas con `|`.
 - `YOUTUBE_MIN_VIEWS` (2000) y `REDDIT_MIN_SCORE` (50): popularidad mínima para tener en cuenta algo.
 - `SUBREDDITS`: por defecto `GTA6|GTAVI`.
-- `CLAUDE_MODEL`: por defecto `claude-opus-5-5`. Si querés gastar menos, probá `claude-haiku-5-5`.
+- `CLAUDE_MODEL`: por defecto `claude-haiku-5-5` (el más barato). Si querés resúmenes más finos, probá `claude-sonnet-5-5` o `claude-opus-5-5`, que cuestan más.
 - `SITE_NAME`: el nombre que aparece en la web.
 
 ## Costos estimados
