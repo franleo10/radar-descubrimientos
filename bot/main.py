@@ -34,6 +34,9 @@ def merge(existing: list[dict], new: list[dict]) -> list[dict]:
 
 
 def save_site(entries: list[dict]) -> None:
+    from .pages import build
+
+    build(entries)  # páginas para Google; también agrega "slug" a cada entrada
     save_json(
         config.DATA_FILE,
         {

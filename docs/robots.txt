@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://franleo10.github.io/radar-descubrimientos/sitemap.xml

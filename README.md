@@ -45,6 +45,7 @@ Para una corrida real en tu PC, copiá `.env.example` como `.env` y completalo.
 - `SUBREDDITS`: por defecto `GTA6|GTAVI`.
 - `CLAUDE_MODEL`: por defecto `claude-haiku-5-5` (el más barato). Si querés resúmenes más finos, probá `claude-sonnet-5-5` o `claude-opus-5-5`, que cuestan más.
 - `SITE_NAME`: el nombre que aparece en la web.
+- `SITE_URL`: la dirección pública de la web (para Google y el sitemap). Cuando tengas dominio propio, cargala en *Settings → Secrets and variables → Actions → Variables*.
 
 ## Costos estimados
 

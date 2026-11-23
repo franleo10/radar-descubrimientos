@@ -58,4 +58,6 @@ CLAUDE_BATCH_SIZE = int(os.environ.get("CLAUDE_BATCH_SIZE", "15"))
 
 # --- Web ---
 SITE_NAME = os.environ.get("SITE_NAME", "Radar de Descubrimientos")
+# Dirección pública de la web, sin "/" al final. Cambiala cuando tengas dominio propio.
+SITE_URL = (os.environ.get("SITE_URL") or "https://franleo10.github.io/radar-descubrimientos").rstrip("/")
 MAX_ENTRIES = int(os.environ.get("MAX_ENTRIES", "600"))
