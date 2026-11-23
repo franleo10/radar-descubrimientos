@@ -1,6 +1,6 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-23T16:32:48Z",
+ "updated_at": "2026-11-23T16:42:33Z",
  "entries": [
   {
    "id": "yt:4zVYLPSTvao",
@@ -10,7 +10,7 @@
    "author": "ZacCoxTV",
    "published_at": "2026-11-23T13:17:44Z",
    "title_original": "GTA 6 PLAY AS TOMMY VERCETTI EASTER EGG! (GTA MULTIVERSE)",
-   "popularity": 6480,
+   "popularity": 28302,
    "thumbnail": "https://i.ytimg.com/vi/4zVYLPSTvao/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Easter egg para jugar como Tommy Vercetti",
@@ -29,7 +29,13 @@
      "published_at": "2026-11-23T14:08:16Z"
     }
    ],
-   "slug": "easter-egg-para-jugar-como-tommy-vercetti-37e64"
+   "slug": "easter-egg-para-jugar-como-tommy-vercetti-37e64",
+   "enriched": true,
+   "detalle": "Al activar 12 centrales eléctricas, Jason viaja a una versión de Vice City y se convierte en Tommy Vercetti. En el easter egg aparece Kent Paul, y también se desbloquea la camisa floral azul de Tommy y su moto característica.\n\nEl video muestra las 12 centrales eléctricas (Powerstations) con sus marcas de tiempo.",
+   "pasos": [
+    "Completar las 12 centrales eléctricas (Powerstations) que muestra el video."
+   ],
+   "region": ""
   },
   {
    "id": "yt:jO-0JuxmNlQ",
@@ -49,6 +55,44 @@
    "spoiler": false,
    "confianza": "media",
    "slug": "seis-controles-ocultos-de-gta-6-c7d89"
+  },
+  {
+   "id": "yt:8oxKAffn_Jc",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=8oxKAffn_Jc",
+   "video_id": "8oxKAffn_Jc",
+   "author": "Spawn And Tell",
+   "published_at": "2026-11-23T12:07:22Z",
+   "title_original": "6 hidden cars in GTA 6",
+   "popularity": 10622,
+   "thumbnail": "https://i.ytimg.com/vi/8oxKAffn_Jc/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Seis autos ocultos en GTA 6",
+   "resumen": "Autos raros escondidos en mansiones, astilleros y garajes, entre ellos un Penumbra FF, dos Emerus especiales y un Tempesta dorado. La publicación no detalla ubicaciones exactas.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "slug": "seis-autos-ocultos-en-gta-6-04cc9"
+  },
+  {
+   "id": "yt:eLqnjkmVRnA",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=eLqnjkmVRnA",
+   "video_id": "eLqnjkmVRnA",
+   "author": "Schlayer",
+   "published_at": "2026-11-23T11:49:04Z",
+   "title_original": "Don't miss these 2 RARE cars in GTA 6! 🚗 #gta6 #gta6leaks #gaming",
+   "popularity": 5197,
+   "thumbnail": "https://i.ytimg.com/vi/eLqnjkmVRnA/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Autos raros y dinero en Leonida",
+   "resumen": "Guía que muestra cómo conseguir el Pink Ginn Tulip y el Cherry Bomb Chino, junto con armas como la Guardian ES-18 y la Stand for Stand KZ-59AR, y escondites de dinero que según el video pueden dar hasta $40.000.",
+   "zona": "Leonida",
+   "como_conseguirlo": "El video detalla las ubicaciones exactas de cada ítem en el mapa; la descripción no incluye los pasos concretos, hay que verlo en el video.",
+   "spoiler": false,
+   "confianza": "media",
+   "slug": "autos-raros-y-dinero-en-leonida-38b38"
   },
   {
    "id": "yt:Af7l95NrLXY",
@@ -115,7 +159,7 @@
    "author": "Clips & Tricks",
    "published_at": "2026-11-23T08:03:21Z",
    "title_original": "GTA 6 How to Make Money Early: 6 Best Ways 💰",
-   "popularity": 2095,
+   "popularity": 2195,
    "thumbnail": "https://i.ytimg.com/vi/pvbk01P8x78/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Seis formas de ganar plata al principio",
@@ -124,7 +168,36 @@
    "como_conseguirlo": "Robar tiendas y estaciones de servicio, vender cada tipo de botín a su reducidor, escanear autos con WAiNK y venderlos (Moses sin rastreador en el Cap. 2, Pay 'n' Spray con rastreador, Randy superautos en el Cap. 3). Depositar la plata en un cajero.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "seis-formas-de-ganar-plata-al-principio-628bc"
+   "slug": "seis-formas-de-ganar-plata-al-principio-628bc",
+   "enriched": true,
+   "detalle": "Guía con seis formas de conseguir dinero al principio: robar tiendas y estaciones de servicio, vender el botín a reducidores, asaltar escondites de pandillas y robar autos.\n\nEl botín no cuenta como dinero hasta venderlo, y cada tipo tiene su propio comprador. Moses compra autos sin rastreador en el Capítulo 2, Pay 'n' Spray compra autos con rastreador y Randy paga por superautos de su lista en el Capítulo 3. Los bancos son trabajos de fin de juego.\n\nSi morís o te arrestan perdés lo que llevás encima, así que conviene depositar el dinero en un cajero.",
+   "pasos": [
+    "Robar tiendas y estaciones de servicio",
+    "Vender cada tipo de botín a su reducidor",
+    "Escanear autos con WAiNK",
+    "Vender los autos a Moses, Pay 'n' Spray o Randy según el capítulo",
+    "Depositar la plata en un cajero"
+   ],
+   "region": ""
+  },
+  {
+   "id": "yt:dN2IB_Xll_U",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=dN2IB_Xll_U",
+   "video_id": "dN2IB_Xll_U",
+   "author": "Caspahz",
+   "published_at": "2026-11-23T07:50:58Z",
+   "title_original": "How to Get the FREE Grotti Cheetah in GTA 6 (1010 Mural Mission Reward)",
+   "popularity": 4090,
+   "thumbnail": "https://i.ytimg.com/vi/dN2IB_Xll_U/hqdefault.jpg",
+   "categoria": "mision",
+   "titulo": "Cómo conseguir el Grotti Cheetah gratis",
+   "resumen": "El Grotti Cheetah es la recompensa de completar la misión del mural 1010. La guía muestra los cinco murales y cómo desbloquear el auto.",
+   "zona": "",
+   "como_conseguirlo": "Completar la misión del mural 1010 viendo los cinco murales (intro, mural 1 al 5) y reclamar el Grotti Cheetah como recompensa.",
+   "spoiler": false,
+   "confianza": "media",
+   "slug": "como-conseguir-el-grotti-cheetah-gratis-a772b"
   },
   {
    "id": "yt:ybLbnrwU7vY",
@@ -153,7 +226,7 @@
    "author": "Jay Dunna ",
    "published_at": "2026-11-23T06:59:19Z",
    "title_original": "GTA 6 Chapter 2 COMPLETE WALKTHROUGH (All Missions & Missables)",
-   "popularity": 8927,
+   "popularity": 10661,
    "thumbnail": "https://i.ytimg.com/vi/xU3VMbon1PU/hqdefault.jpg",
    "categoria": "otro",
    "titulo": "Guía completa del capítulo 2",
@@ -162,7 +235,11 @@
    "como_conseguirlo": "",
    "spoiler": true,
    "confianza": "alta",
-   "slug": "guia-completa-del-capitulo-2-e233c"
+   "slug": "guia-completa-del-capitulo-2-e233c",
+   "enriched": true,
+   "detalle": "Es un walkthrough del capítulo 2 que cubre las misiones principales, coleccionables que se pueden perder, un auto legendario, el sombrero de Arthur Morgan y una forma de ganar 15.000 dólares. Incluye spoilers de la historia.\n\nEl video termina con la llegada a Vice City y el inicio del capítulo 3.",
+   "pasos": [],
+   "region": "Port Gellhorn"
   },
   {
    "id": "yt:u9G0LA-wg40",
@@ -210,7 +287,7 @@
    "author": "Dynasty",
    "published_at": "2026-11-23T02:52:11Z",
    "title_original": "GTA 6 – SECRET Pennywise Easter Egg?! (Terrifying IT Killer Clown Encounter)",
-   "popularity": 6387,
+   "popularity": 7244,
    "thumbnail": "https://i.ytimg.com/vi/wZbR4SZDoiI/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Payaso estilo Pennywise en un edificio en construcción",
@@ -219,7 +296,14 @@
    "como_conseguirlo": "Ir a la obra de noche, idealmente cerca de las 3:00 AM, y entrar al ascensor que tiene el globo al lado.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "payaso-estilo-pennywise-en-un-edificio-en-construccion-95125"
+   "slug": "payaso-estilo-pennywise-en-un-edificio-en-construccion-95125",
+   "enriched": true,
+   "detalle": "En un complejo de departamentos en construcción aparece un globo junto a un ascensor supuestamente fuera de servicio. Al entrar al ascensor, Jason encuentra globos y a un payaso con machete llamado Benny, que tiene un parecido con Pennywise.\n\nSegún el video, el ascensor puede usarse para volver al lobby después del encuentro, y en el techo hay un paracaídas cerca de uno de los accesos.",
+   "pasos": [
+    "Ir a la obra de noche, idealmente cerca de las 3:00 AM.",
+    "Entrar al ascensor que tiene el globo al lado."
+   ],
+   "region": "Complejo de departamentos en construcción"
   },
   {
    "id": "yt:7vBHXYbx5Zg",
@@ -248,7 +332,7 @@
    "author": "Misleading",
    "published_at": "2026-11-23T02:24:24Z",
    "title_original": "Get $20,000 + a SECRET Truck & SMG in GTA 6!",
-   "popularity": 40892,
+   "popularity": 41363,
    "thumbnail": "https://i.ytimg.com/vi/oGU_oNPXtgQ/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "20.000 dólares, SMG Chronic Vatra y camioneta única",
@@ -257,7 +341,11 @@
    "como_conseguirlo": "Seguí la ruta por el Industrial Weed Grow que muestra el video y agarrá las recompensas.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "20-000-dolares-smg-chronic-vatra-y-camioneta-unica-f70cb"
+   "slug": "20-000-dolares-smg-chronic-vatra-y-camioneta-unica-f70cb",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "Industrial Weed Grow"
   },
   {
    "id": "yt:WWzQJBIwpQM",
@@ -305,7 +393,7 @@
    "author": "MrDalekJD",
    "published_at": "2026-11-23T01:58:07Z",
    "title_original": "GTA 6 SECRET SATAN BOSS FIGHT EASTER EGG! (PERMANENT Health Boost & Legendary Shotgun)",
-   "popularity": 29983,
+   "popularity": 31324,
    "thumbnail": "https://i.ytimg.com/vi/ccnkCxGBHKc/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "Jefe Satanás: escopeta legendaria y salud permanente",
@@ -324,7 +412,17 @@
      "published_at": "2026-11-23T07:15:06Z"
     }
    ],
-   "slug": "jefe-satanas-escopeta-legendaria-y-salud-permanente-29c2d"
+   "slug": "jefe-satanas-escopeta-legendaria-y-salud-permanente-29c2d",
+   "enriched": true,
+   "detalle": "En el norte de Port Gellhorn hay una casa con el graffiti 'Welcome to Hell-Hole' en el frente. Si la visitás de noche y mirás la fogata, la pelea te lleva al infierno: es un jefe estilo DOOM con demonios y enemigos que explotan.\n\nLa recompensa es la escopeta Hellspawn Comshot 12 (roja y única), una mejora permanente de salud máxima, la remera Circles of Hell y nuevos diseños de tatuajes.\n\nSi el garaje no abre, el video recomienda alejarse unos 800 metros y volver a la siguiente hora del juego, repitiendo hasta que se abra.",
+   "pasos": [
+    "Ir de noche a la casa con el graffiti 'Welcome to Hell-Hole' en el norte de Port Gellhorn.",
+    "Juntarte con Beelzebub y Dave.",
+    "Subir a su camioneta y mirar la fogata para ser llevado al infierno.",
+    "Si el garaje está cerrado, alejarte unos 800 metros y volver a la siguiente hora del juego.",
+    "Repetir el paso anterior hasta que el garaje abra."
+   ],
+   "region": "Port Gellhorn"
   },
   {
    "id": "yt:BgHEX8IpviA",
@@ -334,7 +432,7 @@
    "author": "CovertMF",
    "published_at": "2026-11-23T01:46:16Z",
    "title_original": "GTA 6 – Make Robberies MUCH Easier! (Chapter 2 Tips & Tricks)",
-   "popularity": 55861,
+   "popularity": 67312,
    "thumbnail": "https://i.ytimg.com/vi/BgHEX8IpviA/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Consejos para robos en el capítulo 2",
@@ -343,7 +441,15 @@
    "como_conseguirlo": "Guardar máscaras y outfits en el baúl del vehículo, usar entradas alternativas y el modo foco, y vender las bolsas en el tráiler de Dunk después de la misión Slam Dunk.",
    "spoiler": true,
    "confianza": "alta",
-   "slug": "consejos-para-robos-en-el-capitulo-2-a0c73"
+   "slug": "consejos-para-robos-en-el-capitulo-2-a0c73",
+   "enriched": true,
+   "detalle": "Consejos para robos en el Capítulo 2 alrededor de Port Gellhorn. Incluye dónde encontrar la Truth & Justice Caracara, la Smuggler Caracara y la Firebug Dominator, cómo desactivar alarmas, borrar grabaciones de CCTV y abrir cajas fuertes.\n\nTambién explica cómo guardar máscaras y outfits en el baúl del vehículo, usar entradas alternativas y el modo foco, y vender las bolsas de botín en el tráiler de Dunk después de la misión Slam Dunk.",
+   "pasos": [
+    "Guardar máscaras y outfits en el baúl del vehículo.",
+    "Usar entradas alternativas y el modo foco.",
+    "Vender las bolsas de botín en el tráiler de Dunk después de la misión Slam Dunk."
+   ],
+   "region": "Port Gellhorn"
   },
   {
    "id": "yt:6_zu1ZOwLFo",
@@ -353,7 +459,7 @@
    "author": "NickPlaysGames",
    "published_at": "2026-11-23T01:45:07Z",
    "title_original": "How To Remove Advanced Trackers on Exotic Cars in GTA 6",
-   "popularity": 81400,
+   "popularity": 83646,
    "thumbnail": "https://i.ytimg.com/vi/6_zu1ZOwLFo/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Cómo quitar rastreadores avanzados a los autos exóticos",
@@ -362,7 +468,15 @@
    "como_conseguirlo": "En el capítulo 3, desbloqueá la Wish List de Randy en Leonida Auto World. Después hacé la misión secreta \"¡Dale Mamba!\" en Leaf Links para robar el Declasse Mamba GT '64. Con eso se habilita el registro de exóticos en el Pay 'n' Spray.",
    "spoiler": true,
    "confianza": "alta",
-   "slug": "como-quitar-rastreadores-avanzados-a-los-autos-exoticos-ec387"
+   "slug": "como-quitar-rastreadores-avanzados-a-los-autos-exoticos-ec387",
+   "enriched": true,
+   "detalle": "Explica cómo quitar el rastreador GPS avanzado (rojo) de los superautos robados para poder registrarlos como vehículo personal en el Pay 'n' Spray. Sin ese paso, el taller rechaza el auto.\n\nEl proceso requiere avanzar en la historia hasta el capítulo 3 y completar una misión secreta.",
+   "pasos": [
+    "En el capítulo 3, desbloquear la Wish List de Randy en Leonida Auto World.",
+    "Completar la misión secreta \"¡Dale Mamba!\" en Leaf Links para robar el Declasse Mamba GT '64.",
+    "Con eso habilitado, registrar el exótico en el Pay 'n' Spray."
+   ],
+   "region": "Leonida Auto World, Leaf Links"
   },
   {
    "id": "yt:0OagpFy3SDc",
@@ -391,7 +505,7 @@
    "author": "TheGamingRevolution",
    "published_at": "2026-11-23T01:34:54Z",
    "title_original": "GTA 6 - Secret Mario Easter Egg Location (Free Jason & Lucia Hats)",
-   "popularity": 2557,
+   "popularity": 2592,
    "thumbnail": "https://i.ytimg.com/vi/4W5aSkPq5Cg/hqdefault.jpg",
    "categoria": "coleccionable",
    "titulo": "Bloque de Mario con gorras J y L gratis",
@@ -400,7 +514,15 @@
    "como_conseguirlo": "Ir al campamento de ruinas de ladrillo, ubicar el bloque flotante sobre el arroyo y saltar debajo para golpearlo.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "bloque-de-mario-con-gorras-j-y-l-gratis-b013d"
+   "slug": "bloque-de-mario-con-gorras-j-y-l-gratis-b013d",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [
+    "Ir al campamento de ruinas de ladrillo",
+    "Ubicar el bloque flotante sobre el arroyo",
+    "Saltar debajo para golpearlo"
+   ],
+   "region": "Mina MacAlister"
   },
   {
    "id": "yt:2r-ejiWtmj8",
@@ -486,7 +608,7 @@
    "author": "Misleading",
    "published_at": "2026-11-23T01:20:21Z",
    "title_original": "Get Moses’s SECRET Reward Car in GTA 6! All Vehicle Locations",
-   "popularity": 126489,
+   "popularity": 128607,
    "thumbnail": "https://i.ytimg.com/vi/5cdXnYDeitQ/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Sultan secreto de recompensa de Moses",
@@ -495,7 +617,15 @@
    "como_conseguirlo": "Conseguí los vehículos que Moses pide por mensaje y entregáselos. Si alguno no aparece, esperá su próximo mensaje antes de ir.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "sultan-secreto-de-recompensa-de-moses-b3f60"
+   "slug": "sultan-secreto-de-recompensa-de-moses-b3f60",
+   "enriched": true,
+   "detalle": "Moses pide ciertos vehículos por mensaje y, al entregarlos, recompensa con un Sultan secreto. El video muestra dónde encontrar cada vehículo.\n\nSi algún vehículo no aparece, hay que esperar el próximo mensaje de Moses antes de ir.",
+   "pasos": [
+    "Conseguir los vehículos que Moses pide por mensaje.",
+    "Entregárselos a Moses.",
+    "Si algún vehículo no aparece, esperar su próximo mensaje antes de ir."
+   ],
+   "region": ""
   },
   {
    "id": "yt:mrN2Hvh5eBA",
@@ -505,7 +635,7 @@
    "author": "TheProfessional",
    "published_at": "2026-11-23T01:19:41Z",
    "title_original": "GTA 6 How To Get The Good Ending In Kyle's Stranger Mission And  $10,000 Meth, Unique Gun And Bike",
-   "popularity": 11938,
+   "popularity": 12486,
    "thumbnail": "https://i.ytimg.com/vi/mrN2Hvh5eBA/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "Final bueno de la misión de Kyle y recompensas únicas",
@@ -514,7 +644,17 @@
    "como_conseguirlo": "Conocer a Kyle, conseguir los químicos del MC Final Chapter, lidiar con el equipo hazmat, elegir el final bueno y después volver al laboratorio para buscar la meta, el arma y la moto.",
    "spoiler": true,
    "confianza": "alta",
-   "slug": "final-bueno-de-la-mision-de-kyle-y-recompensas-unicas-191e8"
+   "slug": "final-bueno-de-la-mision-de-kyle-y-recompensas-unicas-191e8",
+   "enriched": true,
+   "detalle": "Es la guía para completar la misión de extraño de Kyle con el final bueno. Según el video, al volver al laboratorio de metanfetamina después de la misión se consiguen 10.000 dólares en meta, un arma única y una moto única.\n\nLa guía recorre el proceso completo: cómo conocer a Kyle, cómo conseguir los químicos del MC Final Chapter, cómo lidiar con el equipo hazmat y cómo elegir el final bueno en lugar del malo.",
+   "pasos": [
+    "Conocer a Kyle.",
+    "Conseguir los químicos del MC Final Chapter.",
+    "Lidiar con el equipo hazmat.",
+    "Elegir el final bueno.",
+    "Volver al laboratorio de metanfetamina y buscar la meta, el arma única y la moto única."
+   ],
+   "region": ""
   },
   {
    "id": "yt:F8QqCqhDw8w",
@@ -524,7 +664,7 @@
    "author": "Maka91Productions",
    "published_at": "2026-11-23T01:17:02Z",
    "title_original": "GTA 6 - Dom's Charger (Fast & Furious Secret Car) Location Guide",
-   "popularity": 6836,
+   "popularity": 7631,
    "thumbnail": "https://i.ytimg.com/vi/F8QqCqhDw8w/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Ubicación del Charger de Dom (Rápidos y Furiosos)",
@@ -543,7 +683,14 @@
      "published_at": "2026-11-23T04:35:31Z"
     }
    ],
-   "slug": "ubicacion-del-charger-de-dom-rapidos-y-furiosos-f3051"
+   "slug": "ubicacion-del-charger-de-dom-rapidos-y-furiosos-f3051",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [
+    "Ir a la ubicación indicada en el mapa.",
+    "Registrar el vehículo para guardarlo en el garaje."
+   ],
+   "region": "Leonida"
   },
   {
    "id": "yt:YIHoJBaUACE",
@@ -553,7 +700,7 @@
    "author": "2 PLAYER MX",
    "published_at": "2026-11-23T01:15:21Z",
    "title_original": "¡Puedes entrar a OTRA DIMENSIÓN en GTA 6!",
-   "popularity": 4324,
+   "popularity": 4378,
    "thumbnail": "https://i.ytimg.com/vi/YIHoJBaUACE/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Easter egg del viaje psicodélico (Mushroom Trip)",
@@ -562,7 +709,17 @@
    "como_conseguirlo": "Buscar la zona de excavaciones cerca de una operación de la banda M7, entrar al contenedor y revisar el objeto marcado con ??? sobre la mesa. Después superar el recorrido de plataformas y la zona bajo el agua hasta llegar al final. Lleva unos 10 minutos.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "easter-egg-del-viaje-psicodelico-mushroom-trip-9024d"
+   "slug": "easter-egg-del-viaje-psicodelico-mushroom-trip-9024d",
+   "enriched": true,
+   "detalle": "Es un easter egg que transporta a Jason a un mundo psicodélico con plataformas flotantes y contenedores imposibles, conocido por la comunidad como Mushroom Trip o Backrooms Easter Egg.\n\nLas recompensas reportadas son una mejora permanente de resistencia máxima y un nuevo diseño de tatuaje. Según el video, se puede encontrar desde las primeras horas del juego y tarda unos 10 minutos en completarse.",
+   "pasos": [
+    "Buscar la zona de excavaciones cerca de una operación de la banda M7",
+    "Entrar al contenedor y revisar el objeto marcado con ??? sobre la mesa",
+    "Superar el recorrido de plataformas",
+    "Atravesar la zona bajo el agua",
+    "Llegar hasta el final para volver al mundo normal"
+   ],
+   "region": "Millport"
   },
   {
    "id": "yt:yfvXnuY5YrU",
@@ -572,7 +729,7 @@
    "author": "Maka91Productions",
    "published_at": "2026-11-23T01:06:01Z",
    "title_original": "GTA 6 - Dom's Chevelle (Fast & Furious Secret Car) Location Guide",
-   "popularity": 3420,
+   "popularity": 3791,
    "thumbnail": "https://i.ytimg.com/vi/yfvXnuY5YrU/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Ubicación del Chevelle de Dom (Rápidos y Furiosos)",
@@ -581,7 +738,14 @@
    "como_conseguirlo": "Ir a la ubicación indicada en el mapa y registrar el vehículo para guardarlo en el garaje.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "ubicacion-del-chevelle-de-dom-rapidos-y-furiosos-fb713"
+   "slug": "ubicacion-del-chevelle-de-dom-rapidos-y-furiosos-fb713",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [
+    "Ir a la ubicación indicada en el mapa",
+    "Registrar el vehículo para guardarlo en el garaje"
+   ],
+   "region": "Leonida"
   },
   {
    "id": "yt:FpKSDSGVTGg",
@@ -591,7 +755,7 @@
    "author": "Imack Studios",
    "published_at": "2026-11-23T01:01:12Z",
    "title_original": "AUNTIE'S PLACE LOCATION AND ACCESS CODE GTA 6! (HOW TO FIND AUNTIE'S PLACE)",
-   "popularity": 3674,
+   "popularity": 4033,
    "thumbnail": "https://i.ytimg.com/vi/FpKSDSGVTGg/hqdefault.jpg",
    "categoria": "ubicacion_secreta",
    "titulo": "Ubicación y código de acceso de Auntie's Place",
@@ -600,7 +764,34 @@
    "como_conseguirlo": "Ir a la entrada, ubicar el teclado e ingresar el código que se muestra en el video.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "ubicacion-y-codigo-de-acceso-de-auntie-s-place-21732"
+   "slug": "ubicacion-y-codigo-de-acceso-de-auntie-s-place-21732",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [
+    "Ir a la entrada del edificio",
+    "Ubicar el teclado de acceso",
+    "Ingresar el código que se muestra en el video"
+   ],
+   "region": ""
+  },
+  {
+   "id": "yt:Qw2roxJHM2o",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=Qw2roxJHM2o",
+   "video_id": "Qw2roxJHM2o",
+   "author": "Born Wanted",
+   "published_at": "2026-11-23T01:00:28Z",
+   "title_original": "8 Rare Vehicles In GTA 6 (And Exactly Where To Find Them).",
+   "popularity": 31085,
+   "thumbnail": "https://i.ytimg.com/vi/Qw2roxJHM2o/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Ocho vehículos raros y dónde encontrarlos",
+   "resumen": "Lista ocho vehículos raros con su ubicación, como un Pegassi Infernus en el nivel 7 de un garaje de comisaría, un Penumbra FF y un Emerus Royal Ruby. Incluye qué obstáculos hay y el costo de mantenerlos.",
+   "zona": "Garaje de comisaría nivel 7; Vespucci Island; Key Lento; M7 junkyard",
+   "como_conseguirlo": "Ir al garaje de la comisaría en el nivel 7 y salir por un salto acrobático desde el techo para el Infernus; los demás autos se ubican en los lugares indicados en el video.",
+   "spoiler": false,
+   "confianza": "media",
+   "slug": "ocho-vehiculos-raros-y-donde-encontrarlos-b2e66"
   },
   {
    "id": "yt:zyWszhA3Upw",
@@ -610,7 +801,7 @@
    "author": "Robbin Rams",
    "published_at": "2026-11-23T00:29:23Z",
    "title_original": "GTA 6: ALL Underwater Research Facilities & Meteorite Locations!",
-   "popularity": 42643,
+   "popularity": 44137,
    "thumbnail": "https://i.ytimg.com/vi/zyWszhA3Upw/hqdefault.jpg",
    "categoria": "ubicacion_secreta",
    "titulo": "Instalaciones de investigación submarinas y el meteorito",
@@ -619,7 +810,30 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "instalaciones-de-investigacion-submarinas-y-el-meteorito-bc379"
+   "slug": "instalaciones-de-investigacion-submarinas-y-el-meteorito-bc379",
+   "enriched": true,
+   "detalle": "Recorrido por todas las instalaciones de investigación submarinas de Leonida y la ubicación de un meteorito misterioso, con las pistas que los conectan. El video no detalla pasos concretos para llegar a cada una.",
+   "pasos": [],
+   "region": "Leonida, bajo el mar"
+  },
+  {
+   "id": "yt:FEBCk0oEChQ",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=FEBCk0oEChQ",
+   "video_id": "FEBCk0oEChQ",
+   "author": "GTA6 Gaming Clips",
+   "published_at": "2026-11-23T00:09:17Z",
+   "title_original": "GTA 6 Rare Cars Early (3 Gang Rides in Chapter 2)",
+   "popularity": 4795,
+   "thumbnail": "https://i.ytimg.com/vi/FEBCk0oEChQ/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Tres vehículos de pandillas robables temprano",
+   "resumen": "Tres vehículos de pandilla que se pueden robar en el capítulo 2: Vapid Smuggler Caracara, Dominator y LCC Monarch Avarus. Requiere desbloquear antes a Moses, el encubridor de autos.",
+   "zona": "Port Gellhorn; Ambrosia",
+   "como_conseguirlo": "Desbloquear a Moses. Caracara: entrar a la casa allanada por la policía en el norte de Port Gellhorn, tomar el código de la caja fuerte y llevarse la camioneta del medio del predio; no personalizarla en la tienda off-road porque pierde su variante rara. Dominator: estacionado frente al edificio de la pandilla en el oeste de Port Gellhorn, junto al agua. Monarch Avarus: refugio de motociclistas en Ambrosia, en el patio del bar; llevar explosivos.",
+   "spoiler": false,
+   "confianza": "media",
+   "slug": "tres-vehiculos-de-pandillas-robables-temprano-e5fd4"
   },
   {
    "id": "yt:8hQqKFpxO0Q",
@@ -667,7 +881,7 @@
    "author": "LunarGaming",
    "published_at": "2026-11-23T00:00:27Z",
    "title_original": "GTA 6 – All LEGENDARY Revolver Locations (Rare & Unique Weapons)",
-   "popularity": 3985,
+   "popularity": 4560,
    "thumbnail": "https://i.ytimg.com/vi/CdYIk_8AEC8/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "Ubicación de los 11 revólveres legendarios",
@@ -676,7 +890,11 @@
    "como_conseguirlo": "Los revólveres Hawk y Little Morgan están en la Vercetti Estate; el resto aparece en contenedores de carga, baúles de vehículos, operaciones ilegales y los pantanos, según los timestamps del video.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "ubicacion-de-los-11-revolveres-legendarios-cc312"
+   "slug": "ubicacion-de-los-11-revolveres-legendarios-cc312",
+   "enriched": true,
+   "detalle": "Guía con las ubicaciones de los 11 revólveres legendarios únicos, incluyendo variantes de H&L .38, Mustang .357, WCR-1 y Akulus, y uno exclusivo de la Ultimate Edition.\n\nLos revólveres Hawk y Little Morgan están en la Vercetti Estate. El resto aparece en contenedores de carga, baúles de vehículos, operaciones ilegales, pantanos o armerías, según los timestamps del video.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:mUL7QDiHzIE",
@@ -705,7 +923,7 @@
    "author": "BennyCentral",
    "published_at": "2026-11-22T23:45:21Z",
    "title_original": "GTA 6 - 100 HUGE Tips You NEED to Know (Don't Make These Mistakes)",
-   "popularity": 163979,
+   "popularity": 177009,
    "thumbnail": "https://i.ytimg.com/vi/X54pK6784-c/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "100 consejos para empezar",
@@ -714,7 +932,15 @@
    "como_conseguirlo": "Antes de que termine el Capítulo 1 poné $5.000 en Family Savings y comprá armas y ropa. Código del garage Growler gratis cerca de Auntie's Place: 92665.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "100-consejos-para-empezar-8d516"
+   "slug": "100-consejos-para-empezar-8d516",
+   "enriched": true,
+   "detalle": "Consejos generales para empezar en GTA 6. Antes de que termine el Capítulo 1 conviene poner $5.000 en Family Savings y comprar armas y ropa, porque el reinicio de dinero borra lo que no está guardado.\n\nTambién hay un garage Growler gratis cerca de Auntie's Place, en La Perle, con el código 92665.",
+   "pasos": [
+    "Antes de que termine el Capítulo 1, poner $5.000 en Family Savings.",
+    "Comprar armas y ropa antes del reinicio.",
+    "Usar el código 92665 para obtener el garage Growler gratis, cerca de Auntie's Place."
+   ],
+   "region": "La Perle"
   },
   {
    "id": "yt:-NVWgFahF6Q",
@@ -724,7 +950,7 @@
    "author": "T5G",
    "published_at": "2026-11-22T23:18:41Z",
    "title_original": "30 Secrets & Easter Eggs In GTA 6! #2",
-   "popularity": 458567,
+   "popularity": 484121,
    "thumbnail": "https://i.ytimg.com/vi/-NVWgFahF6Q/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Recopilación de 30 secretos y easter eggs (parte 2)",
@@ -733,7 +959,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "recopilacion-de-30-secretos-y-easter-eggs-parte-2-6f871"
+   "slug": "recopilacion-de-30-secretos-y-easter-eggs-parte-2-6f871",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:DMuB_981H2o",
@@ -743,7 +973,7 @@
    "author": "ZacCoxTV",
    "published_at": "2026-11-22T23:00:52Z",
    "title_original": "50 GTA 6 Easter Eggs That You MISSED!",
-   "popularity": 29256,
+   "popularity": 31723,
    "thumbnail": "https://i.ytimg.com/vi/DMuB_981H2o/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "50 easter eggs: sombrero de Arthur Morgan, fantasmas del faro y más",
@@ -752,7 +982,14 @@
    "como_conseguirlo": "Para el fantasma del faro, estar en el agua cerca de Little Hardin Island a la 1:30 AM. El sombrero se compra por $35 en la venta de garaje de Port Gellhorn.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "50-easter-eggs-sombrero-de-arthur-morgan-fantasmas-del-faro-45246"
+   "slug": "50-easter-eggs-sombrero-de-arthur-morgan-fantasmas-del-faro-45246",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [
+    "Ir a la venta de garaje de Port Gellhorn y comprar el sombrero de Arthur Morgan por $35.",
+    "Para el fantasma del faro, estar en el agua cerca de Little Hardin Island a la 1:30 AM."
+   ],
+   "region": ""
   },
   {
    "id": "yt:PH-KkLXeC9Q",
@@ -762,7 +999,7 @@
    "author": "RageGamingVideos",
    "published_at": "2026-11-22T23:00:09Z",
    "title_original": "GTA 6 - WARNING: Do THIS Straight Away in Chapter 3 - Best Missable Permanent Buff & INFINITE Money!",
-   "popularity": 122844,
+   "popularity": 133203,
    "thumbnail": "https://i.ytimg.com/vi/PH-KkLXeC9Q/hqdefault.jpg",
    "categoria": "coleccionable",
    "titulo": "Desbloqueos perdibles del capítulo 3",
@@ -771,7 +1008,11 @@
    "como_conseguirlo": "",
    "spoiler": true,
    "confianza": "media",
-   "slug": "desbloqueos-perdibles-del-capitulo-3-3234f"
+   "slug": "desbloqueos-perdibles-del-capitulo-3-3234f",
+   "enriched": true,
+   "detalle": "La guía repasa ítems y mejoras permanentes que se pueden perder en el capítulo 3. Entre los temas que aparecen en los capítulos del video están el Dazzler DW-9, el Iron & Oak WCR1, la San4San K17, el Bourbon Windsor, el Purple Drank Emerus, la Quarter Mile ES9 y un aumento permanente de las estadísticas principales.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:zv8j6pfah90",
@@ -781,7 +1022,7 @@
    "author": "Arekkz Gaming",
    "published_at": "2026-11-22T23:00:05Z",
    "title_original": "GTA 6 - How to Get the SECRET GOLD PISTOL! (Guardian ES18 Location)",
-   "popularity": 6640,
+   "popularity": 6837,
    "thumbnail": "https://i.ytimg.com/vi/zv8j6pfah90/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "Pistola dorada Guardian ES18",
@@ -790,7 +1031,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "pistola-dorada-guardian-es18-9aa9e"
+   "slug": "pistola-dorada-guardian-es18-9aa9e",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:suVVXEOLsOs",
@@ -810,6 +1055,25 @@
    "spoiler": false,
    "confianza": "media",
    "slug": "robos-de-joyerias-sin-policia-78bed"
+  },
+  {
+   "id": "yt:nZktTCqKU_o",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=nZktTCqKU_o",
+   "video_id": "nZktTCqKU_o",
+   "author": "Taggy Gamer",
+   "published_at": "2026-11-22T22:52:59Z",
+   "title_original": "Police Ke Saamne Rare Car Chori 😱 #gta6",
+   "popularity": 11341,
+   "thumbnail": "https://i.ytimg.com/vi/nZktTCqKU_o/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Robo de auto clásico frente a la policía",
+   "resumen": "Muestra un robo de un auto clásico de Vice City frente a la policía, según un clip de Mythpat. Es un hecho de gameplay sin procedimiento claro.",
+   "zona": "Vice City",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "slug": "robo-de-auto-clasico-frente-a-la-policia-41057"
   },
   {
    "id": "yt:KY1mMAMjomA",
@@ -838,7 +1102,7 @@
    "author": "Fateh2r Gaming",
    "published_at": "2026-11-22T22:35:28Z",
    "title_original": "2 Secrets You Missed in Jason's Burned House in GTA 6 😳 #gta6 #gta6gameplay #gaming",
-   "popularity": 79399,
+   "popularity": 86651,
    "thumbnail": "https://i.ytimg.com/vi/avPpY0IIgPY/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Secretos en la casa quemada de Jason",
@@ -847,7 +1111,15 @@
    "como_conseguirlo": "Volvé a la casa quemada de Jason, buscá el escondite con el dinero y mirá detrás de la escalera para ver a la serpiente.",
    "spoiler": true,
    "confianza": "media",
-   "slug": "secretos-en-la-casa-quemada-de-jason-d867f"
+   "slug": "secretos-en-la-casa-quemada-de-jason-d867f",
+   "enriched": true,
+   "detalle": "En la casa quemada de Jason hay dos secretos que se pueden pasar por alto. Si volvés a la casa, encontrás un escondite con $5.000 y una foto antigua de su mamá y de su vida en el ejército.\n\nDetrás de la escalera está la serpiente mascota de Jason, que sobrevivió y puso huevos.",
+   "pasos": [
+    "Volvé a la casa quemada de Jason.",
+    "Buscá el escondite con el dinero.",
+    "Mirá detrás de la escalera para ver a la serpiente."
+   ],
+   "region": "Casa quemada de Jason"
   },
   {
    "id": "yt:r4eRjMuXc5g",
@@ -876,7 +1148,7 @@
    "author": "ChazSG",
    "published_at": "2026-11-22T22:26:44Z",
    "title_original": "How to Get the Royal Ruby Emerus in GTA 6 🏎️🔴 (Any Chapter)",
-   "popularity": 2557,
+   "popularity": 2627,
    "thumbnail": "https://i.ytimg.com/vi/uTXSQDudREI/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Royal Ruby Emerus en GTA 6",
@@ -885,7 +1157,17 @@
    "como_conseguirlo": "Llegar a la mansión con puertas en Vespucci Island, escalar el muro y abrir la puerta desde adentro (cuidado con los guardias armados). El auto queda desbloqueado en el garaje. Registrarlo en un Pay 'n' Spray por $29,900 desde el Capítulo 2.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "royal-ruby-emerus-en-gta-6-f43b0"
+   "slug": "royal-ruby-emerus-en-gta-6-f43b0",
+   "enriched": true,
+   "detalle": "El Royal Ruby Emerus está en una mansión con vigilancia en Vespucci Island, Rialto Islands. Hay guardias armados en el terreno, así que conviene revisar la zona antes.\n\nSe puede tomar en cualquier momento de la historia, pero solo se registra a partir del Capítulo 2 en un Pay 'n' Spray por $29,900. En el Capítulo 1 solo se puede guardar en el garaje. Sus estadísticas reportadas son velocidad 8.6, aceleración 8.4 y manejo en asfalto 8.4.",
+   "pasos": [
+    "Llegar a la mansión con puertas en Vespucci Island",
+    "Escalar el muro",
+    "Abrir la puerta desde adentro",
+    "Ubicar el auto desbloqueado en el garaje",
+    "Registrarlo en un Pay 'n' Spray por $29,900 desde el Capítulo 2"
+   ],
+   "region": "Vespucci Island"
   },
   {
    "id": "yt:ilppoOSDZbc",
@@ -914,7 +1196,7 @@
    "author": "ConCon",
    "published_at": "2026-11-22T22:15:37Z",
    "title_original": "How to get Snap Gun for EASY Unlocking Doors | \"Yasmani's Jewelry Jobs\" Mission Guide ► GTA 6",
-   "popularity": 7429,
+   "popularity": 7898,
    "thumbnail": "https://i.ytimg.com/vi/dzVi7AGxnsw/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Snap Gun para abrir puertas sin alarma",
@@ -923,7 +1205,15 @@
    "como_conseguirlo": "Durante la misión, robar Casa De Empeño para obtener la cadena Buffalo Skull, conseguir la Snap Gun y usarla en Richardson Jewelry.",
    "spoiler": true,
    "confianza": "alta",
-   "slug": "snap-gun-para-abrir-puertas-sin-alarma-eb78f"
+   "slug": "snap-gun-para-abrir-puertas-sin-alarma-eb78f",
+   "enriched": true,
+   "detalle": "Durante la misión de las joyerías de Yasmani se puede conseguir la Snap Gun, un arma que abre puertas sin ruido ni alarmas. El video también explica cómo obtener el trofeo Sneakthief robando una joyería sin ser detectado.",
+   "pasos": [
+    "Robar Casa De Empeño para obtener la cadena Buffalo Skull.",
+    "Conseguir la Snap Gun.",
+    "Usar la Snap Gun en Richardson Jewelry."
+   ],
+   "region": ""
   },
   {
    "id": "yt:oWriR3nUhgE",
@@ -990,7 +1280,7 @@
    "author": "Espresso",
    "published_at": "2026-11-22T22:03:05Z",
    "title_original": "GTA 6: 7 MUST HAVE Items That Completely Change the Game...",
-   "popularity": 39501,
+   "popularity": 40472,
    "thumbnail": "https://i.ytimg.com/vi/HB386XvCkVg/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Herramientas clave para robos y autos",
@@ -999,7 +1289,11 @@
    "como_conseguirlo": "Avanzá en la historia: el Slim Jim se desbloquea en el capítulo 2; el video explica cómo obtener el resto.",
    "spoiler": true,
    "confianza": "alta",
-   "slug": "herramientas-clave-para-robos-y-autos-ae27f"
+   "slug": "herramientas-clave-para-robos-y-autos-ae27f",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:XQHeX6MrRG8",
@@ -1047,7 +1341,7 @@
    "author": "PowerPyx",
    "published_at": "2026-11-22T21:59:10Z",
    "title_original": "GTA 6 - Hidden Charges Walkthrough - All Cell Tower Locations (East Cell, West Cell, South Tower)",
-   "popularity": 17024,
+   "popularity": 17948,
    "thumbnail": "https://i.ytimg.com/vi/k7UaLqTKFlI/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "Guía de Hidden Charges: las tres antenas",
@@ -1056,7 +1350,14 @@
    "como_conseguirlo": "Subí por el ascensor del lobby de cada edificio hasta la azotea o llegá en helicóptero a las antenas Este, Oeste y Sur.",
    "spoiler": true,
    "confianza": "alta",
-   "slug": "guia-de-hidden-charges-las-tres-antenas-66620"
+   "slug": "guia-de-hidden-charges-las-tres-antenas-66620",
+   "enriched": true,
+   "detalle": "La misión principal Hidden Charges, del capítulo 3, pide encontrar tres torres de celular: la Este, la Oeste y la Sur. Están en azoteas de edificios.\n\nPodés subir por el ascensor del lobby de cada edificio o llegar en helicóptero.",
+   "pasos": [
+    "Subir por el ascensor del lobby de cada edificio hasta la azotea, o llegar en helicóptero.",
+    "Encontrar la antena Este, la antena Oeste y la antena Sur."
+   ],
+   "region": ""
   },
   {
    "id": "yt:b2iIu_WEb4s",
@@ -1123,7 +1424,7 @@
    "author": "TOAD STYLE",
    "published_at": "2026-11-22T21:04:36Z",
    "title_original": "GTA 6 Melee Combat Guide – ALL Secret Fighting Moves & Techniques!",
-   "popularity": 46181,
+   "popularity": 48078,
    "thumbnail": "https://i.ytimg.com/vi/5yW4B4PnVc8/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Guía de combate cuerpo a cuerpo con movimientos secretos",
@@ -1132,7 +1433,15 @@
    "como_conseguirlo": "Usar los cinco modificadores de combate (controles de PS5), correr para ataques en carrera y aprovechar paredes y autos para golpes ambientales.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "guia-de-combate-cuerpo-a-cuerpo-con-movimientos-secretos-8be81"
+   "slug": "guia-de-combate-cuerpo-a-cuerpo-con-movimientos-secretos-8be81",
+   "enriched": true,
+   "detalle": "Guía de combate cuerpo a cuerpo para Jason y Lucia, con bloqueos, esquives, contraataques, llaves, suplex, dropkick, estrangulaciones y técnicas exclusivas de Lucia.\n\nLa mayoría de las técnicas se activan con los cinco modificadores de combate (controles de PS5), y el entorno también sirve para hacer ataques.",
+   "pasos": [
+    "Usar los cinco modificadores de combate (controles de PS5).",
+    "Correr para ejecutar ataques en carrera.",
+    "Aprovechar paredes y autos para golpes ambientales."
+   ],
+   "region": ""
   },
   {
    "id": "yt:f_tiqbq2qp8",
@@ -1142,7 +1451,7 @@
    "author": "Arekkz Gaming",
    "published_at": "2026-11-22T21:00:38Z",
    "title_original": "GTA 6 - 5 Easter Eggs That Give PERMANENT Stat Boosts! (All Locations Walkthrough)",
-   "popularity": 228036,
+   "popularity": 235964,
    "thumbnail": "https://i.ytimg.com/vi/f_tiqbq2qp8/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "5 easter eggs que dan mejoras permanentes de estadísticas",
@@ -1151,7 +1460,11 @@
    "como_conseguirlo": "El video recorre la ubicación y los pasos de cada uno.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "5-easter-eggs-que-dan-mejoras-permanentes-de-estadisticas-b8087"
+   "slug": "5-easter-eggs-que-dan-mejoras-permanentes-de-estadisticas-b8087",
+   "enriched": true,
+   "detalle": "Guía de cinco secretos en Leonida que dan mejoras permanentes de estadísticas: la abducción alienígena (todas las stats), el easter egg de Doom/Stranger Things (salud máxima), el de Red Hulk (resistencia máxima), un desafío de parkour secreto (resistencia máxima) y The Final Flush (resistencia máxima).\n\nEl video recorre la ubicación y los pasos de cada uno, y explica cómo reclamar las recompensas para no perdérselas.",
+   "pasos": [],
+   "region": "Leonida"
   },
   {
    "id": "yt:rDpLhLnFLwk",
@@ -1171,6 +1484,33 @@
    "spoiler": false,
    "confianza": "media",
    "slug": "los-robos-que-mas-pagan-e54d9"
+  },
+  {
+   "id": "yt:xvncn7HS9Mg",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=xvncn7HS9Mg",
+   "video_id": "xvncn7HS9Mg",
+   "author": "Leonida Daily",
+   "published_at": "2026-11-22T21:00:30Z",
+   "title_original": "How to Get the SOLID GOLD Urus in GTA 6 (Rare Car Location)",
+   "popularity": 14414,
+   "thumbnail": "https://i.ytimg.com/vi/xvncn7HS9Mg/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Cómo conseguir el Urus dorado",
+   "resumen": "El Lamborghini Urus dorado (Pegassi Lustrous Toros) está en una casa de Casanova Island y requiere la llave clonadora, que se desbloquea en el capítulo 3.",
+   "zona": "Casanova Island, Rialto Islands, entre Vice City y Vice Beach",
+   "como_conseguirlo": "Ir a la casa del medio de la carretera sur, entrar por el garaje (no por la puerta principal) y usar la Key Cloner para arrancarlo. La Key Cloner se desbloquea en el capítulo 3, misión 'Clonin' Keys, Makin' GS'.",
+   "spoiler": true,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "El Lamborghini Urus dorado (Pegassi Lustrous Toros) está en una casa de Casanova Island, la más oriental de las Rialto Islands, entre Vice City y Vice Beach.\n\nPara arrancarlo necesitás la llave clonadora, que se desbloquea en el capítulo 3 con la misión 'Clonin' Keys, Makin' GS'.",
+   "pasos": [
+    "Ir a la casa del medio de la carretera sur de Casanova Island.",
+    "Entrar por el garaje, no por la puerta principal.",
+    "Usar la Key Cloner para arrancar el Urus dorado."
+   ],
+   "region": "Casanova Island",
+   "slug": "como-conseguir-el-urus-dorado-e437c"
   },
   {
    "id": "yt:_xE_OI6_rt0",
@@ -1199,7 +1539,7 @@
    "author": "Nexxuz World",
    "published_at": "2026-11-22T20:58:46Z",
    "title_original": "GTA VI - LOS 10 VEHICULOS mas SECRETOS... de GTA 6 - coches ocultos",
-   "popularity": 153956,
+   "popularity": 159140,
    "thumbnail": "https://i.ytimg.com/vi/dnSryvUd2zQ/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Los 10 vehículos más secretos de GTA 6",
@@ -1208,7 +1548,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "los-10-vehiculos-mas-secretos-de-gta-6-f68f9"
+   "slug": "los-10-vehiculos-mas-secretos-de-gta-6-f68f9",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:QVT66Ule-qs",
@@ -1237,7 +1581,7 @@
    "author": "Nbrisky",
    "published_at": "2026-11-22T20:47:13Z",
    "title_original": "GTA 6 Easy Money: Icegem Diamonds Jewelry Store Robbery Guide",
-   "popularity": 10742,
+   "popularity": 11211,
    "thumbnail": "https://i.ytimg.com/vi/cF-75dgztG0/hqdefault.jpg",
    "categoria": "dinero",
    "titulo": "Robo a la joyería Icegem Diamonds",
@@ -1246,7 +1590,16 @@
    "como_conseguirlo": "Completá los trabajos de joyería de Yasmani en el capítulo 3 para desbloquear los robos. Después robá la tienda, perdé el nivel de búsqueda y vendé las joyas a un reducidor.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "robo-a-la-joyeria-icegem-diamonds-bafb3"
+   "slug": "robo-a-la-joyeria-icegem-diamonds-bafb3",
+   "enriched": true,
+   "detalle": "La joyería Icegem Diamonds & Watches, en Vice-Dale, paga hasta 25.000 dólares por robo según el video. Los robos de joyerías se desbloquean al completar los trabajos de joyería de Yasmani en el capítulo 3.\n\nLa guía explica cómo robar la tienda, cómo perder el nivel de búsqueda después y cómo vender las joyas a un reducidor para obtener el máximo dinero.",
+   "pasos": [
+    "Completar los trabajos de joyería de Yasmani en el capítulo 3 para desbloquear los robos.",
+    "Robar la tienda Icegem Diamonds & Watches.",
+    "Perder el nivel de búsqueda.",
+    "Vender las joyas a un reducidor."
+   ],
+   "region": "Vice-Dale"
   },
   {
    "id": "yt:gFjtQseu7Os",
@@ -1256,7 +1609,7 @@
    "author": "LOOKY",
    "published_at": "2026-11-22T20:44:06Z",
    "title_original": "J'ai trouvé une BASE SECRÈTE sous l'océan de GTA 6",
-   "popularity": 91219,
+   "popularity": 96334,
    "thumbnail": "https://i.ytimg.com/vi/gFjtQseu7Os/hqdefault.jpg",
    "categoria": "ubicacion_secreta",
    "titulo": "Base secreta bajo el océano",
@@ -1265,7 +1618,14 @@
    "como_conseguirlo": "Llevá equipo de buceo y explorá el fondo marino hasta la base.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "base-secreta-bajo-el-oceano-0e79c"
+   "slug": "base-secreta-bajo-el-oceano-0e79c",
+   "enriched": true,
+   "detalle": "Se trata de un complejo oculto bajo el océano que tiene un tesoro escondido y easter eggs adentro.",
+   "pasos": [
+    "Llevá equipo de buceo.",
+    "Explorá el fondo marino hasta llegar a la base."
+   ],
+   "region": "Leonida, bajo el mar"
   },
   {
    "id": "yt:evWlZieBkV8",
@@ -1275,7 +1635,7 @@
    "author": "Hollow",
    "published_at": "2026-11-22T20:28:37Z",
    "title_original": "I Found Paul Walker’s HIDDEN Fast & Furious Car in GTA 6..",
-   "popularity": 131419,
+   "popularity": 134289,
    "thumbnail": "https://i.ytimg.com/vi/evWlZieBkV8/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Eclipse de Paul Walker: Maibatsu Penumbra FF",
@@ -1302,7 +1662,14 @@
      "published_at": "2026-11-23T00:58:30Z"
     }
    ],
-   "slug": "eclipse-de-paul-walker-maibatsu-penumbra-ff-51965"
+   "slug": "eclipse-de-paul-walker-maibatsu-penumbra-ff-51965",
+   "enriched": true,
+   "detalle": "Ubicación y desbloqueo del Maibatsu Penumbra FF, un homenaje al auto de Rápido y Furioso. Para conservar su diseño personalizado de forma permanente se usa el truco con Moses o Vice Vinyl.",
+   "pasos": [
+    "Ir a la ubicación indicada en el video y reclamar el auto.",
+    "Para conservar el diseño personalizado, usar el truco con Moses o Vice Vinyl."
+   ],
+   "region": ""
   },
   {
    "id": "yt:VddZCEpCL8Y",
@@ -1456,6 +1823,25 @@
    "slug": "el-sombrero-de-arthur-morgan-9c767"
   },
   {
+   "id": "yt:llpeLlGwzsk",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=llpeLlGwzsk",
+   "video_id": "llpeLlGwzsk",
+   "author": "Naillyk",
+   "published_at": "2026-11-22T19:00:36Z",
+   "title_original": "5 voitures ULTRA RARES cachées dans GTA 6 ! #gta6 #gta",
+   "popularity": 37050,
+   "thumbnail": "https://i.ytimg.com/vi/llpeLlGwzsk/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Cinco autos ultra raros ocultos",
+   "resumen": "Video en francés que muestra cinco autos ultra raros escondidos en el juego, sin detalle en la descripción.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "slug": "cinco-autos-ultra-raros-ocultos-c22ab"
+  },
+  {
    "id": "yt:Lwep1R_oufQ",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=Lwep1R_oufQ",
@@ -1482,7 +1868,7 @@
    "author": "Gaming with Griff Griffin",
    "published_at": "2026-11-22T18:58:08Z",
    "title_original": "25 Hidden Mechanics You Should Know in GTA 6",
-   "popularity": 682553,
+   "popularity": 707640,
    "thumbnail": "https://i.ytimg.com/vi/MXMw7g_V_E4/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Mecánicas ocultas que quizás te perdiste",
@@ -1491,7 +1877,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "mecanicas-ocultas-que-quizas-te-perdiste-0e61a"
+   "slug": "mecanicas-ocultas-que-quizas-te-perdiste-0e61a",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:Crq8hmkWlOA",
@@ -1520,7 +1910,7 @@
    "author": "DPJ",
    "published_at": "2026-11-22T18:44:24Z",
    "title_original": "GTA 6 - 10 FASTEST CARS You Can Get EARLY! (No Trackers or Key Cloning)",
-   "popularity": 16094,
+   "popularity": 16723,
    "thumbnail": "https://i.ytimg.com/vi/mMRxTcvckls/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Diez autos rápidos para conseguir al principio",
@@ -1529,7 +1919,11 @@
    "como_conseguirlo": "Seguir las ubicaciones del video; no hace falta clonar llaves ni usar rastreadores.",
    "spoiler": false,
    "confianza": "alta",
-   "slug": "diez-autos-rapidos-para-conseguir-al-principio-76716"
+   "slug": "diez-autos-rapidos-para-conseguir-al-principio-76716",
+   "enriched": true,
+   "detalle": "El video muestra diez autos rápidos que se consiguen temprano, sin rastreadores ni clonar llaves. Entre ellos hay un muscle car con nitro, un lowrider exclusivo, el Eclipse de Paul Walker, un Porsche rosa secreto, un Porsche 911 plateado, un Rolls Royce dorado, una moto bobber zombie, un Mitsubishi Evolution y un Saleen S7.",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:Pae-nCJK22Q",
@@ -1606,7 +2000,7 @@
    "author": "RoMax",
    "published_at": "2026-11-22T17:36:38Z",
    "title_original": "Descubrí 10 Lugares SECRETOS de GTA 6!",
-   "popularity": 75223,
+   "popularity": 76261,
    "thumbnail": "https://i.ytimg.com/vi/FhCM721iKMk/hqdefault.jpg",
    "categoria": "ubicacion_secreta",
    "titulo": "10 lugares secretos y NPCs ocultos",
@@ -1615,7 +2009,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "10-lugares-secretos-y-npcs-ocultos-a65df"
+   "slug": "10-lugares-secretos-y-npcs-ocultos-a65df",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:9yBG8atjQs0",
@@ -1625,7 +2023,7 @@
    "author": "Perfect Score",
    "published_at": "2026-11-22T17:15:07Z",
    "title_original": "How to Unlock the Key Cloner in GTA 6 (Clonin' Keys, Makin' Gs)",
-   "popularity": 18297,
+   "popularity": 19671,
    "thumbnail": "https://i.ytimg.com/vi/9yBG8atjQs0/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "Cómo desbloquear el clonador de llaves",
@@ -1644,7 +2042,17 @@
      "published_at": "2026-11-23T09:07:15Z"
     }
    ],
-   "slug": "como-desbloquear-el-clonador-de-llaves-ba1e0"
+   "slug": "como-desbloquear-el-clonador-de-llaves-ba1e0",
+   "enriched": true,
+   "detalle": "Esta misión del capítulo 3, 'Clonin' Keys, Makin' Gs', de Randy, instala el clonador de llaves en el teléfono. Con él podés robar un Pegassi Zorrusso sin llave.\n\nAl entregar el auto a Randy ganás $21.250, más un bono de $10.000 por estado limpio. Además conservás el clonador de llaves y desbloqueás la lista de deseos de Randy, con 18 autos raros. Antes de entregarlo tenés que escapar del rastreador avanzado.",
+   "pasos": [
+    "Completar la misión principal Crosstown Traffic y las primeras misiones de Randy en el capítulo 3.",
+    "Llegar al estacionamiento de Hathaway Apartments y llamar a Randy, que envía el software al teléfono; aceptar la instalación.",
+    "Ir al Zorrusso en la planta baja del garaje, elegir 'Clonar llave' y completar el hackeo.",
+    "Mantener la velocidad sin dañar el auto para evitar que el rastreador avanzado avise a la policía.",
+    "Entregar el Zorrusso en el punto de Randy."
+   ],
+   "region": "Ocean Beach"
   },
   {
    "id": "yt:y6kVhh5-qb4",
@@ -1692,7 +2100,7 @@
    "author": "SpeirsTheAmazingHD",
    "published_at": "2026-11-22T15:47:59Z",
    "title_original": "Stealing Secret Cars in GTA 6",
-   "popularity": 199562,
+   "popularity": 206246,
    "thumbnail": "https://i.ytimg.com/vi/qCtJ6IOhT_Y/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Autos secretos: Eclipse, Charger y carrito de golf hot rod",
@@ -1701,7 +2109,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "autos-secretos-eclipse-charger-y-carrito-de-golf-hot-rod-468db"
+   "slug": "autos-secretos-eclipse-charger-y-carrito-de-golf-hot-rod-468db",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:PKQIi9Yxu3s",
@@ -1711,7 +2123,7 @@
    "author": "Trojan",
    "published_at": "2026-11-22T15:46:14Z",
    "title_original": "How To Get Professional Criminal Profile In GTA 6",
-   "popularity": 119452,
+   "popularity": 125612,
    "thumbnail": "https://i.ytimg.com/vi/PKQIi9Yxu3s/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Cómo obtener el perfil de criminal profesional",
@@ -1720,7 +2132,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "como-obtener-el-perfil-de-criminal-profesional-23919"
+   "slug": "como-obtener-el-perfil-de-criminal-profesional-23919",
+   "enriched": true,
+   "detalle": "El video explica cómo obtener el perfil de criminal profesional. Muestra un método para los capítulos 1 y 2 y otro distinto desde el capítulo 3 en adelante.",
+   "pasos": [],
+   "region": ""
   }
  ]
 }
