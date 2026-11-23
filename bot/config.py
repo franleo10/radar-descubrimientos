@@ -58,6 +58,14 @@ CLAUDE_BATCH_SIZE = int(os.environ.get("CLAUDE_BATCH_SIZE", "15"))
 # Cuántos descubrimientos ya publicados se amplían (guía, pasos, región) por corrida.
 ENRICH_PER_RUN = int(os.environ.get("ENRICH_PER_RUN", "40"))
 
+# --- Redes (cada una se saltea si no tiene claves) ---
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")  # ej. @wastedmap
+BLUESKY_HANDLE = os.environ.get("BLUESKY_HANDLE", "")
+BLUESKY_APP_PASSWORD = os.environ.get("BLUESKY_APP_PASSWORD", "")
+SOCIAL_PER_RUN = int(os.environ.get("SOCIAL_PER_RUN", "3"))  # por red y por corrida
+SOCIAL_MAX_AGE_DAYS = int(os.environ.get("SOCIAL_MAX_AGE_DAYS", "3"))
+
 # --- Web ---
 SITE_NAME = os.environ.get("SITE_NAME", "WastedMap")
 # Dirección pública de la web, sin "/" al final. Cambiala cuando tengas dominio propio.

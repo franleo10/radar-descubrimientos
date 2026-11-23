@@ -28,6 +28,15 @@ Corre gratis en GitHub Actions y se publica gratis en Cloudflare Pages (https://
 
 Listo. La web está publicada en https://wastedmap.com con Cloudflare Pages: cada vez que el bot sube cambios, Cloudflare la actualiza sola (carpeta de salida `docs`, sin comando de build).
 
+## Redes sociales (opcional)
+
+En cada corrida el bot publica hasta 3 descubrimientos confirmados, sin spoilers y de los últimos 3 días, en cada red que tenga claves. Lo ya publicado queda en `state/posted.json` para no repetir.
+
+| Red | Secret | Variable |
+|---|---|---|
+| Telegram | `TELEGRAM_BOT_TOKEN` (de @BotFather) | `TELEGRAM_CHAT_ID` (por ejemplo `@wastedmap`) |
+| Bluesky | `BLUESKY_APP_PASSWORD` (contraseña de app) | `BLUESKY_HANDLE` (por ejemplo `wastedmap.bsky.social`) |
+
 ## Probar en tu PC
 
 ```bash

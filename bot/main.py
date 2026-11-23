@@ -112,6 +112,11 @@ def run(demo: bool) -> None:
     save_site(entries)
     print(f"[bot] {added} descubrimientos nuevos, {len(entries)} en total")
 
+    if not demo:
+        from .social import publish
+
+        publish(entries)  # Telegram y Bluesky, sin repetir
+
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
