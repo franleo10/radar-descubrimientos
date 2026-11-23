@@ -6,7 +6,7 @@ Cada 6 horas, el bot:
 2. Le pasa los candidatos a Claude, que descarta lo que no sirve (noticias, memes, quejas) y escribe en español un título, un resumen, la zona y cómo conseguirlo.
 3. Guarda todo en `docs/data.json`, y la web (`docs/index.html`) lo muestra con el video original insertado.
 
-Corre gratis en GitHub Actions y se publica gratis en GitHub Pages. Tu PC no tiene que estar prendida.
+Corre gratis en GitHub Actions y se publica gratis en Cloudflare Pages (https://wastedmap.com). Tu PC no tiene que estar prendida.
 
 ## Lo que tenés que hacer una sola vez
 
@@ -23,7 +23,7 @@ Corre gratis en GitHub Actions y se publica gratis en GitHub Pages. Tu PC no tie
 1. Creá un repositorio nuevo (puede ser público, porque las claves no van en el código).
 2. Subí esta carpeta.
 3. En **Settings → Secrets and variables → Actions**, cargá las claves de arriba (las de Reddit solo si te aprobaron) con esos mismos nombres.
-4. En **Settings → Pages**, elegí *Deploy from a branch*, rama `main`, carpeta `/docs`.
+4. En Cloudflare → **Workers & Pages**, conectá el repositorio como proyecto de Pages: sin comando de build, carpeta de salida `docs`, y sumá tu dominio en **Custom domains**.
 5. En **Actions → Bot de descubrimientos → Run workflow** podés correrlo por primera vez sin esperar.
 
 Listo. La web está publicada en https://wastedmap.com con Cloudflare Pages: cada vez que el bot sube cambios, Cloudflare la actualiza sola (carpeta de salida `docs`, sin comando de build).
@@ -49,7 +49,7 @@ Para una corrida real en tu PC, copiá `.env.example` como `.env` y completalo.
 
 ## Costos estimados
 
-- GitHub Actions y Pages: gratis.
+- GitHub Actions y Cloudflare Pages: gratis. Dominio: unos USD 10,50 por año.
 - YouTube: 8 búsquedas × 4 corridas = ~3.300 unidades por día, de un límite gratis de 10.000.
 - Reddit: gratis para este uso.
 - Claude: cada candidato se analiza una sola vez (`state/seen.json` guarda los ya vistos), en tandas de 15. Con un par de cientos de candidatos por día, son pocos dólares por mes.
