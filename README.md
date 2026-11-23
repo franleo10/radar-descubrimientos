@@ -1,4 +1,4 @@
-# Radar de Descubrimientos (bot de GTA 6)
+# WastedMap (bot de descubrimientos de GTA 6)
 
 Cada 6 horas, el bot:
 
@@ -26,7 +26,7 @@ Corre gratis en GitHub Actions y se publica gratis en GitHub Pages. Tu PC no tie
 4. En **Settings → Pages**, elegí *Deploy from a branch*, rama `main`, carpeta `/docs`.
 5. En **Actions → Bot de descubrimientos → Run workflow** podés correrlo por primera vez sin esperar.
 
-Listo. La web queda en `https://TU_USUARIO.github.io/NOMBRE_DEL_REPO/`.
+Listo. La web está publicada en https://wastedmap.com con Cloudflare Pages: cada vez que el bot sube cambios, Cloudflare la actualiza sola (carpeta de salida `docs`, sin comando de build).
 
 ## Probar en tu PC
 
