@@ -19,6 +19,7 @@ from html import escape
 from urllib.parse import quote
 
 from . import config
+from .brand import logo
 
 CATS = {
     "easter_egg": ("easter-eggs", "Easter eggs"),
@@ -30,6 +31,11 @@ CATS = {
     "mision": ("misiones", "Misiones"),
     "mecanica_truco": ("mecanicas-y-tips", "Mecánicas y tips"),
     "otro": ("otros", "Otros"),
+}
+CAT_COLOR = {
+    "easter_egg": "#ff3d8b", "ubicacion_secreta": "#2ee6d6", "coleccionable": "#ffd54a",
+    "vehiculo": "#ff8a3d", "arma": "#ff4d4d", "dinero": "#4ade80", "mision": "#a78bfa",
+    "mecanica_truco": "#60a5fa", "otro": "#958ba9",
 }
 CAT_INTRO = {
     "easter_egg": "Referencias escondidas, guiños a otros juegos y secretos que encontró la comunidad en GTA 6.",
@@ -110,18 +116,21 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <link rel="icon" href="{root}favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
 <meta name="theme-color" content="#0d0b14">
-<link rel="stylesheet" href="{root}page.css">
+<link rel="preload" href="{root}fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{root}site.css">
 {ld}
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="{root}">{escape(config.SITE_NAME)}</a>
-<nav class="topnav"><a href="{root}semana/">Lo mejor de la semana</a></nav></div></header>
-<main><div class="wrap">
+<header class="topbar"><div class="wrap">{logo(root, "lg")}
+<nav class="nav"><a class="hide-sm" href="{root}#explorar">Explorar</a><a class="pill" href="{root}semana/">🔥 Top de la semana</a></nav></div></header>
+<main class="page"><div class="wrap">
 {body}
 </div></main>
-<footer>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive.<br>
-Los videos y publicaciones son de sus autores y se muestran con el reproductor o el enlace original.<br>
-<a href="{root}acerca/">Acerca de</a> · <a href="{root}privacidad/">Privacidad</a> · <a href="{root}contacto/">Contacto</a></footer>
+<footer class="foot"><div class="wrap">
+<div>{logo(root, "lg2")}
+<p>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.</p></div>
+<nav><a href="{root}semana/">Top de la semana</a><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
+</div></footer>
 <script>
 document.addEventListener("click", ev => {{
   const sp = ev.target.closest(".spoiler-btn");
@@ -161,7 +170,8 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
     else:
         media = ""
 
-    tags = [f'<a class="tag cat" href="{root}c/{slug_cat}/">{escape(cat_name)}</a>']
+    color = CAT_COLOR.get(e.get("categoria"), CAT_COLOR["otro"])
+    tags = [f'<a class="tag cat" style="--c:{color}" href="{root}c/{slug_cat}/">{escape(cat_name)}</a>']
     if e.get("region") in zones:
         tags.append(f'<a class="tag" href="{root}z/{zones[e["region"]]}/">📍 {escape(e["region"])}</a>')
     elif e.get("zona"):

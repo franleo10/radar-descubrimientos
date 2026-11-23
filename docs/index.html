@@ -17,158 +17,169 @@
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#0d0b14">
-<style>
-:root{
-  --bg:#0d0b14; --panel:#17131f; --panel2:#1f1a2b; --line:#2c2540;
-  --text:#ece8f5; --muted:#9a91ad; --accent:#ff3d8b; --accent2:#2ee6d6;
-  --warn:#ffb547; --radius:14px;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-a{color:var(--accent2)}
-header{padding:28px 16px 18px;background:linear-gradient(160deg,#2a0f2e 0%,#0d0b14 60%);border-bottom:1px solid var(--line)}
-.wrap{max-width:1100px;margin:0 auto}
-h1{margin:0;font-size:clamp(26px,5vw,40px);letter-spacing:-.02em}
-h1 span{background:linear-gradient(90deg,var(--accent),var(--warn));-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{color:var(--muted);margin:6px 0 0}
-.toolbar{position:sticky;top:0;z-index:5;background:rgba(13,11,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 16px}
-.search{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:16px}
-.chips{display:flex;gap:8px;overflow-x:auto;padding-top:10px;scrollbar-width:none}
-.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:6px 12px;border-radius:999px;cursor:pointer;font-size:14px}
-.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-main{padding:18px 16px 40px}
-.meta{color:var(--muted);font-size:13px;margin-bottom:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
-.media{position:relative;aspect-ratio:16/9;background:var(--panel2);display:grid;place-items:center;color:var(--muted);font-size:13px;cursor:pointer;border:0;padding:0;width:100%}
-.media img{width:100%;height:100%;object-fit:cover;display:block}
-.media iframe{width:100%;height:100%;border:0}
-.play{position:absolute;width:62px;height:44px;border-radius:12px;background:rgba(0,0,0,.7);display:grid;place-items:center}
-.play::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
-.spoiler .media img,.spoiler .body h2,.spoiler .body p,.spoiler .body .how{filter:blur(10px)}
-.spoiler-btn{position:absolute;inset:0;background:rgba(13,11,20,.55);color:#fff;border:0;font-weight:600;cursor:pointer;z-index:2}
-.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;position:relative}
-.tags{display:flex;gap:6px;flex-wrap:wrap;font-size:12px}
-.tag{padding:2px 8px;border-radius:6px;background:var(--panel2);color:var(--muted)}
-.tag.cat{color:var(--accent2)}
-.tag.media-conf{color:var(--warn)}
-.card h2{font-size:18px;line-height:1.3;margin:0}
-.tlink{color:inherit;text-decoration:none}
-.tlink:hover{text-decoration:underline}
-.static-list{grid-column:1/-1}
-.card p{margin:0;color:#cfc8de;font-size:15px}
-.how{font-size:14px;color:var(--muted)}
-.how b{color:var(--text)}
-.also{font-size:13px;color:var(--muted)}
-.also a{white-space:nowrap}
-.src{margin-top:auto;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;padding-top:8px;border-top:1px solid var(--line)}
-.empty{color:var(--muted);text-align:center;padding:60px 0}
-.demo-banner{background:var(--warn);color:#1a1200;padding:8px 16px;text-align:center;font-weight:600;font-size:14px}
-footer{color:var(--muted);font-size:13px;padding:24px 16px 40px;border-top:1px solid var(--line);text-align:center}
-</style>
+<link rel="preload" href="fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 <div id="demo" class="demo-banner" hidden>Datos de ejemplo: el bot todavía no corrió con las claves reales.</div>
-<header><div class="wrap">
-  <h1><span id="site-name">WastedMap</span></h1>
-  <p class="sub">Todos los secretos que descubre la comunidad de GTA 6. Se actualiza solo.</p>
+
+<header class="topbar"><div class="wrap">
+  <a class="logo" href="./" aria-label="WastedMap, inicio"><svg viewBox="0 0 30 38" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3d8b"/><stop offset="1" stop-color="#ffb547"/></linearGradient></defs><path d="M15 1C7.3 1 1 7.1 1 14.7 1 24.9 15 37 15 37s14-12.1 14-22.3C29 7.1 22.7 1 15 1z" fill="url(#lg)"/><circle cx="15" cy="14.5" r="7.2" fill="#0b0912"/><path d="M15 9.2l1.4 3.9 3.9 1.4-3.9 1.4-1.4 3.9-1.4-3.9-3.9-1.4 3.9-1.4z" fill="#fff"/></svg><span class="wordmark"><b>Wasted</b><i>Map</i></span></a>
+  <nav class="nav"><a class="hide-sm" href="#explorar">Explorar</a><a class="pill" href="semana/">🔥 Top de la semana</a></nav>
 </div></header>
 
-<div class="toolbar"><div class="wrap">
-  <input id="q" class="search" type="search" placeholder="Buscar: muelle, auto, dinero…" aria-label="Buscar">
+<section class="hero">
+  <div class="hero-art" role="img" aria-label="Atardecer retro con palmeras sobre la ciudad"></div>
+  <div class="wrap">
+    <span class="eyebrow">Se actualiza solo · varias veces por día</span>
+    <h1>Todos los <em>secretos</em> de GTA 6 en un solo mapa</h1>
+    <p class="lede">Easter eggs, lugares ocultos, autos raros y guías que descubre la comunidad, resumidos en español y con el video original.</p>
+    <label class="searchbox"><span class="sr">Buscar</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Buscá un secreto: muelle, Cheetah, dinero…" autocomplete="off">
+    </label>
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<div class="toolbar" id="explorar"><div class="wrap">
   <div id="chips" class="chips" role="toolbar" aria-label="Categorías"></div>
 </div></div>
 
-<main><div class="wrap">
-  <div id="meta" class="meta"></div>
-  <div id="grid" class="grid"><!--STATIC--><p><a href="semana/">Lo mejor de la semana</a></p><p><a href="c/easter-eggs/">Easter eggs (16)</a> · <a href="c/lugares-secretos/">Lugares secretos (6)</a> · <a href="c/coleccionables/">Coleccionables (2)</a> · <a href="c/vehiculos/">Vehículos (25)</a> · <a href="c/armas/">Armas (9)</a> · <a href="c/dinero/">Dinero (11)</a> · <a href="c/misiones/">Misiones (9)</a> · <a href="c/mecanicas-y-tips/">Mecánicas y tips (15)</a> · <a href="c/otros/">Otros (1)</a></p><p>Zonas: <a href="z/port-gellhorn/">Port Gellhorn</a></p><ul class="static-list"><li><a href="d/easter-egg-para-jugar-como-tommy-vercetti-37e64/">Easter egg para jugar como Tommy Vercetti</a></li><li><a href="d/seis-controles-ocultos-de-gta-6-c7d89/">Seis controles ocultos de GTA 6</a></li><li><a href="d/seis-autos-ocultos-en-gta-6-04cc9/">Seis autos ocultos en GTA 6</a></li><li><a href="d/autos-raros-y-dinero-en-leonida-38b38/">Autos raros y dinero en Leonida</a></li><li><a href="d/francotirador-secreto-en-key-lento-82007/">Francotirador secreto en Key Lento</a></li><li><a href="d/aumento-permanente-de-enfoque-en-el-campo-de-tiro-7f8e3/">Aumento permanente de Enfoque en el campo de tiro</a></li><li><a href="d/fantasma-en-sassafras-road-a954a/">Fantasma en Sassafras Road</a></li><li><a href="d/seis-formas-de-ganar-plata-al-principio-628bc/">Seis formas de ganar plata al principio</a></li><li><a href="d/como-conseguir-el-grotti-cheetah-gratis-a772b/">Cómo conseguir el Grotti Cheetah gratis</a></li><li><a href="d/todas-las-habitaciones-secretas-con-botin-b18d5/">Todas las habitaciones secretas con botín</a></li><li><a href="d/guia-completa-del-capitulo-2-e233c/">Guía completa del capítulo 2</a></li><li><a href="d/funciones-ocultas-de-los-autos-en-gta-6-98462/">Funciones ocultas de los autos en GTA 6</a></li><li><a href="d/maximo-botin-en-el-golpe-al-cartel-e1061/">Máximo botín en el golpe al cartel</a></li><li><a href="d/payaso-estilo-pennywise-en-un-edificio-en-construccion-95125/">Payaso estilo Pennywise en un edificio en construcción</a></li><li><a href="d/escopeta-dorada-en-kingpin-bowling-5bfe5/">Escopeta dorada en Kingpin Bowling</a></li><li><a href="d/20-000-dolares-smg-chronic-vatra-y-camioneta-unica-f70cb/">20.000 dólares, SMG Chronic Vatra y camioneta única</a></li><li><a href="d/11-autos-secretos-y-unicos-d5f2f/">11 autos secretos y únicos</a></li><li><a href="d/tres-ubicaciones-de-armas-secretas-697bd/">Tres ubicaciones de armas secretas</a></li><li><a href="d/jefe-satanas-escopeta-legendaria-y-salud-permanente-29c2d/">Jefe Satanás: escopeta legendaria y salud permanente</a></li><li><a href="d/consejos-para-robos-en-el-capitulo-2-a0c73/">Consejos para robos en el capítulo 2</a></li><li><a href="d/como-quitar-rastreadores-avanzados-a-los-autos-exoticos-ec387/">Cómo quitar rastreadores avanzados a los autos exóticos</a></li><li><a href="d/seis-mecanicas-ocultas-de-gta-6-eead2/">Seis mecánicas ocultas de GTA 6</a></li><li><a href="d/bloque-de-mario-con-gorras-j-y-l-gratis-b013d/">Bloque de Mario con gorras J y L gratis</a></li><li><a href="d/aumento-permanente-de-resistencia-en-el-bano-daa2d/">Aumento permanente de resistencia en el baño</a></li><li><a href="d/como-robar-un-jet-militar-86eba/">Cómo robar un jet militar</a></li><li><a href="d/ubicaciones-de-autos-raros-d6bce/">Ubicaciones de autos raros</a></li><li><a href="d/easter-egg-del-ovni-3a988/">Easter egg del OVNI</a></li><li><a href="d/sultan-secreto-de-recompensa-de-moses-b3f60/">Sultan secreto de recompensa de Moses</a></li><li><a href="d/final-bueno-de-la-mision-de-kyle-y-recompensas-unicas-191e8/">Final bueno de la misión de Kyle y recompensas únicas</a></li><li><a href="d/ubicacion-del-charger-de-dom-rapidos-y-furiosos-f3051/">Ubicación del Charger de Dom (Rápidos y Furiosos)</a></li><li><a href="d/easter-egg-del-viaje-psicodelico-mushroom-trip-9024d/">Easter egg del viaje psicodélico (Mushroom Trip)</a></li><li><a href="d/ubicacion-del-chevelle-de-dom-rapidos-y-furiosos-fb713/">Ubicación del Chevelle de Dom (Rápidos y Furiosos)</a></li><li><a href="d/ubicacion-y-codigo-de-acceso-de-auntie-s-place-21732/">Ubicación y código de acceso de Auntie&#x27;s Place</a></li><li><a href="d/ocho-vehiculos-raros-y-donde-encontrarlos-b2e66/">Ocho vehículos raros y dónde encontrarlos</a></li><li><a href="d/instalaciones-de-investigacion-submarinas-y-el-meteorito-bc379/">Instalaciones de investigación submarinas y el meteorito</a></li><li><a href="d/tres-vehiculos-de-pandillas-robables-temprano-e5fd4/">Tres vehículos de pandillas robables temprano</a></li><li><a href="d/15-superautos-secretos-que-podes-robar-sin-avanzar-la-histor-da096/">15 superautos secretos que podés robar sin avanzar la historia</a></li><li><a href="d/tres-autos-escondidos-a12bf/">Tres autos escondidos</a></li><li><a href="d/ubicacion-de-los-11-revolveres-legendarios-cc312/">Ubicación de los 11 revólveres legendarios</a></li><li><a href="d/easter-eggs-de-terror-pie-grande-mujer-sobre-un-auto-y-criat-077b9/">Easter eggs de terror: Pie Grande, mujer sobre un auto y criatura demoníaca</a></li><li><a href="d/100-consejos-para-empezar-8d516/">100 consejos para empezar</a></li><li><a href="d/recopilacion-de-30-secretos-y-easter-eggs-parte-2-6f871/">Recopilación de 30 secretos y easter eggs (parte 2)</a></li><li><a href="d/50-easter-eggs-sombrero-de-arthur-morgan-fantasmas-del-faro-45246/">50 easter eggs: sombrero de Arthur Morgan, fantasmas del faro y más</a></li><li><a href="d/desbloqueos-perdibles-del-capitulo-3-3234f/">Desbloqueos perdibles del capítulo 3</a></li><li><a href="d/pistola-dorada-guardian-es18-9aa9e/">Pistola dorada Guardian ES18</a></li><li><a href="d/robos-de-joyerias-sin-policia-78bed/">Robos de joyerías sin policía</a></li><li><a href="d/robo-de-auto-clasico-frente-a-la-policia-41057/">Robo de auto clásico frente a la policía</a></li><li><a href="d/25-trucos-y-mecanicas-que-el-juego-no-explica-6e9c2/">25 trucos y mecánicas que el juego no explica</a></li><li><a href="d/secretos-en-la-casa-quemada-de-jason-d867f/">Secretos en la casa quemada de Jason</a></li><li><a href="d/easter-eggs-poco-conocidos-parte-5-67305/">Easter eggs poco conocidos, parte 5</a></li><li><a href="d/royal-ruby-emerus-en-gta-6-f43b0/">Royal Ruby Emerus en GTA 6</a></li><li><a href="d/lmg-mercenario-en-un-contenedor-ef554/">LMG mercenario en un contenedor</a></li><li><a href="d/snap-gun-para-abrir-puertas-sin-alarma-eb78f/">Snap Gun para abrir puertas sin alarma</a></li><li><a href="d/lugares-con-dinero-escondido-en-leonida-e2259/">Lugares con dinero escondido en Leonida</a></li><li><a href="d/tres-autos-top-en-gta-6-04589/">Tres autos top en GTA 6</a></li><li><a href="d/los-10-autos-mas-rapidos-y-donde-encontrarlos-f0a4e/">Los 10 autos más rápidos y dónde encontrarlos</a></li><li><a href="d/herramientas-clave-para-robos-y-autos-ae27f/">Herramientas clave para robos y autos</a></li><li><a href="d/ubicacion-secreta-con-10-000-dolares-y-un-subfusil-legendari-ea242/">Ubicación secreta con 10.000 dólares y un subfusil legendario</a></li><li><a href="d/guia-de-dinero-para-el-capitulo-2-8b518/">Guía de dinero para el capítulo 2</a></li><li><a href="d/guia-de-hidden-charges-las-tres-antenas-66620/">Guía de Hidden Charges: las tres antenas</a></li><li><a href="d/24-lugares-secretos-visitados-ae263/">24 lugares secretos visitados</a></li><li><a href="d/easter-egg-de-red-hulk-y-finales-alternativos-54346/">Easter egg de Red Hulk y finales alternativos</a></li><li><a href="d/hotel-embrujado-secreto-2963c/">Hotel embrujado secreto</a></li><li><a href="d/guia-de-combate-cuerpo-a-cuerpo-con-movimientos-secretos-8be81/">Guía de combate cuerpo a cuerpo con movimientos secretos</a></li><li><a href="d/5-easter-eggs-que-dan-mejoras-permanentes-de-estadisticas-b8087/">5 easter eggs que dan mejoras permanentes de estadísticas</a></li><li><a href="d/los-robos-que-mas-pagan-e54d9/">Los robos que más pagan</a></li><li><a href="d/como-conseguir-el-urus-dorado-e437c/">Cómo conseguir el Urus dorado</a></li><li><a href="d/iceberg-de-easter-eggs-y-misterios-de-terror-5f4e4/">Iceberg de easter eggs y misterios de terror</a></li><li><a href="d/los-10-vehiculos-mas-secretos-de-gta-6-f68f9/">Los 10 vehículos más secretos de GTA 6</a></li><li><a href="d/11-armas-con-silenciador-recomendadas-13890/">11 armas con silenciador recomendadas</a></li><li><a href="d/robo-a-la-joyeria-icegem-diamonds-bafb3/">Robo a la joyería Icegem Diamonds</a></li><li><a href="d/base-secreta-bajo-el-oceano-0e79c/">Base secreta bajo el océano</a></li><li><a href="d/eclipse-de-paul-walker-maibatsu-penumbra-ff-51965/">Eclipse de Paul Walker: Maibatsu Penumbra FF</a></li><li><a href="d/como-saber-que-edificios-se-pueden-visitar-8d117/">Cómo saber qué edificios se pueden visitar</a></li><li><a href="d/dos-lowriders-raros-desde-el-inicio-incluido-el-albany-manan-d02e1/">Dos lowriders raros desde el inicio, incluido el Albany Manana dorado</a></li><li><a href="d/abduccion-alienigena-y-mision-secreta-alien-dream-b2ed3/">Abducción alienígena y misión secreta Alien Dream</a></li><li><a href="d/18-autos-raros-y-unicos-para-no-perderte-36797/">18 autos raros y únicos para no perderte</a></li><li><a href="d/mas-de-25-funciones-ocultas-que-el-juego-no-explica-c8bea/">Más de 25 funciones ocultas que el juego no explica</a></li><li><a href="d/christine-el-auto-asesino-escondido-f1d3d/">Christine, el auto asesino escondido</a></li><li><a href="d/el-sombrero-de-arthur-morgan-9c767/">El sombrero de Arthur Morgan</a></li><li><a href="d/cinco-autos-ultra-raros-ocultos-c22ab/">Cinco autos ultra raros ocultos</a></li><li><a href="d/ganar-dinero-rapido-en-el-capitulo-1-30fd5/">Ganar dinero rápido en el capítulo 1</a></li><li><a href="d/mecanicas-ocultas-que-quizas-te-perdiste-0e61a/">Mecánicas ocultas que quizás te perdiste</a></li><li><a href="d/cangrejo-gigante-y-arma-legendaria-en-leonida-5f806/">Cangrejo gigante y arma legendaria en Leonida</a></li><li><a href="d/diez-autos-rapidos-para-conseguir-al-principio-76716/">Diez autos rápidos para conseguir al principio</a></li><li><a href="d/escondites-con-botin-parte-2-bddde/">Escondites con botín (parte 2)</a></li><li><a href="d/perro-en-moto-de-agua-que-lleva-a-una-isla-secreta-44294/">Perro en moto de agua que lleva a una isla secreta</a></li><li><a href="d/donde-encontrar-el-truffade-thrax-95ec5/">Dónde encontrar el Truffade Thrax</a></li><li><a href="d/10-lugares-secretos-y-npcs-ocultos-a65df/">10 lugares secretos y NPCs ocultos</a></li><li><a href="d/como-desbloquear-el-clonador-de-llaves-ba1e0/">Cómo desbloquear el clonador de llaves</a></li><li><a href="d/robo-de-autos-para-moses-en-el-capitulo-2-ceef2/">Robo de autos para Moses en el Capítulo 2</a></li><li><a href="d/recopilacion-de-easter-eggs-y-referencias-parte-1-c2ffa/">Recopilación de easter eggs y referencias (parte 1)</a></li><li><a href="d/autos-secretos-eclipse-charger-y-carrito-de-golf-hot-rod-468db/">Autos secretos: Eclipse, Charger y carrito de golf hot rod</a></li><li><a href="d/como-obtener-el-perfil-de-criminal-profesional-23919/">Cómo obtener el perfil de criminal profesional</a></li></ul><!--/STATIC--></div>
-</div></main>
+<main>
+  <section class="section" id="featured-wrap" hidden><div class="wrap">
+    <div class="sec-head"><h2>Destacado <span>de la semana</span></h2><a href="semana/">Ver el top completo →</a></div>
+    <div id="featured"></div>
+  </div></section>
 
-<footer>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive.<br>
-Los videos y publicaciones son de sus autores y se muestran con el reproductor o el enlace original.<br>
-<a href="acerca/">Acerca de</a> · <a href="privacidad/">Privacidad</a> · <a href="contacto/">Contacto</a></footer>
+  <section class="section"><div class="wrap">
+    <div class="sec-head"><h2 id="grid-title">Últimos <span>descubrimientos</span></h2><span id="meta" class="meta"></span></div>
+    <div id="grid" class="grid"><!--STATIC--><p><a href="semana/">Lo mejor de la semana</a></p><p><a href="c/easter-eggs/">Easter eggs (16)</a> · <a href="c/lugares-secretos/">Lugares secretos (6)</a> · <a href="c/coleccionables/">Coleccionables (2)</a> · <a href="c/vehiculos/">Vehículos (25)</a> · <a href="c/armas/">Armas (9)</a> · <a href="c/dinero/">Dinero (11)</a> · <a href="c/misiones/">Misiones (9)</a> · <a href="c/mecanicas-y-tips/">Mecánicas y tips (15)</a> · <a href="c/otros/">Otros (1)</a></p><p>Zonas: <a href="z/port-gellhorn/">Port Gellhorn</a></p><ul class="static-list"><li><a href="d/easter-egg-para-jugar-como-tommy-vercetti-37e64/">Easter egg para jugar como Tommy Vercetti</a></li><li><a href="d/seis-controles-ocultos-de-gta-6-c7d89/">Seis controles ocultos de GTA 6</a></li><li><a href="d/seis-autos-ocultos-en-gta-6-04cc9/">Seis autos ocultos en GTA 6</a></li><li><a href="d/autos-raros-y-dinero-en-leonida-38b38/">Autos raros y dinero en Leonida</a></li><li><a href="d/francotirador-secreto-en-key-lento-82007/">Francotirador secreto en Key Lento</a></li><li><a href="d/aumento-permanente-de-enfoque-en-el-campo-de-tiro-7f8e3/">Aumento permanente de Enfoque en el campo de tiro</a></li><li><a href="d/fantasma-en-sassafras-road-a954a/">Fantasma en Sassafras Road</a></li><li><a href="d/seis-formas-de-ganar-plata-al-principio-628bc/">Seis formas de ganar plata al principio</a></li><li><a href="d/como-conseguir-el-grotti-cheetah-gratis-a772b/">Cómo conseguir el Grotti Cheetah gratis</a></li><li><a href="d/todas-las-habitaciones-secretas-con-botin-b18d5/">Todas las habitaciones secretas con botín</a></li><li><a href="d/guia-completa-del-capitulo-2-e233c/">Guía completa del capítulo 2</a></li><li><a href="d/funciones-ocultas-de-los-autos-en-gta-6-98462/">Funciones ocultas de los autos en GTA 6</a></li><li><a href="d/maximo-botin-en-el-golpe-al-cartel-e1061/">Máximo botín en el golpe al cartel</a></li><li><a href="d/payaso-estilo-pennywise-en-un-edificio-en-construccion-95125/">Payaso estilo Pennywise en un edificio en construcción</a></li><li><a href="d/escopeta-dorada-en-kingpin-bowling-5bfe5/">Escopeta dorada en Kingpin Bowling</a></li><li><a href="d/20-000-dolares-smg-chronic-vatra-y-camioneta-unica-f70cb/">20.000 dólares, SMG Chronic Vatra y camioneta única</a></li><li><a href="d/11-autos-secretos-y-unicos-d5f2f/">11 autos secretos y únicos</a></li><li><a href="d/tres-ubicaciones-de-armas-secretas-697bd/">Tres ubicaciones de armas secretas</a></li><li><a href="d/jefe-satanas-escopeta-legendaria-y-salud-permanente-29c2d/">Jefe Satanás: escopeta legendaria y salud permanente</a></li><li><a href="d/consejos-para-robos-en-el-capitulo-2-a0c73/">Consejos para robos en el capítulo 2</a></li><li><a href="d/como-quitar-rastreadores-avanzados-a-los-autos-exoticos-ec387/">Cómo quitar rastreadores avanzados a los autos exóticos</a></li><li><a href="d/seis-mecanicas-ocultas-de-gta-6-eead2/">Seis mecánicas ocultas de GTA 6</a></li><li><a href="d/bloque-de-mario-con-gorras-j-y-l-gratis-b013d/">Bloque de Mario con gorras J y L gratis</a></li><li><a href="d/aumento-permanente-de-resistencia-en-el-bano-daa2d/">Aumento permanente de resistencia en el baño</a></li><li><a href="d/como-robar-un-jet-militar-86eba/">Cómo robar un jet militar</a></li><li><a href="d/ubicaciones-de-autos-raros-d6bce/">Ubicaciones de autos raros</a></li><li><a href="d/easter-egg-del-ovni-3a988/">Easter egg del OVNI</a></li><li><a href="d/sultan-secreto-de-recompensa-de-moses-b3f60/">Sultan secreto de recompensa de Moses</a></li><li><a href="d/final-bueno-de-la-mision-de-kyle-y-recompensas-unicas-191e8/">Final bueno de la misión de Kyle y recompensas únicas</a></li><li><a href="d/ubicacion-del-charger-de-dom-rapidos-y-furiosos-f3051/">Ubicación del Charger de Dom (Rápidos y Furiosos)</a></li><li><a href="d/easter-egg-del-viaje-psicodelico-mushroom-trip-9024d/">Easter egg del viaje psicodélico (Mushroom Trip)</a></li><li><a href="d/ubicacion-del-chevelle-de-dom-rapidos-y-furiosos-fb713/">Ubicación del Chevelle de Dom (Rápidos y Furiosos)</a></li><li><a href="d/ubicacion-y-codigo-de-acceso-de-auntie-s-place-21732/">Ubicación y código de acceso de Auntie&#x27;s Place</a></li><li><a href="d/ocho-vehiculos-raros-y-donde-encontrarlos-b2e66/">Ocho vehículos raros y dónde encontrarlos</a></li><li><a href="d/instalaciones-de-investigacion-submarinas-y-el-meteorito-bc379/">Instalaciones de investigación submarinas y el meteorito</a></li><li><a href="d/tres-vehiculos-de-pandillas-robables-temprano-e5fd4/">Tres vehículos de pandillas robables temprano</a></li><li><a href="d/15-superautos-secretos-que-podes-robar-sin-avanzar-la-histor-da096/">15 superautos secretos que podés robar sin avanzar la historia</a></li><li><a href="d/tres-autos-escondidos-a12bf/">Tres autos escondidos</a></li><li><a href="d/ubicacion-de-los-11-revolveres-legendarios-cc312/">Ubicación de los 11 revólveres legendarios</a></li><li><a href="d/easter-eggs-de-terror-pie-grande-mujer-sobre-un-auto-y-criat-077b9/">Easter eggs de terror: Pie Grande, mujer sobre un auto y criatura demoníaca</a></li><li><a href="d/100-consejos-para-empezar-8d516/">100 consejos para empezar</a></li><li><a href="d/recopilacion-de-30-secretos-y-easter-eggs-parte-2-6f871/">Recopilación de 30 secretos y easter eggs (parte 2)</a></li><li><a href="d/50-easter-eggs-sombrero-de-arthur-morgan-fantasmas-del-faro-45246/">50 easter eggs: sombrero de Arthur Morgan, fantasmas del faro y más</a></li><li><a href="d/desbloqueos-perdibles-del-capitulo-3-3234f/">Desbloqueos perdibles del capítulo 3</a></li><li><a href="d/pistola-dorada-guardian-es18-9aa9e/">Pistola dorada Guardian ES18</a></li><li><a href="d/robos-de-joyerias-sin-policia-78bed/">Robos de joyerías sin policía</a></li><li><a href="d/robo-de-auto-clasico-frente-a-la-policia-41057/">Robo de auto clásico frente a la policía</a></li><li><a href="d/25-trucos-y-mecanicas-que-el-juego-no-explica-6e9c2/">25 trucos y mecánicas que el juego no explica</a></li><li><a href="d/secretos-en-la-casa-quemada-de-jason-d867f/">Secretos en la casa quemada de Jason</a></li><li><a href="d/easter-eggs-poco-conocidos-parte-5-67305/">Easter eggs poco conocidos, parte 5</a></li><li><a href="d/royal-ruby-emerus-en-gta-6-f43b0/">Royal Ruby Emerus en GTA 6</a></li><li><a href="d/lmg-mercenario-en-un-contenedor-ef554/">LMG mercenario en un contenedor</a></li><li><a href="d/snap-gun-para-abrir-puertas-sin-alarma-eb78f/">Snap Gun para abrir puertas sin alarma</a></li><li><a href="d/lugares-con-dinero-escondido-en-leonida-e2259/">Lugares con dinero escondido en Leonida</a></li><li><a href="d/tres-autos-top-en-gta-6-04589/">Tres autos top en GTA 6</a></li><li><a href="d/los-10-autos-mas-rapidos-y-donde-encontrarlos-f0a4e/">Los 10 autos más rápidos y dónde encontrarlos</a></li><li><a href="d/herramientas-clave-para-robos-y-autos-ae27f/">Herramientas clave para robos y autos</a></li><li><a href="d/ubicacion-secreta-con-10-000-dolares-y-un-subfusil-legendari-ea242/">Ubicación secreta con 10.000 dólares y un subfusil legendario</a></li><li><a href="d/guia-de-dinero-para-el-capitulo-2-8b518/">Guía de dinero para el capítulo 2</a></li><li><a href="d/guia-de-hidden-charges-las-tres-antenas-66620/">Guía de Hidden Charges: las tres antenas</a></li><li><a href="d/24-lugares-secretos-visitados-ae263/">24 lugares secretos visitados</a></li><li><a href="d/easter-egg-de-red-hulk-y-finales-alternativos-54346/">Easter egg de Red Hulk y finales alternativos</a></li><li><a href="d/hotel-embrujado-secreto-2963c/">Hotel embrujado secreto</a></li><li><a href="d/guia-de-combate-cuerpo-a-cuerpo-con-movimientos-secretos-8be81/">Guía de combate cuerpo a cuerpo con movimientos secretos</a></li><li><a href="d/5-easter-eggs-que-dan-mejoras-permanentes-de-estadisticas-b8087/">5 easter eggs que dan mejoras permanentes de estadísticas</a></li><li><a href="d/los-robos-que-mas-pagan-e54d9/">Los robos que más pagan</a></li><li><a href="d/como-conseguir-el-urus-dorado-e437c/">Cómo conseguir el Urus dorado</a></li><li><a href="d/iceberg-de-easter-eggs-y-misterios-de-terror-5f4e4/">Iceberg de easter eggs y misterios de terror</a></li><li><a href="d/los-10-vehiculos-mas-secretos-de-gta-6-f68f9/">Los 10 vehículos más secretos de GTA 6</a></li><li><a href="d/11-armas-con-silenciador-recomendadas-13890/">11 armas con silenciador recomendadas</a></li><li><a href="d/robo-a-la-joyeria-icegem-diamonds-bafb3/">Robo a la joyería Icegem Diamonds</a></li><li><a href="d/base-secreta-bajo-el-oceano-0e79c/">Base secreta bajo el océano</a></li><li><a href="d/eclipse-de-paul-walker-maibatsu-penumbra-ff-51965/">Eclipse de Paul Walker: Maibatsu Penumbra FF</a></li><li><a href="d/como-saber-que-edificios-se-pueden-visitar-8d117/">Cómo saber qué edificios se pueden visitar</a></li><li><a href="d/dos-lowriders-raros-desde-el-inicio-incluido-el-albany-manan-d02e1/">Dos lowriders raros desde el inicio, incluido el Albany Manana dorado</a></li><li><a href="d/abduccion-alienigena-y-mision-secreta-alien-dream-b2ed3/">Abducción alienígena y misión secreta Alien Dream</a></li><li><a href="d/18-autos-raros-y-unicos-para-no-perderte-36797/">18 autos raros y únicos para no perderte</a></li><li><a href="d/mas-de-25-funciones-ocultas-que-el-juego-no-explica-c8bea/">Más de 25 funciones ocultas que el juego no explica</a></li><li><a href="d/christine-el-auto-asesino-escondido-f1d3d/">Christine, el auto asesino escondido</a></li><li><a href="d/el-sombrero-de-arthur-morgan-9c767/">El sombrero de Arthur Morgan</a></li><li><a href="d/cinco-autos-ultra-raros-ocultos-c22ab/">Cinco autos ultra raros ocultos</a></li><li><a href="d/ganar-dinero-rapido-en-el-capitulo-1-30fd5/">Ganar dinero rápido en el capítulo 1</a></li><li><a href="d/mecanicas-ocultas-que-quizas-te-perdiste-0e61a/">Mecánicas ocultas que quizás te perdiste</a></li><li><a href="d/cangrejo-gigante-y-arma-legendaria-en-leonida-5f806/">Cangrejo gigante y arma legendaria en Leonida</a></li><li><a href="d/diez-autos-rapidos-para-conseguir-al-principio-76716/">Diez autos rápidos para conseguir al principio</a></li><li><a href="d/escondites-con-botin-parte-2-bddde/">Escondites con botín (parte 2)</a></li><li><a href="d/perro-en-moto-de-agua-que-lleva-a-una-isla-secreta-44294/">Perro en moto de agua que lleva a una isla secreta</a></li><li><a href="d/donde-encontrar-el-truffade-thrax-95ec5/">Dónde encontrar el Truffade Thrax</a></li><li><a href="d/10-lugares-secretos-y-npcs-ocultos-a65df/">10 lugares secretos y NPCs ocultos</a></li><li><a href="d/como-desbloquear-el-clonador-de-llaves-ba1e0/">Cómo desbloquear el clonador de llaves</a></li><li><a href="d/robo-de-autos-para-moses-en-el-capitulo-2-ceef2/">Robo de autos para Moses en el Capítulo 2</a></li><li><a href="d/recopilacion-de-easter-eggs-y-referencias-parte-1-c2ffa/">Recopilación de easter eggs y referencias (parte 1)</a></li><li><a href="d/autos-secretos-eclipse-charger-y-carrito-de-golf-hot-rod-468db/">Autos secretos: Eclipse, Charger y carrito de golf hot rod</a></li><li><a href="d/como-obtener-el-perfil-de-criminal-profesional-23919/">Cómo obtener el perfil de criminal profesional</a></li></ul><!--/STATIC--></div>
+    <div class="more"><button id="more" class="btn" hidden>Ver más descubrimientos</button></div>
+  </div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <div><a class="logo" href="./"><svg viewBox="0 0 30 38" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3d8b"/><stop offset="1" stop-color="#ffb547"/></linearGradient></defs><path d="M15 1C7.3 1 1 7.1 1 14.7 1 24.9 15 37 15 37s14-12.1 14-22.3C29 7.1 22.7 1 15 1z" fill="url(#lg2)"/><circle cx="15" cy="14.5" r="7.2" fill="#0b0912"/><path d="M15 9.2l1.4 3.9 3.9 1.4-3.9 1.4-1.4 3.9-1.4-3.9-3.9-1.4 3.9-1.4z" fill="#fff"/></svg><span class="wordmark"><b>Wasted</b><i>Map</i></span></a>
+  <p>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.</p></div>
+  <nav><a href="semana/">Top de la semana</a><a href="acerca/">Acerca de</a><a href="privacidad/">Privacidad</a><a href="contacto/">Contacto</a></nav>
+</div></footer>
 
 <script>
 const CATS = {
-  todos:"Todos", easter_egg:"Easter eggs", ubicacion_secreta:"Lugares secretos",
-  coleccionable:"Coleccionables", vehiculo:"Vehículos", arma:"Armas", dinero:"Dinero",
-  mision:"Misiones", mecanica_truco:"Mecánicas y tips", otro:"Otros"
+  todos:["Todos","#f2eefa"], easter_egg:["Easter eggs","#ff3d8b"], ubicacion_secreta:["Lugares secretos","#2ee6d6"],
+  coleccionable:["Coleccionables","#ffd54a"], vehiculo:["Vehículos","#ff8a3d"], arma:["Armas","#ff4d4d"],
+  dinero:["Dinero","#4ade80"], mision:["Misiones","#a78bfa"], mecanica_truco:["Mecánicas y tips","#60a5fa"], otro:["Otros","#958ba9"]
 };
-let all = [], cat = "todos", q = "";
+const PAGE = 24;
+let all = [], cat = "todos", q = "", shown = PAGE;
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const fmtNum = n => n >= 1e6 ? (n/1e6).toFixed(1)+" M" : n >= 1e3 ? Math.round(n/1e3)+" k" : String(n);
+const fmtNum = n => n >= 1e6 ? (n/1e6).toFixed(1).replace(".",",")+" M" : n >= 1e3 ? Math.round(n/1e3)+" k" : String(n||0);
 function ago(iso){
   const h = (Date.now() - new Date(iso)) / 36e5;
   if (h < 1) return "hace minutos";
   if (h < 24) return `hace ${Math.floor(h)} h`;
   const d = Math.floor(h/24); return d === 1 ? "ayer" : `hace ${d} días`;
 }
+function fresh(iso){
+  const h = (Date.now() - new Date(iso)) / 36e5;
+  return h < 1 ? "Recién" : h < 24 ? `Hace ${Math.floor(h)} h` : `Hace ${Math.floor(h/24)} d`;
+}
+const color = k => (CATS[k] || CATS.otro)[1];
+const label = k => (CATS[k] || CATS.otro)[0];
+const thumbOf = e => e.thumbnail || (e.video_id ? `https://i.ytimg.com/vi/${encodeURIComponent(e.video_id)}/hqdefault.jpg` : "");
+const link = e => e.slug ? `d/${esc(e.slug)}/` : esc(e.url);
 
 function renderChips(){
   const counts = all.reduce((m,e) => (m[e.categoria]=(m[e.categoria]||0)+1, m), {});
   document.getElementById("chips").innerHTML = Object.entries(CATS)
     .filter(([k]) => k === "todos" || counts[k])
-    .map(([k,v]) => `<button class="chip" data-cat="${k}" aria-pressed="${k===cat}">${v}${k!=="todos"?` · ${counts[k]}`:""}</button>`)
+    .map(([k,[name,c]]) => `<button class="chip" style="--c:${c}" data-cat="${k}" aria-pressed="${k===cat}"><i></i>${name} <small>${k==="todos" ? all.length : counts[k]}</small></button>`)
     .join("");
 }
 
-function mediaHtml(e){
-  if (e.video_id) {
-    const thumb = e.thumbnail || `https://i.ytimg.com/vi/${encodeURIComponent(e.video_id)}/hqdefault.jpg`;
-    return `<button class="media" data-yt="${esc(e.video_id)}" aria-label="Reproducir video">
-      <img loading="lazy" src="${esc(thumb)}" alt=""><span class="play"></span></button>`;
-  }
-  if (e.thumbnail) return `<a class="media" href="${esc(e.url)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(e.thumbnail)}" alt=""></a>`;
-  return `<div class="media">${e.source === "reddit" ? "Publicación de Reddit" : "Sin vista previa"}</div>`;
+function mediaHtml(e, big){
+  const t = thumbOf(e);
+  const extra = `<span class="badge">${esc(label(e.categoria))}</span>${e.confianza==="media"?'<span class="flag">Sin confirmar</span>':""}<span class="views">${e.source==="youtube"?"▶ ":"▲ "}${fmtNum(e.popularity)}</span>`;
+  if (e.video_id) return `<button class="media" data-yt="${esc(e.video_id)}" aria-label="Reproducir video"><img loading="${big?"eager":"lazy"}" src="${esc(t)}" alt="">${extra}<span class="play"></span></button>`;
+  if (t) return `<a class="media" href="${esc(e.url)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(t)}" alt="">${extra}</a>`;
+  return `<div class="media">${extra}Sin vista previa</div>`;
 }
 
 function alsoHtml(e){
   const extra = (e.fuentes_extra || []).filter(s => /^https?:/.test(s.url || ""));
   if (!extra.length) return "";
-  const links = extra.slice(0, 4).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.author)}</a>`).join(", ");
-  const more = extra.length > 4 ? ` y ${extra.length - 4} más` : "";
-  return `<div class="also">También lo mostraron: ${links}${more}</div>`;
+  const links = extra.slice(0, 3).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.author)}</a>`).join(", ");
+  return `<div class="also">También lo mostraron: ${links}${extra.length > 3 ? ` y ${extra.length-3} más` : ""}</div>`;
 }
 
 function card(e){
-  const src = e.source === "youtube" ? `▶ ${fmtNum(e.popularity)} vistas` : `▲ ${fmtNum(e.popularity)} votos`;
-  return `<article class="card${e.spoiler ? " spoiler" : ""}">
+  return `<article class="card${e.spoiler ? " spoiler" : ""}" style="--c:${color(e.categoria)}">
     ${mediaHtml(e)}
     <div class="body">
-      ${e.spoiler ? `<button class="spoiler-btn">Contiene spoilers · tocá para ver</button>` : ""}
-      <div class="tags">
-        <span class="tag cat">${esc(CATS[e.categoria] || "Otros")}</span>
-        ${e.zona ? `<span class="tag">📍 ${esc(e.zona)}</span>` : ""}
-        ${e.confianza === "media" ? `<span class="tag media-conf">Sin confirmar</span>` : ""}
-      </div>
-      <h2>${e.slug ? `<a class="tlink" href="d/${esc(e.slug)}/">${esc(e.titulo)}</a>` : esc(e.titulo)}</h2>
+      ${e.spoiler ? `<button class="spoiler-btn">⚠ Contiene spoilers · tocá para ver</button>` : ""}
+      <h3><a href="${link(e)}">${esc(e.titulo)}</a></h3>
       <p>${esc(e.resumen)}</p>
-      ${e.como_conseguirlo ? `<div class="how"><b>Cómo:</b> ${esc(e.como_conseguirlo)}</div>` : ""}
+      ${e.region || e.zona ? `<div class="zone">📍 ${esc(e.region || e.zona)}</div>` : ""}
       ${alsoHtml(e)}
-      <div class="src"><span>${esc(e.author)} · ${ago(e.published_at)}</span>
-        <a href="${esc(e.url)}" target="_blank" rel="noopener">${src}</a></div>
+      <div class="src"><span>${esc(e.author)} · ${ago(e.published_at)}</span><a href="${link(e)}">Ver guía →</a></div>
     </div></article>`;
+}
+
+function featured(){
+  const week = Date.now() - 7*864e5;
+  const top = all.filter(e => e.confianza === "alta" && !e.spoiler && new Date(e.published_at) >= week)
+                 .sort((a,b) => (b.popularity||0) - (a.popularity||0))[0];
+  if (!top) return;
+  document.getElementById("featured").innerHTML = `<article class="featured card" style="--c:${color(top.categoria)}">
+    ${mediaHtml(top, true)}
+    <div class="fbody">
+      <span class="kicker">#1 de la semana · ${esc(label(top.categoria))}</span>
+      <h3><a href="${link(top)}">${esc(top.titulo)}</a></h3>
+      <p>${esc(top.resumen)}</p>
+      <div><a class="btn primary" href="${link(top)}">Ver la guía completa →</a></div>
+    </div></article>`;
+  document.getElementById("featured-wrap").hidden = false;
+}
+
+function stats(d){
+  const confirmed = all.filter(e => e.confianza === "alta").length;
+  const zones = new Set(all.map(e => e.region).filter(Boolean)).size;
+  document.getElementById("stats").innerHTML =
+    `<div class="stat"><b>${all.length}</b><span>Descubrimientos</span></div>
+     <div class="stat"><b>${confirmed}</b><span>Confirmados</span></div>
+     ${zones ? `<div class="stat"><b>${zones}</b><span>Zonas</span></div>` : ""}
+     <div class="stat"><b>${fresh(d.updated_at)}</b><span>Última actualización</span></div>`;
 }
 
 function render(){
   const needle = q.trim().toLowerCase();
   const list = all.filter(e => (cat === "todos" || e.categoria === cat) &&
-    (!needle || [e.titulo,e.resumen,e.zona,e.como_conseguirlo,e.title_original].join(" ").toLowerCase().includes(needle)));
-  document.getElementById("grid").innerHTML = list.length ? list.map(card).join("")
-    : `<div class="empty">No hay nada con ese filtro todavía. El bot revisa nuevas publicaciones varias veces por día.</div>`;
+    (!needle || [e.titulo,e.resumen,e.zona,e.region,e.como_conseguirlo,e.title_original].join(" ").toLowerCase().includes(needle)));
+  const title = document.getElementById("grid-title");
+  title.innerHTML = needle ? `Resultados <span>(${list.length})</span>`
+    : cat === "todos" ? `Últimos <span>descubrimientos</span>` : `${esc(label(cat))} <span>(${list.length})</span>`;
+  document.getElementById("grid").innerHTML = list.length ? list.slice(0, shown).map(card).join("")
+    : `<div class="empty">No encontramos nada con ese filtro todavía. El bot revisa videos nuevos varias veces por día.</div>`;
+  document.getElementById("more").hidden = list.length <= shown;
 }
 
 document.getElementById("chips").addEventListener("click", ev => {
   const b = ev.target.closest(".chip"); if (!b) return;
-  cat = b.dataset.cat; renderChips(); render();
+  cat = b.dataset.cat; shown = PAGE; renderChips(); render();
 });
-document.getElementById("q").addEventListener("input", ev => { q = ev.target.value; render(); });
-document.getElementById("grid").addEventListener("click", ev => {
+document.getElementById("q").addEventListener("input", ev => { q = ev.target.value; shown = PAGE; render(); });
+document.getElementById("q").addEventListener("keydown", ev => {
+  if (ev.key === "Enter") document.getElementById("explorar").scrollIntoView();
+});
+document.getElementById("more").addEventListener("click", () => { shown += PAGE; render(); });
+document.addEventListener("click", ev => {
   const sp = ev.target.closest(".spoiler-btn");
   if (sp) { sp.closest(".card").classList.remove("spoiler"); sp.remove(); return; }
   const m = ev.target.closest(".media[data-yt]");
   if (m && !m.closest(".spoiler")) {
+    ev.preventDefault();
     m.outerHTML = `<div class="media"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(m.dataset.yt)}?autoplay=1"
       allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Video"></iframe></div>`;
   }
@@ -176,11 +187,9 @@ document.getElementById("grid").addEventListener("click", ev => {
 
 fetch("data.json", {cache: "no-store"}).then(r => r.json()).then(d => {
   all = d.entries || [];
-  if (d.site_name) document.getElementById("site-name").textContent = d.site_name;
   document.getElementById("demo").hidden = !all.some(e => e.demo);
-  document.getElementById("meta").textContent =
-    `${all.length} descubrimientos · actualizado ${ago(d.updated_at)}`;
-  renderChips(); render();
+  document.getElementById("meta").textContent = `Actualizado ${ago(d.updated_at)}`;
+  stats(d); featured(); renderChips(); render();
 }).catch(() => {
   document.getElementById("grid").innerHTML = `<div class="empty">No se pudieron cargar los datos.</div>`;
 });
