@@ -1,7 +1,53 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-23T16:58:28Z",
+ "updated_at": "2026-11-23T17:29:47Z",
  "entries": [
+  {
+   "id": "yt:F7ubWhPjkbY",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=F7ubWhPjkbY",
+   "video_id": "F7ubWhPjkbY",
+   "author": "Nominel",
+   "published_at": "2026-11-23T14:34:01Z",
+   "title_original": "bisher das bester gta 6 easter Egg Zeitreise zurück zu Vice City #gta6 #gta6clips #gtaesteregg",
+   "popularity": 3857,
+   "thumbnail": "https://i.ytimg.com/vi/F7ubWhPjkbY/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Viaje en el tiempo a Vice City",
+   "resumen": "Clip que muestra un easter egg que lleva de vuelta a Vice City. El texto no da detalles de cómo activarlo.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "slug": "viaje-en-el-tiempo-a-vice-city-57ff1"
+  },
+  {
+   "id": "yt:nwYs8S_D-KA",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=nwYs8S_D-KA",
+   "video_id": "nwYs8S_D-KA",
+   "author": "SubscribeForTacos",
+   "published_at": "2026-11-23T14:00:13Z",
+   "title_original": "How To Get Inside The Cruise Ship in GTA 6",
+   "popularity": 2859,
+   "thumbnail": "https://i.ytimg.com/vi/nwYs8S_D-KA/hqdefault.jpg",
+   "categoria": "ubicacion_secreta",
+   "titulo": "Cómo subir al crucero en GTA 6",
+   "resumen": "El video explica cómo abordar el crucero de Leonida y muestra qué se puede encontrar arriba. La descripción no detalla los pasos concretos.",
+   "zona": "Leonida",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "slug": "como-subir-al-crucero-en-gta-6-3e872"
+  },
   {
    "id": "yt:4zVYLPSTvao",
    "source": "youtube",
@@ -45,7 +91,7 @@
    "author": "Xakon Gaming",
    "published_at": "2026-11-23T12:17:41Z",
    "title_original": "6 HIDDEN Controls you Probably Missed in GTA 6",
-   "popularity": 2415,
+   "popularity": 3004,
    "thumbnail": "https://i.ytimg.com/vi/jO-0JuxmNlQ/hqdefault.jpg",
    "categoria": "mecanica_truco",
    "titulo": "Seis controles ocultos de GTA 6",
@@ -54,7 +100,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "seis-controles-ocultos-de-gta-6-c7d89"
+   "slug": "seis-controles-ocultos-de-gta-6-c7d89",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:8oxKAffn_Jc",
@@ -87,7 +137,7 @@
    "author": "Schlayer",
    "published_at": "2026-11-23T11:49:04Z",
    "title_original": "Don't miss these 2 RARE cars in GTA 6! 🚗 #gta6 #gta6leaks #gaming",
-   "popularity": 5197,
+   "popularity": 5941,
    "thumbnail": "https://i.ytimg.com/vi/eLqnjkmVRnA/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Autos raros y dinero en Leonida",
@@ -96,7 +146,34 @@
    "como_conseguirlo": "El video detalla las ubicaciones exactas de cada ítem en el mapa; la descripción no incluye los pasos concretos, hay que verlo en el video.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "autos-raros-y-dinero-en-leonida-38b38"
+   "slug": "autos-raros-y-dinero-en-leonida-38b38",
+   "enriched": true,
+   "detalle": "Guía que muestra cómo conseguir el Pink Ginn Tulip y el Cherry Bomb Chino, junto con armas como la Guardian ES-18 y la Stand for Stand KZ-59AR, además de escondites de dinero que según el video pueden dar hasta $40.000.\n\nLa descripción detalla que se trata de ítems de alto valor en Leonida, incluyendo también Sticky Bombs. Sin embargo, no incluye los pasos concretos: hay que verlos en el video del autor.",
+   "pasos": [],
+   "region": ""
+  },
+  {
+   "id": "yt:1bbeWHBvWMQ",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=1bbeWHBvWMQ",
+   "video_id": "1bbeWHBvWMQ",
+   "author": "CHOWH1",
+   "published_at": "2026-11-23T11:00:19Z",
+   "title_original": "L'EASTER EGG DU T-REX SUR GTA 6 ! #Shorts",
+   "popularity": 13854,
+   "thumbnail": "https://i.ytimg.com/vi/1bbeWHBvWMQ/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Easter egg del T-Rex",
+   "resumen": "Short en francés que muestra un easter egg con un T-Rex en GTA VI. La descripción no da pasos para encontrarlo.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "slug": "easter-egg-del-t-rex-8898b"
   },
   {
    "id": "yt:Af7l95NrLXY",
@@ -106,7 +183,7 @@
    "author": "Walking in Games",
    "published_at": "2026-11-23T11:00:10Z",
    "title_original": "A Nice Sniper for the Early Game – GTA 6 #shorts #gta6",
-   "popularity": 2791,
+   "popularity": 3715,
    "thumbnail": "https://i.ytimg.com/vi/Af7l95NrLXY/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "Francotirador secreto en Key Lento",
@@ -115,7 +192,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "francotirador-secreto-en-key-lento-82007"
+   "slug": "francotirador-secreto-en-key-lento-82007",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "Key Lento"
   },
   {
    "id": "yt:mith8Uhw3lg",
@@ -151,7 +232,7 @@
    "author": "TheJizzy",
    "published_at": "2026-11-23T09:00:16Z",
    "title_original": "GTA 6: Scariest Ghost Encounter! (Easter Egg)",
-   "popularity": 2085,
+   "popularity": 2869,
    "thumbnail": "https://i.ytimg.com/vi/eZEaz6Uqy4Q/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Fantasma en Sassafras Road",
@@ -160,7 +241,14 @@
    "como_conseguirlo": "Manejar de noche con niebla por Sassafras Road.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "fantasma-en-sassafras-road-a954a"
+   "slug": "fantasma-en-sassafras-road-a954a",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [
+    "Manejar de noche por Sassafras Road con niebla",
+    "Si aparece la mujer fantasma sobre el auto, volver al vehículo para que reaparezca"
+   ],
+   "region": ""
   },
   {
    "id": "yt:pvbk01P8x78",
@@ -199,7 +287,7 @@
    "author": "Caspahz",
    "published_at": "2026-11-23T07:50:58Z",
    "title_original": "How to Get the FREE Grotti Cheetah in GTA 6 (1010 Mural Mission Reward)",
-   "popularity": 4090,
+   "popularity": 4483,
    "thumbnail": "https://i.ytimg.com/vi/dN2IB_Xll_U/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "Cómo conseguir el Grotti Cheetah gratis",
@@ -208,7 +296,14 @@
    "como_conseguirlo": "Completar la misión del mural 1010 viendo los cinco murales (intro, mural 1 al 5) y reclamar el Grotti Cheetah como recompensa.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "como-conseguir-el-grotti-cheetah-gratis-a772b"
+   "slug": "como-conseguir-el-grotti-cheetah-gratis-a772b",
+   "enriched": true,
+   "detalle": "El Grotti Cheetah es la recompensa de completar la misión del mural 1010. Según la descripción, no hace falta gastar dinero: alcanza con terminar la misión para quedarse con el auto.\n\nLa guía recorre la introducción y los cinco murales antes de mostrar el momento en que se desbloquea el auto.",
+   "pasos": [
+    "Completar la misión del mural 1010 mirando los cinco murales (intro, mural 1 al 5).",
+    "Reclamar el Grotti Cheetah como recompensa."
+   ],
+   "region": ""
   },
   {
    "id": "yt:ybLbnrwU7vY",
@@ -326,7 +421,17 @@
     "Ir a la obra de noche, idealmente cerca de las 3:00 AM.",
     "Entrar al ascensor que tiene el globo al lado."
    ],
-   "region": ""
+   "region": "",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=eAJEIDg-RFo",
+     "video_id": "eAJEIDg-RFo",
+     "author": "xGarbett",
+     "popularity": 2159,
+     "published_at": "2026-11-23T05:30:16Z"
+    }
+   ]
   },
   {
    "id": "yt:7vBHXYbx5Zg",
@@ -336,7 +441,7 @@
    "author": "NIXNE",
    "published_at": "2026-11-23T02:39:26Z",
    "title_original": "GTA 6 - Get This Gold Tier Weapon and Rare Loot ASAP!",
-   "popularity": 4350,
+   "popularity": 4436,
    "thumbnail": "https://i.ytimg.com/vi/7vBHXYbx5Zg/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "Escopeta dorada en Kingpin Bowling",
@@ -345,7 +450,15 @@
    "como_conseguirlo": "Hacer el robo en Kingpin Bowling en el Capítulo 2, abrir la caja fuerte con la combinación indicada en el video y luego desbloquear el trofeo \"Let's Go Bowling\".",
    "spoiler": false,
    "confianza": "media",
-   "slug": "escopeta-dorada-en-kingpin-bowling-5bfe5"
+   "slug": "escopeta-dorada-en-kingpin-bowling-5bfe5",
+   "enriched": true,
+   "detalle": "Es una guía para conseguir una escopeta de nivel dorado durante un robo en Kingpin Bowling, en Port Gellhorn.\n\nEl video muestra la combinación de la caja fuerte del lugar y cómo desbloquear el trofeo oculto \"Let's Go Bowling\" después del robo.",
+   "pasos": [
+    "Hacer el robo en Kingpin Bowling durante el Capítulo 2.",
+    "Abrir la caja fuerte con la combinación que indica el video.",
+    "Desbloquear el trofeo \"Let's Go Bowling\"."
+   ],
+   "region": "Port Gellhorn"
   },
   {
    "id": "yt:oGU_oNPXtgQ",
@@ -401,7 +514,7 @@
    "author": "Redvenge",
    "published_at": "2026-11-23T02:00:32Z",
    "title_original": "3 Secret Weapon Locations in GTA 6",
-   "popularity": 3809,
+   "popularity": 4659,
    "thumbnail": "https://i.ytimg.com/vi/WqrXp44o530/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "Tres ubicaciones de armas secretas",
@@ -410,7 +523,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "tres-ubicaciones-de-armas-secretas-697bd"
+   "slug": "tres-ubicaciones-de-armas-secretas-697bd",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:ccnkCxGBHKc",
@@ -580,7 +697,7 @@
     "Seguir al Dr. Merle hasta la planta de aguas residuales.",
     "Saltar en la cámara tóxica."
    ],
-   "region": "Corsair Key"
+   "region": ""
   },
   {
    "id": "yt:oejK0_fCg-s",
@@ -590,7 +707,7 @@
    "author": "JoblessGarrett",
    "published_at": "2026-11-23T01:30:36Z",
    "title_original": "How To Steal A Military Jet In GTA 6 #GTA #GTA6",
-   "popularity": 3794,
+   "popularity": 3866,
    "thumbnail": "https://i.ytimg.com/vi/oejK0_fCg-s/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Cómo robar un jet militar",
@@ -599,7 +716,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "como-robar-un-jet-militar-86eba"
+   "slug": "como-robar-un-jet-militar-86eba",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:VCfH-Kcd2y0",
@@ -609,7 +730,7 @@
    "author": "Jouget",
    "published_at": "2026-11-23T01:23:06Z",
    "title_original": "Ubicaciones de AUTOS SECRETOS que DEBES visitar en GTA 6 💀🔥 #gta6 #gtavi #gaming",
-   "popularity": 4648,
+   "popularity": 4770,
    "thumbnail": "https://i.ytimg.com/vi/VCfH-Kcd2y0/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Ubicaciones de autos raros",
@@ -618,7 +739,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "ubicaciones-de-autos-raros-d6bce"
+   "slug": "ubicaciones-de-autos-raros-d6bce",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:yGjne8kRJQk",
@@ -628,7 +753,7 @@
    "author": "ZLANER",
    "published_at": "2026-11-23T01:22:45Z",
    "title_original": "The UFO Easter Egg in GTA 6 is CRAZY",
-   "popularity": 5751,
+   "popularity": 6263,
    "thumbnail": "https://i.ytimg.com/vi/yGjne8kRJQk/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Easter egg del OVNI",
@@ -637,7 +762,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "easter-egg-del-ovni-3a988"
+   "slug": "easter-egg-del-ovni-3a988",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:5cdXnYDeitQ",
@@ -871,7 +1000,7 @@
    "author": "GTA6 Gaming Clips",
    "published_at": "2026-11-23T00:09:17Z",
    "title_original": "GTA 6 Rare Cars Early (3 Gang Rides in Chapter 2)",
-   "popularity": 4795,
+   "popularity": 4897,
    "thumbnail": "https://i.ytimg.com/vi/FEBCk0oEChQ/hqdefault.jpg",
    "categoria": "vehiculo",
    "titulo": "Tres vehículos de pandillas robables temprano",
@@ -880,7 +1009,18 @@
    "como_conseguirlo": "Desbloquear a Moses. Caracara: entrar a la casa allanada por la policía en el norte de Port Gellhorn, tomar el código de la caja fuerte y llevarse la camioneta del medio del predio; no personalizarla en la tienda off-road porque pierde su variante rara. Dominator: estacionado frente al edificio de la pandilla en el oeste de Port Gellhorn, junto al agua. Monarch Avarus: refugio de motociclistas en Ambrosia, en el patio del bar; llevar explosivos.",
    "spoiler": false,
    "confianza": "media",
-   "slug": "tres-vehiculos-de-pandillas-robables-temprano-e5fd4"
+   "slug": "tres-vehiculos-de-pandillas-robables-temprano-e5fd4",
+   "enriched": true,
+   "detalle": "Tres vehículos de pandillas que se pueden robar temprano, en el capítulo 2: Vapid Smuggler Caracara, Dominator y LCC Monarch Avarus. Para habilitarlos hay que desbloquear antes a Moses, el encubridor de autos, que permite registrarlos como propios.\n\nEl Caracara es una camioneta todoterreno que se consigue en una casa allanada por la policía, en el norte de Port Gellhorn. El Dominator está estacionado frente al edificio de la pandilla, en el oeste de Port Gellhorn, junto al agua. El Monarch Avarus se encuentra en un refugio de motociclistas en Ambrosia, en el patio del bar.\n\nOjo: personalizar el Caracara en la tienda off-road le quita su variante rara.",
+   "pasos": [
+    "Desbloquear a Moses, el encubridor de autos, antes de robar los vehículos.",
+    "Caracara: entrar a la casa allanada por la policía en el norte de Port Gellhorn y tomar el código de la caja fuerte que está adentro.",
+    "Caracara: llevarse la camioneta que está en el medio del predio.",
+    "Dominator: ir al oeste de Port Gellhorn, estacionado frente al edificio de la pandilla, junto al agua.",
+    "Monarch Avarus: ir al refugio de motociclistas en Ambrosia, en el patio del bar.",
+    "Monarch Avarus: llevar explosivos para enfrentar a los motociclistas."
+   ],
+   "region": ""
   },
   {
    "id": "yt:8hQqKFpxO0Q",
@@ -950,6 +1090,29 @@
    "detalle": "Guía con las ubicaciones de los 11 revólveres legendarios únicos, incluyendo variantes de H&L .38, Mustang .357, WCR-1 y Akulus, y uno exclusivo de la Ultimate Edition.\n\nLos revólveres Hawk y Little Morgan están en la Vercetti Estate. El resto aparece en contenedores de carga, baúles de vehículos, operaciones ilegales, pantanos o armerías, según los timestamps del video.",
    "pasos": [],
    "region": ""
+  },
+  {
+   "id": "yt:_Kz3LoJiR9s",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=_Kz3LoJiR9s",
+   "video_id": "_Kz3LoJiR9s",
+   "author": "Riot Clipping | GTA 6 News, Clips & Viral Moments",
+   "published_at": "2026-11-23T00:00:14Z",
+   "title_original": "5 Rare GTA 6 Cars You Can Take for FREE 🚗 (Part 1)",
+   "popularity": 2249,
+   "thumbnail": "https://i.ytimg.com/vi/_Kz3LoJiR9s/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "5 autos raros que podés llevarte gratis en GTA 6",
+   "resumen": "Lista de autos raros que se pueden tomar sin costo, con su ubicación y observaciones sobre rastreador, bloqueo o vigilancia. La parte 1 cubre cinco de diez ubicaciones.",
+   "zona": "Vespucci, Waxman, La Perle, Ambrosia",
+   "como_conseguirlo": "Progen Royal Ruby Emerus: en la mansión de la isla Vespucci, sin cerradura ni rastreador. Progen Purple Drank Emerus: Chatfield Storage en la isla Waxman, con nitro pero muy custodiado. Pegassi Charred Toros: en el patio de una trap house en La Perle, sin rastreador. Bravado Copperheads Gauntlet: en un garaje de Ambrosia, tiene rastreador estándar, se registra en un Pay 'n' Spray. Bravado Devil's Rope Gauntlet: garaje de bikers en Ambrosia, se entra por el techo sin pelear.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Son cinco autos raros que se pueden llevar gratis. Están repartidos en varias zonas: el Progen Royal Ruby Emerus está en la mansión de la isla Vespucci, sin cerradura ni rastreador. El Progen Purple Drank Emerus está en Chatfield Storage, en la isla Waxman, con nitro pero muy custodiado.\n\nEl Pegassi Charred Toros se encuentra en el patio de una trap house en La Perle, sin rastreador. Los dos Bravado Gauntlet están en garajes de Ambrosia: el Copperheads tiene rastreador estándar, así que conviene registrarlo en un Pay 'n' Spray; el Devil's Rope está en un garaje de bikers y se puede entrar por el techo sin pelear.\n\nEl video es la parte 1 de 2, y la descripción menciona que la parte 2 incluye otros cinco autos.",
+   "pasos": [],
+   "region": "",
+   "slug": "5-autos-raros-que-podes-llevarte-gratis-en-gta-6-f572a"
   },
   {
    "id": "yt:mUL7QDiHzIE",
@@ -1394,7 +1557,7 @@
    "author": "Abex",
    "published_at": "2026-11-22T22:00:21Z",
    "title_original": "Consigue $10,000 y un subfusil legendario en GTA 6 (Ubicación secreta)",
-   "popularity": 3655,
+   "popularity": 3711,
    "thumbnail": "https://i.ytimg.com/vi/XQHeX6MrRG8/hqdefault.jpg",
    "categoria": "arma",
    "titulo": "Ubicación secreta con 10.000 dólares y un subfusil legendario",
@@ -1403,7 +1566,11 @@
    "como_conseguirlo": "",
    "spoiler": false,
    "confianza": "media",
-   "slug": "ubicacion-secreta-con-10-000-dolares-y-un-subfusil-legendari-ea242"
+   "slug": "ubicacion-secreta-con-10-000-dolares-y-un-subfusil-legendari-ea242",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": ""
   },
   {
    "id": "yt:W1zKJHp9WPo",
@@ -1485,7 +1652,7 @@
    "author": "2 PLAYER MX",
    "published_at": "2026-11-22T21:15:07Z",
    "title_original": "¡HULK ROJO existe en GTA 6 y tiene 2 FINALES SECRETOS! 🔥",
-   "popularity": 4038,
+   "popularity": 4121,
    "thumbnail": "https://i.ytimg.com/vi/REfc5kkhLA8/hqdefault.jpg",
    "categoria": "mision",
    "titulo": "Easter egg de Red Hulk y finales alternativos",
@@ -1494,7 +1661,17 @@
    "como_conseguirlo": "Capítulo 2: encontrar el cartel Pilot Wanted afuera del Starlet Motel y completar las tres misiones de Kyle (fumigar cultivos, conseguir químicos de Final Chapter y revisar a Kyle en la granja). En la última, no atacarlo para el final bueno, o ayudar a la policía para el final malo. Guardar manualmente antes de la tercera misión.",
    "spoiler": true,
    "confianza": "media",
-   "slug": "easter-egg-de-red-hulk-y-finales-alternativos-54346"
+   "slug": "easter-egg-de-red-hulk-y-finales-alternativos-54346",
+   "enriched": true,
+   "detalle": "Es un easter egg relacionado con Red Hulk, que se inicia con las misiones secundarias de Kyle McKittrick, parte de Strangers & Freaks.\n\nLas tres misiones llevan a dos finales. El final bueno se consigue sin atacar a Kyle y el malo ayudando a la policía a eliminarlo, con una recompensa de $5,000. El video recomienda guardar manualmente antes de la tercera misión para poder probar ambos finales.",
+   "pasos": [
+    "En el Capítulo 2, encontrar el cartel de Pilot Wanted afuera del Starlet Motel.",
+    "Completar \"Check Out McKittrick Farm\" ayudando a Kyle a fumigar sus cultivos.",
+    "Completar \"Collect Chemicals for Kyle\" consiguiendo los químicos de los Final Chapter.",
+    "Guardar manualmente antes de la misión \"Buddy? (Check on Kyle)\".",
+    "En la última misión, no atacar a Kyle para el final bueno, o ayudar a la policía para el final malo."
+   ],
+   "region": ""
   },
   {
    "id": "yt:0CJSsFqwtOs",
@@ -1815,6 +1992,29 @@
    "region": ""
   },
   {
+   "id": "yt:rjOQ_72JwJQ",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=rjOQ_72JwJQ",
+   "video_id": "rjOQ_72JwJQ",
+   "author": "SkybFly",
+   "published_at": "2026-11-22T20:16:15Z",
+   "title_original": "Michael’s ringtone from GTA 5 EASTER EGG in GTA 6📱❤️‍🔥#gaming #gta6 #gta5 #grandtheftauto6",
+   "popularity": 8812,
+   "thumbnail": "https://i.ytimg.com/vi/rjOQ_72JwJQ/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Tono de llamada de Michael",
+   "resumen": "Short que muestra un easter egg con el tono de llamada de Michael de GTA 5 dentro de GTA 6. No hay texto con detalles.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "slug": "tono-de-llamada-de-michael-21281"
+  },
+  {
    "id": "yt:45B_EjE6IlY",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=45B_EjE6IlY",
@@ -1877,6 +2077,29 @@
    "detalle": "Guía del easter egg de abducción alienígena y de la misión secreta Alien Dream que lo acompaña. Según el video, completar la misión da una mejora permanente de salud, resistencia y concentración.",
    "pasos": [],
    "region": ""
+  },
+  {
+   "id": "yt:heZb0DZRULk",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=heZb0DZRULk",
+   "video_id": "heZb0DZRULk",
+   "author": "MatuzCL",
+   "published_at": "2026-11-22T19:51:43Z",
+   "title_original": "👽 ¡ENCONTRÉ el EASTER EGG del ALIEN en GTA 6! 😱",
+   "popularity": 12211,
+   "thumbnail": "https://i.ytimg.com/vi/heZb0DZRULk/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Easter egg del alien",
+   "resumen": "Video en español que dice haber encontrado un easter egg con un alien en GTA 6. El texto no explica qué es ni cómo llegar.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "slug": "easter-egg-del-alien-d78bf"
   },
   {
    "id": "yt:7SzYZRsoCo0",
@@ -1946,6 +2169,29 @@
    "detalle": "",
    "pasos": [],
    "region": ""
+  },
+  {
+   "id": "yt:YA5x6Vi4dOg",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=YA5x6Vi4dOg",
+   "video_id": "YA5x6Vi4dOg",
+   "author": "Zemie Plays",
+   "published_at": "2026-11-22T19:11:28Z",
+   "title_original": "This QR Code in GTA 6 is a HIDDEN Easter Egg",
+   "popularity": 20798,
+   "thumbnail": "https://i.ytimg.com/vi/YA5x6Vi4dOg/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Código QR escondido",
+   "resumen": "Short que muestra un código QR presentado como easter egg oculto en GTA 6. La descripción no explica qué hace ni dónde está.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "slug": "codigo-qr-escondido-9f1f0"
   },
   {
    "id": "yt:f0DBLY-wK90",
@@ -2047,7 +2293,7 @@
    "author": "Zoko",
    "published_at": "2026-11-22T18:51:36Z",
    "title_original": "GTA 6: EL CANGREJO GIGANTE  y ARMA LEGENDARIA (Easter Egg)",
-   "popularity": 2018,
+   "popularity": 2225,
    "thumbnail": "https://i.ytimg.com/vi/Crq8hmkWlOA/hqdefault.jpg",
    "categoria": "easter_egg",
    "titulo": "Cangrejo gigante y arma legendaria en Leonida",
@@ -2056,7 +2302,15 @@
    "como_conseguirlo": "Encontrar el escondite del cangrejo gigante, derrotarlo y luego buscar el arma legendaria en la caja fuerte del mapa (según los capítulos del video).",
    "spoiler": false,
    "confianza": "media",
-   "slug": "cangrejo-gigante-y-arma-legendaria-en-leonida-5f806"
+   "slug": "cangrejo-gigante-y-arma-legendaria-en-leonida-5f806",
+   "enriched": true,
+   "detalle": "Es un easter egg de Leonida: hay un cangrejo gigante escondido en el mapa. Al derrotarlo podés encontrar un arma legendaria, que es un objeto especial del mapa.\n\nSegún los capítulos del video, después de derrotar al cangrejo hay que ir a la caja fuerte del mapa para buscar el arma secreta.",
+   "pasos": [
+    "Encontrar el escondite del cangrejo gigante",
+    "Derrotar al cangrejo gigante",
+    "Buscar el arma legendaria en la caja fuerte del mapa"
+   ],
+   "region": ""
   },
   {
    "id": "yt:mMRxTcvckls",
@@ -2080,6 +2334,29 @@
    "detalle": "El video muestra diez autos rápidos que se consiguen temprano, sin rastreadores ni clonar llaves. Entre ellos hay un muscle car con nitro, un lowrider exclusivo, el Eclipse de Paul Walker, un Porsche rosa secreto, un Porsche 911 plateado, un Rolls Royce dorado, una moto bobber zombie, un Mitsubishi Evolution y un Saleen S7.",
    "pasos": [],
    "region": ""
+  },
+  {
+   "id": "yt:YJQGGj6mstY",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=YJQGGj6mstY",
+   "video_id": "YJQGGj6mstY",
+   "author": "Meberson",
+   "published_at": "2026-11-22T18:37:14Z",
+   "title_original": "SO MACHST DU DAS SATAN EASTER EGG IN GTA 6! #gta6 #gta6tipps #gta",
+   "popularity": 15006,
+   "thumbnail": "https://i.ytimg.com/vi/YJQGGj6mstY/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Easter egg de Satán",
+   "resumen": "Video en alemán que promete mostrar cómo activar un easter egg de Satán en GTA 6. El texto no detalla los pasos; el contenido estaría en el video.",
+   "zona": "",
+   "como_conseguirlo": "Ver el video del autor; la descripción no incluye pasos.",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "slug": "easter-egg-de-satan-c2507"
   },
   {
    "id": "yt:Pae-nCJK22Q",
