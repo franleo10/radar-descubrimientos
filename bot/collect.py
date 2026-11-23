@@ -89,6 +89,32 @@ def collect_youtube() -> list[dict]:
     return out
 
 
+def fetch_video_details(video_ids: list[str]) -> dict[str, dict]:
+    """Descripción y vistas actuales de videos ya conocidos (1 unidad de cuota cada 50)."""
+    if not config.YOUTUBE_API_KEY:
+        return {}
+    out: dict[str, dict] = {}
+    for i in range(0, len(video_ids), 50):
+        r = requests.get(
+            "https://www.googleapis.com/youtube/v3/videos",
+            params={
+                "key": config.YOUTUBE_API_KEY,
+                "part": "snippet,statistics",
+                "id": ",".join(video_ids[i : i + 50]),
+            },
+            timeout=TIMEOUT,
+        )
+        if r.status_code != 200:
+            print(f"[youtube] error {r.status_code} en videos.list: {r.text[:200]}")
+            continue
+        for v in r.json().get("items", []):
+            out[v["id"]] = {
+                "description": (v["snippet"].get("description") or "")[:3000],
+                "views": int(v.get("statistics", {}).get("viewCount", 0)),
+            }
+    return out
+
+
 # ------------------------------------------------------------------ Reddit --
 
 def _reddit_token() -> str | None:

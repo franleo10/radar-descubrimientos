@@ -33,3 +33,11 @@ h2{font-size:20px;margin:26px 0 8px}
 .spoiler-mini img{filter:blur(8px)}
 .other{margin-top:24px;font-size:15px;color:var(--muted)}
 footer{color:var(--muted);font-size:13px;padding:24px 16px 40px;border-top:1px solid var(--line);text-align:center}
+.topnav{display:inline-block;margin-left:14px;font-size:14px}
+.topnav a{color:var(--muted);text-decoration:none}
+.topnav a:hover{color:var(--text)}
+.steps{padding-left:22px}
+.steps li{margin-bottom:6px}
+.ranking{padding-left:24px}
+.ranking li{margin-bottom:14px;color:#cfc8de;font-size:15px}
+.ranking li a{font-weight:600;font-size:17px}

@@ -105,6 +105,10 @@ def run(demo: bool) -> None:
         entries = merge(existing, new_entries)
         added = len(new_entries)
 
+    if not demo:
+        from .enrich import enrich
+
+        enrich(entries)  # guía más completa, pasos y región, de a poco
     save_site(entries)
     print(f"[bot] {added} descubrimientos nuevos, {len(entries)} en total")
 

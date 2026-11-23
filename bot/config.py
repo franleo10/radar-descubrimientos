@@ -55,6 +55,8 @@ REDDIT_KEYWORDS = _list(
 # --- Claude ---
 CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-haiku-5-5")
 CLAUDE_BATCH_SIZE = int(os.environ.get("CLAUDE_BATCH_SIZE", "15"))
+# Cuántos descubrimientos ya publicados se amplían (guía, pasos, región) por corrida.
+ENRICH_PER_RUN = int(os.environ.get("ENRICH_PER_RUN", "40"))
 
 # --- Web ---
 SITE_NAME = os.environ.get("SITE_NAME", "WastedMap")

@@ -45,11 +45,23 @@ CAT_INTRO = {
 _MARK = re.compile(r"(<!--STATIC-->).*?(<!--/STATIC-->)", re.S)
 
 
-def slug_for(e: dict) -> str:
-    text = unicodedata.normalize("NFKD", e.get("titulo") or "descubrimiento")
+def _slugify(text: str, fallback: str = "descubrimiento") -> str:
+    text = unicodedata.normalize("NFKD", text or "")
     text = re.sub(r"[^a-z0-9]+", "-", text.encode("ascii", "ignore").decode().lower()).strip("-")
-    text = text[:60].rstrip("-") or "descubrimiento"
-    return f"{text}-{hashlib.sha1(e['id'].encode()).hexdigest()[:5]}"
+    return text[:60].rstrip("-") or fallback
+
+
+def slug_for(e: dict) -> str:
+    return f"{_slugify(e.get('titulo'))}-{hashlib.sha1(e['id'].encode()).hexdigest()[:5]}"
+
+
+def indexable(e: dict) -> bool:
+    """Solo las confirmadas van a Google; las dudosas se ven en la web pero no se indexan."""
+    return e.get("confianza") == "alta"
+
+
+MIN_ZONE_ENTRIES = 2  # una zona necesita al menos esto para tener su propia página
+WEEK_DAYS = 7
 
 
 def _date(iso: str) -> str:
@@ -74,7 +86,8 @@ def _safe_json(data) -> str:
 
 
 def _layout(*, title: str, description: str, canonical: str, root: str, body: str,
-            image: str = "", jsonld: list | None = None) -> str:
+            image: str = "", jsonld: list | None = None, noindex: bool = False) -> str:
+    robots = '<meta name="robots" content="noindex, follow">' if noindex else ""
     og_image = f'<meta property="og:image" content="{escape(image)}">' if image else ""
     ld = "".join(f'<script type="application/ld+json">{_safe_json(x)}</script>' for x in (jsonld or []))
     return f"""<!doctype html>
@@ -85,6 +98,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(description)}">
 <link rel="canonical" href="{escape(canonical)}">
+{robots}
 <meta property="og:type" content="article">
 <meta property="og:title" content="{escape(title)}">
 <meta property="og:description" content="{escape(description)}">
@@ -95,7 +109,8 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 {ld}
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="{root}">{escape(config.SITE_NAME)}</a></div></header>
+<header><div class="wrap"><a class="brand" href="{root}">{escape(config.SITE_NAME)}</a>
+<nav class="topnav"><a href="{root}semana/">Lo mejor de la semana</a></nav></div></header>
 <main><div class="wrap">
 {body}
 </div></main>
@@ -125,7 +140,7 @@ def _mini_card(e: dict, root: str) -> str:
             f'<span>{escape(e.get("titulo", ""))}</span></a>')
 
 
-def _entry_page(e: dict, related: list[dict]) -> str:
+def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
     root = "../../"
     slug_cat, cat_name = CATS.get(e.get("categoria"), CATS["otro"])
     url = f"{config.SITE_URL}/d/{e['slug']}/"
@@ -142,12 +157,22 @@ def _entry_page(e: dict, related: list[dict]) -> str:
         media = ""
 
     tags = [f'<a class="tag cat" href="{root}c/{slug_cat}/">{escape(cat_name)}</a>']
-    if e.get("zona"):
+    if e.get("region") in zones:
+        tags.append(f'<a class="tag" href="{root}z/{zones[e["region"]]}/">📍 {escape(e["region"])}</a>')
+    elif e.get("zona"):
         tags.append(f'<span class="tag">📍 {escape(e["zona"])}</span>')
     if e.get("confianza") == "media":
         tags.append('<span class="tag warn">Sin confirmar</span>')
 
-    how = (f'<h2>Cómo hacerlo</h2><p>{escape(e["como_conseguirlo"])}</p>' if e.get("como_conseguirlo") else "")
+    if e.get("pasos"):
+        how = "<h2>Cómo hacerlo</h2><ol class=\"steps\">" + "".join(f"<li>{escape(p)}</li>" for p in e["pasos"]) + "</ol>"
+    elif e.get("como_conseguirlo"):
+        how = f'<h2>Cómo hacerlo</h2><p>{escape(e["como_conseguirlo"])}</p>'
+    else:
+        how = ""
+    paragraphs = re.split(r"\n\s*\n", e.get("detalle") or "")
+    detail = "".join(f"<p>{escape(par.strip())}</p>" for par in paragraphs if par.strip())
+    detail = f"<h2>Qué es</h2>{detail}" if detail else ""
     zona = (f'<h2>Dónde está</h2><p>{escape(e["zona"])}</p>' if e.get("zona") else "")
     src_word = "vistas" if e.get("source") == "youtube" else "votos"
     sources = [f'<li><a href="{escape(e["url"])}" rel="noopener">{escape(e.get("author", ""))}</a> · '
@@ -168,7 +193,7 @@ def _entry_page(e: dict, related: list[dict]) -> str:
     <h1>{escape(e.get("titulo", ""))}</h1>
     {media}
     <p class="lead">{escape(e.get("resumen", ""))}</p>
-    {zona}{how}
+    {detail}{zona}{how}
   </div>
   <h2>Fuentes</h2><ul class="sources">{"".join(sources)}</ul>
   <p class="note">Resumen hecho automáticamente a partir del video original. Si algo no coincide con tu partida, mirá el video.</p>
@@ -192,7 +217,7 @@ def _entry_page(e: dict, related: list[dict]) -> str:
             "contentUrl": e.get("url", ""),
         })
     return _layout(title=title, description=desc, canonical=url, root=root, body=body,
-                   image=thumb, jsonld=jsonld)
+                   image=thumb, jsonld=jsonld, noindex=not indexable(e))
 
 
 def _category_page(cat: str, entries: list[dict]) -> str:
@@ -210,11 +235,55 @@ def _category_page(cat: str, entries: list[dict]) -> str:
                    canonical=url, root=root, body=body)
 
 
-def _home_static(entries: list[dict], counts: dict[str, int]) -> str:
+def _zone_page(region: str, slug: str, entries: list[dict], zones: dict[str, str]) -> str:
+    root = "../../"
+    url = f"{config.SITE_URL}/z/{slug}/"
+    intro = (f"Todos los secretos, easter eggs, autos, armas y lugares ocultos de GTA 6 que la "
+             f"comunidad encontró en {region}.")
+    others = " · ".join(f'<a href="{root}z/{s}/">{escape(r)}</a>' for r, s in zones.items() if r != region)
+    body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Zonas › {escape(region)}</nav>
+<h1>Secretos en {escape(region)}</h1>
+<p class="lead">{escape(intro)} {len(entries)} descubrimientos en esta zona, actualizados varias veces por día.</p>
+<div class="minis">{"".join(_mini_card(e, root) for e in entries)}</div>
+<p class="other">Otras zonas: {others or "pronto vas a ver más zonas acá."}</p>"""
+    return _layout(title=f"Secretos en {region} | GTA 6 | {config.SITE_NAME}", description=intro,
+                   canonical=url, root=root, body=body)
+
+
+def _week_page(entries: list[dict]) -> str:
+    root = "../"
+    url = f"{config.SITE_URL}/semana/"
+    intro = ("Los descubrimientos de GTA 6 que más se vieron en los últimos 7 días, "
+             "ordenados por popularidad. Se actualiza solo varias veces por día.")
+    items = "".join(
+        f'<li><a href="{root}d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a>'
+        f'<span class="note"> · {escape(CATS.get(e.get("categoria"), CATS["otro"])[1])}'
+        f' · {_num(e.get("popularity"))} vistas</span><br>{escape(e.get("resumen", ""))}</li>'
+        for e in entries)
+    body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Lo mejor de la semana</nav>
+<h1>Lo mejor de la semana en GTA 6</h1>
+<p class="lead">{escape(intro)}</p>
+<ol class="ranking">{items or "<li>Todavía no hay descubrimientos esta semana.</li>"}</ol>"""
+    return _layout(title=f"Lo mejor de la semana en GTA 6 | {config.SITE_NAME}", description=intro,
+                   canonical=url, root=root, body=body)
+
+
+def _top_week(entries: list[dict]) -> list[dict]:
+    from datetime import datetime, timedelta, timezone
+
+    since = (datetime.now(timezone.utc) - timedelta(days=WEEK_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    recent = [e for e in entries if e.get("published_at", "") >= since and indexable(e)]
+    return sorted(recent, key=lambda e: e.get("popularity") or 0, reverse=True)[:15]
+
+
+def _home_static(entries: list[dict], counts: dict[str, int], zones: dict[str, str]) -> str:
     cats = " · ".join(f'<a href="c/{CATS[k][0]}/">{escape(CATS[k][1])} ({n})</a>'
                       for k, n in counts.items())
+    zl = " · ".join(f'<a href="z/{s}/">{escape(r)}</a>' for r, s in zones.items())
     items = "".join(f'<li><a href="d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></li>' for e in entries)
-    return f'<p>{cats}</p><ul class="static-list">{items}</ul>'
+    return (f'<p><a href="semana/">Lo mejor de la semana</a></p><p>{cats}</p>'
+            + (f"<p>Zonas: {zl}</p>" if zl else "") + f'<ul class="static-list">{items}</ul>')
+
 
 CONTACT_EMAIL = "contacto@wastedmap.com"
 _MAIL = f'<a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>'
@@ -284,10 +353,19 @@ def build(entries: list[dict]) -> None:
     for e in entries:
         by_cat.setdefault(e.get("categoria") if e.get("categoria") in CATS else "otro", []).append(e)
 
+    by_zone: dict[str, list[dict]] = {}
+    for e in entries:
+        if e.get("region"):
+            by_zone.setdefault(e["region"], []).append(e)
+    by_zone = {r: v for r, v in sorted(by_zone.items(), key=lambda kv: -len(kv[1]))
+               if len(v) >= MIN_ZONE_ENTRIES}
+    zones = {r: _slugify(r, "zona") for r in by_zone}
+    week = _top_week(entries)
+
     _write_static_pages()
 
     # Se regeneran desde cero: así desaparecen las que ya no están (duplicados juntados, etc.).
-    for folder in ("d", "c"):
+    for folder in ("d", "c", "z", "semana"):
         shutil.rmtree(docs / folder, ignore_errors=True)
 
     for e in entries:
@@ -295,17 +373,26 @@ def build(entries: list[dict]) -> None:
         related = [r for r in by_cat[cat] if r is not e][:6]
         out = docs / "d" / e["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(_entry_page(e, related), encoding="utf-8")
+        out.write_text(_entry_page(e, related, zones), encoding="utf-8")
 
     for cat, items in by_cat.items():
         out = docs / "c" / CATS[cat][0] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(_category_page(cat, items), encoding="utf-8")
 
+    for region, items in by_zone.items():
+        out = docs / "z" / zones[region] / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(_zone_page(region, zones[region], items, zones), encoding="utf-8")
+
+    out = docs / "semana" / "index.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(_week_page(week), encoding="utf-8")
+
     index = docs / "index.html"
     html = index.read_text(encoding="utf-8")
     counts = {k: len(by_cat[k]) for k in CATS if k in by_cat}
-    static = _home_static(entries, counts)
+    static = _home_static(entries, counts, zones)
     html = _MARK.sub(lambda m: m.group(1) + static + m.group(2), html)
     html = re.sub(r'<link rel="canonical" href="[^"]*">',
                   f'<link rel="canonical" href="{escape(config.SITE_URL)}/">', html)
@@ -313,7 +400,10 @@ def build(entries: list[dict]) -> None:
 
     urls = [(f"{config.SITE_URL}/", entries[0]["published_at"] if entries else "")]
     urls += [(f"{config.SITE_URL}/c/{CATS[k][0]}/", v[0].get("published_at", "")) for k, v in by_cat.items()]
-    urls += [(f"{config.SITE_URL}/d/{e['slug']}/", e.get("published_at", "")) for e in entries]
+    urls += [(f"{config.SITE_URL}/z/{zones[r]}/", v[0].get("published_at", "")) for r, v in by_zone.items()]
+    urls.append((f"{config.SITE_URL}/semana/", week[0].get("published_at", "") if week else ""))
+    # Las dudosas no van al sitemap (y llevan noindex): solo indexamos lo confirmado.
+    urls += [(f"{config.SITE_URL}/d/{e['slug']}/", e.get("published_at", "")) for e in entries if indexable(e)]
     urls += [(f"{config.SITE_URL}/{slug}/", "") for slug in STATIC_PAGES]
     sitemap = "".join(f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d[:10]}</lastmod>" if d else "") + "</url>"
                       for u, d in urls)
@@ -323,4 +413,6 @@ def build(entries: list[dict]) -> None:
         encoding="utf-8")
     (docs / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {config.SITE_URL}/sitemap.xml\n", encoding="utf-8")
-    print(f"[web] {len(entries)} páginas de descubrimientos y {len(by_cat)} de categorías")
+    n_index = sum(1 for e in entries if indexable(e))
+    print(f"[web] {len(entries)} páginas de descubrimientos ({n_index} indexables), "
+          f"{len(by_cat)} de categorías, {len(by_zone)} de zonas")
