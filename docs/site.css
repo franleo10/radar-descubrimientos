@@ -223,3 +223,31 @@ img{max-width:100%}
 .map-cta h2 span{color:var(--cyan)}
 .map-cta p{color:var(--soft);margin:0 0 16px}
 @media (max-width:760px){.map-cta{grid-template-columns:1fr}}
+
+/* ---------- Comunidad: votos y comentarios ---------- */
+.community{margin-top:10px}
+.votes{display:flex;flex-wrap:wrap;gap:10px}
+.vote{display:inline-flex;align-items:center;gap:8px;font:700 15px var(--body);color:var(--soft);background:var(--panel);border:1px solid var(--line);padding:10px 16px;border-radius:12px;cursor:pointer;transition:all .15s}
+.vote b{font:400 20px/1 var(--display);color:#fff;min-width:14px}
+.vote:hover{border-color:var(--pink);color:#fff}
+.vote[aria-pressed="true"]{background:rgba(255,61,139,.16);border-color:var(--pink);color:#fff}
+.vote.confirm[aria-pressed="true"]{background:rgba(74,222,128,.16);border-color:#4ade80}
+.vote:disabled{cursor:default}
+@media (max-width:640px){.vote span{display:none}.vote{flex:1;justify-content:center}}
+.c-form{display:flex;flex-direction:column;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.c-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:640px){.c-row{grid-template-columns:1fr}}
+.c-form input,.c-form textarea{width:100%;font:inherit;font-size:15px;color:var(--text);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:11px 12px;outline:none;resize:vertical}
+.c-form input:focus,.c-form textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,61,139,.15)}
+.c-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.c-msg{font-size:14px;color:var(--muted)}
+.c-msg.ok{color:#4ade80}
+.c-msg.err{color:#ff6b6b}
+.c-list{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:10px}
+.c-list li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.c-head{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.c-head b{color:#fff}
+.c-head span{color:var(--muted);font-size:13px}
+.c-list p{margin:6px 0 0;white-space:pre-wrap;word-break:break-word}
+.c-list .c-empty{color:var(--muted);font-size:14px;text-align:center}
+.tag.ok{color:#4ade80;border:1px solid rgba(74,222,128,.45);background:transparent}

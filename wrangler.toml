@@ -1,0 +1,10 @@
+# Configuración de Cloudflare Pages para WastedMap.
+name = "wastedmap"
+pages_build_output_dir = "docs"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "wastedmap"
+database_id = "fd274c79-4333-46b4-b45b-c837ee1e01a3"

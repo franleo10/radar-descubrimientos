@@ -92,10 +92,39 @@ def _safe_json(data) -> str:
     return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 
 
+def _ver(name: str) -> str:
+    """Huella de un archivo: cambia cuando cambia, así nadie ve versiones viejas en caché."""
+    f = config.DOCS_DIR / name
+    return hashlib.sha1(f.read_bytes()).hexdigest()[:8] if f.exists() else "0"
+
+
 def _css_version() -> str:
-    """Huella del CSS: cambia cuando cambia el archivo, así nadie ve estilos viejos en caché."""
-    css = config.DOCS_DIR / "site.css"
-    return hashlib.sha1(css.read_bytes()).hexdigest()[:8] if css.exists() else "0"
+    return _ver("site.css")
+
+
+def _community(e: dict, root: str) -> str:
+    """Votos, 'me funcionó' y comentarios (se completa con community.js)."""
+    return f"""<section id="community" class="community" data-slug="{escape(e['slug'])}" data-sitekey="{escape(config.TURNSTILE_SITEKEY)}" hidden>
+  <h2>¿Te sirvió?</h2>
+  <div class="votes">
+    <button class="vote" data-act="like" aria-pressed="false">👍 <span>Me gusta</span> <b data-n="likes">0</b></button>
+    <button class="vote" data-act="dislike" aria-pressed="false">👎 <span>No me gusta</span> <b data-n="dislikes">0</b></button>
+    <button class="vote confirm" data-act="confirm" aria-pressed="false">✅ <span>Me funcionó</span> <b data-n="confirms">0</b></button>
+  </div>
+  <p class="note">"Me funcionó" ayuda a confirmar el hallazgo para el resto de la comunidad.</p>
+  <h2>Comentarios <span class="c-count"></span></h2>
+  <form class="c-form">
+    <div class="c-row"><input name="name" maxlength="40" required placeholder="Tu nombre o apodo" autocomplete="nickname">
+    <input name="email" type="email" maxlength="200" required placeholder="Tu mail (no se publica)" autocomplete="email"></div>
+    <textarea name="body" maxlength="1000" required rows="3" placeholder="¿Te funcionó? ¿Encontraste algo más? Contalo acá."></textarea>
+    <div class="c-captcha"></div>
+    <div class="c-foot"><button class="btn primary" type="submit">Publicar comentario</button>
+    <span class="c-msg"></span></div>
+    <p class="note">Tu mail no se muestra ni se guarda: solo usamos una huella cifrada para frenar el spam. Los comentarios pasan por una revisión automática. <a href="{root}privacidad/">Privacidad</a>.</p>
+  </form>
+  <ul class="c-list"></ul>
+</section>
+<script src="{root}community.js?v={_ver('community.js')}" defer></script>"""
 
 
 def _layout(*, title: str, description: str, canonical: str, root: str, body: str,
@@ -189,6 +218,8 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
         tags.append(f'<span class="tag">📍 {escape(e["zona"])}</span>')
     if e.get("confianza") == "media":
         tags.append('<span class="tag warn">Sin confirmar</span>')
+    if e.get("confirmado_por_comunidad"):
+        tags.append('<span class="tag ok">✅ Confirmado por la comunidad</span>')
 
     if e.get("pasos"):
         how = "<h2>Cómo hacerlo</h2><ol class=\"steps\">" + "".join(f"<li>{escape(p)}</li>" for p in e["pasos"]) + "</ol>"
@@ -222,6 +253,7 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
     {detail}{zona}{how}
   </div>
   {tg_cta()}
+  {_community(e, root)}
   <h2>Fuentes</h2><ul class="sources">{"".join(sources)}</ul>
   <p class="note">Resumen hecho automáticamente a partir del video original. Si algo no coincide con tu partida, mirá el video.</p>
 </article>
@@ -358,8 +390,14 @@ STATIC_PAGES = {
     "privacidad": ("Política de privacidad",
                    "Qué datos se recopilan al visitar WastedMap y cómo se usan.",
                    f"""<h1>Política de privacidad</h1>
-<p class="note">Última actualización: 23 de noviembre de 2026.</p>
-<p class="lead">WastedMap no tiene cuentas de usuario ni formularios: no te pedimos ningún dato personal para usar el sitio.</p>
+<p class="note">Última actualización: 24 de noviembre de 2026.</p>
+<p class="lead">WastedMap no tiene cuentas de usuario. Solo te pedimos un dato si decidís comentar, y nunca lo mostramos.</p>
+<h2>Comentarios</h2>
+<p>Para comentar te pedimos un nombre o apodo y un mail. El nombre y el comentario se publican en la guía. <b>El mail no se publica ni se guarda</b>: lo convertimos en una huella cifrada (hash) que no permite recuperarlo y que solo sirve para frenar el spam.</p>
+<p>Cada comentario pasa por una revisión automática hecha con inteligencia artificial (Claude, de Anthropic), que recibe el nombre y el texto, nunca el mail, para decidir si cumple las reglas del sitio. Para comprobar que no sos un robot usamos Cloudflare Turnstile, que se carga recién cuando vas a escribir un comentario.</p>
+<h2>Votos y "Me funcionó"</h2>
+<p>Para que cada persona vote una sola vez por guía guardamos una huella anónima calculada a partir de tu conexión y tu navegador. No guardamos tu dirección IP ni ningún dato que te identifique.</p>
+<p>Si querés que borremos un comentario tuyo, escribinos a {_MAIL} con el enlace de la guía y el nombre que usaste.</p>
 <h2>Estadísticas de visitas</h2>
 <p>Usamos Cloudflare Web Analytics para saber cuántas personas visitan el sitio y qué páginas leen. Esta herramienta no usa cookies, no guarda tu dirección IP y no te sigue entre sitios: solo recibimos números agregados (visitas, páginas, país, tipo de dispositivo).</p>
 <h2>Alojamiento</h2>
@@ -371,7 +409,7 @@ STATIC_PAGES = {
 <h2>Publicidad y enlaces de afiliados</h2>
 <p>Por ahora el sitio no muestra publicidad. Si en el futuro sumamos anuncios o enlaces de afiliados, vamos a actualizar esta página antes, explicar qué cookies usan y, cuando corresponda, pedirte el consentimiento.</p>
 <h2>Tus derechos</h2>
-<p>Como no guardamos datos personales tuyos, no hay información para consultar ni borrar. Igual, si tenés cualquier pregunta sobre privacidad, escribinos a {_MAIL}.</p>"""),
+<p>Podés pedirnos que borremos tus comentarios o consultar qué guardamos escribiendo a {_MAIL}. Como del mail solo guardamos una huella cifrada, no podemos usarlo para contactarte ni compartirlo con nadie.</p>"""),
     "contacto": ("Contacto",
                  "Cómo comunicarte con WastedMap: correcciones, sugerencias y pedidos de retiro de contenido.",
                  f"""<h1>Contacto</h1>
@@ -384,6 +422,17 @@ STATIC_PAGES = {
 </ul>
 <p class="note">WastedMap es una guía no oficial: no podemos ayudar con problemas de cuenta, compras o soporte técnico del juego.</p>"""),
 }
+
+
+def _write_404() -> None:
+    """Página de error propia: sin ella Cloudflare Pages devuelve la portada para cualquier
+    dirección inexistente, y Google lo toma como contenido duplicado."""
+    body = """<h1>Acá no hay nada… todavía</h1>
+<p class="lead">Esta página no existe o el descubrimiento se juntó con otro igual.</p>
+<p><a class="btn primary" href="/">Ir al inicio</a> <a class="btn" href="/mapa/">Abrir el mapa</a></p>"""
+    page = _layout(title=f"Página no encontrada | {config.SITE_NAME}", description="Página no encontrada.",
+                   canonical=f"{config.SITE_URL}/", root="/", body=body, noindex=True)
+    (config.DOCS_DIR / "404.html").write_text(page, encoding="utf-8")
 
 
 def _write_static_pages() -> None:
@@ -417,6 +466,7 @@ def build(entries: list[dict]) -> None:
     week = _top_week(entries)
 
     _write_static_pages()
+    _write_404()
 
     # Se regeneran desde cero: así desaparecen las que ya no están (duplicados juntados, etc.).
     for folder in ("d", "c", "z", "semana", "mapa"):

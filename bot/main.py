@@ -59,6 +59,33 @@ def dedupe_all() -> None:
     print(f"[bot] limpieza de duplicados: {len(entries)} -> {len(merged)} tarjetas")
 
 
+COMMUNITY_MIN_CONFIRMS = 3
+
+
+def community_confirm(entries: list[dict]) -> None:
+    """Las guías "sin confirmar" que la gente marca como "Me funcionó" pasan a confirmadas."""
+    import requests
+
+    try:
+        r = requests.get(f"{config.SITE_URL}/api/summary", timeout=20)
+        summary = r.json() if r.status_code == 200 else {}
+    except (requests.RequestException, ValueError):
+        summary = {}
+    n = 0
+    for e in entries:
+        s = summary.get(e.get("slug", ""))
+        if not s:
+            continue
+        e["comunidad"] = s  # likes, dislikes y confirms, para mostrar en la web
+        if (e.get("confianza") == "media" and s["confirms"] >= COMMUNITY_MIN_CONFIRMS
+                and s["confirms"] >= s["dislikes"]):
+            e["confianza"] = "alta"
+            e["confirmado_por_comunidad"] = True
+            n += 1
+    if summary:
+        print(f"[comunidad] votos de {len(summary)} guías, {n} confirmadas por la gente")
+
+
 def run(demo: bool) -> None:
     site = load_json(config.DATA_FILE, {"entries": []})
     # Los datos de ejemplo se borran apenas corre el bot de verdad.
@@ -104,6 +131,9 @@ def run(demo: bool) -> None:
     else:
         entries = merge(existing, new_entries)
         added = len(new_entries)
+
+    if not demo:
+        community_confirm(entries)
 
     if not demo:
         from .enrich import enrich

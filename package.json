@@ -1,0 +1,16 @@
+{
+  "name": "wastedmap",
+  "private": true,
+  "type": "module",
+  "description": "Funciones de Cloudflare Pages (votos y comentarios) de WastedMap",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.13.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.167.0"
+  },
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "db:local": "wrangler d1 execute wastedmap --local --file migrations/0001_inicial.sql"
+  }
+}

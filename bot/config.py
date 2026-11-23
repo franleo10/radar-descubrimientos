@@ -70,4 +70,6 @@ SOCIAL_MAX_AGE_DAYS = int(os.environ.get("SOCIAL_MAX_AGE_DAYS", "3"))
 SITE_NAME = os.environ.get("SITE_NAME", "WastedMap")
 # Dirección pública de la web, sin "/" al final. Cambiala cuando tengas dominio propio.
 SITE_URL = (os.environ.get("SITE_URL") or "https://wastedmap.com").rstrip("/")
+# Clave PÚBLICA del widget de Turnstile (la secreta va solo en Cloudflare).
+TURNSTILE_SITEKEY = os.environ.get("TURNSTILE_SITEKEY") or "0x4AAAAAAGPi3Jn1ITCgmyhh"
 MAX_ENTRIES = int(os.environ.get("MAX_ENTRIES", "600"))
