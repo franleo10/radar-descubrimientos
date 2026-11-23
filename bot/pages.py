@@ -20,6 +20,7 @@ from urllib.parse import quote
 
 from . import config
 from .brand import bsky_link, logo, tg_cta, tg_link
+from .mapa import AREAS, map_svg
 
 CATS = {
     "easter_egg": ("easter-eggs", "Easter eggs"),
@@ -66,7 +67,7 @@ def indexable(e: dict) -> bool:
     return e.get("confianza") == "alta"
 
 
-MIN_ZONE_ENTRIES = 2  # una zona necesita al menos esto para tener su propia página
+MIN_ZONE_ENTRIES = 1  # zonas = las grandes áreas del mapa (ver bot/mapa.py)
 WEEK_DAYS = 7
 
 
@@ -89,6 +90,12 @@ def _thumb(e: dict) -> str:
 
 def _safe_json(data) -> str:
     return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+
+
+def _css_version() -> str:
+    """Huella del CSS: cambia cuando cambia el archivo, así nadie ve estilos viejos en caché."""
+    css = config.DOCS_DIR / "site.css"
+    return hashlib.sha1(css.read_bytes()).hexdigest()[:8] if css.exists() else "0"
 
 
 def _layout(*, title: str, description: str, canonical: str, root: str, body: str,
@@ -117,12 +124,12 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
 <meta name="theme-color" content="#0d0b14">
 <link rel="preload" href="{root}fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{root}site.css">
+<link rel="stylesheet" href="{root}site.css?v={_css_version()}">
 {ld}
 </head>
 <body>
 <header class="topbar"><div class="wrap">{logo(root, "lg")}
-<nav class="nav"><a class="hide-sm" href="{root}#explorar">Explorar</a>{tg_link()}{bsky_link()}<a class="pill" href="{root}semana/">🔥 Top de la semana</a></nav></div></header>
+<nav class="nav"><a class="hide-sm" href="{root}mapa/">Mapa</a>{tg_link()}{bsky_link()}<a class="pill" href="{root}semana/">🔥 Top de la semana</a></nav></div></header>
 <main class="page"><div class="wrap">
 {body}
 </div></main>
@@ -172,8 +179,12 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
 
     color = CAT_COLOR.get(e.get("categoria"), CAT_COLOR["otro"])
     tags = [f'<a class="tag cat" style="--c:{color}" href="{root}c/{slug_cat}/">{escape(cat_name)}</a>']
-    if e.get("region") in zones:
-        tags.append(f'<a class="tag" href="{root}z/{zones[e["region"]]}/">📍 {escape(e["region"])}</a>')
+    if e.get("macro") in zones:
+        place = e["region"] if e.get("region") and e["region"] != e["macro"] else ""
+        tags.append(f'<a class="tag" href="{root}z/{zones[e["macro"]]}/">📍 {escape(e["macro"])}'
+                    + (f' · {escape(place)}' if place else "") + '</a>')
+    elif e.get("region"):
+        tags.append(f'<span class="tag">📍 {escape(e["region"])}</span>')
     elif e.get("zona"):
         tags.append(f'<span class="tag">📍 {escape(e["zona"])}</span>')
     if e.get("confianza") == "media":
@@ -263,6 +274,32 @@ def _zone_page(region: str, slug: str, entries: list[dict], zones: dict[str, str
 <div class="minis">{"".join(_mini_card(e, root) for e in entries)}</div>
 <p class="other">Otras zonas: {others or "pronto vas a ver más zonas acá."}</p>"""
     return _layout(title=f"Secretos en {region} | GTA 6 | {config.SITE_NAME}", description=intro,
+                   canonical=url, root=root, body=body)
+
+
+def _map_page(by_zone: dict[str, list[dict]], zones: dict[str, str]) -> str:
+    root = "../"
+    url = f"{config.SITE_URL}/mapa/"
+    counts = {a: len(v) for a, v in by_zone.items()}
+    links = {a: f"z/{s}/" for a, s in zones.items()}
+    intro = ("Explorá los secretos de GTA 6 por zona. Tocá un área para ver todo lo que la "
+             "comunidad encontró ahí.")
+    cards = []
+    for area, (_, _, color, desc) in AREAS.items():
+        items = by_zone.get(area, [])
+        top = "".join(f'<li><a href="{root}d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></li>'
+                      for e in sorted(items, key=lambda e: -(e.get("popularity") or 0))[:4])
+        head = (f'<a href="{root}z/{zones[area]}/">{escape(area)}</a>' if area in zones else escape(area))
+        cards.append(f'<article class="area-card" style="--c:{color}"><h3>{head} <small>{len(items)}</small></h3>'
+                     f'<p>{escape(desc)}</p>' + (f'<ul>{top}</ul>' if top else '<p class="note">Todavía sin secretos acá.</p>')
+                     + '</article>')
+    body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Mapa</nav>
+<h1>El mapa de los secretos</h1>
+<p class="lead">{escape(intro)}</p>
+<div class="map-wrap">{map_svg(counts, links, root)}</div>
+<p class="note">Mapa esquemático hecho por WastedMap: no es el mapa oficial del juego y las ubicaciones son aproximadas. Cada burbuja agrupa los descubrimientos de esa zona.</p>
+<div class="area-grid">{"".join(cards)}</div>"""
+    return _layout(title=f"Mapa de secretos de GTA 6 por zona | {config.SITE_NAME}", description=intro,
                    canonical=url, root=root, body=body)
 
 
@@ -372,8 +409,8 @@ def build(entries: list[dict]) -> None:
 
     by_zone: dict[str, list[dict]] = {}
     for e in entries:
-        if e.get("region"):
-            by_zone.setdefault(e["region"], []).append(e)
+        if e.get("macro") in AREAS:
+            by_zone.setdefault(e["macro"], []).append(e)
     by_zone = {r: v for r, v in sorted(by_zone.items(), key=lambda kv: -len(kv[1]))
                if len(v) >= MIN_ZONE_ENTRIES}
     zones = {r: _slugify(r, "zona") for r in by_zone}
@@ -382,7 +419,7 @@ def build(entries: list[dict]) -> None:
     _write_static_pages()
 
     # Se regeneran desde cero: así desaparecen las que ya no están (duplicados juntados, etc.).
-    for folder in ("d", "c", "z", "semana"):
+    for folder in ("d", "c", "z", "semana", "mapa"):
         shutil.rmtree(docs / folder, ignore_errors=True)
 
     for e in entries:
@@ -402,6 +439,10 @@ def build(entries: list[dict]) -> None:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(_zone_page(region, zones[region], items, zones), encoding="utf-8")
 
+    out = docs / "mapa" / "index.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(_map_page(by_zone, zones), encoding="utf-8")
+
     out = docs / "semana" / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(_week_page(week), encoding="utf-8")
@@ -411,6 +452,9 @@ def build(entries: list[dict]) -> None:
     counts = {k: len(by_cat[k]) for k in CATS if k in by_cat}
     static = _home_static(entries, counts, zones)
     html = _MARK.sub(lambda m: m.group(1) + static + m.group(2), html)
+    mini = map_svg({k: len(v) for k, v in by_zone.items()}, {}, "")
+    html = re.sub(r"(<!--MAP-->).*?(<!--/MAP-->)", lambda m: m.group(1) + mini + m.group(2), html, flags=re.S)
+    html = re.sub(r'href="site\.css(\?v=[^"]*)?"', f'href="site.css?v={_css_version()}"', html)
     html = re.sub(r'<link rel="canonical" href="[^"]*">',
                   f'<link rel="canonical" href="{escape(config.SITE_URL)}/">', html)
     index.write_text(html, encoding="utf-8")
@@ -418,6 +462,7 @@ def build(entries: list[dict]) -> None:
     urls = [(f"{config.SITE_URL}/", entries[0]["published_at"] if entries else "")]
     urls += [(f"{config.SITE_URL}/c/{CATS[k][0]}/", v[0].get("published_at", "")) for k, v in by_cat.items()]
     urls += [(f"{config.SITE_URL}/z/{zones[r]}/", v[0].get("published_at", "")) for r, v in by_zone.items()]
+    urls.append((f"{config.SITE_URL}/mapa/", entries[0]["published_at"] if entries else ""))
     urls.append((f"{config.SITE_URL}/semana/", week[0].get("published_at", "") if week else ""))
     # Las dudosas no van al sitemap (y llevan noindex): solo indexamos lo confirmado.
     urls += [(f"{config.SITE_URL}/d/{e['slug']}/", e.get("published_at", "")) for e in entries if indexable(e)]

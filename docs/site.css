@@ -197,3 +197,29 @@ img{max-width:100%}
 @media (max-width:640px){.cta-btns{width:100%}.cta-btns .btn{flex:1;justify-content:center}}
 .cta-tg .cta-btns{flex:none;flex-direction:row;gap:8px}
 @media (max-width:640px){.cta-tg .cta-btns{flex:1 1 100%}}
+
+/* ---------- Mapa ---------- */
+.map-wrap{max-width:640px;margin:8px auto 10px;border-radius:22px;overflow:hidden;border:1px solid rgba(255,61,139,.35);box-shadow:0 20px 60px rgba(255,61,139,.12)}
+.leonida{display:block;width:100%;height:auto}
+.leonida .num{font:400 26px var(--display);fill:#120a14}
+.leonida .lbl{font:400 21px var(--display);fill:#fff;letter-spacing:.04em}
+.leonida .sub{font:600 14px var(--body);fill:#cfc6e0}
+.leonida .compass{font:400 22px var(--display);fill:#958ba9}
+.leonida .area{transition:transform .2s;transform-box:fill-box;transform-origin:center}
+.leonida a:hover .area,.leonida a:focus .area{transform:scale(1.06)}
+.leonida a:hover .halo{opacity:.3}
+.leonida .off text.lbl{fill:#958ba9}
+.area-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:22px}
+.area-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:14px;padding:14px 16px}
+.area-card h3{margin:0 0 4px;font:400 22px var(--display);text-transform:uppercase;letter-spacing:.02em}
+.area-card h3 a{color:#fff;text-decoration:none}
+.area-card h3 small{font:700 13px var(--body);color:var(--c);margin-left:6px}
+.area-card p{margin:0 0 8px;font-size:14px}
+.area-card ul{margin:0;padding-left:18px;font-size:14px}
+.area-card li{margin-bottom:4px}
+.map-cta{display:grid;grid-template-columns:1fr 1.1fr;gap:26px;align-items:center;background:linear-gradient(135deg,rgba(46,230,214,.08),rgba(255,61,139,.1));border:1px solid var(--line);border-radius:22px;padding:22px}
+.map-cta .leonida{max-width:340px;margin:0 auto;border-radius:16px}
+.map-cta h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(28px,3.6vw,40px);line-height:1;margin:0 0 10px}
+.map-cta h2 span{color:var(--cyan)}
+.map-cta p{color:var(--soft);margin:0 0 16px}
+@media (max-width:760px){.map-cta{grid-template-columns:1fr}}

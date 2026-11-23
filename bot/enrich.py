@@ -152,7 +152,11 @@ variantes obvias, para que la misma región se escriba siempre igual).
 donde está SOLO si el nombre o el ejemplo lo dicen. Si no lo dicen, devolvé "".
 - "Leonida" (es todo el mapa), "bajo el mar", "todo el mapa" o varias zonas a la \
 vez: devolvé "".
-- Nunca adivines ni inventes regiones."""
+- Nunca adivines ni inventes regiones.
+
+Además, en "macro" indicá en cuál de estas grandes áreas del mapa queda: "Vice City", "Leonida Keys", "Grassrivers", "Port Gellhorn", "Ambrosia" o "Mount Kalaga". Los barrios e islas de la ciudad van en "Vice City" y los cayos (lugares con "Key") en "Leonida Keys". Si no estás seguro, devolvé "": es mejor dejarlo sin área que ponerlo en el lugar equivocado."""
+
+MACROS = ["Vice City", "Leonida Keys", "Grassrivers", "Port Gellhorn", "Ambrosia", "Mount Kalaga"]
 
 REGION_SCHEMA = {
     "type": "object",
@@ -161,8 +165,9 @@ REGION_SCHEMA = {
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {"nombre": {"type": "string"}, "region": {"type": "string"}},
-                "required": ["nombre", "region"],
+                "properties": {"nombre": {"type": "string"}, "region": {"type": "string"},
+                               "macro": {"type": "string", "enum": MACROS + [""]}},
+                "required": ["nombre", "region", "macro"],
                 "additionalProperties": False,
             },
         }
@@ -196,12 +201,19 @@ def normalize_regions(entries: list[dict]) -> None:
     if response.stop_reason in ("refusal", "max_tokens"):
         return
     text = next(b.text for b in response.content if b.type == "text")
-    mapping = {r["nombre"]: r["region"].strip() for r in json.loads(text)["regiones"]
-               if r["nombre"] in examples}
+    rows = [r for r in json.loads(text)["regiones"] if r["nombre"] in examples]
+    mapping = {r["nombre"]: r["region"].strip() for r in rows}
+    macro = {r["nombre"]: r["macro"] for r in rows}
     changed = 0
     for e in entries:
-        new = mapping.get(e.get("region", ""), e.get("region", ""))
-        if new != e.get("region", ""):
+        old = e.get("region", "")
+        new = mapping.get(old, old)
+        if new != old:
             e["region"] = new
             changed += 1
+        m = macro.get(old, "") or (new if new in MACROS else "")
+        if old and m != e.get("macro", ""):
+            e["macro"] = m
+        elif not new:
+            e.pop("macro", None)
     print(f"[regiones] {len(examples)} nombres revisados, {changed} descubrimientos reasignados")
