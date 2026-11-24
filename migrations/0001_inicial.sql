@@ -33,3 +33,24 @@ CREATE TABLE IF NOT EXISTS presence (
   voter TEXT PRIMARY KEY,
   seen  INTEGER NOT NULL
 );
+
+-- Panel de administración (también se crean solas desde functions/_lib.js -> ensureSchema).
+CREATE TABLE IF NOT EXISTS bans (
+  key     TEXT PRIMARY KEY,         -- huella anónima o huella del mail
+  kind    TEXT NOT NULL,            -- 'voter' o 'email'
+  name    TEXT NOT NULL DEFAULT '', -- nombre que usaba, para reconocerlo en el panel
+  reason  TEXT NOT NULL DEFAULT '',
+  created INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS rejected (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  slug       TEXT NOT NULL,
+  name       TEXT NOT NULL,
+  email_hash TEXT NOT NULL,
+  body       TEXT NOT NULL,
+  reason     TEXT NOT NULL,         -- por qué no lo publicó la moderación automática
+  voter      TEXT NOT NULL,
+  created    INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS rejected_by_created ON rejected (created);

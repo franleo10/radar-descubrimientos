@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel · WastedMap</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../site.css">
+<style>
+  body{background:var(--bg)}
+  .ad{max-width:1200px;margin:0 auto;padding:20px 16px 60px}
+  .ad-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+  .ad-top h1{font-size:22px;margin:0}
+  .ad-top h1 a{color:inherit;text-decoration:none}
+  .ad-top small{color:var(--muted);font-weight:500;margin-left:8px}
+  .ad-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:10px}
+  .ad-tabs button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 14px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink-2)}
+  .ad-tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .ad-tabs b{display:inline-block;min-width:18px;padding:0 6px;margin-left:4px;border-radius:999px;background:var(--pink);color:#fff;font-size:12px}
+  .ad-tabs b:empty{display:none}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:22px}
+  .kpi{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:14px 16px}
+  .kpi span{display:block;color:var(--muted);font-size:13px}
+  .kpi b{display:block;font-size:28px;line-height:1.2;font-variant-numeric:tabular-nums}
+  .kpi small{color:var(--muted);font-size:12.5px}
+  .kpi.warn b{color:var(--pink)}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+  .box{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 18px;margin-bottom:16px;min-width:0}
+  .box h2{font-size:16px;margin:0 0 12px}
+  .box p.note{margin:0 0 10px}
+  .bars{display:flex;align-items:flex-end;gap:4px;height:130px;padding-top:6px}
+  .bars div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:2px;min-width:0;height:100%}
+  .bars i{display:block;width:100%;border-radius:3px 3px 0 0;background:var(--pink);min-height:1px}
+  .bars i.v{background:var(--line-2)}
+  .bars small{font-size:10px;color:var(--muted);white-space:nowrap}
+  .legend{display:flex;gap:14px;font-size:12.5px;color:var(--muted);margin-top:8px}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+  .rank{list-style:none;margin:0;padding:0}
+  .rank li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+  .rank li:first-child{border-top:0}
+  .rank a{color:var(--ink);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .rank a:hover{color:var(--pink)}
+  .rank span{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+  .tools input[type=search],.tools select{font:inherit;font-size:14px;padding:8px 12px;border:1px solid var(--line-2);border-radius:var(--r);background:var(--paper);min-width:0}
+  .tools input[type=search]{flex:1 1 220px}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;background:var(--pink-soft);color:var(--pink-hover);border-radius:999px;padding:4px 10px}
+  .chip button{border:0;background:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0}
+  .items{list-style:none;margin:0;padding:0}
+  .it{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:14px 16px;margin-bottom:10px}
+  .it-h{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-size:13.5px;color:var(--muted);margin-bottom:6px}
+  .it-h b{color:var(--ink);font-size:15px}
+  .it-h a{color:var(--ink-2)}
+  .it p{margin:0 0 10px;white-space:pre-wrap;overflow-wrap:anywhere}
+  .it .why{font-size:13.5px;color:var(--pink-hover);background:var(--pink-soft);border-radius:var(--r);padding:6px 10px;margin-bottom:10px}
+  .acts{display:flex;gap:6px;flex-wrap:wrap}
+  .acts button,.btn-s{font:inherit;font-size:13px;border:1px solid var(--line-2);background:var(--bg);border-radius:var(--r);padding:6px 10px;cursor:pointer;color:var(--ink)}
+  .acts button:hover,.btn-s:hover{border-color:var(--ink)}
+  .acts button.danger{color:var(--pink-hover);border-color:#efb8cd}
+  .acts button.danger:hover{background:var(--pink-soft)}
+  .tag-b{font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;background:var(--ink);color:#fff;border-radius:4px;padding:1px 6px}
+  .more{display:block;margin:6px auto 0}
+  .empty{color:var(--muted);text-align:center;padding:30px 10px}
+  table.dt{width:100%;border-collapse:collapse;font-size:13.5px}
+  .dt th{text-align:left;color:var(--muted);font-weight:500;padding:8px 6px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+  .dt td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+  .dt td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .dt a{color:var(--ink)}
+  .tbl{overflow-x:auto}
+  .pill{display:inline-block;font-size:11.5px;border-radius:999px;padding:1px 8px;background:var(--sunk);color:var(--ink-2);white-space:nowrap}
+  .pill.ok{background:#dff3e6;color:#1f6b3a}
+  .pill.no{background:var(--pink-soft);color:var(--pink-hover)}
+  .runs li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 0;border-top:1px solid var(--line);font-size:14px}
+  .runs li > a{flex:1;min-width:0}
+  .runs li:first-child{border-top:0}
+  .login{max-width:380px;margin:12vh auto;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px}
+  .login h1{font-size:22px;margin:0 0 6px}
+  .login input{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line-2);border-radius:var(--r);margin:14px 0 10px;box-sizing:border-box}
+  .login .err{color:var(--pink-hover);font-size:14px;min-height:1.2em;margin:0 0 10px}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:var(--r);padding:10px 16px;font-size:14px;z-index:9;max-width:calc(100% - 32px)}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+<form class="login" id="login" hidden>
+  <h1>Panel de WastedMap</h1>
+  <p class="note">Ingresá la contraseña del panel (la variable ADMIN_TOKEN de Cloudflare).</p>
+  <input type="password" id="pw" autocomplete="current-password" placeholder="Contraseña" required>
+  <p class="err" id="login-err"></p>
+  <button class="btn primary" type="submit">Entrar</button>
+</form>
+
+<div class="ad" id="app" hidden>
+  <header class="ad-top">
+    <h1><a href="../">WastedMap</a> <small>Panel</small></h1>
+    <div class="acts"><button type="button" id="refresh">Actualizar</button><button type="button" id="logout">Salir</button></div>
+  </header>
+  <nav class="ad-tabs" id="tabs">
+    <button type="button" data-tab="resumen" class="on">Resumen</button>
+    <button type="button" data-tab="comentarios">Comentarios <b id="n-com"></b></button>
+    <button type="button" data-tab="rechazados">Rechazados <b id="n-rej"></b></button>
+    <button type="button" data-tab="bloqueados">Bloqueados</button>
+    <button type="button" data-tab="descubrimientos">Descubrimientos</button>
+  </nav>
+
+  <section data-panel="resumen">
+    <div class="kpis" id="kpis"></div>
+    <div class="cols">
+      <div class="box"><h2>Actividad de los últimos 14 días</h2><div class="bars" id="bars"></div>
+        <div class="legend"><span><i style="background:var(--pink)"></i>Comentarios</span><span><i style="background:var(--line-2)"></i>Votos</span></div></div>
+      <div class="box"><h2>Estado del sitio y del bot</h2><ul class="rank" id="site"></ul><h2 style="margin-top:16px">Últimas corridas del bot</h2><ul class="rank runs" id="runs"></ul></div>
+    </div>
+    <div class="cols">
+      <div class="box"><h2>Lo más movido de la semana</h2><p class="note">Votos, «me funcionó» y comentarios de los últimos 7 días.</p><ul class="rank" id="top"></ul></div>
+      <div class="box"><h2>Posibles errores</h2><p class="note">Descubrimientos con más «no me sirvió» que «me sirvió» (2 o más). Conviene revisarlos.</p><ul class="rank" id="disliked"></ul></div>
+    </div>
+  </section>
+
+  <section data-panel="comentarios" hidden>
+    <div class="tools">
+      <input type="search" id="c-q" placeholder="Buscar en el texto o el nombre…">
+      <span class="chip" id="c-filter" hidden><span></span><button type="button" aria-label="Quitar filtro">×</button></span>
+    </div>
+    <ul class="items" id="c-list"></ul>
+    <button class="btn-s more" id="c-more" type="button" hidden>Ver más</button>
+  </section>
+
+  <section data-panel="rechazados" hidden>
+    <p class="note">Comentarios que la moderación automática no publicó. Si se equivocó, podés publicarlo igual.</p>
+    <ul class="items" id="r-list"></ul>
+    <button class="btn-s more" id="r-more" type="button" hidden>Ver más</button>
+  </section>
+
+  <section data-panel="bloqueados" hidden>
+    <p class="note">Las personas bloqueadas no pueden comentar. Se bloquea su huella anónima y la huella de su mail (nunca guardamos la IP ni el mail).</p>
+    <ul class="items" id="b-list"></ul>
+  </section>
+
+  <section data-panel="descubrimientos" hidden>
+    <div class="tools">
+      <input type="search" id="d-q" placeholder="Buscar descubrimiento…">
+      <select id="d-f">
+        <option value="">Todos</option>
+        <option value="media">Sin confirmar</option>
+        <option value="alta">Confirmados</option>
+        <option value="bad">Más «no me sirvió»</option>
+        <option value="nopt">Sin traducir al portugués</option>
+        <option value="noen">Sin traducir al inglés</option>
+      </select>
+      <span class="note" id="d-n"></span>
+    </div>
+    <div class="box tbl"><table class="dt"><thead><tr>
+      <th data-k="titulo">Descubrimiento</th><th data-k="published_at">Publicado</th><th data-k="likes" class="n">👍</th>
+      <th data-k="dislikes" class="n">👎</th><th data-k="confirms" class="n">Le funcionó</th><th data-k="comments" class="n">Coment.</th><th>Estado</th>
+    </tr></thead><tbody id="d-body"></tbody></table></div>
+  </section>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

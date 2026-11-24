@@ -2,7 +2,7 @@
 // 1) verifica Turnstile (anti-bots), 2) limita la frecuencia, 3) Claude modera el texto,
 // 4) si se aprueba, se publica. El mail nunca se guarda: solo una huella (hash).
 import Anthropic from "@anthropic-ai/sdk";
-import { emailHash, json, readBody, slugExists, voterId } from "../_lib.js";
+import { emailHash, ensureSchema, isBanned, json, readBody, slugExists, voterId } from "../_lib.js";
 
 const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,24}$/;
 const MAX_PER_HOUR = 5;
@@ -74,6 +74,8 @@ export async function onRequestPost({ request, env }) {
   const recent = await env.DB.prepare("SELECT COUNT(*) AS n FROM comments WHERE voter = ? AND created > ?")
     .bind(voter, Date.now() - 3600_000).first();
   if (recent.n >= MAX_PER_HOUR) return json({ error: "Escribiste muchos comentarios seguidos. Probá en un rato." }, 429);
+  const mail = await emailHash(email);
+  if (await isBanned(env, voter, mail)) return json({ error: "No podés comentar en este sitio." }, 403);
 
   let verdict;
   try {
@@ -82,10 +84,16 @@ export async function onRequestPost({ request, env }) {
     console.error("moderación", err?.status || "", err?.message || err);
     return json({ error: "No pudimos revisar tu comentario ahora. Probá en unos minutos." }, 503);
   }
-  if (!verdict.aprobado) return json({ error: `No se publicó: ${verdict.motivo || "no cumple las reglas del sitio."}` }, 422);
+  if (!verdict.aprobado) {
+    // Queda guardado para revisarlo en el panel (por si la moderación se equivocó).
+    await ensureSchema(env);
+    await env.DB.prepare("INSERT INTO rejected (slug, name, email_hash, body, reason, voter, created) VALUES (?, ?, ?, ?, ?, ?, ?)")
+      .bind(slug, name, mail, text, String(verdict.motivo || "").slice(0, 300), voter, Date.now()).run();
+    return json({ error: `No se publicó: ${verdict.motivo || "no cumple las reglas del sitio."}` }, 422);
+  }
 
   const created = Date.now();
   await env.DB.prepare("INSERT INTO comments (slug, name, email_hash, body, voter, created) VALUES (?, ?, ?, ?, ?, ?)")
-    .bind(slug, name, await emailHash(email), text, voter, created).run();
+    .bind(slug, name, mail, text, voter, created).run();
   return json({ ok: true, comment: { name, body: text, created } });
 }

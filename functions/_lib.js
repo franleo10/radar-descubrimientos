@@ -46,3 +46,40 @@ export async function readBody(request) {
     return null;
   }
 }
+
+// Tablas que agregó el panel de administración. Se crean solas la primera vez (no hace falta migrar).
+const EXTRA_SCHEMA = [
+  `CREATE TABLE IF NOT EXISTS bans (
+     key     TEXT PRIMARY KEY,
+     kind    TEXT NOT NULL,
+     name    TEXT NOT NULL DEFAULT '',
+     reason  TEXT NOT NULL DEFAULT '',
+     created INTEGER NOT NULL
+   )`,
+  `CREATE TABLE IF NOT EXISTS rejected (
+     id         INTEGER PRIMARY KEY AUTOINCREMENT,
+     slug       TEXT NOT NULL,
+     name       TEXT NOT NULL,
+     email_hash TEXT NOT NULL,
+     body       TEXT NOT NULL,
+     reason     TEXT NOT NULL,
+     voter      TEXT NOT NULL,
+     created    INTEGER NOT NULL
+   )`,
+  "CREATE INDEX IF NOT EXISTS rejected_by_created ON rejected (created)",
+  "CREATE TABLE IF NOT EXISTS presence (voter TEXT PRIMARY KEY, seen INTEGER NOT NULL)",
+];
+let schemaReady = false;
+export async function ensureSchema(env) {
+  if (schemaReady) return;
+  await env.DB.batch(EXTRA_SCHEMA.map((s) => env.DB.prepare(s)));
+  schemaReady = true;
+}
+
+// ¿Esta persona tiene prohibido comentar? Se mira la huella anónima (voter) y la del mail.
+// En bans, "key" es una de las dos huellas y "kind" dice cuál ("voter" o "email").
+export async function isBanned(env, voter, mailHash) {
+  await ensureSchema(env);
+  const r = await env.DB.prepare("SELECT 1 AS b FROM bans WHERE key IN (?, ?) LIMIT 1").bind(voter, mailHash).first();
+  return !!r;
+}

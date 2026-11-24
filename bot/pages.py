@@ -650,7 +650,7 @@ def build(entries: list[dict]) -> None:
         f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sitemap}</urlset>\n',
         encoding="utf-8")
     (docs / "robots.txt").write_text(
-        f"User-agent: *\nAllow: /\nSitemap: {config.SITE_URL}/sitemap.xml\n", encoding="utf-8")
+        f"User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\nSitemap: {config.SITE_URL}/sitemap.xml\n", encoding="utf-8")
     n_index = sum(1 for e in entries if indexable(e))
     print(f"[web] {len(entries)} páginas de descubrimientos ({n_index} indexables), "
           f"{len(by_cat)} de categorías, {len(by_zone)} de zonas")
