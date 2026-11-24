@@ -204,11 +204,31 @@ img{max-width:100%}
 .leonida .num{font:400 26px var(--display);fill:#120a14}
 .leonida .lbl{font:400 21px var(--display);fill:#fff;letter-spacing:.04em}
 .leonida .sub{font:600 14px var(--body);fill:#cfc6e0}
-.leonida .compass{font:400 22px var(--display);fill:#958ba9}
+.leonida .lbl,.leonida .sub{paint-order:stroke;stroke:#0b0814;stroke-width:5px;stroke-linejoin:round}
+.leonida .sea{font:400 18px var(--display);fill:#2ee6d6;fill-opacity:.22;letter-spacing:.5em}
+.leonida .fields rect{fill:#ffd54a;fill-opacity:.07;stroke:#ffd54a;stroke-opacity:.18}
+.leonida .swamp path{fill:none;stroke:#2ee6d6;stroke-opacity:.32;stroke-width:1.4;stroke-linecap:round}
+.leonida .rivers path{fill:none;stroke:#2ee6d6;stroke-opacity:.45;stroke-width:2.5;stroke-linecap:round}
+.leonida .lake{fill:#16525a;fill-opacity:.55;stroke:#2ee6d6;stroke-opacity:.6;stroke-width:2}
+.leonida .mts path{fill:#3a2a55;stroke:#4ade80;stroke-opacity:.45;stroke-width:1.2;stroke-linejoin:round}
+.leonida .mts .snow{fill:#e9e4f5;fill-opacity:.7;stroke:none}
+.leonida .city rect{fill:#ff3d8b}
+.leonida .docks{stroke:#ff8a3d;stroke-opacity:.6;stroke-width:4;stroke-linecap:round}
+.leonida .roads{fill:none;stroke:#ffb547;stroke-opacity:.45;stroke-width:2.5;stroke-dasharray:9 7;stroke-linecap:round}
+.leonida .rose path{fill:#5d5175}.leonida .rose .n{fill:#ff3d8b}
+.leonida .rose .ring{fill:none;stroke:#5d5175;stroke-opacity:.6}
+.leonida .rose text{font:400 18px var(--display);fill:#ff3d8b}
+.leonida .cartouche rect{fill:#0b0814;fill-opacity:.75;stroke:#ff3d8b;stroke-opacity:.5}
+.leonida .cartouche .t1{font:400 26px var(--display);fill:#fff;letter-spacing:.12em}
+.leonida .cartouche .t2{font:600 12px var(--body);fill:#958ba9}
 .leonida .area{transition:transform .2s;transform-box:fill-box;transform-origin:center}
 .leonida a:hover .area,.leonida a:focus .area{transform:scale(1.06)}
 .leonida a:hover .halo{opacity:.3}
 .leonida .off text.lbl{fill:#958ba9}
+.leonida .pulse{transform-box:fill-box;transform-origin:center;opacity:0;animation:lm-pulse 2.6s ease-out infinite}
+.leonida .off .pulse{display:none}
+@keyframes lm-pulse{0%{transform:scale(.85);opacity:.7}100%{transform:scale(1.35);opacity:0}}
+@media (prefers-reduced-motion:reduce){.leonida .pulse{animation:none}}
 .area-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:22px}
 .area-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:14px;padding:14px 16px}
 .area-card h3{margin:0 0 4px;font:400 22px var(--display);text-transform:uppercase;letter-spacing:.02em}
