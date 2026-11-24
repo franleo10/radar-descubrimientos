@@ -145,7 +145,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
             lang: str = "es", alternates: list | None = None) -> str:
     robots = '<meta name="robots" content="noindex, follow">' if noindex else ""
     # Sin imagen propia (inicio, categorías, zonas...) se usa la de la marca.
-    og_image = f'<meta property="og:image" content="{escape(image or config.SITE_URL + "/og.png")}">'
+    og_image = f'<meta property="og:image" content="{escape(image or config.SITE_URL + "/og.png?v=2")}">'
     ld = "".join(f'<script type="application/ld+json">{_safe_json(x)}</script>' for x in (jsonld or []))
     links = (f'<a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a>'
              f'<a href="{root}#categorias">Categorías</a><a href="{root}lista/">Mi lista</a>')
