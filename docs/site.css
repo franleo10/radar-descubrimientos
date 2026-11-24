@@ -23,6 +23,7 @@ img{max-width:100%;display:block}
 h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.025em;line-height:1.1;text-wrap:balance}
 p{margin:0}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+[hidden]{display:none!important}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 :focus-visible{outline:2px solid var(--pink);outline-offset:2px;border-radius:4px}
 @media (max-width:640px){.wrap{padding:0 16px}}
