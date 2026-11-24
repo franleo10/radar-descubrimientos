@@ -272,3 +272,55 @@ def discover_body(entries: list[dict], by_cat: dict[str, list[dict]], root: str,
 <div class="grid" id="grid">{"".join(card(e, root) for e in ordered[:24])}</div>
 <div class="more"><button class="btn" id="more"{"" if len(entries) > 24 else " hidden"}>Ver más</button></div>
 <script src="{root}discover.js?v={js_ver}" defer></script>"""
+
+
+# ---------------------------------------------------------------- mi lista (progreso)
+
+def checklist_body(entries: list[dict], by_cat: dict[str, list[dict]], root: str) -> str:
+    """Lista de todos los secretos para tildar. El progreso se guarda en el navegador (localStorage)."""
+    p = _p()
+    groups = []
+    for k, items in sorted(by_cat.items(), key=lambda kv: -len(kv[1])):
+        slug, name = p.CATS[k]
+        rows = "".join(
+            f'<li><label><input type="checkbox" data-slug="{escape(e["slug"])}">'
+            f'<span class="ck-t"><a href="{root}d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a>'
+            + (f'<small>{escape(e.get("macro") or e.get("region"))}</small>' if (e.get("macro") or e.get("region")) else "")
+            + "</span></label></li>"
+            for e in sorted(items, key=lambda e: -int(e.get("popularity") or 0)))
+        groups.append(f'<section class="ck-group" style="--c:{p.CAT_COLOR[k]}">'
+                      f'<h2><a href="{root}c/{slug}/">{escape(name)}</a><span class="ck-n" data-total="{len(items)}">0 / {len(items)}</span></h2>'
+                      f'<div class="ck-bar"><i></i></div><ul class="ck-list">{rows}</ul></section>')
+    return f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Mi lista</nav>
+<header class="page-head"><h1>Mi lista de secretos</h1>
+<p class="lead">Tildá los secretos que ya encontraste en tu partida y mirá cuánto te falta. Se guarda solo en este navegador: no hace falta registrarse.</p></header>
+<div class="ck-summary"><p><b id="ck-done">0</b> de <b>{len(entries)}</b> secretos encontrados</p><div class="ck-bar big"><i id="ck-all"></i></div>
+<div class="ck-actions"><label class="ck-hide"><input type="checkbox" id="ck-hide"> Ocultar los que ya hice</label><button class="btn sm ghost" id="ck-reset" type="button">Borrar mi progreso</button></div></div>
+{"".join(groups)}
+<script>
+(() => {{
+  const KEY = "wm-hechos";
+  let done;
+  try {{ done = new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); }} catch {{ done = new Set(); }}
+  const save = () => {{ try {{ localStorage.setItem(KEY, JSON.stringify([...done])); }} catch {{}} }};
+  const boxes = [...document.querySelectorAll(".ck-list input")];
+  function paint() {{
+    boxes.forEach(b => {{ b.checked = done.has(b.dataset.slug); b.closest("li").classList.toggle("is-done", b.checked); }});
+    let total = 0;
+    document.querySelectorAll(".ck-group").forEach(g => {{
+      const all = g.querySelectorAll(".ck-list input").length, n = g.querySelectorAll(".ck-list input:checked").length;
+      total += n;
+      g.querySelector(".ck-n").textContent = `${{n}} / ${{all}}`;
+      g.querySelector(".ck-bar i").style.width = (100 * n / all) + "%";
+    }});
+    document.getElementById("ck-done").textContent = total;
+    document.getElementById("ck-all").style.width = (100 * total / boxes.length) + "%";
+  }}
+  boxes.forEach(b => b.addEventListener("change", () => {{ b.checked ? done.add(b.dataset.slug) : done.delete(b.dataset.slug); save(); paint(); }}));
+  document.getElementById("ck-hide").addEventListener("change", ev => document.body.classList.toggle("ck-hiding", ev.target.checked));
+  document.getElementById("ck-reset").addEventListener("click", () => {{
+    if (confirm("¿Borrar todo tu progreso? No se puede deshacer.")) {{ done.clear(); save(); paint(); }}
+  }});
+  paint();
+}})();
+</script>"""

@@ -375,3 +375,50 @@ a.thumb:hover img{transform:scale(1.03)}
 .c-head span{color:var(--muted);font-size:13px}
 .c-list p{margin:6px 0 0;white-space:pre-wrap;word-break:break-word}
 .c-list .c-empty{color:var(--muted);font-size:14.5px}
+
+/* Guías destacadas en las páginas de categoría */
+.top-guides{list-style:none;margin:0;padding:0}
+.top-guides > li{padding:24px 0;border-top:1px solid var(--line)}
+.top-guides > li:last-child{border-bottom:1px solid var(--line)}
+.top-guides h3{font-size:21px;letter-spacing:-.02em;display:flex;gap:14px;align-items:baseline}
+.top-guides h3 span{font:600 14px var(--mono);color:var(--pink)}
+.top-guides h3 a{text-decoration:none}
+.top-guides h3 a:hover{text-decoration:underline}
+.top-guides > li > p{margin:8px 0 0 38px}
+.top-guides .mini-steps{margin:12px 0 0 38px}
+.top-guides .mini-steps li{padding:8px 0;font-size:15px}
+.top-guides .more-link{display:inline-block;margin:12px 0 0 38px;font-size:14.5px}
+@media (max-width:640px){.top-guides > li > p,.top-guides .mini-steps,.top-guides .more-link{margin-left:0}}
+
+/* Mi lista */
+.ck-summary{position:sticky;top:64px;z-index:5;background:var(--bg);padding:16px 0 18px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.ck-summary p{font-size:17px}
+.ck-summary b{font-weight:700}
+.ck-bar{height:6px;border-radius:3px;background:var(--sunk);overflow:hidden;margin-top:10px}
+.ck-bar.big{height:10px;border-radius:5px}
+.ck-bar i{display:block;height:100%;width:0;background:var(--c,var(--pink));border-radius:inherit;transition:width .3s}
+.ck-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;font-size:14.5px;color:var(--ink-2)}
+.ck-hide{display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.ck-group{margin-top:40px}
+.ck-group h2{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0}
+.ck-group h2 a{text-decoration:none}
+.ck-n{font:500 14px var(--mono);color:var(--muted)}
+.ck-list{list-style:none;margin:12px 0 0;padding:0}
+.ck-list li{border-top:1px solid var(--line)}
+.ck-list label{display:flex;gap:14px;align-items:flex-start;padding:12px 2px;cursor:pointer}
+.ck-list input,.ck-hide input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--pink);flex:none;cursor:pointer}
+.ck-t{display:flex;flex-direction:column;gap:2px}
+.ck-t a{color:var(--ink)!important;text-decoration:none;font-weight:550}
+.ck-t a:hover{text-decoration:underline}
+.ck-t small{font-size:13px;color:var(--muted)}
+.is-done .ck-t a{color:var(--muted)!important;text-decoration:line-through}
+.ck-hiding .is-done{display:none}
+.done-btn{margin-left:auto;font:600 13.5px var(--font);padding:6px 12px;border-radius:6px;border:1px solid var(--line-2);background:var(--paper);color:var(--ink-2);cursor:pointer}
+.done-btn:hover{border-color:var(--ink)}
+.done-btn[aria-pressed="true"]{background:#e6f4ea;border-color:#2b8a3e;color:#1e6b31}
+
+/* Portugués */
+.pt-hero h1 em{font-style:normal;color:var(--pink)}
+.pt-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pt-actions .btn + .btn{margin-left:0}
+.page .cats{margin-top:8px}

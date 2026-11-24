@@ -2,7 +2,7 @@ name: Bot de descubrimientos
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # cada 6 horas (hora UTC)
+    - cron: "15 */2 * * *"   # cada 2 horas (hora UTC); en cada corrida busca la mitad de las consultas
   workflow_dispatch:         # botón "Run workflow" para correrlo a mano
     inputs:
       limpiar_duplicados:
@@ -40,6 +40,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ vars.TELEGRAM_CHAT_ID }}
           BLUESKY_HANDLE: ${{ vars.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DEDUPE_ALL: ${{ inputs.limpiar_duplicados }}
         run: |
           if [ "$DEDUPE_ALL" = "true" ]; then python -m bot.main --dedupe-all; else python -m bot.main; fi

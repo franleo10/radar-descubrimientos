@@ -1,0 +1,3 @@
+# Direcciones viejas que cambiaron (301 = mudanza permanente, Google pasa el valor a la nueva)
+/c/mecanicas-y-tips/* /c/trucos-y-consejos/:splat 301
+/c/mecanicas-y-tips /c/trucos-y-consejos/ 301

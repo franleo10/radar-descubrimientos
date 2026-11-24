@@ -139,6 +139,8 @@ def run(demo: bool) -> None:
         from .enrich import enrich
 
         enrich(entries)  # guía más completa, pasos y región, de a poco
+        from .pt import translate
+        translate(entries)  # versión en portugués, de a poco
     save_site(entries)
     print(f"[bot] {added} descubrimientos nuevos, {len(entries)} en total")
 

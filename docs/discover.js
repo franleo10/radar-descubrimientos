@@ -5,7 +5,7 @@
     easter_egg: ["Easter eggs", "easter-eggs"], ubicacion_secreta: ["Lugares secretos", "lugares-secretos"],
     coleccionable: ["Coleccionables", "coleccionables"], vehiculo: ["Vehículos", "vehiculos"],
     arma: ["Armas", "armas"], dinero: ["Dinero", "dinero"], mision: ["Misiones", "misiones"],
-    mecanica_truco: ["Mecánicas y tips", "mecanicas-y-tips"], otro: ["Otros", "otros"],
+    mecanica_truco: ["Trucos y consejos", "trucos-y-consejos"], otro: ["Otros", "otros"],
   };
   const PAGE = 24;
   const grid = document.getElementById("grid");

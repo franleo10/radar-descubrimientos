@@ -40,6 +40,7 @@ YOUTUBE_QUERIES = _list(
     "GTA 6 easter egg|GTA 6 secret location|GTA 6 hidden|GTA 6 ubicación secreta|"
     "GTA 6 secreto|GTA 6 how to get|GTA 6 rare car|GTA 6 money guide",
 )
+YOUTUBE_ROTATE = os.environ.get("YOUTUBE_ROTATE", "1") == "1"  # alternar consultas entre corridas
 YOUTUBE_MIN_VIEWS = int(os.environ.get("YOUTUBE_MIN_VIEWS", "2000"))
 YOUTUBE_LOOKBACK_HOURS = int(os.environ.get("YOUTUBE_LOOKBACK_HOURS", "24"))
 
@@ -57,13 +58,15 @@ CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-haiku-5-5")
 CLAUDE_BATCH_SIZE = int(os.environ.get("CLAUDE_BATCH_SIZE", "15"))
 # Cuántos descubrimientos ya publicados se amplían (guía, pasos, región) por corrida.
 ENRICH_PER_RUN = int(os.environ.get("ENRICH_PER_RUN", "40"))
+TRANSLATE_PER_RUN = int(os.environ.get("TRANSLATE_PER_RUN", "40"))  # guías traducidas al portugués por corrida
 
 # --- Redes (cada una se saltea si no tiene claves) ---
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")  # ej. @wastedmap
 BLUESKY_HANDLE = os.environ.get("BLUESKY_HANDLE", "")
 BLUESKY_APP_PASSWORD = os.environ.get("BLUESKY_APP_PASSWORD", "")
-SOCIAL_PER_RUN = int(os.environ.get("SOCIAL_PER_RUN", "3"))  # por red y por corrida
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
+SOCIAL_PER_RUN = int(os.environ.get("SOCIAL_PER_RUN", "1"))  # por red y por corrida
 SOCIAL_MAX_AGE_DAYS = int(os.environ.get("SOCIAL_MAX_AGE_DAYS", "3"))
 
 # --- Web ---

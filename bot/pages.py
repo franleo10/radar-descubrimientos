@@ -31,7 +31,7 @@ CATS = {
     "arma": ("armas", "Armas"),
     "dinero": ("dinero", "Dinero"),
     "mision": ("misiones", "Misiones"),
-    "mecanica_truco": ("mecanicas-y-tips", "Mecánicas y tips"),
+    "mecanica_truco": ("trucos-y-consejos", "Trucos y consejos"),
     "otro": ("otros", "Otros"),
 }
 CAT_COLOR = {
@@ -63,8 +63,17 @@ def slug_for(e: dict) -> str:
 
 
 def indexable(e: dict) -> bool:
-    """Solo las confirmadas van a Google; las dudosas se ven en la web pero no se indexan."""
-    return e.get("confianza") == "alta"
+    """Qué páginas van a Google. Las dudosas y flojas se ven en la web pero no se indexan.
+
+    Entran las confirmadas, las que confirmó la comunidad y las que, aunque no estén del todo
+    claras, tienen contenido propio (explicación o pasos) y respaldo (varias fuentes o un video
+    muy visto). Así no mandamos a Google páginas casi vacías.
+    """
+    if e.get("confianza") == "alta" or e.get("confirmado_por_comunidad"):
+        return True
+    contenido = len(e.get("detalle") or "") >= 200 or len(e.get("pasos") or []) >= 3
+    respaldo = int(e.get("popularity") or 0) >= 5000 or bool(e.get("fuentes_extra"))
+    return contenido and respaldo
 
 
 MIN_ZONE_ENTRIES = 1  # zonas = las grandes áreas del mapa (ver bot/mapa.py)
@@ -132,22 +141,34 @@ MENU = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 1
 
 def _layout(*, title: str, description: str, canonical: str, root: str, body: str,
             image: str = "", jsonld: list | None = None, noindex: bool = False,
-            bare: bool = False, og_type: str = "article", wide: bool = False) -> str:
+            bare: bool = False, og_type: str = "article", wide: bool = False,
+            lang: str = "es", alternates: list | None = None) -> str:
     robots = '<meta name="robots" content="noindex, follow">' if noindex else ""
     # Sin imagen propia (inicio, categorías, zonas...) se usa la de la marca.
     og_image = f'<meta property="og:image" content="{escape(image or config.SITE_URL + "/og.png")}">'
     ld = "".join(f'<script type="application/ld+json">{_safe_json(x)}</script>' for x in (jsonld or []))
     links = (f'<a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a>'
-             f'<a href="{root}#categorias">Categorías</a>')
+             f'<a href="{root}#categorias">Categorías</a><a href="{root}lista/">Mi lista</a>')
+    alt = "".join(f'<link rel="alternate" hreflang="{h}" href="{escape(u)}">' for h, u in (alternates or []))
+    if alternates:
+        alt += f'<link rel="alternate" hreflang="x-default" href="{escape(alternates[0][1])}">'
+    cta, foot_txt = "Abrir el mapa", ("Guía no oficial hecha por fans de GTA 6. No tiene relación con Rockstar Games ni con "
+                                      "Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.")
+    if lang == "pt":
+        links = (f'<a href="{root}pt/">Início</a><a href="{root}pt/#categorias">Categorias</a>'
+                 f'<a href="{root}" hreflang="es">Versão em espanhol</a>')
+        cta, foot_txt = "Abrir o mapa", ("Guia não oficial feito por fãs de GTA 6. Não tem relação com a Rockstar Games nem com a "
+                                         "Take-Two Interactive. Os vídeos são de seus autores e aparecem com o player original.")
     main = body if bare else f'<div class="wrap{" wide" if wide else ""}">\n{body}\n</div>'
     return f"""<!doctype html>
-<html lang="es">
+<html lang="{"pt-BR" if lang == "pt" else "es"}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(description)}">
 <link rel="canonical" href="{escape(canonical)}">
+{alt}
 {robots}
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{escape(title)}">
@@ -168,7 +189,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <header class="topbar"><div class="wrap bar">
 {logo(root)}
 <nav class="nav" aria-label="Principal">{links}</nav>
-<a class="btn primary sm map-btn" href="{root}mapa/">Abrir el mapa</a>
+<a class="btn primary sm map-btn" href="{root}mapa/">{cta}</a>
 <details class="menu"><summary aria-label="Menú">{MENU}</summary><div class="menu-panel"><a href="{root}mapa/">Mapa</a>{links}</div></details>
 </div></header>
 <main class="{"home" if bare else "page"}">
@@ -176,9 +197,9 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 </main>
 <footer class="foot"><div class="wrap foot-grid">
 <div class="foot-brand">{logo(root)}
-<p>Guía no oficial hecha por fans de GTA 6. No tiene relación con Rockstar Games ni con Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.</p></div>
-<nav aria-label="Explorar"><h3>Explorar</h3><a href="{root}mapa/">Mapa</a><a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a></nav>
-<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
+<p>{foot_txt}</p></div>
+<nav aria-label="Explorar"><h3>Explorar</h3><a href="{root}mapa/">Mapa</a><a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a><a href="{root}lista/">Mi lista</a></nav>
+<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a><a href="{root}pt/" hreflang="pt-BR">Em português</a></nav>
 <nav aria-label="Redes"><h3>Seguinos</h3>{tg_link("social")}{bsky_link("social")}</nav>
 </div></footer>
 <script>
@@ -189,6 +210,17 @@ window.wmAgo = (scope = document) => scope.querySelectorAll("time[data-ago]").fo
   t.textContent = h < 1 ? "hace minutos" : h < 24 ? `hace ${{Math.floor(h)}} h` : d === 1 ? "ayer" : `hace ${{d}} días`;
 }});
 wmAgo();
+document.querySelectorAll(".done-btn").forEach(b => {{
+  const KEY = "wm-hechos";
+  let done; try {{ done = new Set(JSON.parse(localStorage.getItem(KEY) || "[]")); }} catch {{ done = new Set(); }}
+  const paint = () => {{ const on = done.has(b.dataset.slug); b.setAttribute("aria-pressed", on); b.textContent = on ? "Hecho ✓" : "Marcar como hecho"; }};
+  b.addEventListener("click", () => {{
+    done.has(b.dataset.slug) ? done.delete(b.dataset.slug) : done.add(b.dataset.slug);
+    try {{ localStorage.setItem(KEY, JSON.stringify([...done])); }} catch {{}}
+    paint();
+  }});
+  paint();
+}});
 document.addEventListener("click", ev => {{
   const sp = ev.target.closest(".spoiler-btn");
   if (sp) {{ document.querySelectorAll(".spoiler").forEach(x => x.classList.remove("spoiler")); sp.remove(); return; }}
@@ -265,7 +297,7 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
 
     body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › <a href="{root}c/{slug_cat}/">{escape(cat_name)}</a></nav>
 <article class="entry">
-  <div class="tags">{"".join(tags)}</div>
+  <div class="tags">{"".join(tags)}<button class="done-btn" type="button" data-slug="{escape(e['slug'])}" aria-pressed="false">Marcar como hecho</button></div>
   {spoiler_btn}
   <div class="{"spoiler" if e.get("spoiler") else ""}">
     <h1>{escape(e.get("titulo", ""))}</h1>
@@ -297,22 +329,68 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
             "contentUrl": e.get("url", ""),
         })
     return _layout(title=title, description=desc, canonical=url, root=root, body=body,
-                   image=thumb, jsonld=jsonld, noindex=not indexable(e))
+                   image=thumb, jsonld=jsonld, noindex=not indexable(e),
+                   alternates=([("es", url), ("pt-BR", f"{config.SITE_URL}/pt/d/{e['slug']}/")]
+                               if (e.get("pt") or {}).get("titulo") else None))
+
+
+# Cada categoría responde a una búsqueda concreta de Google (título y H1 pensados para eso).
+CAT_SEO = {
+    "dinero": ("Cómo ganar dinero rápido en GTA 6",
+               "Los métodos para hacer plata en GTA 6 que encontró la comunidad, ordenados por los más vistos. "
+               "Cada uno tiene su guía con los pasos y el video original."),
+    "vehiculo": ("Autos secretos y raros de GTA 6: dónde encontrarlos",
+                 "Dónde aparecen los autos, motos y vehículos raros de GTA 6 y cómo conseguirlos, "
+                 "con la ubicación y el video de quien los encontró."),
+    "easter_egg": ("Easter eggs de GTA 6: todos los secretos encontrados",
+                   "Referencias escondidas, guiños a otros juegos y secretos de GTA 6 que descubrió la comunidad."),
+    "ubicacion_secreta": ("Lugares secretos de GTA 6 y cómo llegar",
+                          "Habitaciones ocultas, zonas difíciles de encontrar y lugares secretos del mapa de GTA 6, "
+                          "con cómo llegar a cada uno."),
+    "arma": ("Armas secretas de GTA 6 y dónde conseguirlas",
+             "Armas especiales, ubicaciones de armas y cómo conseguirlas en GTA 6."),
+    "mision": ("Misiones secretas de GTA 6",
+               "Misiones ocultas, golpes y cómo sacarles el máximo provecho en GTA 6."),
+    "coleccionable": ("Coleccionables de GTA 6: ubicaciones y recompensas",
+                      "Dónde encontrar los coleccionables de GTA 6 y qué se gana al juntarlos."),
+    "mecanica_truco": ("Trucos y consejos de GTA 6",
+                       "Trucos, controles ocultos y mecánicas poco conocidas de GTA 6 que encontró la comunidad. "
+                       "Si aparecen códigos de trucos, se suman acá automáticamente."),
+    "otro": ("Otros descubrimientos de GTA 6", "Otros descubrimientos de la comunidad en GTA 6."),
+}
 
 
 def _category_page(cat: str, entries: list[dict]) -> str:
     root = "../../"
     slug_cat, name = CATS[cat]
     url = f"{config.SITE_URL}/c/{slug_cat}/"
-    intro = CAT_INTRO[cat]
+    h1, intro = CAT_SEO.get(cat, (f"{name} de GTA 6", CAT_INTRO[cat]))
+    ranked = sorted(entries, key=lambda e: -int(e.get("popularity") or 0))
+    top = [e for e in ranked if not e.get("spoiler")][:5]
+    top_slugs = {e["slug"] for e in top}
+    items = []
+    for i, e in enumerate(top, 1):
+        steps = "".join(f"<li>{escape(p)}</li>" for p in (e.get("pasos") or [])[:3])
+        more = (f'<ol class="steps mini-steps">{steps}</ol>' if steps else "")
+        items.append(f'<li><h3><span>{i:02d}</span><a href="{root}d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></h3>'
+                     f'<p>{escape(e.get("resumen", ""))}</p>{more}'
+                     f'<a class="more-link" href="{root}d/{e["slug"]}/">Ver la guía completa →</a></li>')
+    rest = [e for e in ranked if e["slug"] not in top_slugs]
     nav = " · ".join(f'<a href="{root}c/{s}/">{escape(n)}</a>' for k, (s, n) in CATS.items() if k != cat)
     body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › {escape(name)}</nav>
-<h1>{escape(name)} de GTA 6</h1>
-<p class="lead">{escape(intro)} {len(entries)} descubrimientos, actualizados varias veces por día.</p>
-<div class="minis">{"".join(_mini_card(e, root) for e in entries)}</div>
+<header class="page-head"><h1>{escape(h1)}</h1>
+<p class="lead">{escape(intro)}</p>
+<p class="note">{len(entries)} descubrimientos · se actualiza varias veces por día.</p></header>
+{'<h2>Los más vistos</h2><ol class="top-guides">' + "".join(items) + "</ol>" if items else ""}
+{f'<h2>Todos ({len(rest)} más)</h2><div class="minis">' + "".join(_mini_card(e, root) for e in rest) + "</div>" if rest else ""}
 <p class="other">Otras categorías: {nav}</p>"""
-    return _layout(title=f"{name} de GTA 6 | {config.SITE_NAME}", description=intro,
-                   canonical=url, root=root, body=body)
+    jsonld = [{
+        "@context": "https://schema.org", "@type": "ItemList", "name": h1,
+        "itemListElement": [{"@type": "ListItem", "position": i, "url": f"{config.SITE_URL}/d/{e['slug']}/",
+                             "name": e.get("titulo", "")} for i, e in enumerate(ranked[:20], 1)],
+    }]
+    return _layout(title=f"{h1} | {config.SITE_NAME}", description=intro,
+                   canonical=url, root=root, body=body, jsonld=jsonld)
 
 
 def _zone_page(region: str, slug: str, entries: list[dict], zones: dict[str, str]) -> str:
@@ -406,6 +484,8 @@ STATIC_PAGES = {
 <h2>Votos y "Me funcionó"</h2>
 <p>Para que cada persona vote una sola vez por guía guardamos una huella anónima calculada a partir de tu conexión y tu navegador. No guardamos tu dirección IP ni ningún dato que te identifique.</p>
 <p>Si querés que borremos un comentario tuyo, escribinos a {_MAIL} con el enlace de la guía y el nombre que usaste.</p>
+<h2>Mi lista y "Marcar como hecho"</h2>
+<p>Los secretos que marcás como hechos se guardan solo en tu navegador (almacenamiento local). No se mandan a ningún servidor y los podés borrar cuando quieras desde la página Mi lista.</p>
 <h2>Estadísticas de visitas</h2>
 <p>Usamos Cloudflare Web Analytics para saber cuántas personas visitan el sitio y qué páginas leen. Esta herramienta no usa cookies, no guarda tu dirección IP y no te sigue entre sitios: solo recibimos números agregados (visitas, páginas, país, tipo de dispositivo).</p>
 <h2>Alojamiento</h2>
@@ -477,7 +557,7 @@ def build(entries: list[dict]) -> None:
     _write_404()
 
     # Se regeneran desde cero: así desaparecen las que ya no están (duplicados juntados, etc.).
-    for folder in ("d", "c", "z", "semana", "mapa", "descubrimientos"):
+    for folder in ("d", "c", "z", "semana", "mapa", "descubrimientos", "lista"):
         shutil.rmtree(docs / folder, ignore_errors=True)
 
     for e in entries:
@@ -514,6 +594,14 @@ def build(entries: list[dict]) -> None:
         canonical=f"{config.SITE_URL}/", root="", og_type="website", bare=True,
         body=home.home_body(entries, by_cat, by_zone, zones, week, updated)), encoding="utf-8")
 
+    out = docs / "lista" / "index.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(_layout(
+        title=f"Mi lista de secretos de GTA 6 | {config.SITE_NAME}",
+        description="Tildá los secretos de GTA 6 que ya encontraste y mirá cuánto te falta, por categoría. Sin registrarte.",
+        canonical=f"{config.SITE_URL}/lista/", root="../", wide=False,
+        body=home.checklist_body(entries, by_cat, "../")), encoding="utf-8")
+
     out = docs / "descubrimientos" / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(_layout(
@@ -528,10 +616,14 @@ def build(entries: list[dict]) -> None:
     urls += [(f"{config.SITE_URL}/z/{zones[r]}/", v[0].get("published_at", "")) for r, v in by_zone.items()]
     urls.append((f"{config.SITE_URL}/mapa/", entries[0]["published_at"] if entries else ""))
     urls.append((f"{config.SITE_URL}/descubrimientos/", entries[0]["published_at"] if entries else ""))
+    urls.append((f"{config.SITE_URL}/lista/", ""))
     urls.append((f"{config.SITE_URL}/semana/", week[0].get("published_at", "") if week else ""))
     # Las dudosas no van al sitemap (y llevan noindex): solo indexamos lo confirmado.
     urls += [(f"{config.SITE_URL}/d/{e['slug']}/", e.get("published_at", "")) for e in entries if indexable(e)]
     urls += [(f"{config.SITE_URL}/{slug}/", "") for slug in STATIC_PAGES]
+    import sys
+    from . import pt
+    urls += pt.build(entries, sys.modules[__name__])
     sitemap = "".join(f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d[:10]}</lastmod>" if d else "") + "</url>"
                       for u, d in urls)
     (docs / "sitemap.xml").write_text(

@@ -28,7 +28,11 @@ def collect_youtube() -> list[dict]:
 
     since = datetime.now(timezone.utc) - timedelta(hours=config.YOUTUBE_LOOKBACK_HOURS)
     ids: list[str] = []
-    for q in config.YOUTUBE_QUERIES:
+    # El bot corre cada 2 horas: en cada corrida busca la mitad de las consultas (alternando),
+    # así cada una se revisa cada 4 horas y la cuota diaria de YouTube alcanza con margen.
+    half = (datetime.now(timezone.utc).hour // 2) % 2
+    queries = config.YOUTUBE_QUERIES[half::2] if config.YOUTUBE_ROTATE else config.YOUTUBE_QUERIES
+    for q in queries:
         # search.list cuesta 100 unidades de cuota (el límite diario gratis es 10.000)
         r = requests.get(
             "https://www.googleapis.com/youtube/v3/search",

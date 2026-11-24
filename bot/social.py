@@ -91,6 +91,30 @@ def post_telegram(e: dict) -> bool:
     return True
 
 
+# ----------------------------------------------------------------- Discord --
+
+def post_discord(e: dict) -> bool:
+    """Publica en un canal de Discord mediante un webhook (Ajustes del canal → Integraciones → Webhooks)."""
+    embed = {
+        "title": _cut(e.get("titulo", ""), 250),
+        "url": _url(e),
+        "description": _cut(e.get("resumen", ""), 600),
+        "color": 0xD61F69,
+        "footer": {"text": "WastedMap · guía no oficial de GTA 6"},
+    }
+    if e.get("region"):
+        embed["fields"] = [{"name": "Zona", "value": _cut(e["region"], 100), "inline": True}]
+    thumb = _thumb(e)
+    if thumb:
+        embed["image"] = {"url": thumb}
+    r = requests.post(config.DISCORD_WEBHOOK_URL, json={"username": "WastedMap", "embeds": [embed]}, timeout=TIMEOUT)
+    if r.status_code not in (200, 204):
+        # No mostramos la URL del webhook: funciona como una contraseña.
+        print(f"[discord] error {r.status_code}: {r.text[:200]}")
+        return False
+    return True
+
+
 # ----------------------------------------------------------------- Bluesky --
 
 class Bluesky:
@@ -179,5 +203,20 @@ def publish(entries: list[dict]) -> None:
         print(f"[bluesky] {sent} publicados")
     else:
         print("[bluesky] sin claves, se saltea")
+
+    if config.DISCORD_WEBHOOK_URL:
+        done = posted.setdefault("discord", [])
+        sent = 0
+        for e in pick(entries, set(done), limit):
+            try:
+                if post_discord(e):
+                    done.append(e["id"])
+                    sent += 1
+            except requests.RequestException as err:
+                print(f"[discord] sin conexión ({type(err).__name__})")
+                break
+        print(f"[discord] {sent} publicados")
+    else:
+        print("[discord] sin webhook, se saltea")
 
     _save_posted(posted)
