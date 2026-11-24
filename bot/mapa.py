@@ -30,6 +30,9 @@ AREAS = {
     "Grassrivers": (*_xy(335, 690), "#2ee6d6", "Pantanos y ríos del sur"),
     "Vice City": (*_xy(515, 555), "#ff3d8b", "La gran ciudad de la costa este"),
     "Leonida Keys": (*_xy(250, 905), "#a78bfa", "Cadena de cayos e islas"),
+    "Vice Beach": (*_xy(660, 520), "#38bdf8", "Playas e islas frente a Vice City"),
+    "Hamlet": (*_xy(440, 735), "#a3e635", "Pueblo del sur, camino a los cayos"),
+    "Capri": (*_xy(225, 563), "#f87171", "Pueblo costero del oeste"),
 }
 # Áreas con el nombre a la izquierda de la burbuja (para que no se pisen con las vecinas).
 _LABEL_LEFT: set[str] = set()

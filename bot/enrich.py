@@ -154,9 +154,20 @@ donde está SOLO si el nombre o el ejemplo lo dicen. Si no lo dicen, devolvé ""
 vez: devolvé "".
 - Nunca adivines ni inventes regiones.
 
-Además, en "macro" indicá en cuál de estas grandes áreas del mapa queda: "Vice City", "Leonida Keys", "Grassrivers", "Port Gellhorn", "Ambrosia" o "Mount Kalaga". Los barrios e islas de la ciudad van en "Vice City" y los cayos (lugares con "Key") en "Leonida Keys". Si no estás seguro, devolvé "": es mejor dejarlo sin área que ponerlo en el lugar equivocado."""
+Además, en "macro" indicá en cuál de estas áreas del mapa queda:
+- "Vice City": la ciudad y sus barrios (La Perle, Vespucci, Vice-Dale, Little Cuba, el aeropuerto VCIA).
+- "Vice Beach": las playas e islas frente a la ciudad (Ocean Beach, Washington Beach, Starfish Island, Casanova Island, Washington Island, Catalina Island).
+- "Hamlet": el pueblo del sur entre Vice City y los cayos.
+- "Capri": el pueblo de la costa oeste, al sur de Port Gellhorn.
+- "Port Gellhorn": el puerto del oeste y Kelly County (Draper Island, Emerald Springs).
+- "Ambrosia": el centro y Leonard County (Belville, Waning Sands, Lake Leonida, Little Hardin Island).
+- "Mount Kalaga": el norte y Lummox County (el parque nacional, Bonanza, Grayson, Millport).
+- "Grassrivers": los pantanos del suroeste y Mariana County (Watson Bay, Pelican Valley, Big Pine).
+- "Leonida Keys": los cayos del sur (lugares con "Key", Key Lento, Mile Zero, Southwind).
+Si no estás seguro, devolvé "": es mejor dejarlo sin área que ponerlo en el lugar equivocado."""
 
-MACROS = ["Vice City", "Leonida Keys", "Grassrivers", "Port Gellhorn", "Ambrosia", "Mount Kalaga"]
+MACROS = ["Vice City", "Vice Beach", "Hamlet", "Capri", "Leonida Keys", "Grassrivers",
+          "Port Gellhorn", "Ambrosia", "Mount Kalaga"]
 
 REGION_SCHEMA = {
     "type": "object",
