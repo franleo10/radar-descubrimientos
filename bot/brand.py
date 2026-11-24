@@ -2,19 +2,17 @@
 
 
 def logo_svg(gid: str = "lg") -> str:
-    """Isotipo: pin de mapa con un destello (el 'descubrimiento')."""
+    """Isotipo: pin de mapa con un destello (el 'descubrimiento'). `gid` queda por compatibilidad."""
     return (
-        f'<svg viewBox="0 0 30 38" aria-hidden="true"><defs><linearGradient id="{gid}" x1="0" y1="0" x2="1" y2="1">'
-        f'<stop offset="0" stop-color="#ff3d8b"/><stop offset="1" stop-color="#ffb547"/></linearGradient></defs>'
-        f'<path d="M15 1C7.3 1 1 7.1 1 14.7 1 24.9 15 37 15 37s14-12.1 14-22.3C29 7.1 22.7 1 15 1z" fill="url(#{gid})"/>'
-        f'<circle cx="15" cy="14.5" r="7.2" fill="#0b0912"/>'
-        f'<path d="M15 9.2l1.4 3.9 3.9 1.4-3.9 1.4-1.4 3.9-1.4-3.9-3.9-1.4 3.9-1.4z" fill="#fff"/></svg>'
+        '<svg viewBox="0 0 30 38" aria-hidden="true">'
+        '<path d="M15 1C7.3 1 1 7.1 1 14.7 1 24.9 15 37 15 37s14-12.1 14-22.3C29 7.1 22.7 1 15 1z" fill="var(--pink,#d61f69)"/>'
+        '<path d="M15 7.6l1.9 5.1 5.1 1.9-5.1 1.9-1.9 5.1-1.9-5.1-5.1-1.9 5.1-1.9z" fill="#fff"/></svg>'
     )
 
 
 def logo(href: str, gid: str = "lg") -> str:
     return (f'<a class="logo" href="{href}" aria-label="WastedMap, inicio">{logo_svg(gid)}'
-            f'<span class="wordmark"><b>Wasted</b><i>Map</i></span></a>')
+            f'<span class="wordmark">Wasted<b>Map</b></span></a>')
 
 
 TELEGRAM_URL = "https://t.me/wastedmap"
@@ -45,8 +43,8 @@ def bsky_link(cls: str = "bsky", text: str = "Bluesky") -> str:
 
 
 def tg_cta(title: str = "¿Te sirvió? Enterate primero de cada secreto nuevo") -> str:
-    return (f'<aside class="cta-tg">{PLANE}<div><b>{title}</b>'
+    return (f'<aside class="cta-tg"><div><b>{title}</b>'
             f'<span>Publicamos los hallazgos confirmados apenas aparecen, sin spoilers.</span></div>'
-            f'<div class="cta-btns"><a class="btn tgbtn" href="{TELEGRAM_URL}" target="_blank" rel="noopener">'
-            f'{PLANE}Telegram</a><a class="btn bskybtn" href="{BLUESKY_URL}" target="_blank" rel="noopener">'
+            f'<div class="cta-btns"><a class="btn" href="{TELEGRAM_URL}" target="_blank" rel="noopener">'
+            f'{PLANE}Telegram</a><a class="btn" href="{BLUESKY_URL}" target="_blank" rel="noopener">'
             f'{BUTTERFLY}Bluesky</a></div></aside>')

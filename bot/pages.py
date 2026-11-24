@@ -20,6 +20,7 @@ from urllib.parse import quote
 
 from . import config
 from .brand import bsky_link, logo, tg_cta, tg_link
+from . import home
 from .mapa import AREAS, map_svg
 
 CATS = {
@@ -34,9 +35,9 @@ CATS = {
     "otro": ("otros", "Otros"),
 }
 CAT_COLOR = {
-    "easter_egg": "#ff3d8b", "ubicacion_secreta": "#2ee6d6", "coleccionable": "#ffd54a",
-    "vehiculo": "#ff8a3d", "arma": "#ff4d4d", "dinero": "#4ade80", "mision": "#a78bfa",
-    "mecanica_truco": "#60a5fa", "otro": "#958ba9",
+    "easter_egg": "#d61f69", "ubicacion_secreta": "#0c8f83", "coleccionable": "#b58105",
+    "vehiculo": "#e0570b", "arma": "#c22d2d", "dinero": "#2b8a3e", "mision": "#6d45d9",
+    "mecanica_truco": "#1b6fc2", "otro": "#7a7484",
 }
 CAT_INTRO = {
     "easter_egg": "Referencias escondidas, guiños a otros juegos y secretos que encontró la comunidad en GTA 6.",
@@ -49,7 +50,6 @@ CAT_INTRO = {
     "mecanica_truco": "Controles ocultos, mecánicas poco conocidas y consejos para jugar mejor a GTA 6.",
     "otro": "Otros descubrimientos de la comunidad en GTA 6.",
 }
-_MARK = re.compile(r"(<!--STATIC-->).*?(<!--/STATIC-->)", re.S)
 
 
 def _slugify(text: str, fallback: str = "descubrimiento") -> str:
@@ -107,9 +107,9 @@ def _community(e: dict, root: str) -> str:
     return f"""<section id="community" class="community" data-slug="{escape(e['slug'])}" data-sitekey="{escape(config.TURNSTILE_SITEKEY)}" hidden>
   <h2>¿Te sirvió?</h2>
   <div class="votes">
-    <button class="vote" data-act="like" aria-pressed="false">👍 <span>Me gusta</span> <b data-n="likes">0</b></button>
-    <button class="vote" data-act="dislike" aria-pressed="false">👎 <span>No me gusta</span> <b data-n="dislikes">0</b></button>
-    <button class="vote confirm" data-act="confirm" aria-pressed="false">✅ <span>Me funcionó</span> <b data-n="confirms">0</b></button>
+    <button class="vote" data-act="like" aria-pressed="false"><span>Me gusta</span> <b data-n="likes">0</b></button>
+    <button class="vote" data-act="dislike" aria-pressed="false"><span>No me gusta</span> <b data-n="dislikes">0</b></button>
+    <button class="vote confirm" data-act="confirm" aria-pressed="false"><span>Me funcionó</span> <b data-n="confirms">0</b></button>
   </div>
   <p class="note">"Me funcionó" ayuda a confirmar el hallazgo para el resto de la comunidad.</p>
   <h2>Comentarios <span class="c-count"></span></h2>
@@ -127,12 +127,19 @@ def _community(e: dict, root: str) -> str:
 <script src="{root}community.js?v={_ver('community.js')}" defer></script>"""
 
 
+MENU = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
+
+
 def _layout(*, title: str, description: str, canonical: str, root: str, body: str,
-            image: str = "", jsonld: list | None = None, noindex: bool = False) -> str:
+            image: str = "", jsonld: list | None = None, noindex: bool = False,
+            bare: bool = False, og_type: str = "article", wide: bool = False) -> str:
     robots = '<meta name="robots" content="noindex, follow">' if noindex else ""
     # Sin imagen propia (inicio, categorías, zonas...) se usa la de la marca.
     og_image = f'<meta property="og:image" content="{escape(image or config.SITE_URL + "/og.png")}">'
     ld = "".join(f'<script type="application/ld+json">{_safe_json(x)}</script>' for x in (jsonld or []))
+    links = (f'<a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a>'
+             f'<a href="{root}#categorias">Categorías</a>')
+    main = body if bare else f'<div class="wrap{" wide" if wide else ""}">\n{body}\n</div>'
     return f"""<!doctype html>
 <html lang="es">
 <head>
@@ -142,32 +149,46 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <meta name="description" content="{escape(description)}">
 <link rel="canonical" href="{escape(canonical)}">
 {robots}
-<meta property="og:type" content="article">
+<meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{escape(title)}">
 <meta property="og:description" content="{escape(description)}">
 <meta property="og:url" content="{escape(canonical)}">
 {og_image}
 <meta name="twitter:card" content="summary_large_image">
+<link rel="sitemap" type="application/xml" href="{root}sitemap.xml">
 <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
 <link rel="icon" href="{root}favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
-<meta name="theme-color" content="#0d0b14">
-<link rel="preload" href="{root}fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#f6f3ee">
+<link rel="preload" href="{root}fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{root}site.css?v={_css_version()}">
 {ld}
 </head>
 <body>
-<header class="topbar"><div class="wrap">{logo(root, "lg")}
-<nav class="nav"><a class="hide-sm" href="{root}mapa/">Mapa</a>{tg_link()}{bsky_link()}<a class="pill" href="{root}semana/">🔥 Top de la semana</a></nav></div></header>
-<main class="page"><div class="wrap">
-{body}
-</div></main>
-<footer class="foot"><div class="wrap">
-<div>{logo(root, "lg2")}
-<p>Guía no oficial hecha por fans. No tiene relación con Rockstar Games ni Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.</p></div>
-<nav><a href="{root}semana/">Top de la semana</a>{tg_link("tg", "Telegram")}{bsky_link()}<a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
+<header class="topbar"><div class="wrap bar">
+{logo(root)}
+<nav class="nav" aria-label="Principal">{links}</nav>
+<a class="btn primary sm map-btn" href="{root}mapa/">Abrir el mapa</a>
+<details class="menu"><summary aria-label="Menú">{MENU}</summary><div class="menu-panel"><a href="{root}mapa/">Mapa</a>{links}</div></details>
+</div></header>
+<main class="{"home" if bare else "page"}">
+{main}
+</main>
+<footer class="foot"><div class="wrap foot-grid">
+<div class="foot-brand">{logo(root)}
+<p>Guía no oficial hecha por fans de GTA 6. No tiene relación con Rockstar Games ni con Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.</p></div>
+<nav aria-label="Explorar"><h3>Explorar</h3><a href="{root}mapa/">Mapa</a><a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a></nav>
+<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
+<nav aria-label="Redes"><h3>Seguinos</h3>{tg_link("social")}{bsky_link("social")}</nav>
 </div></footer>
 <script>
+window.wmAgo = (scope = document) => scope.querySelectorAll("time[data-ago]").forEach(t => {{
+  const h = (Date.now() - new Date(t.getAttribute("datetime"))) / 36e5;
+  if (!(h >= 0)) return;
+  const d = Math.floor(h / 24);
+  t.textContent = h < 1 ? "hace minutos" : h < 24 ? `hace ${{Math.floor(h)}} h` : d === 1 ? "ayer" : `hace ${{d}} días`;
+}});
+wmAgo();
 document.addEventListener("click", ev => {{
   const sp = ev.target.closest(".spoiler-btn");
   if (sp) {{ document.querySelectorAll(".spoiler").forEach(x => x.classList.remove("spoiler")); sp.remove(); return; }}
@@ -210,16 +231,16 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
     tags = [f'<a class="tag cat" style="--c:{color}" href="{root}c/{slug_cat}/">{escape(cat_name)}</a>']
     if e.get("macro") in zones:
         place = e["region"] if e.get("region") and e["region"] != e["macro"] else ""
-        tags.append(f'<a class="tag" href="{root}z/{zones[e["macro"]]}/">📍 {escape(e["macro"])}'
+        tags.append(f'<a class="tag" href="{root}z/{zones[e["macro"]]}/">{escape(e["macro"])}'
                     + (f' · {escape(place)}' if place else "") + '</a>')
     elif e.get("region"):
-        tags.append(f'<span class="tag">📍 {escape(e["region"])}</span>')
+        tags.append(f'<span class="tag">{escape(e["region"])}</span>')
     elif e.get("zona"):
-        tags.append(f'<span class="tag">📍 {escape(e["zona"])}</span>')
+        tags.append(f'<span class="tag">{escape(e["zona"])}</span>')
     if e.get("confianza") == "media":
         tags.append('<span class="tag warn">Sin confirmar</span>')
     if e.get("confirmado_por_comunidad"):
-        tags.append('<span class="tag ok">✅ Confirmado por la comunidad</span>')
+        tags.append('<span class="tag ok">Confirmado por la comunidad</span>')
 
     if e.get("pasos"):
         how = "<h2>Cómo hacerlo</h2><ol class=\"steps\">" + "".join(f"<li>{escape(p)}</li>" for p in e["pasos"]) + "</ol>"
@@ -339,17 +360,13 @@ def _week_page(entries: list[dict]) -> str:
     root = "../"
     url = f"{config.SITE_URL}/semana/"
     intro = ("Los descubrimientos de GTA 6 que más se vieron en los últimos 7 días, "
-             "ordenados por popularidad. Se actualiza solo varias veces por día.")
-    items = "".join(
-        f'<li><a href="{root}d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a>'
-        f'<span class="note"> · {escape(CATS.get(e.get("categoria"), CATS["otro"])[1])}'
-        f' · {_num(e.get("popularity"))} vistas</span><br>{escape(e.get("resumen", ""))}</li>'
-        for e in entries)
-    body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Lo mejor de la semana</nav>
-<h1>Lo mejor de la semana en GTA 6</h1>
-<p class="lead">{escape(intro)}</p>
-<ol class="ranking">{items or "<li>Todavía no hay descubrimientos esta semana.</li>"}</ol>
-{tg_cta("Recibí el top de cada semana en Telegram")}"""
+             "ordenados por las vistas de los videos originales. Se actualiza varias veces por día.")
+    ranking = home.rank_list(entries, root, summary=True) or '<p class="empty">Todavía no hay descubrimientos esta semana.</p>'
+    body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Top de la semana</nav>
+<header class="page-head"><h1>Lo mejor de la semana en GTA 6</h1>
+<p class="lead">{escape(intro)}</p></header>
+{ranking}
+{tg_cta("Recibí los hallazgos nuevos en Telegram o Bluesky")}"""
     return _layout(title=f"Lo mejor de la semana en GTA 6 | {config.SITE_NAME}", description=intro,
                    canonical=url, root=root, body=body)
 
@@ -360,15 +377,6 @@ def _top_week(entries: list[dict]) -> list[dict]:
     since = (datetime.now(timezone.utc) - timedelta(days=WEEK_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     recent = [e for e in entries if e.get("published_at", "") >= since and indexable(e)]
     return sorted(recent, key=lambda e: e.get("popularity") or 0, reverse=True)[:15]
-
-
-def _home_static(entries: list[dict], counts: dict[str, int], zones: dict[str, str]) -> str:
-    cats = " · ".join(f'<a href="c/{CATS[k][0]}/">{escape(CATS[k][1])} ({n})</a>'
-                      for k, n in counts.items())
-    zl = " · ".join(f'<a href="z/{s}/">{escape(r)}</a>' for r, s in zones.items())
-    items = "".join(f'<li><a href="d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></li>' for e in entries)
-    return (f'<p><a href="semana/">Lo mejor de la semana</a></p><p>{cats}</p>'
-            + (f"<p>Zonas: {zl}</p>" if zl else "") + f'<ul class="static-list">{items}</ul>')
 
 
 CONTACT_EMAIL = "contacto@wastedmap.com"
@@ -469,7 +477,7 @@ def build(entries: list[dict]) -> None:
     _write_404()
 
     # Se regeneran desde cero: así desaparecen las que ya no están (duplicados juntados, etc.).
-    for folder in ("d", "c", "z", "semana", "mapa"):
+    for folder in ("d", "c", "z", "semana", "mapa", "descubrimientos"):
         shutil.rmtree(docs / folder, ignore_errors=True)
 
     for e in entries:
@@ -497,22 +505,29 @@ def build(entries: list[dict]) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(_week_page(week), encoding="utf-8")
 
-    index = docs / "index.html"
-    html = index.read_text(encoding="utf-8")
-    counts = {k: len(by_cat[k]) for k in CATS if k in by_cat}
-    static = _home_static(entries, counts, zones)
-    html = _MARK.sub(lambda m: m.group(1) + static + m.group(2), html)
-    mini = map_svg({k: len(v) for k, v in by_zone.items()}, {}, "")
-    html = re.sub(r"(<!--MAP-->).*?(<!--/MAP-->)", lambda m: m.group(1) + mini + m.group(2), html, flags=re.S)
-    html = re.sub(r'href="site\.css(\?v=[^"]*)?"', f'href="site.css?v={_css_version()}"', html)
-    html = re.sub(r'<link rel="canonical" href="[^"]*">',
-                  f'<link rel="canonical" href="{escape(config.SITE_URL)}/">', html)
-    index.write_text(html, encoding="utf-8")
+    from datetime import datetime, timezone
+    updated = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    (docs / "index.html").write_text(_layout(
+        title=f"{config.SITE_NAME} · Secretos, easter eggs y mapa de GTA 6",
+        description=("Secretos, easter eggs, lugares ocultos y guías de GTA 6 que encuentra la comunidad, "
+                     "ordenados en un mapa de Leonida y actualizados varias veces por día. Guía no oficial."),
+        canonical=f"{config.SITE_URL}/", root="", og_type="website", bare=True,
+        body=home.home_body(entries, by_cat, by_zone, zones, week, updated)), encoding="utf-8")
+
+    out = docs / "descubrimientos" / "index.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(_layout(
+        title=f"Todos los descubrimientos de GTA 6 | {config.SITE_NAME}",
+        description=("Todos los secretos, easter eggs, autos, armas y guías de GTA 6 que reunió WastedMap, "
+                     "con buscador y filtro por categoría."),
+        canonical=f"{config.SITE_URL}/descubrimientos/", root="../", wide=True,
+        body=home.discover_body(entries, by_cat, "../", _ver("discover.js"))), encoding="utf-8")
 
     urls = [(f"{config.SITE_URL}/", entries[0]["published_at"] if entries else "")]
     urls += [(f"{config.SITE_URL}/c/{CATS[k][0]}/", v[0].get("published_at", "")) for k, v in by_cat.items()]
     urls += [(f"{config.SITE_URL}/z/{zones[r]}/", v[0].get("published_at", "")) for r, v in by_zone.items()]
     urls.append((f"{config.SITE_URL}/mapa/", entries[0]["published_at"] if entries else ""))
+    urls.append((f"{config.SITE_URL}/descubrimientos/", entries[0]["published_at"] if entries else ""))
     urls.append((f"{config.SITE_URL}/semana/", week[0].get("published_at", "") if week else ""))
     # Las dudosas no van al sitemap (y llevan noindex): solo indexamos lo confirmado.
     urls += [(f"{config.SITE_URL}/d/{e['slug']}/", e.get("published_at", "")) for e in entries if indexable(e)]

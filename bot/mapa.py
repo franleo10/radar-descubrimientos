@@ -181,12 +181,12 @@ def _compass(x: int, y: int) -> str:
             '<text y="-50" text-anchor="middle">N</text></g>')
 
 
-def map_svg(counts: dict[str, int], links: dict[str, str], root: str) -> str:
+def map_svg(counts: dict[str, int], links: dict[str, str], root: str, legend: bool = True) -> str:
     """SVG del mapa con una burbuja por área (tamaño según cantidad de secretos)."""
     tints = []
     grads = []
     for i, (name, (x, y, color, _)) in enumerate(AREAS.items()):
-        grads.append(f'<radialGradient id="lm-t{i}"><stop offset="0" stop-color="{color}" stop-opacity=".30"/>'
+        grads.append(f'<radialGradient id="lm-t{i}"><stop offset="0" stop-color="{color}" stop-opacity=".2"/>'
                      f'<stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient>')
         tints.append(f'<circle cx="{x}" cy="{y}" r="190" fill="url(#lm-t{i})"/>')
     bubbles = []
@@ -199,7 +199,6 @@ def map_svg(counts: dict[str, int], links: dict[str, str], root: str) -> str:
                  f'<circle cx="{x}" cy="{y + 4}" r="{r:.0f}" fill="#000" opacity=".35"/>'
                  f'<circle cx="{x}" cy="{y}" r="{r:.0f}" fill="{color}" fill-opacity="{1 if n else .28}" '
                  f'stroke="#fff" stroke-opacity=".9" stroke-width="2.5"/>'
-                 f'<circle cx="{x}" cy="{y}" r="{r:.0f}" fill="url(#lm-shine)"/>'
                  f'<text x="{x}" y="{y + 9}" text-anchor="middle" class="num">{n if n else "?"}</text>'
                  + (f'<text x="{x - r - 14:.0f}" y="{y + 2}" text-anchor="end" class="lbl">{escape(name.upper())}</text>'
                     f'<text x="{x - r - 14:.0f}" y="{y + 22}" text-anchor="end" class="sub">{label}</text>'
@@ -208,13 +207,13 @@ def map_svg(counts: dict[str, int], links: dict[str, str], root: str) -> str:
                     f'<text x="{x}" y="{y + r + 50:.0f}" text-anchor="middle" class="sub">{label}</text>'))
         if n and name in links:
             bubbles.append(f'<a href="{root}{links[name]}" aria-label="{escape(name)}: {label}">'
-                           f'<g class="area">{inner}</g></a>')
+                           f'<g class="area" data-area="{escape(name)}">{inner}</g></a>')
         else:
-            bubbles.append(f'<g class="area{"" if n else " off"}">{inner}</g>')
+            bubbles.append(f'<g class="area{"" if n else " off"}" data-area="{escape(name)}">{inner}</g>')
     return f"""<svg class="leonida" viewBox="0 0 800 900" role="img" aria-label="Mapa esquemático de Leonida con los secretos por zona">
 <defs>
-<radialGradient id="lm-sea" cx=".55" cy=".45" r=".8"><stop offset="0" stop-color="#1b1236"/><stop offset="1" stop-color="#08060f"/></radialGradient>
-<linearGradient id="lm-land" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stop-color="#2d1a48"/><stop offset="1" stop-color="#1a1030"/></linearGradient>
+<radialGradient id="lm-sea" cx=".55" cy=".45" r=".8"><stop offset="0" stop-color="#1a1626"/><stop offset="1" stop-color="#0e0c15"/></radialGradient>
+<linearGradient id="lm-land" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stop-color="#2a2438"/><stop offset="1" stop-color="#211c2d"/></linearGradient>
 <radialGradient id="lm-shine" cx=".35" cy=".3" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></radialGradient>
 {"".join(grads)}
 <pattern id="lm-waves" width="44" height="22" patternUnits="userSpaceOnUse"><path d="M2 14 q9 -8 18 0 t18 0" fill="none" stroke="#2ee6d6" stroke-opacity=".07" stroke-width="1.5"/></pattern>
@@ -240,10 +239,9 @@ def map_svg(counts: dict[str, int], links: dict[str, str], root: str) -> str:
 <path d="M{AREAS['Port Gellhorn'][0] - 30} {AREAS['Port Gellhorn'][1] + 22} v26 m30 2 v26 m30 -2 v24" class="docks"/>
 </g>
 <g class="roads">{_roads()}</g>
-<path d="{LAND}" fill="none" stroke="#ff3d8b" stroke-width="2.5" stroke-opacity=".85" stroke-linejoin="round" filter="url(#lm-glow)"/>
-<g fill="url(#lm-land)" stroke="#ff3d8b" stroke-width="1.8" stroke-opacity=".75">{KEYS}{BARRIER}</g>
+<path d="{LAND}" fill="none" stroke="#ff5c93" stroke-width="2" stroke-opacity=".75" stroke-linejoin="round"/>
+<g fill="url(#lm-land)" stroke="#ff5c93" stroke-width="1.5" stroke-opacity=".6">{KEYS}{BARRIER}</g>
 {_compass(90, 680)}
-<g class="cartouche" transform="translate(530 800)"><rect width="230" height="66" rx="10"/>
-<text x="16" y="30" class="t1">LEONIDA</text><text x="16" y="50" class="t2">Mapa esquemático · WastedMap</text></g>
+{'<g class="cartouche" transform="translate(530 800)"><rect width="230" height="66" rx="8"/><text x="16" y="30" class="t1">LEONIDA</text><text x="16" y="50" class="t2">Mapa esquemático · WastedMap</text></g>' if legend else ""}
 {"".join(bubbles)}
 </svg>"""
