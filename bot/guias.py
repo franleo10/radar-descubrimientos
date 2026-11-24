@@ -362,6 +362,7 @@ TXT = {
         mn_tips="Para no perder lo que ganaste",
         mn_cat='También tenés la categoría <a href="{root}c/dinero/">Dinero</a>, con los métodos que va encontrando la comunidad en video.',
         hub_lead="Lo esencial para jugar y completar GTA 6, en español y revisado con varias fuentes.",
+        hub_h1="Guías de GTA 6",
         hub_list="<b>Mi lista de secretos</b><span>Tildá los secretos de WastedMap que ya encontraste.</span>",
         home_over="Guías", home_h="Lo que más se busca de GTA 6", home_more="Ver todas →",
     ),
@@ -418,8 +419,66 @@ TXT = {
         mn_tips="Para não perder o que você ganhou",
         mn_cat='Veja também a categoria <a href="{root}pt/c/dinheiro/">Dinheiro</a>, com os métodos que a comunidade vai encontrando em vídeo.',
         hub_lead="O essencial para jogar e completar GTA 6, em português e revisado com várias fontes.",
+        hub_h1="Guias de GTA 6",
         hub_list="<b>Minha lista de segredos</b><span>Marque os segredos do WastedMap que você já encontrou (em espanhol).</span>",
         home_over="Guias", home_h="O mais buscado de GTA 6", home_more="Ver todos →",
+    ),
+    "en": dict(
+        home="Home", guias="Guides", overline="Guide · reviewed {r}",
+        src_h="Where this comes from",
+        src_p="We cross-checked these guides and wrote it in our own words. When they disagree, we say so. "
+              "Reviewed {r}. If your game shows something different, <a href=\"{root}contacto/\">let us know</a>.",
+        segun="Per", capq="What chapter are you on?", cap_aria="Chapter", cap_done="Finished", cap_all="Show all",
+        code_none="Code unconfirmed", unlock="Unlocks by",
+        tk_h1="GTA 6 cheats: every code",
+        tk_lead="All {n} GTA 6 cheats, what each one does and what you have to do to unlock it. "
+                "{c} have a code confirmed by two different guides.",
+        tk_how="""<section class="g-how">
+  <h2>How to enter them</h2>
+  <ol class="g-steps">
+    <li>Finish the story: only then does the cheats section show up in the Progress menu.</li>
+    <li>Meet each cheat's requirement. Once you do, the game shows you the code in Progress.</li>
+    <li>Pull out your phone (up on the d-pad), hold <b>L1 + R1</b> on PS5 or <b>LB + RB</b> on Xbox and dial the sequence.</li>
+  </ol>
+  <p class="g-warn"><b>Before using them:</b> while a cheat is active you don't earn trophies or achievements and the game doesn't save. Save first.</p>
+  <p class="note">Codes are the same on PS5 and Xbox. Arrows are d-pad directions.</p>
+</section>""",
+        tk_search_l="Search for a cheat", tk_search_ph="Search: ammo, Banshee, weather…", tk_empty="No cheats match that search.",
+        h_need="You need", h_of="of", h_minus="Subtract", h_plus="Add", h_aria="How many {x} you have",
+        h_h1="GTA 6 100% checklist",
+        h_lead="Everything 100% asks for and how much you have left. Log your progress: it's saved in this browser, no sign-up.",
+        h_sum="""<div class="ck-summary"><p>You're at <b id="h-pct">0</b>% of the list</p><div class="ck-bar big"><i id="h-all"></i></div>
+<div class="ck-actions"><span class="note">It's an average of each row. The real percentage is in the game, under Progress.</span><button class="btn sm ghost" id="h-reset" type="button">Clear my progress</button></div></div>
+<section class="g-how"><h2>Before you start</h2><ul class="g-facts">
+<li>100% gives the gold trophy <b>A Long Road</b>. Guides estimate about 200 hours, versus 65 to 70 for the story alone.</li>
+<li>You can see your progress on each item in the game, under <b>Map › Progress › Collections</b>. Some categories only show up once you find the first one.</li>
+<li>Nothing on the list is missable: it's all still there after the credits. Still, some things are easier to do early: see <a href="{lost}">the missables</a>.</li>
+</ul></section>""",
+        cards_h="Card collections <small>you need 15 of 18</small>", cards_n="cards",
+        cards_note="Names and counts come from a single guide (Mission Passed Guides), but they add up to exactly the 480 cards the others confirm.",
+        tr_h1="GTA 6 trophies: the full list",
+        tr_lead="All {n} GTA 6 trophies: {p} platinum, {o} gold, {a} silver and {b} bronze. Tick off the ones you have.",
+        tr_how="""<section class="g-how"><h2>What you need to know</h2><ul class="g-facts">
+<li><b>Platinum in a single playthrough.</b> No difficulty levels and no online trophies. Guides rate it 4 out of 10 and about 200 hours.</li>
+<li><b>No mission replay and no New Game+.</b> Free roam continues after the story.</li>
+<li><b>The only one that might be missable</b> is Positive Mental Attitude, because of a chapter 1 meditation. <a href="{lost}">See how to do it</a>.</li>
+<li><b>Cheats disable trophies</b> while they're active.</li>
+</ul></section>""",
+        tr_story="Story: unlocks by itself", tr_opt="You have to go for it", tr_filter="Filter by type", tr_all="All",
+        tr_hide="Hide the ones I have", tr_count="of {n} earned",
+        ml_h1="GTA 6 missables: what you lose as the story moves on",
+        ml_lead="What disappears when you move to the next chapter, in order so you get it done in time. Minimal spoilers: pick your chapter.",
+        ml_gen="General rules", chapter="Chapter",
+        mn_h1="How to make money fast in GTA 6",
+        mn_lead="Every way to make money, ranked from the best payout to the lowest, with the chapter it unlocks in.",
+        mn_from="From", risk={1: "Low risk", 2: "Medium risk", 3: "High risk"},
+        mn_note="Amounts are the ones the first guides reported after launch and may change with updates.",
+        mn_tips="How not to lose what you made",
+        mn_cat='See also the <a href="{root}en/c/money/">Money</a> category, with the methods the community keeps finding on video.',
+        hub_h1="GTA 6 guides",
+        hub_lead="The essentials to play and complete GTA 6, cross-checked against several sources.",
+        hub_list="<b>My secrets list</b><span>Tick off the WastedMap secrets you've already found (in Spanish).</span>",
+        home_over="Guides", home_h="The most searched-for GTA 6 guides", home_more="See all →",
     ),
 }
 
@@ -431,7 +490,8 @@ def _data(lang: str) -> dict:
         return dict(trucos=TRUCOS, cien=CIEN, trofeos=TROFEOS, perdibles=PERDIBLES, generales=GENERALES,
                     plata=PLATA, consejos=CONSEJOS_PLATA, grados=GRADOS, arrow_name=ARROW_NAME, revisado=REVISADO,
                     guias=[(s, s, t, d) for s, t, d in GUIAS])
-    from . import guias_pt as X
+    import importlib
+    X = importlib.import_module(f".guias_{lang}", __package__)
 
     def same(a, b, what):
         if len(a) != len(b):
@@ -459,8 +519,8 @@ def _url(lang: str, root: str, es_slug: str) -> str:
     """Enlace a una guía en el mismo idioma."""
     if lang == "es":
         return f"{root}{es_slug}/"
-    pt = next(s for s, e, _, _ in _data("pt")["guias"] if e == es_slug)
-    return f"{root}pt/{pt}/"
+    x = next(s for s, e, _, _ in _data(lang)["guias"] if e == es_slug)
+    return f"{root}{lang}/{x}/"
 
 
 def _src_links(keys: str) -> str:
@@ -485,7 +545,7 @@ def _capbar(lang: str) -> str:
 
 def _head(root: str, lang: str, title: str, lead: str) -> str:
     t, d = TXT[lang], _data(lang)
-    home, hub = (f"{root}", f"{root}guias/") if lang == "es" else (f"{root}pt/", f"{root}pt/guias/")
+    home, hub = (f"{root}", f"{root}guias/") if lang == "es" else (f"{root}{lang}/", f"{root}{lang}/guias/")
     return (f'<nav class="crumbs"><a href="{home}">{t["home"]}</a> › <a href="{hub}">{t["guias"]}</a> › {escape(title)}</nav>'
             f'<header class="page-head"><p class="overline">{t["overline"].format(r=d["revisado"])}</p><h1>{escape(title)}</h1>'
             f'<p class="lead">{lead}</p></header>')
@@ -500,8 +560,8 @@ def _code(seq: str | None, lang: str) -> str:
     return f'<span class="code" aria-label="{label}">{keys}</span>'
 
 
-def _num(n: int) -> str:
-    return f"{n:,}".replace(",", ".")
+def _num(n: int, lang: str = "es") -> str:
+    return f"{n:,}" if lang == "en" else f"{n:,}".replace(",", ".")
 
 
 def trucos_body(root: str, lang: str = "es") -> str:
@@ -532,12 +592,12 @@ def cien_body(root: str, lang: str = "es") -> str:
         lis = []
         for key, label, need, total, nota, src, cap in rows:
             money = key.startswith("f_")
-            tot = f' {t["h_of"]} {_num(total)}' if total else ""
+            tot = f' {t["h_of"]} {_num(total, lang)}' if total else ""
             step = 5000 if money else 1
             lis.append(
                 f'<li class="h-row" data-cap="{cap}" data-need="{need}">'
                 f'<div class="h-info"><b>{escape(label)}</b>'
-                f'<span class="h-need">{t["h_need"]} {"$" if money else ""}{_num(need)}{tot}</span>'
+                f'<span class="h-need">{t["h_need"]} {"$" if money else ""}{_num(need, lang)}{tot}</span>'
                 + (f'<span class="h-note">{escape(nota)}</span>' if nota else "")
                 + f'<span class="h-src">{t["segun"]} {escape(_src_links(src))}</span></div>'
                 f'<div class="h-ctrl"><button type="button" class="h-minus" aria-label="{t["h_minus"]}">−</button>'
@@ -620,8 +680,8 @@ def _cards(root: str, lang: str) -> str:
 
 def hub_body(root: str, lang: str = "es") -> str:
     t = TXT[lang]
-    home = root if lang == "es" else f"{root}pt/"
-    h1 = "Guías de GTA 6" if lang == "es" else "Guias de GTA 6"
+    home = root if lang == "es" else f"{root}{lang}/"
+    h1 = t["hub_h1"]
     return (f'<nav class="crumbs"><a href="{home}">{t["home"]}</a> › {t["guias"]}</nav>'
             f'<header class="page-head"><h1>{h1}</h1><p class="lead">{t["hub_lead"]}</p></header>'
             f'<ul class="g-hub">{_cards(root, lang)}<li><a href="{root}lista/">{t["hub_list"]}<i aria-hidden="true">→</i></a></li></ul>')
@@ -630,7 +690,7 @@ def hub_body(root: str, lang: str = "es") -> str:
 def home_section(root: str = "", lang: str = "es") -> str:
     """Bloque de la portada con las guías."""
     t = TXT[lang]
-    hub = f"{root}guias/" if lang == "es" else f"{root}pt/guias/"
+    hub = f"{root}guias/" if lang == "es" else f"{root}{lang}/guias/"
     head = (f'<div class="sec-head" data-reveal><div><p class="overline">{t["home_over"]}</p>'
             f'<h2>{t["home_h"]}</h2></div><a class="more-link" href="{hub}">{t["home_more"]}</a></div>'
             f'<ul class="g-hub" data-reveal data-stagger>{_cards(root, lang)}</ul>')
@@ -669,28 +729,46 @@ PAGES_PT = {
     "ganar-dinero": ("Como ganhar dinheiro rápido no GTA 6: todos os métodos",
                      "As melhores formas de ganhar dinheiro no GTA 6, ordenadas por quanto pagam e a partir de qual capítulo dá para fazer."),
 }
+PAGES_EN = {
+    "trucos": ("GTA 6 cheats: every code and how to enter it",
+               "All 61 GTA 6 cheats: codes for PS5 and Xbox, how to enter them and what you have to do to unlock each one."),
+    "100-por-ciento": ("GTA 6 100% checklist with progress tracker",
+                       "Everything GTA 6's 100% asks for: cards, flamingos, WAiNK, robberies, stunts and more. Track your progress, no sign-up."),
+    "trofeos": ("GTA 6 trophies: full list and guide",
+                "All 55 GTA 6 trophies with requirements, which ones come from the story and which one is missable. Tick off the ones you have."),
+    "no-te-lo-pierdas": ("GTA 6 missables: what you lose as the story moves on",
+                         "GTA 6 collectibles, meditations and missions that disappear when you move to the next chapter, and what to do first."),
+    "ganar-dinero": ("How to make money fast in GTA 6: every method",
+                     "The best ways to make money in GTA 6, ranked by payout and by the chapter they unlock in."),
+}
 HUB = {"es": ("Guías de GTA 6 en español", "Trucos, lista del 100 %, trofeos, lo que se pierde y cómo ganar plata en GTA 6."),
-       "pt": ("Guias de GTA 6 em português", "Truques, lista dos 100 %, troféus, o que dá para perder e como ganhar dinheiro no GTA 6.")}
+       "pt": ("Guias de GTA 6 em português", "Truques, lista dos 100 %, troféus, o que dá para perder e como ganhar dinheiro no GTA 6."),
+       "en": ("GTA 6 guides", "Cheats, 100% checklist, trophies, missables and how to make money in GTA 6.")}
 
 
 def build(P) -> list[tuple[str, str]]:
-    """Escribe las guías y el índice en los dos idiomas. Devuelve las URLs para el sitemap."""
+    """Escribe las guías y el índice en todos los idiomas. Devuelve las URLs para el sitemap."""
+    from .idiomas import HREFLANG, LANGS
     docs, site = config.DOCS_DIR, config.SITE_URL
     ver = P._ver("guias.js")
-    pt_slug = {es: pt for pt, es, _, _ in _data("pt")["guias"]}
-    pages = [("guias", "guias", HUB["es"], HUB["pt"], hub_body)]
-    pages += [(es, pt_slug[es], (ti, de), PAGES_PT[es], fn) for es, (ti, de, fn) in PAGES.items()]
+    meta = {"es": {**{k: (t, d) for k, (t, d, _) in PAGES.items()}, "guias": HUB["es"]},
+            "pt": {**PAGES_PT, "guias": HUB["pt"]}, "en": {**PAGES_EN, "guias": HUB["en"]}}
+    slug = {"es": {k: k for k in meta["es"]}}
+    for lang in LANGS:
+        slug[lang] = {"guias": "guias", **{es: x for x, es, _, _ in _data(lang)["guias"]}}
+    fns = {"guias": hub_body, **{k: fn for k, (_, _, fn) in PAGES.items()}}
     urls = []
-    for es, pt, (ti_es, de_es), (ti_pt, de_pt), fn in pages:
-        es_url, pt_url = f"{site}/{es}/", f"{site}/pt/{pt}/"
-        alternates = [("es", es_url), ("pt-BR", pt_url)]
-        for lang, rel, title, desc, root, url in [("es", es, ti_es, de_es, "../", es_url),
-                                                  ("pt", f"pt/{pt}", ti_pt, de_pt, "../../", pt_url)]:
+    for key, fn in fns.items():
+        url = {l: f"{site}/{slug[l][key]}/" if l == "es" else f"{site}/{l}/{slug[l][key]}/" for l in ("es", *LANGS)}
+        alternates = [(HREFLANG[l], url[l]) for l in ("es", *LANGS)]
+        for lang in ("es", *LANGS):
+            rel, root = (slug["es"][key], "../") if lang == "es" else (f"{lang}/{slug[lang][key]}", "../../")
+            title, desc = meta[lang][key]
             out = docs / rel / "index.html"
             out.parent.mkdir(parents=True, exist_ok=True)
             body = fn(root, lang) + f'<script src="{root}guias.js?v={ver}" defer></script>'
-            out.write_text(P._layout(title=f"{title} | {config.SITE_NAME}", description=desc, canonical=url, root=root,
+            out.write_text(P._layout(title=f"{title} | {config.SITE_NAME}", description=desc, canonical=url[lang], root=root,
                                      body=body, lang=lang, alternates=alternates), encoding="utf-8")
-            urls.append((url, "2026-11-24"))
-    print(f"[web] {len(urls)} páginas de guías (español y portugués)")
+            urls.append((url[lang], "2026-11-24"))
+    print(f"[web] {len(urls)} páginas de guías")
     return urls

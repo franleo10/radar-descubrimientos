@@ -1,7 +1,9 @@
 // Guías: filtro por capítulo, contadores del 100 %, listas para tildar y buscador de trucos.
 // Todo se guarda solo en este navegador (localStorage). Si no se puede guardar, igual funciona.
 (() => {
-  const PT = document.documentElement.lang.startsWith("pt");
+  const LANG = document.documentElement.lang.slice(0, 2);
+  const PT = LANG === "pt", EN = LANG === "en";
+  const tx = (es, pt, en) => EN ? en : PT ? pt : es;
   const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
   const store = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 
@@ -19,9 +21,10 @@
       b.querySelectorAll("button").forEach(x => x.classList.toggle("on", +x.dataset.v === v));
       const s = b.querySelector("[data-caphidden]");
       s.hidden = !hidden;
-      s.textContent = !hidden ? "" : PT
-        ? `Ocultamos ${hidden} ${hidden === 1 ? "item" : "itens"} de capítulos que você ainda não jogou.`
-        : `Ocultamos ${hidden} ${hidden === 1 ? "cosa" : "cosas"} de capítulos que todavía no jugaste.`;
+      s.textContent = !hidden ? "" : tx(
+        `Ocultamos ${hidden} ${hidden === 1 ? "cosa" : "cosas"} de capítulos que todavía no jugaste.`,
+        `Ocultamos ${hidden} ${hidden === 1 ? "item" : "itens"} de capítulos que você ainda não jogou.`,
+        `Hiding ${hidden} ${hidden === 1 ? "item" : "items"} from chapters you haven't played yet.`);
     });
     if (window.wmFilter) window.wmFilter();
   }
@@ -49,8 +52,8 @@
       store(key, [...done]); paint();
       if (b.checked && window.wmToast) {
         const n = boxes.filter(x => x.checked).length;
-        key === "wm-trofeos" ? wmToast(PT ? "Troféu desbloqueado!" : "¡Trofeo desbloqueado!", `${n} de ${boxes.length}`)
-                             : wmToast(PT ? "Coleção completa!" : "¡Colección completa!", `${n} de ${boxes.length} ${PT ? "coleções" : "colecciones"}`);
+        key === "wm-trofeos" ? wmToast(tx("¡Trofeo desbloqueado!", "Troféu desbloqueado!", "Trophy unlocked!"), `${n} ${tx("de", "de", "of")} ${boxes.length}`)
+                             : wmToast(tx("¡Colección completa!", "Coleção completa!", "Collection complete!"), `${n} ${tx("de", "de", "of")} ${boxes.length} ${tx("colecciones", "coleções", "collections")}`);
       }
     }));
     paint();
@@ -94,14 +97,14 @@
       const set = v => {
         const before = +inp.value || 0;
         inp.value = Math.max(0, v); have[key] = +inp.value; store("wm-100", have); paint();
-        if (before < need && +inp.value >= need && window.wmToast) wmToast(PT ? "Objetivo cumprido!" : "¡Objetivo cumplido!", r.querySelector("b").textContent);
+        if (before < need && +inp.value >= need && window.wmToast) wmToast(tx("¡Objetivo cumplido!", "Objetivo cumprido!", "Goal complete!"), r.querySelector("b").textContent);
       };
       r.querySelector(".h-minus").addEventListener("click", () => set((+inp.value || 0) - step));
       r.querySelector(".h-plus").addEventListener("click", () => set((+inp.value || 0) + step));
       inp.addEventListener("change", () => set(+inp.value || 0));
     });
     document.getElementById("h-reset").addEventListener("click", () => {
-      if (!confirm(PT ? "Apagar todo o seu progresso dos 100 %? Não dá para desfazer." : "¿Borrar todo tu progreso del 100 %? No se puede deshacer.")) return;
+      if (!confirm(tx("¿Borrar todo tu progreso del 100 %? No se puede deshacer.", "Apagar todo o seu progresso dos 100 %? Não dá para desfazer.", "Clear all your 100% progress? This can't be undone."))) return;
       hRows.forEach(r => { r.querySelector("input").value = 0; });
       Object.keys(have).forEach(k => delete have[k]); store("wm-100", have); paint();
     });

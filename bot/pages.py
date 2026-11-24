@@ -160,9 +160,15 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
                  f'<a href="{root}" hreflang="es">Versão em espanhol</a>')
         cta, foot_txt = "Abrir o mapa", ("Guia não oficial feito por fãs de GTA 6. Não tem relação com a Rockstar Games nem com a "
                                          "Take-Two Interactive. Os vídeos são de seus autores e aparecem com o player original.")
+    elif lang == "en":
+        links = (f'<a href="{root}en/">Home</a><a href="{root}en/#categorias">Categories</a>'
+                 f'<a href="{root}en/guias/">Guides</a><a href="{root}en/cheats/">Cheats</a>'
+                 f'<a href="{root}" hreflang="es">Spanish version</a>')
+        cta, foot_txt = "Open the map", ("Unofficial guide made by GTA 6 fans. Not affiliated with Rockstar Games or "
+                                         "Take-Two Interactive. Videos belong to their creators and play in the original player.")
     main = body if bare else f'<div class="wrap{" wide" if wide else ""}">\n{body}\n</div>'
     return f"""<!doctype html>
-<html lang="{"pt-BR" if lang == "pt" else "es"}">
+<html lang="{ {"pt": "pt-BR", "en": "en"}.get(lang, "es") }">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -192,7 +198,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <header class="topbar"><div class="wrap bar">
 {logo(root)}
 <nav class="nav" aria-label="Principal">{links}</nav>
-<span class="online" data-online hidden><i aria-hidden="true"></i><b></b> <span class="on-long">{"pessoas vendo agora" if lang == "pt" else "personas mirando ahora"}</span><span class="on-short">{"online" if lang == "pt" else "online"}</span></span>
+<span class="online" data-online hidden><i aria-hidden="true"></i><b></b> <span class="on-long">{ {"pt": "pessoas vendo agora", "en": "people here now"}.get(lang, "personas mirando ahora") }</span><span class="on-short">{"online" if lang == "pt" else "online"}</span></span>
 <a class="btn primary sm map-btn" href="{root}mapa/">{cta}</a>
 <details class="menu"><summary aria-label="Menú">{MENU}</summary><div class="menu-panel"><a href="{root}mapa/">Mapa</a>{links}</div></details>
 </div></header>
@@ -203,7 +209,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <div class="foot-brand">{logo(root)}
 <p>{foot_txt}</p></div>
 <nav aria-label="Explorar"><h3>Explorar</h3><a href="{root}mapa/">Mapa</a><a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a><a href="{root}guias/">Guías</a><a href="{root}trucos/">Trucos</a><a href="{root}100-por-ciento/">Lista del 100 %</a><a href="{root}lista/">Mi lista</a></nav>
-<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a><a href="{root}pt/" hreflang="pt-BR">Em português</a></nav>
+<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a><a href="{root}pt/" hreflang="pt-BR">Em português</a><a href="{root}en/" hreflang="en">In English</a></nav>
 <nav aria-label="Redes"><h3>Seguinos</h3>{tg_link("social")}{bsky_link("social")}</nav>
 </div></footer>
 <script>
@@ -335,8 +341,13 @@ def _entry_page(e: dict, related: list[dict], zones: dict[str, str]) -> str:
         })
     return _layout(title=title, description=desc, canonical=url, root=root, body=body,
                    image=thumb, jsonld=jsonld, noindex=not indexable(e),
-                   alternates=([("es", url), ("pt-BR", f"{config.SITE_URL}/pt/d/{e['slug']}/")]
-                               if (e.get("pt") or {}).get("titulo") else None))
+                   alternates=_alts(e))
+
+
+def _alts(e: dict):
+    from .idiomas import alternates
+    alts = alternates(e)
+    return alts if len(alts) > 1 else None
 
 
 # Cada categoría responde a una búsqueda concreta de Google (título y H1 pensados para eso).
@@ -628,8 +639,9 @@ def build(entries: list[dict]) -> None:
     urls += [(f"{config.SITE_URL}/d/{e['slug']}/", e.get("published_at", "")) for e in entries if indexable(e)]
     urls += [(f"{config.SITE_URL}/{slug}/", "") for slug in STATIC_PAGES]
     import sys
-    from . import pt
-    urls += pt.build(entries, sys.modules[__name__])
+    from . import idiomas
+    for lang in idiomas.LANGS:
+        urls += idiomas.build(entries, sys.modules[__name__], lang)
     urls += guias.build(sys.modules[__name__])
     sitemap = "".join(f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d[:10]}</lastmod>" if d else "") + "</url>"
                       for u, d in urls)
