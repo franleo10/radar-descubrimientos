@@ -547,3 +547,96 @@ a.thumb:hover img{transform:scale(1.03)}
 @media (max-width:1100px){.online .on-long{display:none}.online .on-short{display:inline}}
 @media (max-width:860px){.online{margin-right:0}.bar .online + .map-btn{margin-left:0}}
 @media (max-width:440px){.bar:has(.online:not([hidden])) .map-btn{display:none}}
+
+/* ================= Guías (trucos, 100 %, trofeos, lo que se pierde, plata) ================= */
+.ck-hiding .ck-list li.is-done{display:none}
+.cap-off,.grade-off{display:none!important}
+.g-group{margin-top:44px}
+.g-group h2{display:flex;align-items:baseline;gap:10px;font-size:24px}
+.g-group h2 small{font:500 13px var(--mono);color:var(--muted)}
+.g-how{margin:28px 0 8px;padding:22px 24px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg)}
+.g-how h2{font-size:20px;margin-bottom:12px}
+.g-steps{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--ink-2)}
+.g-facts{margin:0;padding-left:18px;display:grid;gap:8px;color:var(--ink-2)}
+.g-warn{margin-top:14px;padding:12px 14px;border-radius:var(--r);background:#fff4e0;color:#6b3a00}
+.g-search{display:block;margin:28px 0 0}
+.g-search input{width:100%;font:inherit;padding:13px 16px;border:1px solid var(--line-2);border-radius:var(--r);background:var(--paper);color:var(--ink)}
+.g-search input:focus{outline:2px solid var(--pink);outline-offset:1px}
+.g-empty{margin-top:24px;color:var(--muted)}
+.g-sources{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14.5px;color:var(--ink-2)}
+.g-sources h2{font-size:18px;margin-bottom:8px}
+.g-sources ul{margin:10px 0 0;padding-left:18px;columns:2;column-gap:32px}
+@media (max-width:640px){.g-sources ul{columns:1}}
+
+/* Trucos */
+.tk-list,.ml-list,.mn-list,.h-list{list-style:none;margin:14px 0 0;padding:0}
+.tk-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:14px 0;border-top:1px solid var(--line)}
+.tk-main{display:flex;flex-direction:column;gap:3px;min-width:0}
+.tk-req{font-size:14.5px;color:var(--ink-2)}
+.tk-note{font-size:13px;color:#8a4b00}
+.tk-code{flex:none}
+.code{display:inline-flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}
+.code kbd{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:6px;background:var(--night);color:#fff;font:600 15px var(--font);box-shadow:inset 0 -2px 0 rgba(255,255,255,.12)}
+@media (max-width:640px){.tk-row{flex-direction:column;align-items:flex-start;gap:10px}.code{justify-content:flex-start}}
+
+/* Capítulo */
+.capbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:24px 0 8px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--paper);font-size:15px}
+.capbar > span{font-weight:600}
+.capbtns,.tr-filter{display:flex;flex-wrap:wrap;gap:6px}
+.capbtns button,.tr-filter button{font:500 14px var(--font);padding:7px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--bg);color:var(--ink);cursor:pointer}
+.capbtns button.on,.tr-filter button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.capbar small{flex-basis:100%;color:var(--muted)}
+
+/* 100 % */
+.h-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 20px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.h-row .ck-bar{grid-column:1 / -1;margin-top:2px}
+.h-row.is-done .ck-bar i{background:#2b8a3e}
+.h-info{display:flex;flex-direction:column;gap:3px;min-width:0}
+.h-need{font:500 14px var(--mono);color:var(--ink-2)}
+.h-note{font-size:14px;color:var(--ink-2)}
+.h-src{font-size:12.5px;color:var(--muted)}
+.h-ctrl{display:flex;align-items:center;border:1px solid var(--line-2);border-radius:var(--r);overflow:hidden;background:var(--paper)}
+.h-ctrl button{width:38px;height:40px;border:0;background:transparent;font:600 18px var(--font);color:var(--ink);cursor:pointer}
+.h-ctrl button:hover{background:var(--sunk)}
+.h-ctrl input{width:84px;height:40px;border:0;border-inline:1px solid var(--line);text-align:center;font:600 15px var(--mono);background:transparent;color:var(--ink);-moz-appearance:textfield}
+.h-ctrl input::-webkit-inner-spin-button{appearance:none}
+@media (max-width:520px){.h-row{grid-template-columns:1fr}.h-ctrl{justify-self:start}}
+
+/* Trofeos */
+.tr-filter{margin:18px 0 0;align-items:center}
+.tr-filter .ck-hide{margin-left:auto;font-size:14.5px}
+.tr-count{margin-top:16px;font-size:16px}
+.tr-badge{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;font:700 12px var(--font);color:#fff}
+.g-p{background:linear-gradient(135deg,#8fb3d9,#4d6f99)}.g-o{background:#c99a1c}.g-a{background:#8f98a3}.g-b{background:#a8673a}
+.tr-list .ck-t{gap:3px}
+.tr-list .ck-t > span{font-size:14.5px;color:var(--ink-2)}
+.tr-note{color:#8a4b00!important}
+
+/* Lo que se pierde */
+.ml-list li{padding:16px 0;border-top:1px solid var(--line);display:grid;gap:5px}
+.ml-list p{margin:0;color:var(--ink-2)}
+.ml-list .ml-do{color:var(--ink);font-weight:500}
+.ml-list .ml-do::before{content:"Qué hacer: ";color:var(--pink);font-weight:600}
+.ml-list small{color:var(--muted)}
+
+/* Plata */
+.mn-row{display:flex;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.mn-n{flex:none;font:600 15px var(--mono);color:var(--muted);padding-top:2px}
+.mn-main{display:grid;gap:5px;min-width:0}
+.mn-main b{font-size:18px}
+.mn-pay{font:600 16px var(--mono);color:var(--pink)}
+.mn-meta{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:14px;color:var(--ink-2)}
+.mn-risk{padding:1px 8px;border-radius:999px;font-size:13px}
+.mn-risk.r1{background:#e6f4ea;color:#1e6b31}.mn-risk.r2{background:#fff4e0;color:#8a4b00}.mn-risk.r3{background:#fde4e4;color:#a01c1c}
+.mn-main p{margin:0;color:var(--ink-2)}
+.mn-main small{color:var(--muted)}
+
+/* Índice de guías */
+.g-hub{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.g-hub a{position:relative;display:flex;flex-direction:column;gap:6px;height:100%;padding:20px 44px 20px 20px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--paper);text-decoration:none;transition:border-color .2s,transform .25s}
+.g-hub a:hover{border-color:var(--pink);transform:translateY(-3px)}
+.g-hub b{font-size:18px}
+.g-hub span{color:var(--ink-2);font-size:14.5px}
+.g-hub i{position:absolute;right:18px;top:20px;font-style:normal;color:var(--pink);transition:transform .25s}
+.g-hub a:hover i{transform:translateX(4px)}
+.g-how h2,.g-sources h2{margin-top:0}

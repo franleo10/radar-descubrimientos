@@ -83,6 +83,11 @@ def card(e: dict, root: str) -> str:
 
 # ---------------------------------------------------------------- portada
 
+def guias_home() -> str:
+    from .guias import home_section
+    return home_section("")
+
+
 def _words(text: str, start: int = 0) -> str:
     """Envuelve cada palabra para que el título aparezca palabra por palabra."""
     return " ".join(f'<span class="w" style="--i:{start + i}">{w}</span>' for i, w in enumerate(text.split(" ")))
@@ -236,6 +241,7 @@ def home_body(entries, by_cat, by_zone, zones, week, updated: str) -> str:
   {_explorer(by_zone, zones)}
 </div></section>
 {_recent(entries, top_slugs)}
+{guias_home()}
 {_top(week)}
 {_categories(by_cat)}
 {_community(updated, n_comm)}

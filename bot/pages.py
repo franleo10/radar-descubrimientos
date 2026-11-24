@@ -148,7 +148,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
     og_image = f'<meta property="og:image" content="{escape(image or config.SITE_URL + "/og.png?v=2")}">'
     ld = "".join(f'<script type="application/ld+json">{_safe_json(x)}</script>' for x in (jsonld or []))
     links = (f'<a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a>'
-             f'<a href="{root}#categorias">Categorías</a><a href="{root}lista/">Mi lista</a>')
+             f'<a href="{root}guias/">Guías</a><a href="{root}trucos/">Trucos</a><a href="{root}lista/">Mi lista</a>')
     alt = "".join(f'<link rel="alternate" hreflang="{h}" href="{escape(u)}">' for h, u in (alternates or []))
     if alternates:
         alt += f'<link rel="alternate" hreflang="x-default" href="{escape(alternates[0][1])}">'
@@ -201,7 +201,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <footer class="foot"><div class="wrap foot-grid">
 <div class="foot-brand">{logo(root)}
 <p>{foot_txt}</p></div>
-<nav aria-label="Explorar"><h3>Explorar</h3><a href="{root}mapa/">Mapa</a><a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a><a href="{root}lista/">Mi lista</a></nav>
+<nav aria-label="Explorar"><h3>Explorar</h3><a href="{root}mapa/">Mapa</a><a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a><a href="{root}guias/">Guías</a><a href="{root}trucos/">Trucos</a><a href="{root}100-por-ciento/">Lista del 100 %</a><a href="{root}lista/">Mi lista</a></nav>
 <nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a><a href="{root}pt/" hreflang="pt-BR">Em português</a></nav>
 <nav aria-label="Redes"><h3>Seguinos</h3>{tg_link("social")}{bsky_link("social")}</nav>
 </div></footer>
@@ -561,7 +561,8 @@ def build(entries: list[dict]) -> None:
     _write_404()
 
     # Se regeneran desde cero: así desaparecen las que ya no están (duplicados juntados, etc.).
-    for folder in ("d", "c", "z", "semana", "mapa", "descubrimientos", "lista"):
+    from . import guias
+    for folder in ("d", "c", "z", "semana", "mapa", "descubrimientos", "lista", "guias", *guias.PAGES):
         shutil.rmtree(docs / folder, ignore_errors=True)
 
     for e in entries:
@@ -628,6 +629,7 @@ def build(entries: list[dict]) -> None:
     import sys
     from . import pt
     urls += pt.build(entries, sys.modules[__name__])
+    urls += guias.build(sys.modules[__name__])
     sitemap = "".join(f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d[:10]}</lastmod>" if d else "") + "</url>"
                       for u, d in urls)
     (docs / "sitemap.xml").write_text(
