@@ -67,6 +67,12 @@ const EXTRA_SCHEMA = [
      created    INTEGER NOT NULL
    )`,
   "CREATE INDEX IF NOT EXISTS rejected_by_created ON rejected (created)",
+  `CREATE TABLE IF NOT EXISTS removed (
+     slug    TEXT PRIMARY KEY,
+     title   TEXT NOT NULL DEFAULT '',
+     reason  TEXT NOT NULL DEFAULT '',
+     created INTEGER NOT NULL
+   )`,
   "CREATE TABLE IF NOT EXISTS presence (voter TEXT PRIMARY KEY, seen INTEGER NOT NULL)",
 ];
 let schemaReady = false;

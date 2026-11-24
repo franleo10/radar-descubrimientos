@@ -65,6 +65,8 @@
   table.dt{width:100%;border-collapse:collapse;font-size:13.5px}
   .dt th{text-align:left;color:var(--muted);font-weight:500;padding:8px 6px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
   .dt td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+  .dt td.acts{white-space:nowrap}
+  .dt tr.is-off td:not(.acts){opacity:.55}
   .dt td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
   .dt a{color:var(--ink)}
   .tbl{overflow-x:auto}
@@ -138,6 +140,7 @@
   </section>
 
   <section data-panel="descubrimientos" hidden>
+    <p class="note">Si un descubrimiento está mal o repetido, quitalo: su página deja de verse al instante y el bot lo saca de la portada, el mapa y las listas en su próxima corrida (cada 2 horas). Se puede restaurar.</p>
     <div class="tools">
       <input type="search" id="d-q" placeholder="Buscar descubrimiento…">
       <select id="d-f">
@@ -147,12 +150,13 @@
         <option value="bad">Más «no me sirvió»</option>
         <option value="nopt">Sin traducir al portugués</option>
         <option value="noen">Sin traducir al inglés</option>
+        <option value="removed">Quitados</option>
       </select>
       <span class="note" id="d-n"></span>
     </div>
     <div class="box tbl"><table class="dt"><thead><tr>
       <th data-k="titulo">Descubrimiento</th><th data-k="published_at">Publicado</th><th data-k="likes" class="n">👍</th>
-      <th data-k="dislikes" class="n">👎</th><th data-k="confirms" class="n">Le funcionó</th><th data-k="comments" class="n">Coment.</th><th>Estado</th>
+      <th data-k="dislikes" class="n">👎</th><th data-k="confirms" class="n">Le funcionó</th><th data-k="comments" class="n">Coment.</th><th>Estado</th><th></th>
     </tr></thead><tbody id="d-body"></tbody></table></div>
   </section>
 </div>

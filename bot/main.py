@@ -91,6 +91,10 @@ def run(demo: bool) -> None:
     # Los datos de ejemplo se borran apenas corre el bot de verdad.
     existing = [e for e in site.get("entries", []) if not e.get("demo")]
 
+    if not demo:
+        from .removed import apply as apply_removed
+        existing = apply_removed(existing)  # los que se quitaron (o restauraron) desde el panel
+
     if demo:
         from .demo_data import CANDIDATES, CLASSIFICATIONS
 

@@ -236,17 +236,26 @@
   });
 
   // ---------------------------------------------------------------- descubrimientos
+  // Quitar: la página deja de verse al instante y el bot lo saca de los datos en su próxima corrida.
   let sortKey = "published_at", sortDir = -1;
+  let removed = new Map(); // slug -> {title, reason, created}
   async function loadDiscoveries() {
     await loadSite();
-    if (!overview) overview = await api("overview");
+    const [o, r] = await Promise.all([overview ? overview : api("overview"), api("discoveries")]);
+    overview = o;
+    removed = new Map(r.removed.map((x) => [x.slug, x]));
     renderDiscoveries();
   }
   function renderDiscoveries() {
     const q = $("#d-q").value.trim().toLowerCase(), f = $("#d-f").value;
     const per = overview?.perSlug || {};
     let rows = site.entries.map((e) => ({ ...e, likes: 0, dislikes: 0, confirms: 0, comments: 0, ...per[e.slug] }));
-    if (q) rows = rows.filter((e) => `${e.titulo} ${e.author} ${e.zona || ""}`.toLowerCase().includes(q));
+    // Los que el bot ya sacó de los datos solo aparecen en el filtro "Quitados".
+    const gone = [...removed.entries()].filter(([slug]) => !site.bySlug[slug])
+      .map(([slug, x]) => ({ slug, titulo: x.title || slug, likes: 0, dislikes: 0, confirms: 0, comments: 0, ...per[slug], gone: true }));
+    if (f === "removed") rows = [...rows.filter((e) => removed.has(e.slug)), ...gone];
+    else if (f !== "") rows = rows.filter((e) => !removed.has(e.slug));
+    if (q) rows = rows.filter((e) => `${e.titulo} ${e.author || ""} ${e.zona || ""}`.toLowerCase().includes(q));
     if (f === "media" || f === "alta") rows = rows.filter((e) => (e.confianza === "alta") === (f === "alta"));
     if (f === "bad") rows = rows.filter((e) => e.dislikes > 0 && e.dislikes >= e.likes);
     if (f === "nopt") rows = rows.filter((e) => !e.pt?.titulo);
@@ -255,21 +264,43 @@
       const x = a[sortKey] ?? "", y = b[sortKey] ?? "";
       return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * sortDir;
     });
-    $("#d-n").textContent = `${rows.length} de ${site.entries.length}`;
-    $("#d-body").innerHTML = rows.map((e) => `<tr>
-      <td><a href="/d/${esc(e.slug)}/" target="_blank" rel="noopener">${esc(e.titulo)}</a><br>
+    $("#d-n").textContent = `${rows.length} de ${site.entries.length}${removed.size ? ` · ${removed.size} quitados` : ""}`;
+    $("#d-body").innerHTML = rows.map((e) => {
+      const off = removed.get(e.slug);
+      const state = off
+        ? `<span class="pill no">${e.gone ? "Quitado" : "Quitado · el bot lo borra en su próxima corrida"}</span>${off.reason ? `<br><small class="note">${esc(off.reason)}</small>` : ""}`
+        : `<span class="pill ${e.confianza === "alta" ? "ok" : ""}">${e.confianza === "alta" ? "Confirmado" : "Sin confirmar"}</span>
+           ${e.pt?.titulo ? '<span class="pill">PT</span>' : ""}${e.en?.titulo ? '<span class="pill">EN</span>' : ""}`;
+      return `<tr data-slug="${esc(e.slug)}"${off ? ' class="is-off"' : ""}>
+      <td>${e.gone ? esc(e.titulo) : `<a href="/d/${esc(e.slug)}/" target="_blank" rel="noopener">${esc(e.titulo)}</a>`}<br>
         <small class="note">${esc(e.author || "")}${e.url ? ` · <a href="${esc(e.url)}" target="_blank" rel="noopener">video</a>` : ""}</small></td>
       <td class="n">${e.published_at ? new Date(e.published_at).toLocaleDateString("es-AR") : "—"}</td>
       <td class="n">${e.likes}</td><td class="n">${e.dislikes}</td><td class="n">${e.confirms}</td><td class="n">${e.comments}</td>
-      <td><span class="pill ${e.confianza === "alta" ? "ok" : ""}">${e.confianza === "alta" ? "Confirmado" : "Sin confirmar"}</span>
-        ${e.pt?.titulo ? '<span class="pill">PT</span>' : ""}${e.en?.titulo ? '<span class="pill">EN</span>' : ""}</td></tr>`).join("")
-      || `<tr><td colspan="7" class="empty">Nada con ese filtro.</td></tr>`;
+      <td>${state}</td>
+      <td class="acts">${off ? '<button type="button" data-a="restore">Restaurar</button>' : '<button type="button" class="danger" data-a="remove">Quitar</button>'}</td></tr>`;
+    }).join("") || `<tr><td colspan="8" class="empty">Nada con ese filtro.</td></tr>`;
   }
   $("#d-q").addEventListener("input", renderDiscoveries);
   $("#d-f").addEventListener("change", renderDiscoveries);
   document.querySelector(".dt thead").addEventListener("click", (ev) => {
     const th = ev.target.closest("th[data-k]"); if (!th) return;
     sortDir = sortKey === th.dataset.k ? -sortDir : -1; sortKey = th.dataset.k; renderDiscoveries();
+  });
+  $("#d-body").addEventListener("click", async (ev) => {
+    const a = ev.target.closest("[data-a]"); if (!a) return;
+    const slug = a.closest("[data-slug]").dataset.slug;
+    if (a.dataset.a === "remove") {
+      const reason = prompt(`¿Quitar «${title(slug)}» del sitio?\n\nLa página deja de verse ahora y desaparece de la portada, el mapa y las listas en la próxima corrida del bot. Podés restaurarlo cuando quieras.\n\nMotivo (opcional, solo lo ves vos):`);
+      if (reason === null) return;
+      await api("discoveries", { action: "remove", slug, title: title(slug), reason });
+      removed.set(slug, { title: title(slug), reason, created: Date.now() });
+      toast("Quitado. Su página ya no se ve.");
+    } else {
+      await api("discoveries", { action: "restore", slug });
+      removed.delete(slug);
+      toast(site.bySlug[slug] ? "Restaurado." : "Restaurado: vuelve a publicarse en la próxima corrida del bot.");
+    }
+    renderDiscoveries();
   });
 
   const LOADERS = { resumen: loadResumen, comentarios: () => loadComments(), rechazados: () => loadRejected(), bloqueados: loadBans, descubrimientos: loadDiscoveries };
