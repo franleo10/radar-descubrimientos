@@ -27,3 +27,9 @@ CREATE TABLE IF NOT EXISTS comments (
 
 CREATE INDEX IF NOT EXISTS comments_by_slug ON comments (slug, created);
 CREATE INDEX IF NOT EXISTS comments_by_voter ON comments (voter, created);
+
+-- Gente online: último aviso de cada huella anónima (la crea también /api/online si falta).
+CREATE TABLE IF NOT EXISTS presence (
+  voter TEXT PRIMARY KEY,
+  seen  INTEGER NOT NULL
+);

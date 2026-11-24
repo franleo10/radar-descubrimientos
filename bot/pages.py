@@ -191,6 +191,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <header class="topbar"><div class="wrap bar">
 {logo(root)}
 <nav class="nav" aria-label="Principal">{links}</nav>
+<span class="online" data-online hidden><i aria-hidden="true"></i><b></b> <span class="on-long">{"pessoas vendo agora" if lang == "pt" else "personas mirando ahora"}</span><span class="on-short">{"online" if lang == "pt" else "online"}</span></span>
 <a class="btn primary sm map-btn" href="{root}mapa/">{cta}</a>
 <details class="menu"><summary aria-label="Menú">{MENU}</summary><div class="menu-panel"><a href="{root}mapa/">Mapa</a>{links}</div></details>
 </div></header>

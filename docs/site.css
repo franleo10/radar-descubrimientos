@@ -537,3 +537,13 @@ a.thumb:hover img{transform:scale(1.03)}
   .radar{display:none}
   .glitch::before,.glitch::after{display:none}
 }
+
+/* Gente online (solo aparece con 5 o más personas) */
+.online{display:inline-flex;align-items:center;gap:7px;margin-left:auto;margin-right:12px;padding:6px 11px;border:1px solid var(--line-2);border-radius:999px;font-size:13px;color:var(--ink-2);white-space:nowrap;background:var(--paper)}
+.online i{width:8px;height:8px;border-radius:50%;background:#2b8a3e;box-shadow:0 0 0 0 rgba(43,138,62,.5);animation:live 2.4s infinite}
+.online b{font:700 13px var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.online .on-short{display:none}
+.online + .map-btn{margin-left:0}
+@media (max-width:1100px){.online .on-long{display:none}.online .on-short{display:inline}}
+@media (max-width:860px){.online{margin-right:0}.bar .online + .map-btn{margin-left:0}}
+@media (max-width:440px){.bar:has(.online:not([hidden])) .map-btn{display:none}}

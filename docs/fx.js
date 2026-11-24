@@ -54,6 +54,30 @@
     setTimeout(() => t.remove(), 2900);
   };
 
+  // Gente online: cada minuto avisa "sigo acá" (solo con la pestaña a la vista) y muestra
+  // el número real cuando hay 5 o más personas. Con menos, el indicador no aparece.
+  const MIN_ONLINE = 5;
+  const badges = document.querySelectorAll("[data-online]");
+  let last = 0;
+  const beat = async () => {
+    if (document.visibilityState !== "visible" || Date.now() - last < 50000) return;
+    last = Date.now();
+    try {
+      const r = await fetch("/api/online", { method: "POST" });
+      if (!r.ok) return;
+      const n = (await r.json()).online | 0;
+      badges.forEach(b => {
+        b.hidden = n < MIN_ONLINE;
+        b.querySelector("b").textContent = n;
+      });
+    } catch (e) { /* sin conexión: no se muestra nada */ }
+  };
+  if (location.hostname.endsWith("wastedmap.com") || location.hostname.endsWith("pages.dev")) {
+    beat();
+    setInterval(beat, 60000);
+    document.addEventListener("visibilitychange", beat);
+  }
+
   // Tarjetas: brillo que sigue al mouse.
   document.addEventListener("pointermove", ev => {
     const c = ev.target.closest && ev.target.closest(".thumb, .r-row img, .cats a");
