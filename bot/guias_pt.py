@@ -1,0 +1,268 @@
+"""Guías fijas en portugués de Brasil (/pt/...). Mismos datos que guias.py, en el mismo orden.
+
+Si cambia un dato en guias.py, hay que cambiarlo también acá: build() avisa si las listas
+no tienen el mismo largo.
+"""
+from __future__ import annotations
+
+REVISADO = "24 de novembro de 2026"
+
+# (slug en /pt/, slug en español, título, descripción)
+GUIAS = [
+    ("truques", "trucos", "Truques de GTA 6", "Os 61 truques, como ativar e o que fazer para desbloquear cada um."),
+    ("100-por-cento", "100-por-ciento", "Lista dos 100 %", "Tudo o que os 100 % pedem, com contadores para acompanhar seu progresso."),
+    ("trofeus", "trofeos", "Troféus de GTA 6", "Os 55 troféus em português, quais vêm da história e quais é preciso buscar."),
+    ("nao-perca", "no-te-lo-pierdas", "O que dá para perder", "Coisas que somem se você avançar a história, capítulo por capítulo."),
+    ("ganhar-dinheiro", "ganar-dinero", "Como ganhar dinheiro rápido", "As formas de fazer dinheiro ordenadas por quanto pagam e desde quando."),
+]
+
+TRUCOS = [
+    ("Personagem", [
+        ("US$ 250.000 na hora", "Terminar a história", "Nos três guias, com o mesmo código."),
+        ("Mais atenção da polícia em todo o mapa", "Perder 3 estrelas de procurado 25 vezes", ""),
+        ("Aumentar o nível de procurado", "Perder 3 estrelas de procurado 50 vezes", ""),
+        ("Concentração infinita", "Terminar a história", ""),
+        ("Blindagem (colete)", "Completar 100 treinos", ""),
+        ("Bêbado (você e seu parceiro)", "Gastar US$ 2.500 em bebida", ""),
+        ("Sem dano de queda", "Sobreviver 20 vezes a uma queda de mais de 12 metros", ""),
+        ("Paraquedas", "Fazer 50 saltos de paraquedas ou um de 92 metros ou mais", ""),
+        ("Consertar o veículo", "Vencer 10 corridas no Gellhorn Raceway, Thrillbilly Mud Club ou Boone Speedway", ""),
+        ("Nitro infinito", "Fazer 50 saltos com veículo", "Dois guias dizem que também dá combustível infinito; outro, que só nitro."),
+    ]),
+    ("Armas e combate", [
+        ("Recarregar toda a munição", "25 medalhas de bronze nos estandes de tiro", ""),
+        ("Munição infinita", "25 medalhas de prata nos estandes de tiro", "Nos três guias, com o mesmo código."),
+        ("Sem recarga", "25 medalhas de ouro nos estandes de tiro", ""),
+        ("Força de ataque (socos e balas empurram mais)", "Terminar a história", ""),
+        ("Bolas explosivas", "Eliminar 20 inimigos com explosivos", ""),
+        ("Força veicular (as batidas empurram mais)", "Eliminar 25 pessoas com um veículo", ""),
+        ("Todas as armas explosivas", "Lançar 100 granadas", ""),
+        ("Munição incendiária", "Queimar 100 inimigos", ""),
+        ("Garrafas explosivas", "Lançar 100 molotovs", ""),
+        ("Escopeta explosiva", "Acertar 100 inimigos com dano explosivo", "Aparece em só um dos guias."),
+        ("Lança-foguetes Hauners H-AT", "Destruir 100 veículos", ""),
+    ]),
+    ("Clima e hora", [
+        ("Mudar o clima", "Terminar a história", "Um guia diz que é desbloqueado ao descobrir todo o mapa."),
+        ("Adiantar a hora", "Juntar 10 relógios colecionáveis", ""),
+        ("Parar a hora", "Juntar 20 relógios colecionáveis", ""),
+    ]),
+    ("Veículos", [
+        ("Maibatsu Boomazoom", "5 desafios de compras", ""),
+        ("Caminhão de bombeiros MTL Pumper", "Descobri-lo (aparece em Progresso)", ""),
+        ("Trator HVY Bulldozer", "Descobri-lo (aparece em Progresso)", ""),
+        ("Ambulância Interstate", "Descobri-la (aparece em Progresso)", ""),
+        ("Aerobarco Airboat 09", "5 desafios de sobrevivência", ""),
+        ("Bravado Banshee", "Todos os desafios de combate", ""),
+        ("Bicicleta Tuff BMX", "5 desafios de condicionamento físico", ""),
+        ("Nagasaki Carbon RS", "Todos os desafios de exploração", ""),
+        ("Vapid Dominator '65", "Todos os desafios de condicionamento físico", ""),
+        ("Progen Emerus", "Todos os desafios de veículos", ""),
+        ("Flamingo inflável", "Destruir 50 flamingos", ""),
+        ("Táxi Vapid Stanier G2", "5 desafios esportivos", ""),
+        ("Avião Hauners P-996 Lazer", "Todos os desafios", ""),
+        ("Lapwing Mallard", "5 desafios de veículos", ""),
+        ("Carrinho de golfe Brimstone Golfer", "Todos os desafios esportivos", ""),
+        ("Tanque Hauners Rhino", "Todos os desafios de sobrevivência", ""),
+        ("Moto Maibatsu Sanchez", "5 desafios criminosos", ""),
+        ("Helicóptero Nagasaki Sea Sparrow", "5 desafios de exploração", ""),
+        ("Lancha Speeder 700 GT", "5 desafios de combate", ""),
+        ("Truffade Thrax", "Todos os desafios de compras", ""),
+        ("Moto Western Zombie Bobber", "Todos os desafios criminosos", ""),
+    ]),
+    ("Filtros de imagem", [
+        ("Cataclysm", "Descobrir o Vamos da Martha (aparece em Progresso)", ""),
+        ("Dollhouse", "Passar 8 horas com seu parceiro", ""),
+        ("Faded Glory (TV de tubo colorida)", "Roubar 50 lojas com seu parceiro", ""),
+        ("Golden Hour", "Passar 4 horas de mãos dadas com seu parceiro", ""),
+        ("Powdered Sugar", "Escanear todo o lixo espacial com o WAiNK", ""),
+        ("Pinhole", "Fazer 25 operações de gangues com seu parceiro", ""),
+        ("Neon Jungle", "Descobrir 16 veículos Girlypop", ""),
+        ("Yesteryear (preto e branco)", "Descobrir Ridgeway", ""),
+        ("Videotape", "Fazer 50 atividades com seu parceiro", ""),
+        ("Dark Mirror", "Ganhar US$ 500.000 vendendo veículos", ""),
+        ("Migraine", "Sobreviver 6 minutos com 6 estrelas", ""),
+        ("Bubblegum", "Juntar as 24 cartas dos Vice City Flamingos", ""),
+        ("Fast Forward", "Fazer 50 meditações", ""),
+        ("Fisheye", "Pescar 100 peixes", ""),
+        ("Pixel Art", "Ganhar US$ 250.000 vendendo colecionáveis", ""),
+        ("Hellscape", "Roubar 100 viaturas de polícia", ""),
+    ]),
+]
+
+ARROW_NAME = {"U": "cima", "D": "baixo", "L": "esquerda", "R": "direita"}
+
+# (nombre, nota) en el mismo orden que CIEN
+CIEN = [
+    ("História e missões", [
+        ("Missões da história", "Terminar a história completa."),
+        ("Tarefas opcionais", "Missões secundárias e serviços de contatos."),
+    ]),
+    ("Roubos", [
+        ("Operações de gangues", "Esconderijos das gangues; você os encontra ouvindo as pessoas ou seguindo carros suspeitos."),
+        ("Trabalhos de banco", "14 bancos pequenos (a partir de «Credit Check», capítulo 3) e 8 cofres grandes (a partir de «That's Where the Money Is», capítulo 4)."),
+        ("Lojas de empréstimo (Payday Loans)", "A partir de «Credit Check», capítulo 3."),
+        ("Smash 'n' Grab", "Roube também o cofre dos fundos, senão a loja pode não contar."),
+        ("Assaltos a lojas", "O Game Checklists diz 50 de 91, mas a própria lista mostra mais lojas."),
+    ]),
+    ("Colecionáveis e exploração", [
+        ("Coleções de cartas completas", "480 cartas em 18 coleções. As repetidas não contam; as variantes de cor, sim."),
+        ("Escaneamentos WAiNK", "Os guias não concordam em quantos existem: 100, 102 ou mais de 110."),
+        ("Flamingos de cocaína destruídos", "Que sejam 125, só uma fonte diz."),
+        ("Achados submarinos", "Precisa de todos. Os mergulhos do Kenton são pausados no fim do capítulo 1, mas voltam."),
+        ("Revistas, livros e quadrinhos", "Três só estão na casa do Jason durante o capítulo 1."),
+        ("Meditações", "Com Jason e com Lucía no mesmo lugar conta em dobro."),
+        ("Coleções do Kenton (tesouros)", "A partir da missão «Island Dreams», capítulo 1."),
+        ("Estilos descobertos", "Revistas de cortes de cabelo, de tatuagens e relógios de luxo."),
+        ("Playlists únicas", "São desbloqueadas com 5 cartazes em Vice City."),
+    ]),
+    ("Corridas, acrobacias e desafios", [
+        ("Corridas diferentes vencidas", ""),
+        ("Desafios de corrida com ouro", "Seis ficam no Thrillbilly Mud Club, no norte de Kelly County."),
+        ("Acrobacias", "Saltos, passar sob pontes, voos rasantes e saltos base: qualquer combinação."),
+        ("Desafios", ""),
+        ("Target decks", ""),
+        ("Ouros nos estandes de tiro", "É preciso comprar um passe de 5 dólares para que apareçam no mapa."),
+        ("Contrarrelógio com drone", ""),
+    ]),
+    ("Atividades", [
+        ("Cestas de basquete", ""),
+        ("Rivais de sinuca", "O rival do Delights Cabaret some com «Checking Out» até o clube reabrir."),
+        ("Videogames", ""),
+        ("Campos de minigolfe", ""),
+    ]),
+    ("Escanear e estudar", [
+        ("Veículos escaneados", ""),
+        ("Animais estudados", "Com binóculos: não precisa caçar."),
+        ("Armas", "As 12 ferramentas não contam."),
+    ]),
+    ("Vendas a receptadores (em dólares)", [
+        ("Notas marcadas", "Precisa do Dye Pack Jammer, que vem com «Credit Check»."),
+        ("Veículos", ""),
+        ("Joias", ""),
+        ("Narcóticos", "Alguns receptadores fecham para sempre: venda antes da missão que os fecha."),
+    ]),
+]
+
+# (requisito, nota) en el mismo orden que TROFEOS
+TROFEOS = [
+    ("Conseguir todos os outros troféus.", ""),
+    ("Terminar a primeira missão.", ""),
+    ("Terminar o capítulo 1.", ""),
+    ("Terminar o capítulo 2.", ""),
+    ("Terminar o capítulo 3.", ""),
+    ("Terminar o capítulo 4.", ""),
+    ("Terminar a última missão da história.", ""),
+    ("Completar a missão «Breakfast Run».", ""),
+    ("Completar a missão «The Cartel Heist».", ""),
+    ("Completar a missão «Child's Play».", ""),
+    ("Completar a missão «Headliners».", ""),
+    ("Completar a missão «VCIA Takedown».", ""),
+    ("Completar a missão «Operation Savage Glory».", ""),
+    ("Chegar a 100 % da lista que aparece ao terminar a história.", "O mais difícil. Nada da lista se perde."),
+    ("Fazer 250 acrobacias.", ""),
+    ("Experimentar uma vez cada um dos 9 tipos de atividade.", ""),
+    ("Tirar ouro nos 42 desafios dos estandes de tiro.", ""),
+    ("Vencer uma corrida de drones nos 14 lugares.", ""),
+    ("Vencer 20 corridas diferentes.", ""),
+    ("Vencer o Cal num desafio de pesca (ele manda mensagem depois de «Feng Shui»).", ""),
+    ("Chegar ao fim de um jogo de fliperama.", ""),
+    ("Completar a última missão do Andy (com Lucía).", ""),
+    ("Completar a última missão do Kenton: os 7 naufrágios.", "O Kenton é pausado ao terminar o capítulo 1 e volta depois."),
+    ("Completar a última missão do Billy.", ""),
+    ("Completar 8 histórias de desconhecidos.", "Um guia avisa que pular «Race Against Yago» (capítulo 3) pode travá-lo."),
+    ("Completar a última missão do Randy (lista de 16 carros).", ""),
+    ("Completar a última missão do Tyrone (só Jason).", ""),
+    ("Meditar nos 18 lugares (Jason e Lucía no mesmo lugar contam como 2).", "Atenção: a meditação na varanda do Jason só existe no capítulo 1. Os guias não concordam se é necessária: faça por garantia."),
+    ("Caçar um animal único para o Bret (só Jason).", "Qual é o animal ainda não está confirmado."),
+    ("Completar 3 coleções de cartas.", ""),
+    ("Escanear 100 lugares com o WAiNK.", ""),
+    ("Completar 50 dos 80 desafios.", ""),
+    ("Fugir de 4 estrelas com seu parceiro.", ""),
+    ("Roubar 3 lojas seguidas com seu parceiro sem perder o nível de procurado.", ""),
+    ("Descobrir 100 veículos.", ""),
+    ("Eliminar 5 inimigos num único uso da Concentração de combate.", ""),
+    ("Roubar um avião de passageiros no aeroporto VCIA.", "Um guia acrescenta que é preciso se afastar 1 km."),
+    ("Roubar o tanque militar Rhino e usá-lo em combate.", ""),
+    ("Roubar uma joalheria sem ser detectado.", ""),
+    ("Roubar 5 cofres de banco e fugir.", ""),
+    ("Roubar um carro-forte e fugir.", ""),
+    ("Descobrir todo o mapa de Leonida.", ""),
+    ("Roubar uma operação de cada uma das 9 gangues.", ""),
+    ("Tomar um drinque no bar do terraço do Ocean View.", "Um guia diz que é um Apple Martini; outro, que não está confirmado."),
+    ("Atravessar a vitrine de uma concessionária com o Banshee azul.", "Método não confirmado em um dos guias."),
+    ("Roubar os 3 objetos valiosos do boliche e fugir.", "Não se perde: dá para voltar."),
+    ("Levar a Força ao máximo com Jason e com Lucía.", ""),
+    ("Fazer 500 ações que mudem seu perfil criminal.", ""),
+    ("Troféu oculto. Um guia diz: roubar de novo o Payday Loans de Little Cuba com Lucía e fugir a pé.", "Método não confirmado."),
+    ("Troféu oculto. Um guia o relaciona com um óvni perto do Starlet Motel que aparece ao acaso.", "Método não confirmado."),
+    ("Troféu oculto. Um guia diz: derrubar 10 pedestres de cima de uma moto em 60 segundos.", "Método não confirmado."),
+    ("Lavar US$ 250.000 em notas marcadas com um receptador.", ""),
+    ("Gastar US$ 100.000 em lojas.", ""),
+    ("Comprar as 8 garagens (cerca de US$ 160.000).", ""),
+    ("Registrar 10 veículos no app Scooter Bros.", ""),
+]
+GRADOS = {"p": "Platina", "o": "Ouro", "a": "Prata", "b": "Bronze"}
+
+# (qué, por qué importa, qué hacer) en el mismo orden que PERDIBLES
+PERDIBLES = [
+    ("Meditação na varanda do Jason", "Pode ser necessária para o troféu Positive Mental Attitude. Os guias não concordam.",
+     "Depois de «Down to Earth», de manhã fale com a Lucía na cozinha, siga-a até a varanda e aceite meditar."),
+    ("Revistas e livros da casa do Jason", "Três títulos (Ashes of Glory, Lethal By Design e Body Copy) só estão lá. Contam para os 100 % (precisa de 30 de 34).",
+     "Leia antes de começar «Tourist Trap»."),
+    ("O dinheiro que você junta no capítulo 1", "Ao terminar o capítulo, só fica o que está no Family Savings.",
+     "Antes de fechar o capítulo, gaste ou guarde o que tiver."),
+    ("Serviços da Shirley (o rum e a scooter)", "Não contam para troféus nem para os 100 %.",
+     "Se quiser fazê-los, faça antes de «Tourist Trap»."),
+    ("Cartas 1 e 2 da coleção Maravilla, no Starlet Motel", "Somem com a missão «Checking Out». Só um guia diz isso.",
+     "Pegue antes de «Checking Out»."),
+    ("Esconderijo do Starlet Motel e rival de sinuca do Delights Cabaret", "«Checking Out» os remove. O rival volta quando o clube reabre.",
+     "Não precisa ter pressa pelos 100 %: bastam 5 de 7 rivais."),
+    ("Final do capítulo 2", "Pede ter terminado os outros trabalhos do capítulo e ter pelo menos US$ 15.000.",
+     "Junte esse dinheiro antes."),
+    ("«Race Against Yago» (missão com ampulheta)", "Se não fizer a tempo, pode travar as missões do Yago e, segundo um guia, o troféu Strangers & Freaks.",
+     "Faça assim que aparecer."),
+]
+
+GENERALES = [
+    ("Não dá para repetir missões", "Salve em vários espaços: há 15 manuais e 1 automático. Uma boa ideia é salvar ao começar cada capítulo."),
+    ("Alguns receptadores fecham para sempre", "Venda o que tiver antes da missão que os fecha."),
+    ("Os truques desativam troféus e salvamento", "Durante essa sessão você não ganha troféus nem o jogo salva. Salve antes de usá-los."),
+    ("Os 100 % não se perdem", "Tudo o que a lista pede continua disponível depois dos créditos, no jogo livre."),
+    ("Os troféus da história não se perdem", "São desbloqueados sozinhos ao avançar. A relação entre Jason e Lucía também não importa."),
+]
+
+# (método, pago, desde, nota) en el mismo orden que PLATA
+PLATA = [
+    ("Cofres de banco grandes", "Até US$ 205.000 cada um", "«That's Where the Money Is», capítulo 4",
+     "Começam com 4 estrelas. Pagam em notas marcadas: é preciso lavá-las com um receptador antes de gastar. São 8."),
+    ("Carros para o Randy (Wish List)", "Cerca de US$ 30.000 a 35.000 por carro impecável", "Metade do capítulo 3, depois de «Key Cloner»",
+     "São 16 ou 18 carros, dependendo do guia. Os rastreadores avançados avisam a polícia se você parar. As batidas baixam o preço."),
+    ("Entregas do Pilot Pete (de avião)", "US$ 12.000 a primeira, US$ 20.000 as seguintes", "Capítulo 4",
+     "Só com Jason. Têm tempo limite e todos os pacotes precisam chegar."),
+    ("Bancos pequenos", "Entre US$ 5.000 e 45.000", "«Credit Check», capítulo 3",
+     "São 14. Leve o caixa e o cofre, senão não conta para os 100 %."),
+    ("Joalherias", "Entre US$ 10.000 e 25.000", "Trabalhos do Yasmani, capítulo 3",
+     "Corte o alarme primeiro. As joias são vendidas a um receptador."),
+    ("Lojas de empréstimo (Payday Loans)", "Entre US$ 2.000 e 25.000", "«Credit Check», capítulo 3",
+     "São 7. O valor depende da loja."),
+    ("Smash 'n' Grab em lojas de penhores", "Entre US$ 1.000 e 25.000", "«Coffee Break», capítulo 2",
+     "Os funcionários podem reagir."),
+    ("Operações de gangues", "Variável", "Desde o começo",
+     "São 39 esconderijos e eles voltam a encher com o tempo. Os cofres têm o código por perto. O que você pegar vai para um receptador."),
+    ("Roubar lojas", "Alguns milhares de dólares", "Desde o começo",
+     "Corte o alarme e apague as gravações de segurança para que não passem sua descrição."),
+    ("Carros para o Moses (garagem de Port Gellhorn)", "Cerca de US$ 1.000 por carro", "Capítulo 2",
+     "Não aceita carros com rastreador. É preciso esperar uns 2 minutos entre vendas e não roubar perto da garagem."),
+    ("Pay 'n' Spray", "Uns dois mil por carro", "Capítulo 3 segundo dois guias; outro diz que desde o começo",
+     "Veja se o carro tem rastreador antes de roubá-lo (estacionado, não do trânsito)."),
+    ("Porta-malas de carros", "Pouco: dinheiro, armas ou coisas para vender", "Desde o começo",
+     "Quase sem risco."),
+]
+
+CONSEJOS_PLATA = [
+    "O que você carrega se perde se morrer ou for preso. Um guia diz que o limite em dinheiro vivo é de US$ 20.000: deposite com frequência num caixa eletrônico ou no BuckMe.",
+    "Cada receptador compra um único tipo de coisa e paga menos se estiver danificada.",
+    "O Scooter Bros. Premium custa cerca de US$ 12.500 e dá três entregas de carros grátis por dia do jogo: segundo um guia, vale a pena assim que puder.",
+    "Ao terminar o capítulo 1, só fica o que está no Family Savings.",
+]

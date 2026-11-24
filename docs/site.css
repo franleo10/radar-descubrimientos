@@ -640,3 +640,5 @@ a.thumb:hover img{transform:scale(1.03)}
 .g-hub i{position:absolute;right:18px;top:20px;font-style:normal;color:var(--pink);transition:transform .25s}
 .g-hub a:hover i{transform:translateX(4px)}
 .g-how h2,.g-sources h2{margin-top:0}
+
+.guides-pt{margin:8px 0 40px}.guides-pt .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:16px}.guides-pt h2{margin:0}

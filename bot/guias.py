@@ -305,61 +305,21 @@ CONSEJOS_PLATA = [
 
 
 # =========================================================================== páginas
+# Las mismas páginas salen en español (/trucos/...) y en portugués (/pt/truques/...).
+# Los datos en portugués están en guias_pt.py; los textos fijos de la página, en TXT.
 
-def _src_links(keys: str) -> str:
-    out = []
-    for k in [k.strip() for k in keys.split(",") if k.strip()]:
-        name, _ = FUENTES[k]
-        out.append(name)
-    return " · ".join(out)
-
-
-def _fuentes_html(keys: list[str]) -> str:
-    items = "".join(f'<li><a href="{escape(FUENTES[k][1])}" rel="noopener nofollow">{escape(FUENTES[k][0])}</a></li>' for k in keys)
-    return (f'<section class="g-sources"><h2>De dónde sale esto</h2>'
-            f'<p>Cruzamos estas guías y lo escribimos con nuestras palabras. Cuando no coinciden, lo aclaramos. '
-            f'Revisado el {REVISADO}. Si en tu partida ves algo distinto, <a href="../contacto/">avisanos</a>.</p>'
-            f'<ul>{items}</ul></section>')
-
-
-def _capbar() -> str:
-    btns = "".join(f'<button type="button" data-v="{v}">{t}</button>' for v, t in
-                   [("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"), ("5", "Terminé")])
-    return ('<div class="capbar" data-capbar><span>¿Por qué capítulo vas?</span>'
-            f'<div class="capbtns" role="group" aria-label="Capítulo">{btns}<button type="button" data-v="0">Ver todo</button></div>'
-            '<small data-caphidden hidden></small></div>')
-
-
-def _head(root: str, slug: str, title: str, lead: str) -> str:
-    return (f'<nav class="crumbs"><a href="{root}">Inicio</a> › <a href="{root}guias/">Guías</a> › {escape(title)}</nav>'
-            f'<header class="page-head"><p class="overline">Guía · revisada el {REVISADO}</p><h1>{escape(title)}</h1>'
-            f'<p class="lead">{lead}</p></header>')
-
-
-def _code(seq: str | None) -> str:
-    if not seq:
-        return '<span class="tag">Código sin confirmar</span>'
-    label = ", ".join(ARROW_NAME[c] for c in seq)
-    keys = "".join(f"<kbd>{ARROW[c]}</kbd>" for c in seq)
-    return f'<span class="code" aria-label="{label}">{keys}</span>'
-
-
-def trucos_body(root: str) -> str:
-    n = sum(len(v) for _, v in TRUCOS)
-    n_code = sum(1 for _, v in TRUCOS for t in v if t[2])
-    groups = []
-    for name, rows in TRUCOS:
-        lis = "".join(
-            f'<li class="tk-row" data-q="{escape((efecto + " " + req).lower())}">'
-            f'<div class="tk-main"><b>{escape(efecto)}</b><span class="tk-req">Se desbloquea: {escape(req)}</span>'
-            + (f'<span class="tk-note">{escape(nota)}</span>' if nota else "") +
-            f'</div><div class="tk-code">{_code(code)}</div></li>'
-            for efecto, req, code, nota in rows)
-        groups.append(f'<section class="g-group"><h2>{escape(name)} <small>{len(rows)}</small></h2><ul class="tk-list">{lis}</ul></section>')
-    return (_head(root, "trucos", "Trucos de GTA 6: todos los códigos",
-                  f"Los {n} trucos de GTA 6, qué hace cada uno y qué hay que hacer para desbloquearlo. "
-                  f"De {n_code} hay código confirmado por dos guías distintas.")
-            + """<section class="g-how">
+TXT = {
+    "es": dict(
+        home="Inicio", guias="Guías", overline="Guía · revisada el {r}",
+        src_h="De dónde sale esto",
+        src_p="Cruzamos estas guías y lo escribimos con nuestras palabras. Cuando no coinciden, lo aclaramos. "
+              "Revisado el {r}. Si en tu partida ves algo distinto, <a href=\"{root}contacto/\">avisanos</a>.",
+        segun="Según", capq="¿Por qué capítulo vas?", cap_aria="Capítulo", cap_done="Terminé", cap_all="Ver todo",
+        code_none="Código sin confirmar", unlock="Se desbloquea",
+        tk_h1="Trucos de GTA 6: todos los códigos",
+        tk_lead="Los {n} trucos de GTA 6, qué hace cada uno y qué hay que hacer para desbloquearlo. "
+                "De {c} hay código confirmado por dos guías distintas.",
+        tk_how="""<section class="g-how">
   <h2>Cómo se activan</h2>
   <ol class="g-steps">
     <li>Terminá la historia: recién ahí aparece la sección de trucos en el menú Progreso.</li>
@@ -368,136 +328,318 @@ def trucos_body(root: str) -> str:
   </ol>
   <p class="g-warn"><b>Antes de usarlos:</b> mientras haya un truco activo no ganás trofeos ni logros y el juego no guarda. Guardá antes.</p>
   <p class="note">Los códigos son iguales en PS5 y Xbox. Las flechas son de la cruceta.</p>
-</section>
-<label class="g-search"><span class="sr">Buscar un truco</span><input type="search" id="tk-q" placeholder="Buscar: munición, Banshee, clima…" autocomplete="off"></label>
-"""
-            + "".join(groups)
-            + '<p class="g-empty" id="tk-empty" hidden>No hay trucos con esa búsqueda.</p>'
-            + _fuentes_html(["levelup", "vidaextra", "infobae"]))
-
-
-def cien_body(root: str) -> str:
-    sections = []
-    for name, rows in CIEN:
-        lis = []
-        for key, label, need, total, nota, src, cap in rows:
-            money = key.startswith("f_")
-            tot = f" de {total:,}".replace(",", ".") if total else ""
-            need_txt = f"{need:,}".replace(",", ".")
-            step = 5000 if money else 1
-            lis.append(
-                f'<li class="h-row" data-cap="{cap}" data-need="{need}">'
-                f'<div class="h-info"><b>{escape(label)}</b>'
-                f'<span class="h-need">Necesitás {"$" if money else ""}{need_txt}{tot}</span>'
-                + (f'<span class="h-note">{escape(nota)}</span>' if nota else "")
-                + f'<span class="h-src">Según {escape(_src_links(src))}</span></div>'
-                f'<div class="h-ctrl"><button type="button" class="h-minus" aria-label="Restar">−</button>'
-                f'<input type="number" inputmode="numeric" min="0" step="{step}" value="0" data-key="{key}" aria-label="Cuántos llevás de {escape(label)}">'
-                f'<button type="button" class="h-plus" aria-label="Sumar">+</button></div>'
-                f'<div class="ck-bar"><i></i></div></li>')
-        sections.append(f'<section class="g-group"><h2>{escape(name)}</h2><ul class="h-list">{"".join(lis)}</ul></section>')
-    cards = "".join(f'<li><label><input type="checkbox" data-ck="wm-cartas" data-id="{escape(n)}">'
-                    f'<span class="ck-t">{escape(n)}<small>{c} cartas</small></span></label></li>' for n, c in CARTAS)
-    return (_head(root, "100-por-ciento", "Lista del 100 % de GTA 6",
-                  "Todo lo que pide el 100 % y cuánto te falta. Anotá lo que llevás: se guarda en este navegador, sin registrarte.")
-            + _capbar()
-            + """<div class="ck-summary"><p>Vas por el <b id="h-pct">0</b>% de la lista</p><div class="ck-bar big"><i id="h-all"></i></div>
+</section>""",
+        tk_search_l="Buscar un truco", tk_search_ph="Buscar: munición, Banshee, clima…", tk_empty="No hay trucos con esa búsqueda.",
+        h_need="Necesitás", h_of="de", h_minus="Restar", h_plus="Sumar", h_aria="Cuántos llevás de {x}",
+        h_h1="Lista del 100 % de GTA 6",
+        h_lead="Todo lo que pide el 100 % y cuánto te falta. Anotá lo que llevás: se guarda en este navegador, sin registrarte.",
+        h_sum="""<div class="ck-summary"><p>Vas por el <b id="h-pct">0</b>% de la lista</p><div class="ck-bar big"><i id="h-all"></i></div>
 <div class="ck-actions"><span class="note">Es un promedio de cada fila. El porcentaje real lo ves en el juego, en Progreso.</span><button class="btn sm ghost" id="h-reset" type="button">Borrar mi progreso</button></div></div>
 <section class="g-how"><h2>Antes de empezar</h2><ul class="g-facts">
 <li>El 100 % da el trofeo de oro <b>A Long Road</b>. Las guías calculan unas 200 horas, contra 65 a 70 de la historia sola.</li>
 <li>El progreso de cada cosa se ve en el juego, en <b>Mapa › Progreso › Colecciones</b>. Algunas categorías aparecen recién cuando encontrás la primera.</li>
-<li>Nada de la lista se pierde: todo sigue disponible después de los créditos. Igual hay cosas cómodas de hacer antes: mirá <a href="../no-te-lo-pierdas/">lo que se pierde</a>.</li>
-</ul></section>"""
+<li>Nada de la lista se pierde: todo sigue disponible después de los créditos. Igual hay cosas cómodas de hacer antes: mirá <a href="{lost}">lo que se pierde</a>.</li>
+</ul></section>""",
+        cards_h="Colecciones de cartas <small>hacen falta 15 de 18</small>", cards_n="cartas",
+        cards_note="Los nombres y cantidades salen de una sola guía (Mission Passed Guides), pero suman exactamente las 480 cartas que confirman las demás.",
+        tr_h1="Trofeos de GTA 6: la lista completa",
+        tr_lead="Los {n} trofeos de GTA 6 en español: {p} platino, {o} de oro, {a} de plata y {b} de bronce. Tildá los que ya tenés.",
+        tr_how="""<section class="g-how"><h2>Lo que tenés que saber</h2><ul class="g-facts">
+<li><b>Platino en una sola partida.</b> No hay niveles de dificultad ni trofeos online. Las guías lo ponen en 4 de 10 de dificultad y unas 200 horas.</li>
+<li><b>No hay repetición de misiones ni partida nueva+.</b> El juego libre sigue después de la historia.</li>
+<li><b>El único que podría perderse</b> es Positive Mental Attitude, por una meditación del capítulo 1. <a href="{lost}">Mirá cómo hacerla</a>.</li>
+<li><b>Los trucos desactivan los trofeos</b> mientras estén activos.</li>
+</ul></section>""",
+        tr_story="Historia: sale solo", tr_opt="Hay que buscarlo", tr_filter="Filtrar por tipo", tr_all="Todos",
+        tr_hide="Ocultar los que ya tengo", tr_count="de {n} conseguidos",
+        ml_h1="GTA 6: lo que se pierde si avanzás la historia",
+        ml_lead="Lo que desaparece al pasar de capítulo, ordenado para que lo hagas a tiempo. Spoilers mínimos: elegí por qué capítulo vas.",
+        ml_gen="Reglas generales", chapter="Capítulo",
+        mn_h1="Cómo ganar plata rápido en GTA 6",
+        mn_lead="Las formas de hacer plata ordenadas de la que más paga a la que menos, con el capítulo desde el que se pueden hacer.",
+        mn_from="Desde", risk={1: "Riesgo bajo", 2: "Riesgo medio", 3: "Riesgo alto"},
+        mn_note="Los montos son los que reportaron las primeras guías después del lanzamiento y pueden cambiar con actualizaciones.",
+        mn_tips="Para no perder lo que ganaste",
+        mn_cat='También tenés la categoría <a href="{root}c/dinero/">Dinero</a>, con los métodos que va encontrando la comunidad en video.',
+        hub_lead="Lo esencial para jugar y completar GTA 6, en español y revisado con varias fuentes.",
+        hub_list="<b>Mi lista de secretos</b><span>Tildá los secretos de WastedMap que ya encontraste.</span>",
+        home_over="Guías", home_h="Lo que más se busca de GTA 6", home_more="Ver todas →",
+    ),
+    "pt": dict(
+        home="Início", guias="Guias", overline="Guia · revisado em {r}",
+        src_h="De onde vem isto",
+        src_p="Cruzamos estes guias e escrevemos com nossas palavras. Quando eles não concordam, avisamos. "
+              "Revisado em {r}. Se no seu jogo aparecer algo diferente, <a href=\"{root}contacto/\">avise a gente</a>.",
+        segun="Segundo", capq="Em que capítulo você está?", cap_aria="Capítulo", cap_done="Terminei", cap_all="Ver tudo",
+        code_none="Código não confirmado", unlock="Desbloqueia com",
+        tk_h1="Truques de GTA 6: todos os códigos",
+        tk_lead="Os {n} truques de GTA 6, o que cada um faz e o que é preciso fazer para desbloqueá-lo. "
+                "{c} têm o código confirmado por dois guias diferentes.",
+        tk_how="""<section class="g-how">
+  <h2>Como ativar</h2>
+  <ol class="g-steps">
+    <li>Termine a história: só então aparece a seção de truques no menu Progresso.</li>
+    <li>Cumpra o requisito de cada truque. Quando você cumpre, o jogo mostra o código em Progresso.</li>
+    <li>Pegue o celular (seta para cima no direcional), segure <b>L1 + R1</b> no PS5 ou <b>LB + RB</b> no Xbox e digite a sequência.</li>
+  </ol>
+  <p class="g-warn"><b>Antes de usar:</b> enquanto houver um truque ativo você não ganha troféus nem conquistas e o jogo não salva. Salve antes.</p>
+  <p class="note">Os códigos são iguais no PS5 e no Xbox. As setas são do direcional.</p>
+</section>""",
+        tk_search_l="Buscar um truque", tk_search_ph="Buscar: munição, Banshee, clima…", tk_empty="Nenhum truque com essa busca.",
+        h_need="Precisa de", h_of="de", h_minus="Diminuir", h_plus="Aumentar", h_aria="Quantos você tem de {x}",
+        h_h1="Lista dos 100 % de GTA 6",
+        h_lead="Tudo o que os 100 % pedem e quanto falta. Anote o que você já tem: fica salvo neste navegador, sem cadastro.",
+        h_sum="""<div class="ck-summary"><p>Você está em <b id="h-pct">0</b>% da lista</p><div class="ck-bar big"><i id="h-all"></i></div>
+<div class="ck-actions"><span class="note">É uma média de cada linha. A porcentagem real aparece no jogo, em Progresso.</span><button class="btn sm ghost" id="h-reset" type="button">Apagar meu progresso</button></div></div>
+<section class="g-how"><h2>Antes de começar</h2><ul class="g-facts">
+<li>Os 100 % dão o troféu de ouro <b>A Long Road</b>. Os guias calculam umas 200 horas, contra 65 a 70 só da história.</li>
+<li>O progresso de cada coisa aparece no jogo, em <b>Mapa › Progresso › Coleções</b>. Algumas categorias só aparecem quando você encontra a primeira.</li>
+<li>Nada da lista se perde: tudo continua disponível depois dos créditos. Mesmo assim, há coisas que convém fazer antes: veja <a href="{lost}">o que dá para perder</a>.</li>
+</ul></section>""",
+        cards_h="Coleções de cartas <small>precisa de 15 de 18</small>", cards_n="cartas",
+        cards_note="Os nomes e quantidades vêm de um único guia (Mission Passed Guides), mas somam exatamente as 480 cartas que os outros confirmam.",
+        tr_h1="Troféus de GTA 6: a lista completa",
+        tr_lead="Os {n} troféus de GTA 6 em português: {p} platina, {o} de ouro, {a} de prata e {b} de bronze. Marque os que você já tem.",
+        tr_how="""<section class="g-how"><h2>O que você precisa saber</h2><ul class="g-facts">
+<li><b>Platina num único save.</b> Não há níveis de dificuldade nem troféus online. Os guias dão dificuldade 4 de 10 e umas 200 horas.</li>
+<li><b>Não dá para repetir missões nem há novo jogo+.</b> O jogo livre continua depois da história.</li>
+<li><b>O único que poderia ser perdido</b> é Positive Mental Attitude, por causa de uma meditação do capítulo 1. <a href="{lost}">Veja como fazer</a>.</li>
+<li><b>Os truques desativam os troféus</b> enquanto estiverem ativos.</li>
+</ul></section>""",
+        tr_story="História: vem sozinho", tr_opt="É preciso buscar", tr_filter="Filtrar por tipo", tr_all="Todos",
+        tr_hide="Ocultar os que já tenho", tr_count="de {n} conquistados",
+        ml_h1="GTA 6: o que dá para perder se você avançar a história",
+        ml_lead="O que some ao passar de capítulo, em ordem para você fazer a tempo. Spoilers mínimos: escolha em que capítulo você está.",
+        ml_gen="Regras gerais", chapter="Capítulo",
+        mn_h1="Como ganhar dinheiro rápido no GTA 6",
+        mn_lead="As formas de fazer dinheiro ordenadas da que mais paga para a que menos, com o capítulo a partir do qual dá para fazer.",
+        mn_from="A partir de", risk={1: "Risco baixo", 2: "Risco médio", 3: "Risco alto"},
+        mn_note="Os valores são os que os primeiros guias publicaram depois do lançamento e podem mudar com atualizações.",
+        mn_tips="Para não perder o que você ganhou",
+        mn_cat='Veja também a categoria <a href="{root}pt/c/dinheiro/">Dinheiro</a>, com os métodos que a comunidade vai encontrando em vídeo.',
+        hub_lead="O essencial para jogar e completar GTA 6, em português e revisado com várias fontes.",
+        hub_list="<b>Minha lista de segredos</b><span>Marque os segredos do WastedMap que você já encontrou (em espanhol).</span>",
+        home_over="Guias", home_h="O mais buscado de GTA 6", home_more="Ver todos →",
+    ),
+}
+
+
+def _data(lang: str) -> dict:
+    """Datos de las guías en el idioma pedido. En portugués se toman los textos de guias_pt.py
+    y los números, códigos y capítulos de acá, así no hay que mantenerlos dos veces."""
+    if lang == "es":
+        return dict(trucos=TRUCOS, cien=CIEN, trofeos=TROFEOS, perdibles=PERDIBLES, generales=GENERALES,
+                    plata=PLATA, consejos=CONSEJOS_PLATA, grados=GRADOS, arrow_name=ARROW_NAME, revisado=REVISADO,
+                    guias=[(s, s, t, d) for s, t, d in GUIAS])
+    from . import guias_pt as X
+
+    def same(a, b, what):
+        if len(a) != len(b):
+            raise ValueError(f"guias_pt.{what} no coincide con guias.{what}")
+    same(X.TRUCOS, TRUCOS, "TRUCOS"); same(X.CIEN, CIEN, "CIEN"); same(X.TROFEOS, TROFEOS, "TROFEOS")
+    same(X.PERDIBLES, PERDIBLES, "PERDIBLES"); same(X.PLATA, PLATA, "PLATA")
+    trucos = []
+    for (g, rows), (_, es) in zip(X.TRUCOS, TRUCOS):
+        same(rows, es, "TRUCOS")
+        trucos.append((g, [(ef, req, e[2], nota) for (ef, req, nota), e in zip(rows, es)]))
+    cien = []
+    for (g, rows), (_, es) in zip(X.CIEN, CIEN):
+        same(rows, es, "CIEN")
+        cien.append((g, [(e[0], lab, e[2], e[3], nota, e[5], e[6]) for (lab, nota), e in zip(rows, es)]))
+    return dict(
+        trucos=trucos, cien=cien,
+        trofeos=[(e[0], e[1], req, e[3], e[4], nota) for (req, nota), e in zip(X.TROFEOS, TROFEOS)],
+        perdibles=[(e[0], q, por, hacer, e[4]) for (q, por, hacer), e in zip(X.PERDIBLES, PERDIBLES)],
+        generales=X.GENERALES,
+        plata=[(m, pago, desde, e[3], e[4], nota, e[6]) for (m, pago, desde, nota), e in zip(X.PLATA, PLATA)],
+        consejos=X.CONSEJOS_PLATA, grados=X.GRADOS, arrow_name=X.ARROW_NAME, revisado=X.REVISADO, guias=X.GUIAS)
+
+
+def _url(lang: str, root: str, es_slug: str) -> str:
+    """Enlace a una guía en el mismo idioma."""
+    if lang == "es":
+        return f"{root}{es_slug}/"
+    pt = next(s for s, e, _, _ in _data("pt")["guias"] if e == es_slug)
+    return f"{root}pt/{pt}/"
+
+
+def _src_links(keys: str) -> str:
+    return " · ".join(FUENTES[k.strip()][0] for k in keys.split(",") if k.strip())
+
+
+def _fuentes_html(keys: list[str], root: str, lang: str) -> str:
+    t, d = TXT[lang], _data(lang)
+    items = "".join(f'<li><a href="{escape(FUENTES[k][1])}" rel="noopener nofollow">{escape(FUENTES[k][0])}</a></li>' for k in keys)
+    return (f'<section class="g-sources"><h2>{t["src_h"]}</h2>'
+            f'<p>{t["src_p"].format(r=d["revisado"], root=root)}</p><ul>{items}</ul></section>')
+
+
+def _capbar(lang: str) -> str:
+    t = TXT[lang]
+    btns = "".join(f'<button type="button" data-v="{v}">{x}</button>' for v, x in
+                   [("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"), ("5", t["cap_done"])])
+    return (f'<div class="capbar" data-capbar><span>{t["capq"]}</span>'
+            f'<div class="capbtns" role="group" aria-label="{t["cap_aria"]}">{btns}<button type="button" data-v="0">{t["cap_all"]}</button></div>'
+            '<small data-caphidden hidden></small></div>')
+
+
+def _head(root: str, lang: str, title: str, lead: str) -> str:
+    t, d = TXT[lang], _data(lang)
+    home, hub = (f"{root}", f"{root}guias/") if lang == "es" else (f"{root}pt/", f"{root}pt/guias/")
+    return (f'<nav class="crumbs"><a href="{home}">{t["home"]}</a> › <a href="{hub}">{t["guias"]}</a> › {escape(title)}</nav>'
+            f'<header class="page-head"><p class="overline">{t["overline"].format(r=d["revisado"])}</p><h1>{escape(title)}</h1>'
+            f'<p class="lead">{lead}</p></header>')
+
+
+def _code(seq: str | None, lang: str) -> str:
+    if not seq:
+        return f'<span class="tag">{TXT[lang]["code_none"]}</span>'
+    names = _data(lang)["arrow_name"]
+    label = ", ".join(names[c] for c in seq)
+    keys = "".join(f"<kbd>{ARROW[c]}</kbd>" for c in seq)
+    return f'<span class="code" aria-label="{label}">{keys}</span>'
+
+
+def _num(n: int) -> str:
+    return f"{n:,}".replace(",", ".")
+
+
+def trucos_body(root: str, lang: str = "es") -> str:
+    t, d = TXT[lang], _data(lang)
+    n = sum(len(v) for _, v in d["trucos"])
+    n_code = sum(1 for _, v in d["trucos"] for x in v if x[2])
+    groups = []
+    for name, rows in d["trucos"]:
+        lis = "".join(
+            f'<li class="tk-row" data-q="{escape((efecto + " " + req).lower())}">'
+            f'<div class="tk-main"><b>{escape(efecto)}</b><span class="tk-req">{t["unlock"]}: {escape(req)}</span>'
+            + (f'<span class="tk-note">{escape(nota)}</span>' if nota else "") +
+            f'</div><div class="tk-code">{_code(code, lang)}</div></li>'
+            for efecto, req, code, nota in rows)
+        groups.append(f'<section class="g-group"><h2>{escape(name)} <small>{len(rows)}</small></h2><ul class="tk-list">{lis}</ul></section>')
+    return (_head(root, lang, t["tk_h1"], t["tk_lead"].format(n=n, c=n_code))
+            + t["tk_how"]
+            + f'<label class="g-search"><span class="sr">{t["tk_search_l"]}</span><input type="search" id="tk-q" placeholder="{t["tk_search_ph"]}" autocomplete="off"></label>'
+            + "".join(groups)
+            + f'<p class="g-empty" id="tk-empty" hidden>{t["tk_empty"]}</p>'
+            + _fuentes_html(["levelup", "vidaextra", "infobae"], root, lang))
+
+
+def cien_body(root: str, lang: str = "es") -> str:
+    t, d = TXT[lang], _data(lang)
+    sections = []
+    for name, rows in d["cien"]:
+        lis = []
+        for key, label, need, total, nota, src, cap in rows:
+            money = key.startswith("f_")
+            tot = f' {t["h_of"]} {_num(total)}' if total else ""
+            step = 5000 if money else 1
+            lis.append(
+                f'<li class="h-row" data-cap="{cap}" data-need="{need}">'
+                f'<div class="h-info"><b>{escape(label)}</b>'
+                f'<span class="h-need">{t["h_need"]} {"$" if money else ""}{_num(need)}{tot}</span>'
+                + (f'<span class="h-note">{escape(nota)}</span>' if nota else "")
+                + f'<span class="h-src">{t["segun"]} {escape(_src_links(src))}</span></div>'
+                f'<div class="h-ctrl"><button type="button" class="h-minus" aria-label="{t["h_minus"]}">−</button>'
+                f'<input type="number" inputmode="numeric" min="0" step="{step}" value="0" data-key="{key}" aria-label="{escape(t["h_aria"].format(x=label))}">'
+                f'<button type="button" class="h-plus" aria-label="{t["h_plus"]}">+</button></div>'
+                f'<div class="ck-bar"><i></i></div></li>')
+        sections.append(f'<section class="g-group"><h2>{escape(name)}</h2><ul class="h-list">{"".join(lis)}</ul></section>')
+    cards = "".join(f'<li><label><input type="checkbox" data-ck="wm-cartas" data-id="{escape(n)}">'
+                    f'<span class="ck-t">{escape(n)}<small>{c} {t["cards_n"]}</small></span></label></li>' for n, c in CARTAS)
+    return (_head(root, lang, t["h_h1"], t["h_lead"])
+            + _capbar(lang)
+            + t["h_sum"].format(lost=_url(lang, root, "no-te-lo-pierdas"))
             + "".join(sections)
-            + f"""<section class="g-group"><h2>Colecciones de cartas <small>hacen falta 15 de 18</small></h2>
-<p class="note">Los nombres y cantidades salen de una sola guía (Mission Passed Guides), pero suman exactamente las 480 cartas que confirman las demás.</p>
-<ul class="ck-list">{cards}</ul></section>"""
-            + _fuentes_html(["gc", "vchq", "mpg", "keengamer"]))
+            + f'<section class="g-group"><h2>{t["cards_h"]}</h2><p class="note">{t["cards_note"]}</p><ul class="ck-list">{cards}</ul></section>'
+            + _fuentes_html(["gc", "vchq", "mpg", "keengamer"], root, lang))
 
 
-def trofeos_body(root: str) -> str:
-    counts = {g: sum(1 for t in TROFEOS if t[1] == g) for g in GRADOS}
+def trofeos_body(root: str, lang: str = "es") -> str:
+    t, d = TXT[lang], _data(lang)
+    grados, trofeos = d["grados"], d["trofeos"]
+    counts = {g: sum(1 for x in trofeos if x[1] == g) for g in grados}
     rows = "".join(
         f'<li class="tr-row" data-cap="{cap}" data-grade="{g}" data-type="{tipo}"><label>'
         f'<input type="checkbox" data-ck="wm-trofeos" data-id="{escape(name)}">'
-        f'<span class="tr-badge g-{g}" title="{GRADOS[g]}">{GRADOS[g][0]}</span>'
+        f'<span class="tr-badge g-{g}" title="{grados[g]}">{grados[g][0]}</span>'
         f'<span class="ck-t"><b>{escape(name)}</b><span>{escape(req)}</span>'
         + (f'<small class="tr-note">{escape(nota)}</small>' if nota else "")
-        + f'<small>{"Historia: sale solo" if tipo == "h" else "Hay que buscarlo"}</small></span></label></li>'
-        for name, g, req, tipo, cap, nota in TROFEOS)
-    filt = "".join(f'<button type="button" data-grade="{g}">{GRADOS[g]} <small>{counts[g]}</small></button>' for g in GRADOS)
-    return (_head(root, "trofeos", "Trofeos de GTA 6: la lista completa",
-                  f"Los {len(TROFEOS)} trofeos de GTA 6 en español: {counts['p']} platino, {counts['o']} de oro, "
-                  f"{counts['a']} de plata y {counts['b']} de bronce. Tildá los que ya tenés.")
-            + """<section class="g-how"><h2>Lo que tenés que saber</h2><ul class="g-facts">
-<li><b>Platino en una sola partida.</b> No hay niveles de dificultad ni trofeos online. Las guías lo ponen en 4 de 10 de dificultad y unas 200 horas.</li>
-<li><b>No hay repetición de misiones ni partida nueva+.</b> El juego libre sigue después de la historia.</li>
-<li><b>El único que podría perderse</b> es Positive Mental Attitude, por una meditación del capítulo 1. <a href="../no-te-lo-pierdas/">Mirá cómo hacerla</a>.</li>
-<li><b>Los trucos desactivan los trofeos</b> mientras estén activos.</li>
-</ul></section>"""
-            + _capbar()
-            + f'<div class="tr-filter" role="group" aria-label="Filtrar por tipo"><button type="button" data-grade="" class="on">Todos</button>{filt}'
-              '<label class="ck-hide"><input type="checkbox" id="tr-hide"> Ocultar los que ya tengo</label></div>'
-            + f'<p class="tr-count"><b id="tr-done">0</b> de {len(TROFEOS)} conseguidos</p>'
+        + f'<small>{t["tr_story"] if tipo == "h" else t["tr_opt"]}</small></span></label></li>'
+        for name, g, req, tipo, cap, nota in trofeos)
+    filt = "".join(f'<button type="button" data-grade="{g}">{grados[g]} <small>{counts[g]}</small></button>' for g in grados)
+    return (_head(root, lang, t["tr_h1"], t["tr_lead"].format(n=len(trofeos), **counts))
+            + t["tr_how"].format(lost=_url(lang, root, "no-te-lo-pierdas"))
+            + _capbar(lang)
+            + f'<div class="tr-filter" role="group" aria-label="{t["tr_filter"]}"><button type="button" data-grade="" class="on">{t["tr_all"]}</button>{filt}'
+              f'<label class="ck-hide"><input type="checkbox" id="tr-hide"> {t["tr_hide"]}</label></div>'
+            + f'<p class="tr-count"><b id="tr-done">0</b> {t["tr_count"].format(n=len(trofeos))}</p>'
             + f'<ul class="ck-list tr-list">{rows}</ul>'
-            + _fuentes_html(["powerpyx", "keengamer", "bloxodes"]))
+            + _fuentes_html(["powerpyx", "keengamer", "bloxodes"], root, lang))
 
 
-def perdibles_body(root: str) -> str:
+def perdibles_body(root: str, lang: str = "es") -> str:
+    t, d = TXT[lang], _data(lang)
     rows = []
-    for cap in sorted({p[0] for p in PERDIBLES}):
+    for cap in sorted({p[0] for p in d["perdibles"]}):
         items = "".join(
             f'<li data-cap="{c}"><b>{escape(q)}</b><p>{escape(por)}</p><p class="ml-do">{escape(hacer)}</p>'
-            f'<small>Según {escape(_src_links(src))}</small></li>'
-            for c, q, por, hacer, src in PERDIBLES if c == cap)
-        rows.append(f'<section class="g-group" data-cap="{cap}"><h2>Capítulo {cap}</h2><ul class="ml-list">{items}</ul></section>')
-    gen = "".join(f"<li><b>{escape(t)}.</b> {escape(d)}</li>" for t, d in GENERALES)
-    return (_head(root, "no-te-lo-pierdas", "GTA 6: lo que se pierde si avanzás la historia",
-                  "Lo que desaparece al pasar de capítulo, ordenado para que lo hagas a tiempo. Spoilers mínimos: elegí por qué capítulo vas.")
-            + _capbar()
-            + f'<section class="g-how"><h2>Reglas generales</h2><ul class="g-facts">{gen}</ul></section>'
+            f'<small>{t["segun"]} {escape(_src_links(src))}</small></li>'
+            for c, q, por, hacer, src in d["perdibles"] if c == cap)
+        rows.append(f'<section class="g-group" data-cap="{cap}"><h2>{t["chapter"]} {cap}</h2><ul class="ml-list">{items}</ul></section>')
+    gen = "".join(f"<li><b>{escape(a)}.</b> {escape(b)}</li>" for a, b in d["generales"])
+    return (_head(root, lang, t["ml_h1"], t["ml_lead"])
+            + _capbar(lang)
+            + f'<section class="g-how"><h2>{t["ml_gen"]}</h2><ul class="g-facts">{gen}</ul></section>'
             + "".join(rows)
-            + _fuentes_html(["powerpyx", "keengamer", "bloxodes", "gc", "mpg"]))
+            + _fuentes_html(["powerpyx", "keengamer", "bloxodes", "gc", "mpg"], root, lang))
 
 
-def plata_body(root: str) -> str:
-    risk = {1: "Bajo", 2: "Medio", 3: "Alto"}
+def plata_body(root: str, lang: str = "es") -> str:
+    t, d = TXT[lang], _data(lang)
     rows = "".join(
         f'<li class="mn-row" data-cap="{cap}"><span class="mn-n">{i:02d}</span>'
         f'<div class="mn-main"><b>{escape(m)}</b><span class="mn-pay">{escape(pago)}</span>'
-        f'<span class="mn-meta"><span>Desde: {escape(desde)}</span><span class="mn-risk r{r}">Riesgo {risk[r].lower()}</span></span>'
-        f'<p>{escape(nota)}</p><small>Según {escape(_src_links(src))}</small></div></li>'
-        for i, (m, pago, desde, cap, r, nota, src) in enumerate(PLATA, 1))
-    tips = "".join(f"<li>{escape(t)}</li>" for t in CONSEJOS_PLATA)
-    return (_head(root, "ganar-dinero", "Cómo ganar plata rápido en GTA 6",
-                  "Las formas de hacer plata ordenadas de la que más paga a la que menos, con el capítulo desde el que se pueden hacer.")
-            + _capbar()
-            + '<p class="note">Los montos son los que reportaron las primeras guías después del lanzamiento y pueden cambiar con actualizaciones.</p>'
+        f'<span class="mn-meta"><span>{t["mn_from"]}: {escape(desde)}</span><span class="mn-risk r{r}">{t["risk"][r]}</span></span>'
+        f'<p>{escape(nota)}</p><small>{t["segun"]} {escape(_src_links(src))}</small></div></li>'
+        for i, (m, pago, desde, cap, r, nota, src) in enumerate(d["plata"], 1))
+    tips = "".join(f"<li>{escape(x)}</li>" for x in d["consejos"])
+    return (_head(root, lang, t["mn_h1"], t["mn_lead"])
+            + _capbar(lang)
+            + f'<p class="note">{t["mn_note"]}</p>'
             + f'<ol class="mn-list">{rows}</ol>'
-            + f'<section class="g-how"><h2>Para no perder lo que ganaste</h2><ul class="g-facts">{tips}</ul></section>'
-            + f'<p class="note">También tenés la categoría <a href="{root}c/dinero/">Dinero</a>, con los métodos que va encontrando la comunidad en video.</p>'
-            + _fuentes_html(["fandomwire", "egamers", "technerdiness"]))
+            + f'<section class="g-how"><h2>{t["mn_tips"]}</h2><ul class="g-facts">{tips}</ul></section>'
+            + f'<p class="note">{t["mn_cat"].format(root=root)}</p>'
+            + _fuentes_html(["fandomwire", "egamers", "technerdiness"], root, lang))
 
 
-def hub_body(root: str) -> str:
-    cards = "".join(f'<li><a href="{root}{s}/"><b>{escape(t)}</b><span>{escape(d)}</span><i aria-hidden="true">→</i></a></li>'
-                    for s, t, d in GUIAS)
-    return (f'<nav class="crumbs"><a href="{root}">Inicio</a> › Guías</nav>'
-            '<header class="page-head"><h1>Guías de GTA 6</h1>'
-            '<p class="lead">Lo esencial para jugar y completar GTA 6, en español y revisado con varias fuentes.</p></header>'
-            f'<ul class="g-hub">{cards}<li><a href="{root}lista/"><b>Mi lista de secretos</b>'
-            '<span>Tildá los secretos de WastedMap que ya encontraste.</span><i aria-hidden="true">→</i></a></li></ul>')
+def _cards(root: str, lang: str) -> str:
+    return "".join(f'<li><a href="{_url(lang, root, es)}"><b>{escape(ti)}</b><span>{escape(de)}</span><i aria-hidden="true">→</i></a></li>'
+                   for _, es, ti, de in _data(lang)["guias"])
 
 
-def home_section(root: str = "") -> str:
+def hub_body(root: str, lang: str = "es") -> str:
+    t = TXT[lang]
+    home = root if lang == "es" else f"{root}pt/"
+    h1 = "Guías de GTA 6" if lang == "es" else "Guias de GTA 6"
+    return (f'<nav class="crumbs"><a href="{home}">{t["home"]}</a> › {t["guias"]}</nav>'
+            f'<header class="page-head"><h1>{h1}</h1><p class="lead">{t["hub_lead"]}</p></header>'
+            f'<ul class="g-hub">{_cards(root, lang)}<li><a href="{root}lista/">{t["hub_list"]}<i aria-hidden="true">→</i></a></li></ul>')
+
+
+def home_section(root: str = "", lang: str = "es") -> str:
     """Bloque de la portada con las guías."""
-    cards = "".join(f'<li><a href="{root}{s}/"><b>{escape(t)}</b><span>{escape(d)}</span><i aria-hidden="true">→</i></a></li>'
-                    for s, t, d in GUIAS)
-    return (f'<section class="sec guides-home"><div class="wrap"><div class="sec-head" data-reveal><div><p class="overline">Guías</p>'
-            f'<h2>Lo que más se busca de GTA 6</h2></div><a class="more-link" href="{root}guias/">Ver todas →</a></div>'
-            f'<ul class="g-hub" data-reveal data-stagger>{cards}</ul></div></section>')
+    t = TXT[lang]
+    hub = f"{root}guias/" if lang == "es" else f"{root}pt/guias/"
+    head = (f'<div class="sec-head" data-reveal><div><p class="overline">{t["home_over"]}</p>'
+            f'<h2>{t["home_h"]}</h2></div><a class="more-link" href="{hub}">{t["home_more"]}</a></div>'
+            f'<ul class="g-hub" data-reveal data-stagger>{_cards(root, lang)}</ul>')
+    if lang == "es":
+        return f'<section class="sec guides-home"><div class="wrap">{head}</div></section>'
+    return f'<section class="guides-pt">{head}</section>'
 
 
+# slug en español -> (título, descripción, función) por idioma
 PAGES = {
     "trucos": ("Trucos de GTA 6: todos los códigos y cómo activarlos",
                "Los 61 trucos de GTA 6 en español: códigos para PS5 y Xbox, cómo se activan y qué hay que hacer para desbloquear cada uno.",
@@ -515,19 +657,40 @@ PAGES = {
                      "Las mejores formas de ganar dinero en GTA 6, ordenadas por cuánto pagan y desde qué capítulo se pueden hacer.",
                      plata_body),
 }
+PAGES_PT = {
+    "trucos": ("Truques de GTA 6: todos os códigos e como ativar",
+               "Os 61 truques de GTA 6 em português: códigos para PS5 e Xbox, como ativar e o que fazer para desbloquear cada um."),
+    "100-por-ciento": ("Lista dos 100 % de GTA 6 com contador de progresso",
+                       "Tudo o que os 100 % de GTA 6 pedem: cartas, flamingos, WAiNK, roubos, acrobacias e mais. Anote seu progresso sem cadastro."),
+    "trofeos": ("Troféus de GTA 6: lista completa em português",
+                "Os 55 troféus de GTA 6 em português, com requisitos, quais vêm da história e qual dá para perder. Marque os que você já tem."),
+    "no-te-lo-pierdas": ("GTA 6: o que dá para perder se você avançar a história",
+                         "Colecionáveis, meditações e missões de GTA 6 que somem ao passar de capítulo, e o que fazer antes."),
+    "ganar-dinero": ("Como ganhar dinheiro rápido no GTA 6: todos os métodos",
+                     "As melhores formas de ganhar dinheiro no GTA 6, ordenadas por quanto pagam e a partir de qual capítulo dá para fazer."),
+}
+HUB = {"es": ("Guías de GTA 6 en español", "Trucos, lista del 100 %, trofeos, lo que se pierde y cómo ganar plata en GTA 6."),
+       "pt": ("Guias de GTA 6 em português", "Truques, lista dos 100 %, troféus, o que dá para perder e como ganhar dinheiro no GTA 6.")}
 
 
 def build(P) -> list[tuple[str, str]]:
-    """Escribe las guías y el índice. Devuelve las URLs para el sitemap."""
-    docs = config.DOCS_DIR
-    urls = []
+    """Escribe las guías y el índice en los dos idiomas. Devuelve las URLs para el sitemap."""
+    docs, site = config.DOCS_DIR, config.SITE_URL
     ver = P._ver("guias.js")
-    for slug, (title, desc, fn) in [("guias", ("Guías de GTA 6 en español", "Trucos, lista del 100 %, trofeos, lo que se pierde y cómo ganar plata en GTA 6.", hub_body))] + list(PAGES.items()):
-        out = docs / slug / "index.html"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        body = fn("../") + f'<script src="../guias.js?v={ver}" defer></script>'
-        out.write_text(P._layout(title=f"{title} | {config.SITE_NAME}", description=desc,
-                                 canonical=f"{config.SITE_URL}/{slug}/", root="../", body=body), encoding="utf-8")
-        urls.append((f"{config.SITE_URL}/{slug}/", "2026-11-24"))
-    print(f"[web] {len(urls)} páginas de guías")
+    pt_slug = {es: pt for pt, es, _, _ in _data("pt")["guias"]}
+    pages = [("guias", "guias", HUB["es"], HUB["pt"], hub_body)]
+    pages += [(es, pt_slug[es], (ti, de), PAGES_PT[es], fn) for es, (ti, de, fn) in PAGES.items()]
+    urls = []
+    for es, pt, (ti_es, de_es), (ti_pt, de_pt), fn in pages:
+        es_url, pt_url = f"{site}/{es}/", f"{site}/pt/{pt}/"
+        alternates = [("es", es_url), ("pt-BR", pt_url)]
+        for lang, rel, title, desc, root, url in [("es", es, ti_es, de_es, "../", es_url),
+                                                  ("pt", f"pt/{pt}", ti_pt, de_pt, "../../", pt_url)]:
+            out = docs / rel / "index.html"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            body = fn(root, lang) + f'<script src="{root}guias.js?v={ver}" defer></script>'
+            out.write_text(P._layout(title=f"{title} | {config.SITE_NAME}", description=desc, canonical=url, root=root,
+                                     body=body, lang=lang, alternates=alternates), encoding="utf-8")
+            urls.append((url, "2026-11-24"))
+    print(f"[web] {len(urls)} páginas de guías (español y portugués)")
     return urls

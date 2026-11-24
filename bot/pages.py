@@ -156,6 +156,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
                                       "Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.")
     if lang == "pt":
         links = (f'<a href="{root}pt/">Início</a><a href="{root}pt/#categorias">Categorias</a>'
+                 f'<a href="{root}pt/guias/">Guias</a><a href="{root}pt/truques/">Truques</a>'
                  f'<a href="{root}" hreflang="es">Versão em espanhol</a>')
         cta, foot_txt = "Abrir o mapa", ("Guia não oficial feito por fãs de GTA 6. Não tem relação com a Rockstar Games nem com a "
                                          "Take-Two Interactive. Os vídeos são de seus autores e aparecem com o player original.")

@@ -179,6 +179,7 @@ def build(entries: list[dict], P) -> list[tuple[str, str]]:
                                  body=body, lang="pt", wide=True), encoding="utf-8")
         urls.append((url, items[0].get("published_at", "")))
 
+    from .guias import home_section
     root = "../"
     recent = sorted(done, key=lambda e: e.get("published_at", ""), reverse=True)
     cats = "".join(f'<li class="t3" style="--c:{P.CAT_COLOR[k]}"><a href="{root}pt/c/{PT_CATS[k][0]}/"><span class="cn">{PT_CATS[k][1]}</span>'
@@ -190,6 +191,7 @@ def build(entries: list[dict], P) -> list[tuple[str, str]]:
   <p class="lead">Easter eggs, lugares escondidos, carros raros e guias que a comunidade descobre, resumidos em português e com o vídeo original.</p>
   <p class="pt-actions"><a class="btn primary" href="{root}mapa/">Abrir o mapa</a><a class="btn" href="{root}">Ver em espanhol ({len(entries)} guias)</a></p>
 </header>
+{home_section(root, "pt")}
 <h2 id="categorias">Por tipo de descoberta</h2>
 <ul class="cats">{cats}</ul>
 <h2>Descobertas recentes</h2>
