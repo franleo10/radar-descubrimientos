@@ -62,9 +62,9 @@ def rank_list(entries: list[dict], root: str, limit: int | None = None, summary:
             f'<li style="--c:{color}"><a href="{root}d/{e["slug"]}/">'
             f'<span class="rk">{i:02d}</span>'
             f'<span class="rt"><b>{escape(e.get("titulo", ""))}</b><small>{sub}</small>{desc}</span>'
-            f'<span class="rbar" aria-hidden="true"><i style="width:{pct}%"></i></span>'
+            f'<span class="rbar" aria-hidden="true"><i style="--w:{pct}%"></i></span>'
             f'<span class="rv">{views(e)}</span></a></li>')
-    return '<ol class="rank">' + "".join(rows) + "</ol>"
+    return '<ol class="rank" data-reveal data-stagger>' + "".join(rows) + "</ol>"
 
 
 def card(e: dict, root: str) -> str:
@@ -82,6 +82,21 @@ def card(e: dict, root: str) -> str:
 
 
 # ---------------------------------------------------------------- portada
+
+def _words(text: str, start: int = 0) -> str:
+    """Envuelve cada palabra para que el título aparezca palabra por palabra."""
+    return " ".join(f'<span class="w" style="--i:{start + i}">{w}</span>' for i, w in enumerate(text.split(" ")))
+
+
+def _ticker(entries: list[dict]) -> str:
+    """Cinta con los últimos hallazgos, como la de noticias de un juego (contenido real)."""
+    last = sorted(entries, key=lambda e: e.get("published_at", ""), reverse=True)[:10]
+    if not last:
+        return ""
+    items = "".join(f'<a href="d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a>' for e in last)
+    return (f'<div class="ticker" aria-label="Últimos descubrimientos"><span class="tk-label">Último</span>'
+            f'<div class="tk-track"><div class="tk-move">{items}<span aria-hidden="true" class="tk-dup">{items}</span></div></div></div>')
+
 
 def _explorer(by_zone: dict[str, list[dict]], zones: dict[str, str]) -> str:
     counts = {a: len(v) for a, v in by_zone.items()}
@@ -103,14 +118,14 @@ def _explorer(by_zone: dict[str, list[dict]], zones: dict[str, str]) -> str:
                         f'<span class="zn">{escape(area)}</span><span class="zc">—</span>'
                         f'<span class="zd">{escape(desc)}. Todavía sin secretos.</span></span></li>')
     active = sum(1 for a in AREAS if counts.get(a))
-    return f"""<div class="explorer" id="mapa">
+    return f"""<div class="explorer" id="mapa" data-reveal>
   <div class="ex-bar">
     <p><b>Leonida</b><span>{active} de {len(AREAS)} zonas con secretos · ubicaciones aproximadas</span></p>
     <a class="btn on-dark" href="mapa/">Abrir el mapa completo <span aria-hidden="true">→</span></a>
   </div>
   <div class="ex-body">
-    <div class="ex-map">{map_svg(counts, links, "", legend=False)}</div>
-    <ol class="ex-zones">{"".join(rows)}</ol>
+    <div class="ex-map">{map_svg(counts, links, "", legend=False)}<div class="radar" aria-hidden="true"></div></div>
+    <ol class="ex-zones" data-stagger>{"".join(rows)}</ol>
   </div>
 </div>"""
 
@@ -126,18 +141,18 @@ def _recent(entries: list[dict], skip: set[str]) -> str:
         f'<li><a class="r-row" href="d/{e["slug"]}/"><img loading="lazy" src="{escape(p._thumb(e))}" alt="">'
         f'<span><b>{escape(e.get("titulo", ""))}</b></span></a>{meta(e)}</li>' for e in rest)
     return f"""<section class="sec" id="recientes"><div class="wrap">
-  <div class="sec-head">
+  <div class="sec-head" data-reveal>
     <div><p class="overline">Recién agregados</p><h2>Descubrimientos recientes</h2></div>
     <a class="more-link" href="descubrimientos/">Ver los {len(entries)} <span aria-hidden="true">→</span></a>
   </div>
   <div class="recent">
-    <article class="r-lead">
+    <article class="r-lead" data-reveal>
       <a class="thumb" href="d/{lead["slug"]}/" tabindex="-1" aria-hidden="true"><img src="{escape(p._thumb(lead))}" alt=""></a>
       {meta(lead)}
       <h3><a href="d/{lead["slug"]}/">{escape(lead.get("titulo", ""))}</a></h3>
       <p>{escape(lead.get("resumen", ""))}</p>
     </article>
-    <ol class="r-list">{rows}</ol>
+    <ol class="r-list" data-reveal data-stagger>{rows}</ol>
   </div>
 </div></section>"""
 
@@ -146,7 +161,7 @@ def _top(week: list[dict]) -> str:
     if len(week) < 3:
         return ""
     return f"""<section class="band band-pink" id="top"><div class="wrap">
-  <div class="sec-head">
+  <div class="sec-head" data-reveal>
     <div><p class="overline">Top de la semana</p><h2>Lo que más se está mirando ahora</h2></div>
     <a class="more-link" href="semana/">Ver el top completo <span aria-hidden="true">→</span></a>
   </div>
@@ -168,12 +183,12 @@ def _categories(by_cat: dict[str, list[dict]]) -> str:
                     f'<span class="cn">{escape(name)}</span><span class="cc">{n}</span>'
                     f'<span class="cx">{sample}</span><span class="arr" aria-hidden="true">→</span></a></li>')
     return f"""<section class="sec" id="categorias"><div class="wrap cat-layout">
-  <div class="cat-intro">
+  <div class="cat-intro" data-reveal>
     <p class="overline">Explorar</p>
     <h2>Por tipo de descubrimiento</h2>
     <p>Desde autos raros hasta formas de hacer plata al empezar. Cada categoría junta las guías con sus pasos y el video original.</p>
   </div>
-  <ul class="cats">{"".join(rows)}</ul>
+  <ul class="cats" data-reveal data-stagger>{"".join(rows)}</ul>
 </div></section>"""
 
 
@@ -181,14 +196,14 @@ def _community(updated: str, n_community: int) -> str:
     confirmed = (f"<p><b>{n_community}</b> guía{'s' if n_community != 1 else ''} ya confirmada{'s' if n_community != 1 else ''} por la comunidad.</p>"
                  if n_community else "")
     return f"""<section class="band band-ink" id="comunidad"><div class="wrap com">
-  <div class="com-copy">
+  <div class="com-copy" data-reveal>
     <p class="overline">Cómo se arma</p>
     <h2>Siempre hay algo nuevo para descubrir</h2>
     <p>Varias veces por día revisamos los videos nuevos de la gente que anda encontrando secretos en GTA 6. Los resumimos en español, los ordenamos por categoría y los ubicamos en el mapa.</p>
     {confirmed}
     <p class="com-updated">Última actualización: {ago(updated)}</p>
   </div>
-  <ol class="how">
+  <ol class="how" data-reveal data-stagger>
     <li><span class="hn">1</span><div><b>Encontramos</b><p>Videos nuevos de creadores que muestran un hallazgo concreto. Noticias, opiniones y memes quedan afuera.</p></div></li>
     <li><span class="hn">2</span><div><b>Resumimos</b><p>Qué es, dónde está y cómo hacerlo, con el video original y su autor citado.</p></div></li>
     <li><span class="hn">3</span><div><b>Confirmás vos</b><p>Si lo probaste, marcá "Me funcionó" en la guía. Cuando varias personas lo confirman, deja de figurar como "Sin confirmar".</p></div></li>
@@ -201,11 +216,11 @@ def home_body(entries, by_cat, by_zone, zones, week, updated: str) -> str:
     n_conf = sum(1 for e in entries if e.get("confianza") == "alta")
     n_comm = sum(1 for e in entries if e.get("confirmado_por_comunidad"))
     top_slugs = {e["slug"] for e in week[:5]}
-    return f"""<section class="hero"><div class="wrap">
+    return f"""{_ticker(entries)}<section class="hero"><div class="wrap">
   <div class="hero-top">
     <div class="hero-copy">
       <p class="overline"><span class="live" aria-hidden="true"></span>Guía no oficial · actualizada {ago(updated)}</p>
-      <h1>Todos los secretos de GTA&nbsp;6 en <em>un solo mapa</em></h1>
+      <h1 class="h-anim">{_words("Todos los secretos de GTA&nbsp;6 en")} <em>{_words("un solo mapa", 7)}</em></h1>
     </div>
     <div class="hero-aside">
       <p class="lede">Easter eggs, lugares ocultos, autos raros y guías que descubre la comunidad, resumidos en español y con el video original.</p>
@@ -215,7 +230,7 @@ def home_body(entries, by_cat, by_zone, zones, week, updated: str) -> str:
         <input id="q" name="q" type="search" placeholder="Buscá un secreto: muelle, Cheetah, dinero…" autocomplete="off">
         <button class="btn primary" type="submit">Buscar</button>
       </form>
-      <p class="facts"><b>{len(entries)}</b> descubrimientos <i>·</i> <b>{n_conf}</b> confirmados <i>·</i> <b>{len(by_cat)}</b> categorías</p>
+      <p class="facts"><b data-count="{len(entries)}">{len(entries)}</b> descubrimientos <i>·</i> <b data-count="{n_conf}">{n_conf}</b> confirmados <i>·</i> <b data-count="{len(by_cat)}">{len(by_cat)}</b> categorías</p>
     </div>
   </div>
   {_explorer(by_zone, zones)}
@@ -225,8 +240,8 @@ def home_body(entries, by_cat, by_zone, zones, week, updated: str) -> str:
 {_categories(by_cat)}
 {_community(updated, n_comm)}
 <section class="final"><div class="wrap">
-  <h2>¿Qué secreto te falta descubrir?</h2>
-  <div class="final-actions">
+  <h2 data-reveal>¿Qué secreto te falta <span class="glitch" data-text="descubrir">descubrir</span>?</h2>
+  <div class="final-actions" data-reveal>
     <a class="btn primary lg" href="mapa/">Explorar el mapa</a>
     <a class="btn ghost lg" href="descubrimientos/">Ver todos los descubrimientos</a>
   </div>
@@ -316,7 +331,14 @@ def checklist_body(entries: list[dict], by_cat: dict[str, list[dict]], root: str
     document.getElementById("ck-done").textContent = total;
     document.getElementById("ck-all").style.width = (100 * total / boxes.length) + "%";
   }}
-  boxes.forEach(b => b.addEventListener("change", () => {{ b.checked ? done.add(b.dataset.slug) : done.delete(b.dataset.slug); save(); paint(); }}));
+  boxes.forEach(b => b.addEventListener("change", () => {{
+    b.checked ? done.add(b.dataset.slug) : done.delete(b.dataset.slug); save(); paint();
+    if (b.checked && window.wmToast) {{
+      const g = b.closest(".ck-group"), all = g.querySelectorAll(".ck-list input").length, n = g.querySelectorAll(".ck-list input:checked").length;
+      n === all ? wmToast("¡Categoría completa!", g.querySelector("h2 a").textContent + ` · ${{n}} de ${{all}}`)
+                : wmToast("¡Secreto encontrado!", `${{done.size}} de ${{boxes.length}} en tu lista`);
+    }}
+  }}));
   document.getElementById("ck-hide").addEventListener("change", ev => document.body.classList.toggle("ck-hiding", ev.target.checked));
   document.getElementById("ck-reset").addEventListener("click", () => {{
     if (confirm("¿Borrar todo tu progreso? No se puede deshacer.")) {{ done.clear(); save(); paint(); }}

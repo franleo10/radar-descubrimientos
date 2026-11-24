@@ -20,7 +20,9 @@
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="theme-color" content="#f6f3ee">
 <link rel="preload" href="../../fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../site.css?v=fc1fccfc">
+<link rel="stylesheet" href="../../site.css?v=e71e5e0b">
+<script>document.documentElement.classList.add("fx");setTimeout(()=>{if(!window.wmToast)document.documentElement.classList.remove("fx")},4000)</script>
+<script src="../../fx.js?v=c74c7088" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://wastedmap.com/"}, {"@type": "ListItem", "position": 2, "name": "Trucos y consejos", "item": "https://wastedmap.com/c/trucos-y-consejos/"}, {"@type": "ListItem", "position": 3, "name": "Snap Gun para abrir puertas sin alarma", "item": "https://wastedmap.com/d/snap-gun-para-abrir-puertas-sin-alarma-eb78f/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Snap Gun para abrir puertas sin alarma", "description": "En la misión de las joyerías de Yasmani se puede conseguir la Snap Gun, que abre puertas sin ruido ni alarmas. También explica cómo sacar el trofeo Sneakthief robando una joyería sin ser detectado.", "thumbnailUrl": ["https://i.ytimg.com/vi/dzVi7AGxnsw/hqdefault.jpg"], "uploadDate": "2026-11-22T22:15:37Z", "embedUrl": "https://www.youtube.com/embed/dzVi7AGxnsw", "contentUrl": "https://www.youtube.com/watch?v=dzVi7AGxnsw"}</script>
 </head>
 <body>
@@ -93,6 +95,7 @@ document.querySelectorAll(".done-btn").forEach(b => {
     done.has(b.dataset.slug) ? done.delete(b.dataset.slug) : done.add(b.dataset.slug);
     try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch {}
     paint();
+    if (done.has(b.dataset.slug) && window.wmToast) wmToast("¡Secreto encontrado!", "Lo sumamos a tu lista");
   });
   paint();
 });

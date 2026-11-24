@@ -20,7 +20,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta name="theme-color" content="#f6f3ee">
 <link rel="preload" href="../fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../site.css?v=fc1fccfc">
+<link rel="stylesheet" href="../site.css?v=e71e5e0b">
+<script>document.documentElement.classList.add("fx");setTimeout(()=>{if(!window.wmToast)document.documentElement.classList.remove("fx")},4000)</script>
+<script src="../fx.js?v=c74c7088" defer></script>
 
 </head>
 <body>
@@ -57,7 +59,14 @@
     document.getElementById("ck-done").textContent = total;
     document.getElementById("ck-all").style.width = (100 * total / boxes.length) + "%";
   }
-  boxes.forEach(b => b.addEventListener("change", () => { b.checked ? done.add(b.dataset.slug) : done.delete(b.dataset.slug); save(); paint(); }));
+  boxes.forEach(b => b.addEventListener("change", () => {
+    b.checked ? done.add(b.dataset.slug) : done.delete(b.dataset.slug); save(); paint();
+    if (b.checked && window.wmToast) {
+      const g = b.closest(".ck-group"), all = g.querySelectorAll(".ck-list input").length, n = g.querySelectorAll(".ck-list input:checked").length;
+      n === all ? wmToast("¡Categoría completa!", g.querySelector("h2 a").textContent + ` · ${n} de ${all}`)
+                : wmToast("¡Secreto encontrado!", `${done.size} de ${boxes.length} en tu lista`);
+    }
+  }));
   document.getElementById("ck-hide").addEventListener("change", ev => document.body.classList.toggle("ck-hiding", ev.target.checked));
   document.getElementById("ck-reset").addEventListener("click", () => {
     if (confirm("¿Borrar todo tu progreso? No se puede deshacer.")) { done.clear(); save(); paint(); }
@@ -90,6 +99,7 @@ document.querySelectorAll(".done-btn").forEach(b => {
     done.has(b.dataset.slug) ? done.delete(b.dataset.slug) : done.add(b.dataset.slug);
     try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch {}
     paint();
+    if (done.has(b.dataset.slug) && window.wmToast) wmToast("¡Secreto encontrado!", "Lo sumamos a tu lista");
   });
   paint();
 });

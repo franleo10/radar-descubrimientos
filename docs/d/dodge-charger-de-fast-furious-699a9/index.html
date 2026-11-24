@@ -20,7 +20,9 @@
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="theme-color" content="#f6f3ee">
 <link rel="preload" href="../../fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../site.css?v=fc1fccfc">
+<link rel="stylesheet" href="../../site.css?v=e71e5e0b">
+<script>document.documentElement.classList.add("fx");setTimeout(()=>{if(!window.wmToast)document.documentElement.classList.remove("fx")},4000)</script>
+<script src="../../fx.js?v=c74c7088" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://wastedmap.com/"}, {"@type": "ListItem", "position": 2, "name": "Vehículos", "item": "https://wastedmap.com/c/vehiculos/"}, {"@type": "ListItem", "position": 3, "name": "Dodge Charger de Fast & Furious", "item": "https://wastedmap.com/d/dodge-charger-de-fast-furious-699a9/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Dodge Charger de Fast & Furious", "description": "Guía sobre la ubicación de un Dodge Charger R/T 1970 inspirado en el auto de Dominic Toretto. La descripción no explica el lugar exacto ni cómo conseguirlo.", "thumbnailUrl": ["https://i.ytimg.com/vi/ugQIeaJ-m78/hqdefault.jpg"], "uploadDate": "2026-11-23T01:54:06Z", "embedUrl": "https://www.youtube.com/embed/ugQIeaJ-m78", "contentUrl": "https://www.youtube.com/watch?v=ugQIeaJ-m78"}</script>
 </head>
 <body>
@@ -93,6 +95,7 @@ document.querySelectorAll(".done-btn").forEach(b => {
     done.has(b.dataset.slug) ? done.delete(b.dataset.slug) : done.add(b.dataset.slug);
     try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch {}
     paint();
+    if (done.has(b.dataset.slug) && window.wmToast) wmToast("¡Secreto encontrado!", "Lo sumamos a tu lista");
   });
   paint();
 });

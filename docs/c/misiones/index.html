@@ -20,7 +20,9 @@
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="theme-color" content="#f6f3ee">
 <link rel="preload" href="../../fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../site.css?v=fc1fccfc">
+<link rel="stylesheet" href="../../site.css?v=e71e5e0b">
+<script>document.documentElement.classList.add("fx");setTimeout(()=>{if(!window.wmToast)document.documentElement.classList.remove("fx")},4000)</script>
+<script src="../../fx.js?v=c74c7088" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Misiones secretas de GTA 6", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://wastedmap.com/d/5-easter-eggs-que-dan-mejoras-permanentes-de-estadisticas-b8087/", "name": "5 easter eggs que dan mejoras permanentes de estadísticas"}, {"@type": "ListItem", "position": 2, "url": "https://wastedmap.com/d/abduccion-alienigena-y-mision-secreta-alien-dream-b2ed3/", "name": "Abducción alienígena y misión secreta Alien Dream"}, {"@type": "ListItem", "position": 3, "url": "https://wastedmap.com/d/maximo-botin-en-el-golpe-al-cartel-e1061/", "name": "Máximo botín en el golpe al cartel"}, {"@type": "ListItem", "position": 4, "url": "https://wastedmap.com/d/como-desbloquear-el-clonador-de-llaves-ba1e0/", "name": "Cómo desbloquear el clonador de llaves"}, {"@type": "ListItem", "position": 5, "url": "https://wastedmap.com/d/mision-secreta-para-obtener-un-bugatti-gratis-a3779/", "name": "Misión secreta para obtener un Bugatti gratis"}, {"@type": "ListItem", "position": 6, "url": "https://wastedmap.com/d/guia-de-hidden-charges-las-tres-antenas-66620/", "name": "Guía de Hidden Charges: las tres antenas"}, {"@type": "ListItem", "position": 7, "url": "https://wastedmap.com/d/final-bueno-de-la-mision-de-kyle-y-recompensas-unicas-191e8/", "name": "Final bueno de la misión de Kyle y recompensas únicas"}, {"@type": "ListItem", "position": 8, "url": "https://wastedmap.com/d/aumento-permanente-de-enfoque-en-el-campo-de-tiro-7f8e3/", "name": "Aumento permanente de Enfoque en el campo de tiro"}, {"@type": "ListItem", "position": 9, "url": "https://wastedmap.com/d/como-conseguir-el-grotti-cheetah-gratis-a772b/", "name": "Cómo conseguir el Grotti Cheetah gratis"}, {"@type": "ListItem", "position": 10, "url": "https://wastedmap.com/d/easter-egg-de-red-hulk-y-finales-alternativos-54346/", "name": "Easter egg de Red Hulk y finales alternativos"}]}</script>
 </head>
 <body>
@@ -64,6 +66,7 @@ document.querySelectorAll(".done-btn").forEach(b => {
     done.has(b.dataset.slug) ? done.delete(b.dataset.slug) : done.add(b.dataset.slug);
     try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch {}
     paint();
+    if (done.has(b.dataset.slug) && window.wmToast) wmToast("¡Secreto encontrado!", "Lo sumamos a tu lista");
   });
   paint();
 });

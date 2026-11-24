@@ -183,6 +183,8 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <meta name="theme-color" content="#f6f3ee">
 <link rel="preload" href="{root}fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{root}site.css?v={_css_version()}">
+<script>document.documentElement.classList.add("fx");setTimeout(()=>{{if(!window.wmToast)document.documentElement.classList.remove("fx")}},4000)</script>
+<script src="{root}fx.js?v={_ver("fx.js")}" defer></script>
 {ld}
 </head>
 <body>
@@ -218,6 +220,7 @@ document.querySelectorAll(".done-btn").forEach(b => {{
     done.has(b.dataset.slug) ? done.delete(b.dataset.slug) : done.add(b.dataset.slug);
     try {{ localStorage.setItem(KEY, JSON.stringify([...done])); }} catch {{}}
     paint();
+    if (done.has(b.dataset.slug) && window.wmToast) wmToast("¡Secreto encontrado!", "Lo sumamos a tu lista");
   }});
   paint();
 }});
@@ -427,7 +430,7 @@ def _map_page(by_zone: dict[str, list[dict]], zones: dict[str, str]) -> str:
     body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Mapa</nav>
 <h1>El mapa de los secretos</h1>
 <p class="lead">{escape(intro)}</p>
-<div class="map-wrap">{map_svg(counts, links, root)}</div>
+<div class="map-wrap" data-reveal><div class="ex-map">{map_svg(counts, links, root)}<div class="radar" aria-hidden="true"></div></div></div>
 <p class="note">Mapa esquemático hecho por WastedMap: no es el mapa oficial del juego y las ubicaciones son aproximadas. Cada burbuja agrupa los descubrimientos de esa zona.</p>
 <div class="area-grid">{"".join(cards)}</div>"""
     return _layout(title=f"Mapa de secretos de GTA 6 por zona | {config.SITE_NAME}", description=intro,

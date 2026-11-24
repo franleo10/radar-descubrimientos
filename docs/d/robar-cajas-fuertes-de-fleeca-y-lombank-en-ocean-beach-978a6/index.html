@@ -20,7 +20,9 @@
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <meta name="theme-color" content="#f6f3ee">
 <link rel="preload" href="../../fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../site.css?v=fc1fccfc">
+<link rel="stylesheet" href="../../site.css?v=e71e5e0b">
+<script>document.documentElement.classList.add("fx");setTimeout(()=>{if(!window.wmToast)document.documentElement.classList.remove("fx")},4000)</script>
+<script src="../../fx.js?v=c74c7088" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://wastedmap.com/"}, {"@type": "ListItem", "position": 2, "name": "Dinero", "item": "https://wastedmap.com/c/dinero/"}, {"@type": "ListItem", "position": 3, "name": "Robar cajas fuertes de Fleeca y Lombank en Ocean Beach", "item": "https://wastedmap.com/d/robar-cajas-fuertes-de-fleeca-y-lombank-en-ocean-beach-978a6/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Robar cajas fuertes de Fleeca y Lombank en Ocean Beach", "description": "Método de dinero basado en robar las cajas fuertes de los bancos Fleeca y Lombank en Ocean Beach, Vice City, que son de los golpes que más pagan.", "thumbnailUrl": ["https://i.ytimg.com/vi/nelwMraqfKo/hqdefault.jpg"], "uploadDate": "2026-11-23T20:40:29Z", "embedUrl": "https://www.youtube.com/embed/nelwMraqfKo", "contentUrl": "https://www.youtube.com/watch?v=nelwMraqfKo"}</script>
 </head>
 <body>
@@ -93,6 +95,7 @@ document.querySelectorAll(".done-btn").forEach(b => {
     done.has(b.dataset.slug) ? done.delete(b.dataset.slug) : done.add(b.dataset.slug);
     try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch {}
     paint();
+    if (done.has(b.dataset.slug) && window.wmToast) wmToast("¡Secreto encontrado!", "Lo sumamos a tu lista");
   });
   paint();
 });
