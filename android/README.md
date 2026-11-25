@@ -29,16 +29,20 @@ Necesita el SDK de Android (la ruta va en `local.properties`, que no se sube) y 
 1. **IDs de AdMob**: en `gradle.properties` completá `admobAppId`, `admobBannerId` y `admobInterstitialId`
    con los de tu cuenta de AdMob. Mientras estén vacíos, la versión final usa los anuncios de prueba de Google.
    La versión de prueba (debug) usa siempre los de prueba, para no generar clics inválidos.
-2. **Firma**: creá la clave una sola vez y guardala en un lugar seguro (si la perdés, no podés actualizar la app):
+2. **Firma**: la clave vive fuera del repo, en la carpeta `WastedMap-firma` del usuario de Windows (la
+   compilación la busca ahí o en `android/keystore.properties`). Se crea una sola vez; guardá una copia aparte:
    ```
-   keytool -genkeypair -v -keystore wastedmap-release.jks -alias wastedmap -keyalg RSA -keysize 2048 -validity 10000
+   cd $HOME\WastedMap-firma
+   & "C:\Program Files\Android\Android Studio3\jbr\bin\keytool.exe" -genkeypair -v -keystore wastedmap-release.jks -alias wastedmap -keyalg RSA -keysize 2048 -validity 10000
    ```
-   Después creá `android/keystore.properties` (no se sube al repo):
+   En la misma carpeta va `keystore.properties` (nunca se sube a ningún lado):
    ```
    storeFile=wastedmap-release.jks
-   storePassword=...
    keyAlias=wastedmap
+   storePassword=...
    keyPassword=...
    ```
+   Activá la firma de apps de Google Play: Google guarda la clave final y, si perdés esta ("clave de subida"),
+   se puede reemplazar pidiéndolo desde Play Console.
 3. **Versión**: en cada actualización subí `versionCode` (y `versionName`) en `app/build.gradle.kts`.
 4. **app-ads.txt**: cuando tengas el ID de editor de AdMob (`pub-...`), va en `docs/app-ads.txt` del sitio.
