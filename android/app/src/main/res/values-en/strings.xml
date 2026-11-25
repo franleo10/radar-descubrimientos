@@ -3,4 +3,14 @@
     <string name="offline_title">No connection</string>
     <string name="offline_text">Check your internet and try again.</string>
     <string name="retry">Try again</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_map">Map</string>
+    <string name="tab_guides">Guides</string>
+    <string name="tab_list">My list</string>
+    <string name="tab_list_100">100% list</string>
+    <string name="share">Share</string>
+    <string name="language">Language</string>
+    <string name="open_browser">Open in browser</string>
+    <string name="privacy_options">Ad privacy options</string>
+    <string name="back">Back</string>
 </resources>

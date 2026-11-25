@@ -6,7 +6,6 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.CookieManager
@@ -15,7 +14,6 @@ import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Button
 import android.widget.FrameLayout
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
@@ -25,33 +23,50 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.progressindicator.LinearProgressIndicator
+import org.json.JSONArray
 import java.util.Locale
 
 /**
- * La app es la web de WastedMap adentro, con un banner de AdMob fijo abajo.
- * - Los enlaces de wastedmap.com se quedan en la app; los demás (YouTube, Telegram, mail) se abren afuera.
- * - Recuerda la última página y, la primera vez, abre la portada en el idioma del teléfono.
- * - El sitio sabe que está en la app porque el User-Agent termina en "WastedMapApp/<versión>".
+ * La app muestra wastedmap.com adentro, pero con forma de app:
+ * - Arriba, una barra propia con el título de la página, "atrás" y un menú (compartir, idioma, navegador).
+ * - Abajo, pestañas: Inicio, Mapa, Guías y Mi lista (en el idioma del sitio que se está viendo).
+ * - La web, al ver "WastedMapApp" en el User-Agent, esconde su barra, su pie y la cinta de novedades.
+ * - Banner de AdMob entre el contenido y las pestañas; anuncio de pantalla completa al abrir guías (ver Ads).
  */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var web: WebView
     private lateinit var refresh: SwipeRefreshLayout
     private lateinit var offline: View
+    private lateinit var toolbar: MaterialToolbar
+    private lateinit var nav: BottomNavigationView
+    private lateinit var progress: LinearProgressIndicator
     private lateinit var ads: Ads
     private var fullscreenView: View? = null
     private var fullscreenCallback: WebChromeClient.CustomViewCallback? = null
     private var mainFrameError = false
+    private var syncingTab = false
 
     private val site = Uri.parse(BuildConfig.SITE)
     private val prefs by lazy { getSharedPreferences("app", MODE_PRIVATE) }
+
+    /** Rutas de cada pestaña según el idioma del sitio. */
+    private val tabs = mapOf(
+        "es" to listOf("/", "/mapa/", "/guias/", "/lista/"),
+        "pt" to listOf("/pt/", "/pt/mapa/", "/pt/guias/", "/pt/100-por-cento/"),
+        "en" to listOf("/en/", "/en/mapa/", "/en/guias/", "/en/100-percent/"),
+    )
+    private val tabIds by lazy { listOf(R.id.tab_home, R.id.tab_map, R.id.tab_guides, R.id.tab_list) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Pantalla de borde a borde: la barra de estado y la de navegación no tapan la página.
         WindowCompat.setDecorFitsSystemWindows(window, false)
         val root = findViewById<View>(R.id.root)
         ViewCompat.setOnApplyWindowInsetsListener(root) { v, insets ->
@@ -59,15 +74,23 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
             insets
         }
-        WindowInsetsControllerCompat(window, root).isAppearanceLightStatusBars = true
+        WindowInsetsControllerCompat(window, root).apply {
+            isAppearanceLightStatusBars = true
+            isAppearanceLightNavigationBars = true
+        }
 
         web = findViewById(R.id.web)
         refresh = findViewById(R.id.refresh)
         offline = findViewById(R.id.offline)
-        findViewById<Button>(R.id.retry).setOnClickListener { offline.visibility = View.GONE; web.reload() }
+        progress = findViewById(R.id.progress)
+        toolbar = findViewById(R.id.toolbar)
+        nav = findViewById(R.id.nav)
+        findViewById<MaterialButton>(R.id.retry).setOnClickListener { offline.visibility = View.GONE; web.reload() }
         refresh.setColorSchemeColors(getColor(R.color.pink))
         refresh.setOnRefreshListener { web.reload() }
 
+        setupToolbar()
+        setupTabs()
         setupWebView()
         ads = Ads(this, findViewById(R.id.banner))
         ads.start()
@@ -82,19 +105,105 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        // Si la pantalla se volvió a crear (por ejemplo, al girar), recupera la página; si no hay nada que
-        // recuperar, carga la de inicio.
         val restored = savedInstanceState?.let { web.restoreState(it) }
-        if (restored == null || web.url.isNullOrEmpty()) {
-            Log.d("WastedMap", "cargando ${startUrl(intent)}")
-            web.loadUrl(startUrl(intent))
-        }
+        if (restored == null || web.url.isNullOrEmpty()) web.loadUrl(startUrl(intent))
     }
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         intent.data?.takeIf { isOurs(it) }?.let { web.loadUrl(it.toString()) }
     }
+
+    // ------------------------------------------------------------------ barra de arriba
+
+    private fun setupToolbar() {
+        toolbar.title = getString(R.string.app_name)
+        toolbar.setNavigationContentDescription(R.string.back)
+        toolbar.setNavigationOnClickListener { if (web.canGoBack()) web.goBack() }
+        toolbar.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.action_share -> share()
+                R.id.action_browser -> web.url?.let { openOutside(Uri.parse(it)) }
+                R.id.action_privacy -> ads.showPrivacyOptions()
+                R.id.lang_es -> switchLanguage("es")
+                R.id.lang_pt -> switchLanguage("pt")
+                R.id.lang_en -> switchLanguage("en")
+            }
+            true
+        }
+    }
+
+    /** Actualiza título, flecha de atrás, idioma marcado y pestaña según la página actual. */
+    private fun refreshChrome(url: String?, title: String? = null) {
+        val path = url?.let { Uri.parse(it).path } ?: "/"
+        val lang = langOf(path)
+        val atTab = tabs.getValue(lang).indexOf(path)
+        toolbar.navigationIcon = if (web.canGoBack() && atTab < 0) getDrawable(R.drawable.ic_back) else null
+        val clean = (title ?: web.title).orEmpty().substringBefore(" | ").trim()
+
+        toolbar.menu.findItem(R.id.lang_es).isChecked = lang == "es"
+        toolbar.menu.findItem(R.id.lang_pt).isChecked = lang == "pt"
+        toolbar.menu.findItem(R.id.lang_en).isChecked = lang == "en"
+        toolbar.menu.findItem(R.id.action_privacy).isVisible = ads.privacyOptionsRequired()
+        prefs.edit().putString("lang", lang).apply()
+        // La última pestaña dice "Mi lista" en español y "Lista 100 %" en los otros idiomas (va a otra página).
+        nav.menu.findItem(R.id.tab_list).setTitle(if (lang == "es") R.string.tab_list else R.string.tab_list_100)
+        toolbar.title = when {
+            atTab == 0 || clean.isEmpty() || clean.startsWith("http") -> getString(R.string.app_name)
+            atTab > 0 -> nav.menu.findItem(tabIds[atTab]).title   // en una pestaña: su nombre
+            else -> clean
+        }
+        if (atTab >= 0 && nav.selectedItemId != tabIds[atTab]) {
+            syncingTab = true
+            nav.selectedItemId = tabIds[atTab]
+            syncingTab = false
+        }
+    }
+
+    private fun langOf(path: String): String = when {
+        path.startsWith("/pt/") || path == "/pt" -> "pt"
+        path.startsWith("/en/") || path == "/en" -> "en"
+        else -> "es"
+    }
+
+    private fun share() {
+        val url = web.url ?: return
+        val text = listOfNotNull(web.title?.substringBefore(" | ")?.takeIf { it.isNotBlank() }, url).joinToString("\n")
+        startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_TEXT, text)
+        }, getString(R.string.share)))
+    }
+
+    /** Va a la misma página en el otro idioma (según los enlaces hreflang de la página) o a su portada. */
+    private fun switchLanguage(lang: String) {
+        val hreflang = mapOf("es" to "es", "pt" to "pt-BR", "en" to "en").getValue(lang)
+        val js = "JSON.stringify([...document.querySelectorAll('link[rel=alternate][hreflang]')].map(l=>[l.hreflang,l.href]))"
+        web.evaluateJavascript(js) { raw ->
+            val target = try {
+                val arr = JSONArray(JSONArray("[$raw]").getString(0))
+                (0 until arr.length()).map { arr.getJSONArray(it) }
+                    .firstOrNull { it.getString(0) == hreflang }?.getString(1)
+            } catch (_: Exception) { null }
+            web.loadUrl(target ?: (BuildConfig.SITE + tabs.getValue(lang)[0]))
+        }
+    }
+
+    // ------------------------------------------------------------------ pestañas de abajo
+
+    private fun setupTabs() {
+        nav.setOnItemSelectedListener { item ->
+            if (!syncingTab) {
+                val lang = langOf(web.url?.let { Uri.parse(it).path } ?: (prefs.getString("lang", "es") ?: "es").let { "/$it/" })
+                web.loadUrl(BuildConfig.SITE + tabs.getValue(lang)[tabIds.indexOf(item.itemId)])
+            }
+            true
+        }
+        // Tocar la pestaña en la que ya estás: vuelve arriba de todo.
+        nav.setOnItemReselectedListener { web.evaluateJavascript("window.scrollTo({top:0,behavior:'smooth'})", null) }
+    }
+
+    // ------------------------------------------------------------------ web
 
     /** Un enlace a wastedmap.com, la última página vista o la portada en el idioma del teléfono. */
     private fun startUrl(intent: Intent?): String {
@@ -140,31 +249,40 @@ class MainActivity : AppCompatActivity() {
 
             override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) {
                 mainFrameError = false
+                if (!refresh.isRefreshing) progress.visibility = View.VISIBLE
             }
 
             override fun onPageFinished(view: WebView, url: String) {
                 refresh.isRefreshing = false
+                progress.visibility = View.GONE
                 if (!mainFrameError) {
                     offline.visibility = View.GONE
                     prefs.edit().putString("last", url).apply()
                 }
-                // Avisa a la página si hay que mostrar "Opciones de privacidad de anuncios".
                 if (ads.privacyOptionsRequired()) {
                     view.evaluateJavascript("document.documentElement.classList.add('app-privacy')", null)
                 }
+                refreshChrome(url)
+            }
+
+            override fun doUpdateVisitedHistory(view: WebView, url: String, isReload: Boolean) {
+                refreshChrome(url)
             }
 
             override fun onReceivedError(view: WebView, request: WebResourceRequest, error: WebResourceError) {
                 if (request.isForMainFrame) {
                     mainFrameError = true
                     refresh.isRefreshing = false
+                    progress.visibility = View.GONE
                     offline.visibility = View.VISIBLE
                 }
             }
         }
 
-        // Videos de YouTube a pantalla completa.
         web.webChromeClient = object : WebChromeClient() {
+            override fun onReceivedTitle(view: WebView, title: String) = refreshChrome(view.url, title)
+
+            // Videos de YouTube a pantalla completa.
             override fun onShowCustomView(view: View, callback: CustomViewCallback) {
                 if (fullscreenView != null) { callback.onCustomViewHidden(); return }
                 fullscreenView = view

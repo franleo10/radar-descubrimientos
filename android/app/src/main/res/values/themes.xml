@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.WastedMap" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.WastedMap" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/pink</item>
-        <item name="colorAccent">@color/pink</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondaryContainer">@color/pink_soft</item>
+        <item name="colorOnSecondaryContainer">@color/pink</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="android:colorBackground">@color/paper</item>
         <item name="android:windowBackground">@color/paper</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/paper</item>
+        <item name="android:navigationBarColor">@color/card</item>
+    </style>
+
+    <style name="NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/pink_soft</item>
+    </style>
+
+    <style name="Toolbar.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ink</item>
     </style>
 
     <!-- Pantalla de inicio: el ícono sobre fondo oscuro, como el ícono de la app. -->

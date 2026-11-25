@@ -3,4 +3,14 @@
     <string name="offline_title">Sem conexão</string>
     <string name="offline_text">Verifique sua internet e tente de novo.</string>
     <string name="retry">Tentar de novo</string>
+    <string name="tab_home">Início</string>
+    <string name="tab_map">Mapa</string>
+    <string name="tab_guides">Guias</string>
+    <string name="tab_list">Minha lista</string>
+    <string name="tab_list_100">Lista 100 %</string>
+    <string name="share">Compartilhar</string>
+    <string name="language">Idioma</string>
+    <string name="open_browser">Abrir no navegador</string>
+    <string name="privacy_options">Opções de privacidade de anúncios</string>
+    <string name="back">Voltar</string>
 </resources>

@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/paper"
+    android:background="@color/card"
     android:orientation="vertical">
+
+    <!-- Barra de arriba: título de la página, atrás y menú (compartir, idioma...). -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/card"
+        app:titleTextAppearance="@style/Toolbar.Title"
+        app:menu="@menu/top" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:background="@color/paper">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/refresh"
@@ -21,6 +37,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/pink"
+            app:trackThickness="3dp" />
 
         <!-- Sin conexión -->
         <LinearLayout
@@ -58,22 +83,38 @@
                 android:textColor="@color/ink2"
                 android:textSize="15sp" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/retry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/pink"
-                android:text="@string/retry"
-                android:textColor="@android:color/white" />
+                android:text="@string/retry" />
         </LinearLayout>
     </FrameLayout>
 
-    <!-- Banner de AdMob: fuera de la página, fijo abajo. -->
+    <!-- Banner de AdMob: fuera de la página, entre el contenido y la navegación. -->
     <FrameLayout
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/paper"
         android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card"
+        app:backgroundTint="@color/card"
+        app:elevation="0dp"
+        app:itemActiveIndicatorStyle="@style/NavIndicator"
+        app:itemIconTint="@color/nav_item"
+        app:itemTextColor="@color/nav_item"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/nav" />
 </LinearLayout>
