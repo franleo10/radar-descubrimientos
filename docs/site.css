@@ -687,3 +687,4 @@ html.app .topbar,html.app .foot,html.app .ticker,html.app .crumbs{display:none}
 html.app .page{padding-top:20px}
 html.app .hero{padding-top:28px}
 html.app .final{padding-bottom:48px}
+html.app .pt-actions .btn:not(.primary){display:none}
