@@ -1,6 +1,6 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-25T11:19:18Z",
+ "updated_at": "2026-11-25T15:06:27Z",
  "entries": [
   {
    "id": "yt:Bi3xOEuJWJk",
@@ -101,6 +101,217 @@
     "src": "cea9b59830"
    },
    "slug": "otro-boost-de-salud-permanente-en-laboratorio-secreto-cfad1"
+  },
+  {
+   "id": "yt:9BYalGApxjo",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=9BYalGApxjo",
+   "video_id": "9BYalGApxjo",
+   "author": "Dynasty",
+   "published_at": "2026-11-25T04:23:26Z",
+   "title_original": "GTA 6 Easter Eggs – SECRET Teenage Mutant Ninja Turtles Origin Story! (TMNT Easter Egg)",
+   "popularity": 6430,
+   "thumbnail": "https://i.ytimg.com/vi/9BYalGApxjo/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Easter egg de las Tortugas Ninja",
+   "resumen": "Un encuentro nocturno en un sistema de alcantarillas al norte de Milport muestra cuatro tortugas y una rata parecida a Splinter junto a una sustancia verde. Se puede documentar con WAiNK como \"Intriguing Substance\".",
+   "zona": "Norte de Milport, sistema de alcantarillas e irrigación",
+   "como_conseguirlo": "Visitar la zona de noche y observar las tortugas y la rata; documentar la sustancia verde con la app WAiNK.",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es un encuentro secreto de noche en un sistema de alcantarillas e irrigación al norte de Milport. Aparecen cuatro tortugas y una rata parecida a Splinter junto a una sustancia verde que hace referencia al mutágeno de TMNT.\n\nLa sustancia se puede documentar con la app WAiNK como \"Intriguing Substance\". Si se observa con binoculares, los animales no se asustan.",
+   "pasos": [
+    "Visitar la zona al norte de Milport de noche.",
+    "Observar a las tortugas y la rata usando binoculares para que no huyan.",
+    "Documentar la sustancia verde que se filtra por una grieta del muro con la app WAiNK."
+   ],
+   "region": "Lummox County",
+   "macro": "Mount Kalaga",
+   "pt": {
+    "titulo": "Easter egg das Tartarugas Ninja",
+    "resumen": "Um encontro noturno em um sistema de esgotos ao norte de Milport mostra quatro tartarugas e um rato parecido com o Splinter ao lado de uma substância verde. Pode ser documentado com o WAiNK como \"Intriguing Substance\".",
+    "detalle": "É um encontro secreto à noite em um sistema de esgoto e irrigação ao norte de Milport. Aparecem quatro tartarugas e um rato parecido com o Splinter ao lado de uma substância verde que faz referência ao mutágeno de TMNT.\n\nA substância pode ser documentada com o app WAiNK como \"Intriguing Substance\". Se observados com binóculos, os animais não fogem.",
+    "pasos": [
+     "Visitar a área ao norte de Milport à noite.",
+     "Observar as tartarugas e o rato usando binóculos para que não fujam.",
+     "Documentar a substância verde que vaza por uma rachadura do muro com o app WAiNK."
+    ],
+    "src": "b7e770f59f"
+   },
+   "en": {
+    "titulo": "Ninja Turtles Easter Egg",
+    "resumen": "A nighttime encounter in a sewer system north of Milport shows four turtles and a Splinter-like rat next to a green substance. It can be documented with WAiNK as \"Intriguing Substance.\"",
+    "detalle": "This is a secret nighttime encounter in a sewer and irrigation system north of Milport. Four turtles and a Splinter-like rat appear next to a green substance that references the TMNT mutagen.\n\nThe substance can be documented with the WAiNK app as \"Intriguing Substance.\" If observed through binoculars, the animals won't get scared.",
+    "pasos": [
+     "Visit the area north of Milport at night.",
+     "Observe the turtles and the rat using binoculars so they don't run away.",
+     "Document the green substance leaking through a crack in the wall with the WAiNK app."
+    ],
+    "src": "b7e770f59f"
+   },
+   "slug": "easter-egg-de-las-tortugas-ninja-281d3"
+  },
+  {
+   "id": "yt:FgMySjfhIp0",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=FgMySjfhIp0",
+   "video_id": "FgMySjfhIp0",
+   "author": "Hollow",
+   "published_at": "2026-11-25T03:26:38Z",
+   "title_original": "I Time Traveled Back to Vice City (2002) in GTA 6..",
+   "popularity": 107653,
+   "thumbnail": "https://i.ytimg.com/vi/FgMySjfhIp0/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Portal al Vice City de 2002 en el Malibu Club",
+   "resumen": "Al activar 12 interruptores eléctricos de subestaciones LPL repartidos por el mapa y entrar al Malibu Club se abre un portal a una versión retro de Vice City, con la camisa hawaiana de Tommy Vercetti y su motocicleta American Glory.",
+   "zona": "Malibu Club, Vice City",
+   "como_conseguirlo": "Activar las 12 llaves de energía de las subestaciones LPL repartidas por el mapa y entrar al Malibu Club para abrir el portal.",
+   "spoiler": false,
+   "confianza": "media",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=5BW8LOnL1GE",
+     "video_id": "5BW8LOnL1GE",
+     "author": "TmarTn2",
+     "popularity": 81653,
+     "published_at": "2026-11-23T17:41:02Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=wHDlyCRERbQ",
+     "video_id": "wHDlyCRERbQ",
+     "author": "FlayHQ",
+     "popularity": 68322,
+     "published_at": "2026-11-24T05:50:15Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=clkDfN3Q4fs",
+     "video_id": "clkDfN3Q4fs",
+     "author": "MrDalekJD",
+     "popularity": 43171,
+     "published_at": "2026-11-24T03:51:45Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=4zVYLPSTvao",
+     "video_id": "4zVYLPSTvao",
+     "author": "ZacCoxTV",
+     "popularity": 28302,
+     "published_at": "2026-11-23T13:17:44Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=t3zvakxz0js",
+     "video_id": "t3zvakxz0js",
+     "author": "Misleading",
+     "popularity": 28265,
+     "published_at": "2026-11-23T12:44:53Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=bxWAygrBsIs",
+     "video_id": "bxWAygrBsIs",
+     "author": "GameRiot",
+     "popularity": 17680,
+     "published_at": "2026-11-23T14:39:33Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=PIfk0s6Qe8Y",
+     "video_id": "PIfk0s6Qe8Y",
+     "author": "GTA Series Videos",
+     "popularity": 15852,
+     "published_at": "2026-11-24T18:16:21Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=4KwBs_RkilM",
+     "video_id": "4KwBs_RkilM",
+     "author": "Dan Allen Gaming",
+     "popularity": 12463,
+     "published_at": "2026-11-23T15:48:36Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=Bwfks9dGUy8",
+     "video_id": "Bwfks9dGUy8",
+     "author": "ZoneX",
+     "popularity": 5876,
+     "published_at": "2026-11-23T14:53:23Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=puhksjX8F2k",
+     "video_id": "puhksjX8F2k",
+     "author": "Chris Chem",
+     "popularity": 4989,
+     "published_at": "2026-11-23T14:08:16Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=NVXXMZ9YDvY",
+     "video_id": "NVXXMZ9YDvY",
+     "author": "zWillyx",
+     "popularity": 4480,
+     "published_at": "2026-11-24T13:46:23Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=ftMow0Pc-PY",
+     "video_id": "ftMow0Pc-PY",
+     "author": "MarleyThirteen",
+     "popularity": 3934,
+     "published_at": "2026-11-23T19:06:19Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=8fmuqGMWgJA",
+     "video_id": "8fmuqGMWgJA",
+     "author": "Genie",
+     "popularity": 3470,
+     "published_at": "2026-11-23T13:53:31Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=RQKhlKn6AEQ",
+     "video_id": "RQKhlKn6AEQ",
+     "author": "HelloItsVG",
+     "popularity": 3385,
+     "published_at": "2026-11-24T04:12:36Z"
+    }
+   ],
+   "enriched": true,
+   "detalle": "Es un easter egg que abre un portal a una versión retro de Vice City con gráficos al estilo PS2 de 2002. Al cruzarlo aparecen la camisa hawaiana de Tommy Vercetti y su motocicleta American Glory.\n\nPara activarlo hay que encender las 12 llaves de energía de las subestaciones LPL repartidas por el mapa y después entrar al Malibu Club. Recién ahí se abre el portal.",
+   "pasos": [
+    "Activar los 12 interruptores eléctricos de las subestaciones LPL repartidas por el mapa.",
+    "Entrar al Malibu Club en Vice City para abrir el portal a la versión de 2002."
+   ],
+   "region": "Vice City",
+   "macro": "Vice City",
+   "pt": {
+    "titulo": "Portal para o Vice City de 2002 no Malibu Club",
+    "resumen": "Ao ativar 12 interruptores elétricos de subestações LPL espalhados pelo mapa e entrar no Malibu Club, abre-se um portal para uma versão retrô de Vice City, com a camisa havaiana de Tommy Vercetti e sua motocicleta American Glory.",
+    "detalle": "É um easter egg que abre um portal para uma versão retrô de Vice City com gráficos no estilo PS2 de 2002. Ao atravessá-lo, aparecem a camisa havaiana de Tommy Vercetti e sua motocicleta American Glory.\n\nPara ativar, é preciso ligar as 12 chaves de energia das subestações LPL espalhadas pelo mapa e depois entrar no Malibu Club. Só então o portal se abre.",
+    "pasos": [
+     "Ativar os 12 interruptores elétricos das subestações LPL espalhadas pelo mapa.",
+     "Entrar no Malibu Club em Vice City para abrir o portal para a versão de 2002."
+    ],
+    "src": "4059cb089e"
+   },
+   "en": {
+    "titulo": "2002 Vice City Portal at the Malibu Club",
+    "resumen": "Turning on the 12 electrical switches at LPL substations spread across the map and then entering the Malibu Club opens a portal to a retro version of Vice City, featuring Tommy Vercetti's Hawaiian shirt and his American Glory motorcycle.",
+    "detalle": "This is an easter egg that opens a portal to a retro version of Vice City with PS2-style graphics from 2002. Crossing it reveals Tommy Vercetti's Hawaiian shirt and his American Glory motorcycle.\n\nTo activate it, you need to power up the 12 energy keys at the LPL substations spread across the map, then enter the Malibu Club. Only then does the portal open.",
+    "pasos": [
+     "Activate the 12 electrical switches at the LPL substations spread across the map.",
+     "Enter the Malibu Club in Vice City to open the portal to the 2002 version."
+    ],
+    "src": "4059cb089e"
+   },
+   "slug": "portal-al-vice-city-de-2002-en-el-malibu-club-ec0e8"
   },
   {
    "id": "yt:ihtobSTJVEY",
@@ -228,6 +439,55 @@
    "slug": "piloto-automatico-en-el-bote-61c4d"
   },
   {
+   "id": "yt:FeZgt7pZ7NI",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=FeZgt7pZ7NI",
+   "video_id": "FeZgt7pZ7NI",
+   "author": "LunarGaming",
+   "published_at": "2026-11-25T00:21:09Z",
+   "title_original": "GTA 6 – All Car Locations For RANDY’S WISH LIST (Quick Method No Police)",
+   "popularity": 23575,
+   "thumbnail": "https://i.ytimg.com/vi/FeZgt7pZ7NI/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Todos los autos de la lista de deseos de Randy",
+   "resumen": "Guía para encontrar los 18 autos de Randy's Wish List y entregarlos sin alertar a la policía ni recibir daño. Incluye un método rápido de entrega usando Jason, Lucia y RideMe.",
+   "zona": "Ocean Beach y Capri",
+   "como_conseguirlo": "Completar Randy's Wish List entregando los 18 vehículos indicados; para desbloquear la remoción avanzada de rastreadores, completar la misión Shoot a Promo en el Capítulo 4.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es una guía para encontrar los 18 autos de la Wish List de Randy y entregarlos sin llamar a la policía ni recibir daño. El video muestra ubicaciones de autos en Ocean Beach y Capri, y un método rápido de entrega usando a Jason, Lucia y RideMe.\n\nPara desbloquear la remoción avanzada de rastreadores hay que completar la misión Shoot a Promo en el Capítulo 4.",
+   "pasos": [
+    "Entregar los 18 vehículos de la Randy's Wish List.",
+    "Usar el método rápido de entrega con Jason, Lucia y RideMe para evitar persecuciones.",
+    "Completar la misión Shoot a Promo en el Capítulo 4 para desbloquear la remoción avanzada de rastreadores."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Todos os carros da lista de desejos de Randy",
+    "resumen": "Guia para encontrar os 18 carros da Randy's Wish List e entregá-los sem alertar a polícia nem receber dano. Inclui um método rápido de entrega usando Jason, Lucia e RideMe.",
+    "detalle": "É um guia para encontrar os 18 carros da Wish List de Randy e entregá-los sem chamar a polícia nem receber dano. O vídeo mostra localizações de carros em Ocean Beach e Capri, e um método rápido de entrega usando Jason, Lucia e RideMe.\n\nPara desbloquear a remoção avançada de rastreadores, é preciso completar a missão Shoot a Promo no Capítulo 4.",
+    "pasos": [
+     "Entregar os 18 veículos da Randy's Wish List.",
+     "Usar o método rápido de entrega com Jason, Lucia e RideMe para evitar perseguições.",
+     "Completar a missão Shoot a Promo no Capítulo 4 para desbloquear a remoção avançada de rastreadores."
+    ],
+    "src": "a73d21827e"
+   },
+   "en": {
+    "titulo": "All the Cars on Randy's Wish List",
+    "resumen": "Guide to finding the 18 cars on Randy's Wish List and delivering them without alerting the police or taking damage. Includes a fast delivery method using Jason, Lucia, and RideMe.",
+    "detalle": "This is a guide to finding the 18 cars on Randy's Wish List and delivering them without calling the police or taking damage. The video shows car locations in Ocean Beach and Capri, plus a fast delivery method using Jason, Lucia, and RideMe.\n\nTo unlock advanced tracker removal, you need to complete the mission Shoot a Promo in Chapter 4.",
+    "pasos": [
+     "Deliver the 18 vehicles from Randy's Wish List.",
+     "Use the fast delivery method with Jason, Lucia, and RideMe to avoid chases.",
+     "Complete the mission Shoot a Promo in Chapter 4 to unlock advanced tracker removal."
+    ],
+    "src": "a73d21827e"
+   },
+   "slug": "todos-los-autos-de-la-lista-de-deseos-de-randy-4aaf4"
+  },
+  {
    "id": "yt:ORpdb-Z6Smk",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=ORpdb-Z6Smk",
@@ -254,6 +514,89 @@
    ],
    "region": "",
    "slug": "billetes-marcados-y-codigos-de-caja-fuerte-en-robos-7095d"
+  },
+  {
+   "id": "yt:wz05ndJGnK4",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=wz05ndJGnK4",
+   "video_id": "wz05ndJGnK4",
+   "author": "Misleading",
+   "published_at": "2026-11-24T23:12:42Z",
+   "title_original": "How to Get Andrew Node’s SECRET Thrax in GTA 6 (No Glitches)",
+   "popularity": 35665,
+   "thumbnail": "https://i.ytimg.com/vi/wz05ndJGnK4/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Cómo conseguir el Thrax secreto de Andrew Node",
+   "resumen": "Guía del Thrax secreto de Andrew Node con las 10 ubicaciones de escaneo, el código de la sede y la ruta de desbloqueo legítima. Hay que llevar 70.000 dólares para registrarlo.",
+   "zona": "Sede de Andrew Node",
+   "como_conseguirlo": "Escanear las 10 ubicaciones, usar el código de la sede, pagar 70.000 dólares para registrar el Thrax (sin glitches de garaje).",
+   "spoiler": false,
+   "confianza": "media",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=J0fGrhRVq8I",
+     "video_id": "J0fGrhRVq8I",
+     "author": "SNIR",
+     "popularity": 19577,
+     "published_at": "2026-11-23T20:28:51Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=tjp9WItqejs",
+     "video_id": "tjp9WItqejs",
+     "author": "Arekkz Gaming",
+     "popularity": 17136,
+     "published_at": "2026-11-23T17:30:07Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=KdG_CrR1sLA",
+     "video_id": "KdG_CrR1sLA",
+     "author": "ZoneX",
+     "popularity": 10592,
+     "published_at": "2026-11-24T16:04:37Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=km51HmZK8Ug",
+     "video_id": "km51HmZK8Ug",
+     "author": "LunarGaming",
+     "popularity": 10207,
+     "published_at": "2026-11-24T02:00:19Z"
+    }
+   ],
+   "enriched": true,
+   "detalle": "Es una guía para conseguir el Thrax secreto de Andrew Node sin recurrir a glitches de garaje. Para registrar el vehículo hay que llevar 70.000 dólares.\n\nEl proceso combina escanear 10 ubicaciones y usar el código de la sede.",
+   "pasos": [
+    "Escanear las 10 ubicaciones indicadas.",
+    "Usar el código de la sede de Andrew Node.",
+    "Pagar 70.000 dólares para registrar el Thrax."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Como conseguir o Thrax secreto de Andrew Node",
+    "resumen": "Guia do Thrax secreto de Andrew Node com as 10 localizações de escaneamento, o código da sede e o caminho de desbloqueio legítimo. É preciso ter 70.000 dólares para registrá-lo.",
+    "detalle": "É um guia para conseguir o Thrax secreto de Andrew Node sem recorrer a glitches de garagem. Para registrar o veículo, é preciso ter 70.000 dólares.\n\nO processo combina escanear 10 localizações e usar o código da sede.",
+    "pasos": [
+     "Escanear as 10 localizações indicadas.",
+     "Usar o código da sede de Andrew Node.",
+     "Pagar 70.000 dólares para registrar o Thrax."
+    ],
+    "src": "73450b4dc4"
+   },
+   "en": {
+    "titulo": "How to Get Andrew Node's Secret Thrax",
+    "resumen": "Guide to Andrew Node's secret Thrax, covering the 10 scan locations, the headquarters code, and the legitimate unlock route. You need to bring $70,000 to register it.",
+    "detalle": "This is a guide to getting Andrew Node's secret Thrax without relying on garage glitches. You need to bring $70,000 to register the vehicle.\n\nThe process combines scanning 10 locations and using the headquarters code.",
+    "pasos": [
+     "Scan the 10 indicated locations.",
+     "Use the Andrew Node headquarters code.",
+     "Pay $70,000 to register the Thrax."
+    ],
+    "src": "73450b4dc4"
+   },
+   "slug": "como-conseguir-el-thrax-secreto-de-andrew-node-5fc1b"
   },
   {
    "id": "yt:IqKb-yJGroE",
@@ -346,7 +689,14 @@
     "pasos": [],
     "src": "fae1c92f2b"
    },
-   "slug": "15-consejos-para-empezar-en-gta-6-64aba"
+   "slug": "15-consejos-para-empezar-en-gta-6-64aba",
+   "en": {
+    "titulo": "15 tips for getting started in GTA 6",
+    "resumen": "A list of tips for starting out in Leonida, including stashing weapons, protecting your money, unlocking vehicle receivers, and improving stats. The text does not detail the steps for each tip.",
+    "detalle": "",
+    "pasos": [],
+    "src": "fae1c92f2b"
+   }
   },
   {
    "id": "yt:egVg5C0awOU",
@@ -479,6 +829,36 @@
     "src": "10eac1ebef"
    },
    "slug": "como-conseguir-el-auto-mas-rapido-gratis-53688"
+  },
+  {
+   "id": "yt:JlBI-9BvAVg",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=JlBI-9BvAVg",
+   "video_id": "JlBI-9BvAVg",
+   "author": "Nbrisky",
+   "published_at": "2026-11-24T21:29:15Z",
+   "title_original": "GTA 6 Money Method: Rob Lombank Bayside Stealthy (Easiest Bank, No Alarm)",
+   "popularity": 2222,
+   "thumbnail": "https://i.ytimg.com/vi/JlBI-9BvAVg/hqdefault.jpg",
+   "categoria": "dinero",
+   "titulo": "Robo silencioso al Lombank Bayside",
+   "resumen": "Método para robar el Lombank Bayside sin activar la alarma, abrir la caja fuerte con el código y escapar sin nivel de búsqueda alto. Las marcas se venden a un fence tras tener el Dye Pack Jammer.",
+   "zona": "Lombank Bayside",
+   "como_conseguirlo": "Conseguir el Dye Pack Jammer en la misión Credit Check, entrar en silencio, tomar el cajón de efectivo, obtener el código de la caja fuerte, abrirla, escapar y vender el dinero marcado a un fence.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es un método para robar el Lombank Bayside sin activar la alarma y sin generar un nivel de búsqueda alto. Según el video, es uno de los bancos más fáciles para conseguir dinero rápido.\n\nEl dinero marcado se puede vender a un fence una vez que se tiene el Dye Pack Jammer, que se obtiene en la misión Credit Check.",
+   "pasos": [
+    "Conseguir el Dye Pack Jammer en la misión Credit Check.",
+    "Entrar al banco en silencio y tomar el cajón de efectivo.",
+    "Obtener el código de la caja fuerte.",
+    "Abrir la caja fuerte.",
+    "Escapar sin generar un nivel de búsqueda alto.",
+    "Vender el dinero marcado a un fence."
+   ],
+   "region": "",
+   "slug": "robo-silencioso-al-lombank-bayside-cf8d9"
   },
   {
    "id": "yt:3oV89ktLD2Q",
@@ -786,7 +1166,14 @@
     "pasos": [],
     "src": "4711ba7797"
    },
-   "slug": "robar-cajeros-automaticos-con-un-camion-e8ed4"
+   "slug": "robar-cajeros-automaticos-con-un-camion-e8ed4",
+   "en": {
+    "titulo": "Robbing ATMs with a truck",
+    "resumen": "Proposes making quick money by robbing ATMs with a special truck. The description does not explain how to do it.",
+    "detalle": "Proposes making quick money by robbing ATMs with a special truck. The description does not explain how to do it.",
+    "pasos": [],
+    "src": "4711ba7797"
+   }
   },
   {
    "id": "yt:Gw6t8MWowH0",
@@ -859,7 +1246,14 @@
     "pasos": [],
     "src": "4c303e055e"
    },
-   "slug": "lugares-secretos-poco-conocidos-64efb"
+   "slug": "lugares-secretos-poco-conocidos-64efb",
+   "en": {
+    "titulo": "Little-Known Secret Locations",
+    "resumen": "A video showing secret locations such as a zoo, hidden islands and large mountains. The post does not indicate where they are or how to get there.",
+    "detalle": "",
+    "pasos": [],
+    "src": "4c303e055e"
+   }
   },
   {
    "id": "yt:2Zaq3UXpkFY",
@@ -926,7 +1320,14 @@
     "pasos": [],
     "src": "135dc61642"
    },
-   "slug": "dos-ubicaciones-secretas-de-pistola-dorada-930bd"
+   "slug": "dos-ubicaciones-secretas-de-pistola-dorada-930bd",
+   "en": {
+    "titulo": "Two Secret Golden Pistol Locations",
+    "resumen": "The video claims to show two secret places where you can get a golden pistol. The description does not explain the details.",
+    "detalle": "",
+    "pasos": [],
+    "src": "135dc61642"
+   }
   },
   {
    "id": "yt:oIL0-FFd15Y",
@@ -1028,7 +1429,19 @@
     "Guardar los vehículos con Moses, que no tiene rastreador."
    ],
    "region": "",
-   "slug": "tres-autos-raros-que-se-pueden-conseguir-temprano-d816a"
+   "slug": "tres-autos-raros-que-se-pueden-conseguir-temprano-d816a",
+   "pt": {
+    "titulo": "Três carros raros que podem ser conseguidos cedo",
+    "resumen": "Mostra três veículos raros: um carro do Paul Walker em uma garagem de Vespucci, um Caracara 4x4 único no complexo cultista de Port Gellhorn e um Dominator vermelho personalizado em um esconderijo de gangues em Port Gellhorn. Podem ser guardados com o Moses, que não tem rastreador.",
+    "detalle": "É um vídeo com três carros raros que podem ser conseguidos cedo no jogo. Um é um carro do Paul Walker em uma garagem de Vespucci Island, outro é um Caracara 4x4 único no complexo cultista de Port Gellhorn e o terceiro é um Dominator vermelho personalizado em um esconderijo de gangue em Port Gellhorn.\n\nSegundo a descrição, podem ser guardados com o Moses, que não tem rastreador.",
+    "pasos": [
+     "Encontrar o carro do Paul Walker em uma garagem de Vespucci Island.",
+     "Encontrar o Caracara 4x4 no complexo cultista de Port Gellhorn.",
+     "Encontrar o Dominator vermelho personalizado em um esconderijo de gangue de Port Gellhorn.",
+     "Guardar os veículos com o Moses, que não tem rastreador."
+    ],
+    "src": "f51a2945b6"
+   }
   },
   {
    "id": "yt:DF8fJVGaUPs",
@@ -1107,6 +1520,43 @@
    "slug": "clima-de-huracan-desbloqueable-00230"
   },
   {
+   "id": "yt:GdnBwWgfoWg",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=GdnBwWgfoWg",
+   "video_id": "GdnBwWgfoWg",
+   "author": "Killmoon",
+   "published_at": "2026-11-24T16:45:15Z",
+   "title_original": "GTA 6 Chapitre 2 : Le guide COMPLET !",
+   "popularity": 23029,
+   "thumbnail": "https://i.ytimg.com/vi/GdnBwWgfoWg/hqdefault.jpg",
+   "categoria": "otro",
+   "titulo": "Guía completa del capítulo 2 en francés",
+   "resumen": "Guía en francés del capítulo 2 que cubre objetos del Star Motel, armas legendarias, misiones secretas, autos raros y robos. El texto fue cortado y no detalla los pasos de cada punto.",
+   "zona": "Star Motel",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Guia completa do capítulo 2 em francês",
+    "resumen": "Guia em francês do capítulo 2 que cobre itens do Star Motel, armas lendárias, missões secretas, carros raros e roubos. O texto foi cortado e não detalha os passos de cada ponto.",
+    "detalle": "",
+    "pasos": [],
+    "src": "13ef9ee6fa"
+   },
+   "en": {
+    "titulo": "Full Chapter 2 Guide in French",
+    "resumen": "A guide in French to Chapter 2 covering Star Motel items, legendary weapons, secret missions, rare cars and heists. The text was cut off and does not detail the steps for each point.",
+    "detalle": "",
+    "pasos": [],
+    "src": "13ef9ee6fa"
+   },
+   "slug": "guia-completa-del-capitulo-2-en-frances-b1309"
+  },
+  {
    "id": "yt:_C_aI_OSaaY",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=_C_aI_OSaaY",
@@ -1168,7 +1618,17 @@
    ],
    "region": "Vice City",
    "macro": "Vice City",
-   "slug": "donde-comprar-cadenas-y-relojes-ae603"
+   "slug": "donde-comprar-cadenas-y-relojes-ae603",
+   "pt": {
+    "titulo": "Onde comprar correntes e relógios",
+    "resumen": "Indica que é possível comprar correntes cubanas na De'Luge Swimwear e relógios dourados na NOLA, em Vice City, disponíveis desde o início do jogo.",
+    "detalle": "Em Vice City é possível comprar correntes cubanas na De'Luge Swimwear e relógios dourados na NOLA. De acordo com os dados, esses acessórios estão disponíveis desde o começo do jogo, sem precisar esperar o final da história.",
+    "pasos": [
+     "Ir à De'Luge Swimwear e comprar correntes cubanas",
+     "Ir à NOLA e comprar relógios dourados"
+    ],
+    "src": "9cf9167e82"
+   }
   },
   {
    "id": "yt:QcGNxmlJLVY",
@@ -1271,7 +1731,14 @@
     "pasos": [],
     "src": "fc6453770e"
    },
-   "slug": "mas-de-40-mecanicas-ocultas-bc489"
+   "slug": "mas-de-40-mecanicas-ocultas-bc489",
+   "en": {
+    "titulo": "More Than 40 Hidden Mechanics",
+    "resumen": "A video compiling more than 40 advanced mechanics, both realistic and gameplay-related. The description does not detail what they are.",
+    "detalle": "",
+    "pasos": [],
+    "src": "fc6453770e"
+   }
   },
   {
    "id": "yt:BuoEBQYYVYI",
@@ -1565,6 +2032,20 @@
      "Sell the marked bills to Yasmani."
     ],
     "src": "6ee781cd0d"
+   },
+   "pt": {
+    "titulo": "Assalto rápido ao Lombank do centro",
+    "resumen": "Rota para roubar o Lombank do centro por cerca de 55.000 dólares sem esperar o cofre principal, vendendo as notas marcadas para Yasmani. O alarme dispara durante a seção das gavetas de dinheiro.",
+    "detalle": "Rota rápida para roubar o Lombank do centro, com um butim de cerca de 55.000 dólares sem esperar o cofre principal. As notas marcadas são vendidas para Yasmani. O alarme dispara durante a seção das gavetas de dinheiro, então não é um roubo furtivo.",
+    "pasos": [
+     "Entrar pela porta dos fundos.",
+     "Usar o código da sala de segurança.",
+     "Abrir o cofre do escritório.",
+     "Pegar o dinheiro das gavetas.",
+     "Fugir.",
+     "Vender as notas marcadas para Yasmani."
+    ],
+    "src": "6ee781cd0d"
    }
   },
   {
@@ -1659,6 +2140,18 @@
      "Unlock the Snap Gun (2:15).",
      "Unlock Tyrone (4:35).",
      "Find the secret bunker with the legendary SMG and rocket launcher (9:23)."
+    ],
+    "src": "83baaa059b"
+   },
+   "pt": {
+    "titulo": "Dez coisas para fazer primeiro no capítulo 3",
+    "resumen": "Guia com várias coisas úteis do capítulo 3: carro esportivo grátis com garagem, Snap Gun, armas lendárias, melhores fornecedores, mais capacidade bancária e formas de ganhar dinheiro. Inclui missões e conteúdos que podem ser perdidos.",
+    "detalle": "Guia com coisas que vale a pena fazer primeiro no capítulo 3 de Vice City: um carro esportivo grátis com garagem, a Snap Gun, armas lendárias, melhores fornecedores, mais capacidade bancária e formas de ganhar dinheiro. Também inclui missões e conteúdos que podem ser perdidos.",
+    "pasos": [
+     "Conseguir o carro esportivo grátis e a garagem (0:22).",
+     "Desbloquear a Snap Gun (2:15).",
+     "Desbloquear o Tyrone (4:35).",
+     "Procurar o bunker secreto com a SMG e o lança-foguetes lendários (9:23)."
     ],
     "src": "83baaa059b"
    }
@@ -1766,6 +2259,20 @@
      "Find the secret muscle car in La Cascara (6:23)."
     ],
     "src": "36dcc6ae4c"
+   },
+   "pt": {
+    "titulo": "Coisas antes de terminar o capítulo 2",
+    "resumen": "Guia com colecionáveis do motel Starlet, registro gratuito de carro, garagem grátis, dinheiro rápido na BuckMe, armas únicas, códigos de cofres e o Vapid Firebug Dominator com nitro.",
+    "detalle": "Guia com colecionáveis e recompensas que vale a pena aproveitar antes de terminar o capítulo 2. Inclui colecionáveis do Starlet Motel, o registro gratuito do carro de Moses, uma garagem grátis, um jeito fácil de chegar a 15.000 dólares na BuckMe e o Vapid Firebug Dominator com nitro.",
+    "pasos": [
+     "Procurar os colecionáveis do Starlet Motel (0:33).",
+     "Registrar de graça o carro de Moses (2:03).",
+     "Desbloquear a garagem grátis (3:11).",
+     "Conseguir 15.000 dólares na BuckMe (3:49).",
+     "Pegar as armas grátis e as recompensas de boliche do Kingpin (5:23).",
+     "Procurar o carro muscle secreto em La Cascara (6:23)."
+    ],
+    "src": "36dcc6ae4c"
    }
   },
   {
@@ -1802,6 +2309,17 @@
      "Go to Watson Bay to get the Golden Gun and the SUV.",
      "Go to the Balsero Compound to get the MP5 with suppressor and scope.",
      "Go to the industrial farm to get the rare Dually, which is used to tow the ATMs."
+    ],
+    "src": "8b5e9fd973"
+   },
+   "pt": {
+    "titulo": "Três pontos de dinheiro rápido no início",
+    "resumen": "O vídeo mostra três lugares para conseguir dinheiro cedo no jogo, além de carros raros e armas Lendárias que podem ser mantidas. Um dos carros pode arrombar caixas eletrônicos para obter mais dinheiro.",
+    "detalle": "Vídeo com três lugares para conseguir dinheiro cedo no jogo. No percurso também é possível obter carros raros que podem ser dirigidos nos primeiros capítulos, entre eles um que arromba caixas eletrônicos, e variantes Lendárias de armas que são mantidas para sempre.",
+    "pasos": [
+     "Ir a Watson Bay para conseguir a Golden Gun e o SUV.",
+     "Ir ao Balsero Compound para conseguir a MP5 com supressor e mira.",
+     "Ir à fazenda industrial para conseguir o carro Dually raro, com o qual se rebocam os caixas eletrônicos."
     ],
     "src": "8b5e9fd973"
    }
@@ -1862,7 +2380,18 @@
    ],
    "region": "Port Gellhorn",
    "macro": "Port Gellhorn",
-   "slug": "mision-oculta-de-asesino-en-serie-en-port-gellhorn-fea5f"
+   "slug": "mision-oculta-de-asesino-en-serie-en-port-gellhorn-fea5f",
+   "pt": {
+    "titulo": "Missão oculta de assassino em série em Port Gellhorn",
+    "resumen": "É uma missão secundária do Capítulo 2 que começa com fotos perturbadoras encontradas em um hangar vermelho abandonado. Leva a localizar as três pessoas desaparecidas.",
+    "detalle": "É uma missão secundária do Capítulo 2 que começa com fotos perturbadoras encontradas em um hangar vermelho abandonado em Port Gellhorn. Essas pistas levam a localizar três pessoas desaparecidas.\n\nO hangar fica ao lado da oficina do Moses, Watkins Auto Parts, do outro lado da rua.",
+    "pasos": [
+     "No Capítulo 2 (missão Kelly County Tip Line), procure o hangar vermelho abandonado ao lado da oficina do Moses.",
+     "Investigue as fotos perturbadoras que você encontrar no hangar.",
+     "Siga a pista até localizar as três localizações das pessoas desaparecidas."
+    ],
+    "src": "ad0aee2a58"
+   }
   },
   {
    "id": "yt:ReX0x5f1e8o",
@@ -1900,6 +2429,18 @@
      "Get in a car and open the phone.",
      "Press Circle to close the phone while quickly tapping the touchpad.",
      "Repeat the attempt until the camera switches to first person."
+    ],
+    "src": "0059d846de"
+   },
+   "pt": {
+    "titulo": "Primeira pessoa com o controle do PS5",
+    "resumen": "Truque para ativar a câmera em primeira pessoa usando o touchpad do controle do PS5, atribuindo o botão à Câmera nas Configurações e fechando o celular enquanto se toca rápido no touchpad.",
+    "detalle": "Truque para ativar a câmera em primeira pessoa com o touchpad do controle do PS5. Segundo o vídeo, pode exigir várias tentativas, e é bom salvar o jogo antes de testar.",
+    "pasos": [
+     "Ir em Configurações > Controle e atribuir o botão do Touch Pad à Câmera (2/2).",
+     "Entrar em um carro e abrir o celular.",
+     "Pressionar Círculo para fechar o celular enquanto se toca rápido no touchpad.",
+     "Repetir a tentativa até a câmera mudar para primeira pessoa."
     ],
     "src": "0059d846de"
    }
@@ -2115,62 +2656,18 @@
    ],
    "region": "Hamlet",
    "macro": "Hamlet",
-   "slug": "truffade-thrax-en-un-transportador-en-hamlet-a0948"
-  },
-  {
-   "id": "yt:J0fGrhRVq8I",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=J0fGrhRVq8I",
-   "video_id": "J0fGrhRVq8I",
-   "author": "SNIR",
-   "published_at": "2026-11-23T20:28:51Z",
-   "title_original": "GTA 6 : Avoir la Meilleure Voiture du Jeu dès le Début ! (Quête SECRÈTE & Bugatti GRATUITE)",
-   "popularity": 19577,
-   "thumbnail": "https://i.ytimg.com/vi/J0fGrhRVq8I/hqdefault.jpg",
-   "categoria": "mision",
-   "titulo": "Misión secreta para obtener un Bugatti gratis",
-   "resumen": "Una misión secreta vinculada a Andrew Node y al movimiento No Flushers permite obtener gratis una supercar inspirada en el Bugatti desde el inicio. Los pasos están en el video, con el Truffade Thrax como auto final.",
-   "zona": "Vice City",
-   "como_conseguirlo": "Seguir la pista de Andrew Node y el movimiento No Flushers, juntar las pistas y los lugares indicados en el video, hasta recuperar el Truffade Thrax. El detalle paso a paso está solo en el video.",
-   "spoiler": true,
-   "confianza": "media",
-   "fuentes_extra": [
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=tjp9WItqejs",
-     "video_id": "tjp9WItqejs",
-     "author": "Arekkz Gaming",
-     "popularity": 17136,
-     "published_at": "2026-11-23T17:30:07Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=km51HmZK8Ug",
-     "video_id": "km51HmZK8Ug",
-     "author": "LunarGaming",
-     "popularity": 10207,
-     "published_at": "2026-11-24T02:00:19Z"
-    }
-   ],
-   "enriched": true,
-   "detalle": "Según el resumen, hay una misión secreta vinculada a Andrew Node y al movimiento No Flushers que permite obtener gratis una supercar inspirada en el Bugatti desde el inicio del juego. El auto final de la búsqueda es el Truffade Thrax.\n\nLos datos no dan los pasos concretos: el video recorre las pistas, los lugares y los personajes de la investigación, así que para el detalle hay que verlo.",
-   "pasos": [],
-   "region": "Vice City",
-   "macro": "Vice City",
+   "slug": "truffade-thrax-en-un-transportador-en-hamlet-a0948",
    "pt": {
-    "titulo": "Missão secreta para conseguir um Bugatti de graça",
-    "resumen": "Uma missão secreta ligada a Andrew Node e ao movimento No Flushers permite conseguir de graça um superesportivo inspirado no Bugatti desde o início. Os passos estão no vídeo, com o Truffade Thrax como carro final.",
-    "detalle": "Segundo o resumo, há uma missão secreta ligada a Andrew Node e ao movimento No Flushers que permite conseguir de graça um superesportivo inspirado no Bugatti desde o início do jogo. O carro final da busca é o Truffade Thrax.\n\nOs dados não trazem os passos específicos: o vídeo percorre as pistas, os locais e os personagens da investigação, então para os detalhes é preciso assisti-lo.",
-    "pasos": [],
-    "src": "759bb9d481"
-   },
-   "slug": "mision-secreta-para-obtener-un-bugatti-gratis-a3779",
-   "en": {
-    "titulo": "Secret Mission to Get a Free Bugatti",
-    "resumen": "A secret mission tied to Andrew Node and the No Flushers movement lets you get a Bugatti-inspired supercar for free from the start. The steps are in the video, with the Truffade Thrax as the final car.",
-    "detalle": "According to the summary, there is a secret mission tied to Andrew Node and the No Flushers movement that lets you get a Bugatti-inspired supercar for free from the start of the game. The final car of the search is the Truffade Thrax.\n\nThe data doesn't give the specific steps: the video goes through the leads, locations, and characters of the investigation, so you'll need to watch it for the details.",
-    "pasos": [],
-    "src": "759bb9d481"
+    "titulo": "Truffade Thrax em um cegonha em Hamlet",
+    "resumen": "O Truffade Thrax aparece em um caminhão transportador de veículos perto do Boone Speedway, em Hamlet, e pode ser roubado sem completar uma missão difícil. Essa versão traz um rastreador avançado que precisa ser desbloqueado antes de registrar o carro como veículo pessoal.",
+    "detalle": "O Truffade Thrax, inspirado no Bugatti Divo, aparece em um caminhão transportador de veículos perto do Boone Speedway, em Hamlet. Segundo o vídeo, não é preciso completar uma missão difícil para chegar até ele.\n\nEssa versão traz um rastreador avançado. Para registrá-lo como veículo pessoal, é preciso desbloquear antes o serviço que exige esse rastreador.",
+    "pasos": [
+     "Ir ao caminhão transportador de veículos perto do Boone Speedway, em Hamlet.",
+     "Roubar o Truffade Thrax e dirigi-lo.",
+     "Desbloquear o serviço exigido pelo rastreador avançado.",
+     "Registrar o Truffade Thrax como veículo pessoal."
+    ],
+    "src": "c399f9d613"
    }
   },
   {
@@ -2210,6 +2707,17 @@
      "Vender os veículos roubados para Randy."
     ],
     "src": "767def0e20"
+   },
+   "en": {
+    "titulo": "Selling High-Value Cars to Randy in Chapter 3",
+    "resumen": "After the mission 'Steal The Zorrusso For Randy' you unlock the Key Cloner, which lets you steal expensive cars and sell them to Randy for easy money. The guide lists six Standout vehicles near his showroom in Vice City.",
+    "detalle": "After completing the mission 'Steal The Zorrusso For Randy', about fourteen missions into Chapter 3, you unlock the Key Cloner. With this tool you can steal expensive cars and sell them to Randy for money.\n\nThe video lists six Standout vehicles near Randy's showroom in Vice City, so you can do them all in one session: Lipgloss Vitello, Purple Drank Emerus, Dolce Vita RSX, Lustrous Toros, Big Cat Furia, and Gilded Dubsta.",
+    "pasos": [
+     "Complete the mission 'Steal The Zorrusso For Randy' (around mission 14 of Chapter 3) to unlock the Key Cloner.",
+     "Steal the Standout cars near Randy's showroom in Vice City.",
+     "Sell the stolen vehicles to Randy."
+    ],
+    "src": "767def0e20"
    }
   },
   {
@@ -2233,7 +2741,14 @@
    "detalle": "Según el video, el perfil de criminal profesional influye en cómo te perciben los personajes, en tus relaciones y posiblemente en los finales del juego.\n\nLa guía repasa el loadout recomendado, las armas no letales, herramientas como el Snap Gun y cómo manejar la policía y el nivel de búsqueda sin arruinar el perfil.",
    "pasos": [],
    "region": "",
-   "slug": "perfil-de-criminal-profesional-ededa"
+   "slug": "perfil-de-criminal-profesional-ededa",
+   "pt": {
+    "titulo": "Perfil de criminoso profissional",
+    "resumen": "Guia sobre o perfil de criminoso profissional que, segundo o vídeo, influencia como os personagens te veem, os relacionamentos e possivelmente os finais. Revisa o loadout, as armas não letais e como lidar com a polícia.",
+    "detalle": "Segundo o vídeo, o perfil de criminoso profissional influencia como os personagens te veem, seus relacionamentos e possivelmente os finais do jogo.\n\nO guia revisa o loadout recomendado, as armas não letais, ferramentas como a Snap Gun e como lidar com a polícia e o nível de procurado sem arruinar o perfil.",
+    "pasos": [],
+    "src": "b28f47eaed"
+   }
   },
   {
    "id": "yt:GByO53W1-fI",
@@ -2352,6 +2867,20 @@
      "Learn how to crack vaults (12:14)."
     ],
     "src": "07a242fb9e"
+   },
+   "pt": {
+    "titulo": "Coisas para fazer antes de terminar o capítulo 3",
+    "resumen": "Lista de coisas úteis do capítulo 3: laptop e senha do Bayside, Snap Gun, roubos fáceis, carros e armas especiais, lojas de roupa, academia dupla e bombas pegajosas diárias.",
+    "detalle": "Vídeo com uma lista de coisas úteis para fazer antes de terminar o capítulo 3. Inclui a senha do laptop do apartamento Bayside, a Snap Gun, roubos fáceis, carros e armas especiais, lojas de roupa, academia dupla, bombas pegajosas diárias e dicas para estourar cofres.",
+    "pasos": [
+     "Conseguir a senha do laptop do apartamento Bayside (00:11).",
+     "Desbloquear a Snap Gun (02:00).",
+     "Seguir as dicas de roubos e o fácil de 35k (02:53).",
+     "Conseguir a supercar e o rifle de assalto do Kingpin (04:28).",
+     "Conseguir a pistola com silenciador na segunda supercar (06:03).",
+     "Aprender a estourar cofres (12:14)."
+    ],
+    "src": "07a242fb9e"
    }
   },
   {
@@ -2443,7 +2972,14 @@
    "pasos": [],
    "region": "Vice City",
    "slug": "como-desbloquear-dos-emisoras-de-radio-secretas-bf974",
-   "macro": "Vice City"
+   "macro": "Vice City",
+   "pt": {
+    "titulo": "Como desbloquear duas estações de rádio secretas",
+    "resumen": "O vídeo explica como desbloquear duas estações de rádio secretas, necessárias para 100% de conclusão. As conquistas listadas indicam que são obtidas completando missões ou atividades específicas.",
+    "detalle": "O vídeo explica como desbloquear duas estações de rádio secretas, necessárias para chegar a 100% de conclusão.\n\nA área indicada é La Perle. Segundo a lista de conquistas do vídeo, as estações são obtidas completando atividades específicas do jogo, mas o passo a passo detalhado não consta nos dados e está no vídeo.",
+    "pasos": [],
+    "src": "da0d323398"
+   }
   },
   {
    "id": "yt:u4xkJfuZ2tI",
@@ -2470,7 +3006,18 @@
     "Entrar arrastrándose al almacén oculto para conseguir el botín."
    ],
    "region": "",
-   "slug": "almacen-oculto-con-tres-coyotes-91e26"
+   "slug": "almacen-oculto-con-tres-coyotes-91e26",
+   "pt": {
+    "titulo": "Armazém oculto com três coiotes",
+    "resumen": "Se você dirigir por um ponto exato do mapa, aparecem três coiotes; seguindo-os, chega-se a um armazém oculto no qual se entra rastejando para pegar o butim.",
+    "detalle": "Se você dirigir por um ponto exato do mapa de Leonida, aparecem três coiotes. Seguindo-os, chega-se a um armazém oculto no qual se entra rastejando para pegar o butim.",
+    "pasos": [
+     "Dirigir pelo ponto exato do mapa indicado no vídeo até que apareçam três coiotes.",
+     "Seguir os coiotes.",
+     "Entrar rastejando no armazém oculto para pegar o butim."
+    ],
+    "src": "58e7a83ab1"
+   }
   },
   {
    "id": "yt:R2bQ5BbC6t8",
@@ -2512,165 +3059,29 @@
      "Use the keypad code 090607 and the password President Russo 0612 on the computer."
     ],
     "src": "6ada84fd70"
-   }
-  },
-  {
-   "id": "yt:5BW8LOnL1GE",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=5BW8LOnL1GE",
-   "video_id": "5BW8LOnL1GE",
-   "author": "TmarTn2",
-   "published_at": "2026-11-23T17:41:02Z",
-   "title_original": "GTA 6 - Play as Tommy Vercetti GTA Multiverse Easter Egg Guide",
-   "popularity": 81653,
-   "thumbnail": "https://i.ytimg.com/vi/5BW8LOnL1GE/hqdefault.jpg",
-   "categoria": "easter_egg",
-   "titulo": "Multiverso de Vice City: jugar como Tommy",
-   "resumen": "Easter egg del multiverso que abre un portal a la Vice City de 2002 y deja jugar en el Malibu Club. Como recompensa se obtienen la camisa de botones de Tommy y la bici Malibu Zombie Bobber.",
-   "zona": "Central eléctrica (Power Station), Vice City",
-   "como_conseguirlo": "Completar las 12 centrales eléctricas del easter egg y luego abrir el portal multiverso. El video tiene capítulos con cada central y la apertura del portal (14:10).",
-   "spoiler": true,
-   "confianza": "alta",
+   },
    "fuentes_extra": [
     {
      "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=wHDlyCRERbQ",
-     "video_id": "wHDlyCRERbQ",
+     "url": "https://www.youtube.com/watch?v=jxewlXnCwxA",
+     "video_id": "jxewlXnCwxA",
      "author": "FlayHQ",
-     "popularity": 68322,
-     "published_at": "2026-11-24T05:50:15Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=clkDfN3Q4fs",
-     "video_id": "clkDfN3Q4fs",
-     "author": "MrDalekJD",
-     "popularity": 43171,
-     "published_at": "2026-11-24T03:51:45Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=4zVYLPSTvao",
-     "video_id": "4zVYLPSTvao",
-     "author": "ZacCoxTV",
-     "popularity": 28302,
-     "published_at": "2026-11-23T13:17:44Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=t3zvakxz0js",
-     "video_id": "t3zvakxz0js",
-     "author": "Misleading",
-     "popularity": 28265,
-     "published_at": "2026-11-23T12:44:53Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=bxWAygrBsIs",
-     "video_id": "bxWAygrBsIs",
-     "author": "GameRiot",
-     "popularity": 17680,
-     "published_at": "2026-11-23T14:39:33Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=PIfk0s6Qe8Y",
-     "video_id": "PIfk0s6Qe8Y",
-     "author": "GTA Series Videos",
-     "popularity": 15852,
-     "published_at": "2026-11-24T18:16:21Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=4KwBs_RkilM",
-     "video_id": "4KwBs_RkilM",
-     "author": "Dan Allen Gaming",
-     "popularity": 12463,
-     "published_at": "2026-11-23T15:48:36Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=Bwfks9dGUy8",
-     "video_id": "Bwfks9dGUy8",
-     "author": "ZoneX",
-     "popularity": 5876,
-     "published_at": "2026-11-23T14:53:23Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=puhksjX8F2k",
-     "video_id": "puhksjX8F2k",
-     "author": "Chris Chem",
-     "popularity": 4989,
-     "published_at": "2026-11-23T14:08:16Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=NVXXMZ9YDvY",
-     "video_id": "NVXXMZ9YDvY",
-     "author": "zWillyx",
-     "popularity": 4480,
-     "published_at": "2026-11-24T13:46:23Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=ftMow0Pc-PY",
-     "video_id": "ftMow0Pc-PY",
-     "author": "MarleyThirteen",
-     "popularity": 3934,
-     "published_at": "2026-11-23T19:06:19Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=8fmuqGMWgJA",
-     "video_id": "8fmuqGMWgJA",
-     "author": "Genie",
-     "popularity": 3470,
-     "published_at": "2026-11-23T13:53:31Z"
-    },
-    {
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=RQKhlKn6AEQ",
-     "video_id": "RQKhlKn6AEQ",
-     "author": "HelloItsVG",
-     "popularity": 3385,
-     "published_at": "2026-11-24T04:12:36Z"
+     "popularity": 15174,
+     "published_at": "2026-11-25T12:54:44Z"
     }
    ],
-   "enriched": true,
-   "detalle": "Es un easter egg del multiverso que abre un portal a la Vice City de 2002 y permite jugar como Tommy en el Malibu Club. Para activarlo hay que completar las 12 centrales eléctricas del easter egg (Power Station) y después abrir el portal multiverso.\n\nComo recompensa se obtienen la camisa de botones de Tommy y la bici Malibu Zombie Bobber.",
-   "pasos": [
-    "Completar las 12 centrales eléctricas del easter egg en Vice City.",
-    "Abrir el portal multiverso al terminar las centrales.",
-    "Entrar al portal para jugar en la Vice City de 2002, en el Malibu Club.",
-    "Recoger las recompensas: la camisa de botones de Tommy y la bici Malibu Zombie Bobber."
-   ],
-   "region": "Vice City",
-   "slug": "multiverso-de-vice-city-jugar-como-tommy-11349",
-   "macro": "Vice City",
    "pt": {
-    "titulo": "Multiverso de Vice City: jogando como Tommy",
-    "resumen": "Easter egg do multiverso que abre um portal para a Vice City de 2002 e permite jogar no Malibu Club. Como recompensa, você ganha a camisa de botões do Tommy e a bicicleta Malibu Zombie Bobber.",
-    "detalle": "É um easter egg do multiverso que abre um portal para a Vice City de 2002 e permite jogar como Tommy no Malibu Club. Para ativá-lo, é preciso completar as 12 usinas elétricas do easter egg (Power Station) e depois abrir o portal multiverso.\n\nComo recompensa, você ganha a camisa de botões do Tommy e a bicicleta Malibu Zombie Bobber.",
+    "titulo": "Bunkers secretos do presidente Russo",
+    "resumen": "Explica como abrir os bunkers secretos do presidente Russo com códigos de porta, baú e computador. As recompensas são a pistola 1922, o rifle Cold War 556, um tanque grátis, a pistola Brainwasher e um Focus permanente.",
+    "detalle": "Os bunkers secretos do presidente Russo são abertos com uma série de códigos de porta, baú, alçapão e computador. Tudo começa no memorial Friends of Freedom de Vice City, onde Jose Bermudez manda o jogador para o seu apartamento em Little Cuba.\n\nAs recompensas citadas no vídeo são a pistola 1922, o rifle Cold War 556, um tanque grátis, a pistola Brainwasher e um bônus de Focus permanente.",
     "pasos": [
-     "Completar as 12 usinas elétricas do easter egg em Vice City.",
-     "Abrir o portal multiverso ao terminar as usinas.",
-     "Entrar no portal para jogar na Vice City de 2002, no Malibu Club.",
-     "Pegar as recompensas: a camisa de botões do Tommy e a bicicleta Malibu Zombie Bobber."
+     "Ir ao memorial Friends of Freedom de Vice City e ao apartamento de Jose Bermudez em Little Cuba.",
+     "Usar o código 010317 na porta do bunker presidencial de Sharktooth Island.",
+     "Usar o código 2975 para abrir o baú com o Protocolo 2.",
+     "Usar o código OBSESS 085355 no alçapão do segundo bunker perto de Big Pine.",
+     "Usar o digicódigo 090607 e a senha President Russo 0612 no computador."
     ],
-    "src": "9839e6663c"
-   },
-   "en": {
-    "titulo": "Vice City Multiverse: Playing as Tommy",
-    "resumen": "A multiverse Easter egg that opens a portal to 2002 Vice City and lets you play at the Malibu Club. The rewards are Tommy's button-up shirt and the Malibu Zombie Bobber bike.",
-    "detalle": "A multiverse Easter egg that opens a portal to 2002 Vice City and lets you play as Tommy at the Malibu Club. To activate it, you must complete the 12 power stations of the Easter egg (Power Station) and then open the multiverse portal.\n\nThe rewards are Tommy's button-up shirt and the Malibu Zombie Bobber bike.",
-    "pasos": [
-     "Complete the 12 power stations of the Easter egg in Vice City.",
-     "Open the multiverse portal after finishing the power stations.",
-     "Enter the portal to play in 2002 Vice City, at the Malibu Club.",
-     "Collect the rewards: Tommy's button-up shirt and the Malibu Zombie Bobber bike."
-    ],
-    "src": "9839e6663c"
+    "src": "6ada84fd70"
    }
   },
   {
@@ -2752,7 +3163,18 @@
    ],
    "region": "Little Hardin Island",
    "slug": "laboratorio-submarino-oculto-burg-b2cc0",
-   "macro": "Ambrosia"
+   "macro": "Ambrosia",
+   "pt": {
+    "titulo": "Laboratório submarino oculto (Burg)",
+    "resumen": "Primeiro laboratório submarino secreto dos cinco mencionados, escondido sob uma boia amarela. Lá há chats de laptop, um meteorito e uma pulseira antiga.",
+    "detalle": "É o primeiro laboratório submarino secreto dos cinco mencionados no jogo. Está escondido sob uma boia amarela, logo a leste de Little Hardin Island.\n\nDentro há chats de laptop, um meteorito e uma pulseira antiga. O meteorito faz parte de um mistério que ainda ninguém resolveu.",
+    "pasos": [
+     "Procurar a boia amarela a leste de Little Hardin Island.",
+     "Mergulhar sob a boia.",
+     "Entrar no laboratório submarino."
+    ],
+    "src": "7b19c2404e"
+   }
   },
   {
    "id": "yt:-mzJSlSHK-A",
@@ -2900,7 +3322,18 @@
     "Realizar las Operaciones Ilegales y esperar a que se reinicien."
    ],
    "region": "",
-   "slug": "tres-formas-de-ganar-dinero-en-el-capitulo-1-db8f4"
+   "slug": "tres-formas-de-ganar-dinero-en-el-capitulo-1-db8f4",
+   "pt": {
+    "titulo": "Três formas de ganhar dinheiro no capítulo 1",
+    "resumen": "Guia de três métodos para ganhar dinheiro cedo: vender bens roubados, roubar lojas e fazer Operações Ilegais. Inclui como funciona o Brian's Lockup e os tempos de reset.",
+    "detalle": "O guia apresenta três métodos para ganhar dinheiro cedo no capítulo 1: vender bens roubados, roubar lojas de forma mais eficiente e fazer Operações Ilegais.\n\nInclui como funciona o Brian's Lockup e quanto tempo levam para reiniciar essas atividades.",
+    "pasos": [
+     "Vender bens roubados no Brian's Lockup.",
+     "Roubar lojas de forma mais eficiente.",
+     "Realizar as Operações Ilegais e esperar que sejam reiniciadas."
+    ],
+    "src": "74542984a9"
+   }
   },
   {
    "id": "yt:F7ubWhPjkbY",
@@ -2923,7 +3356,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "viaje-en-el-tiempo-a-vice-city-57ff1"
+   "slug": "viaje-en-el-tiempo-a-vice-city-57ff1",
+   "pt": {
+    "titulo": "Viagem no tempo para Vice City",
+    "resumen": "Clipe que mostra um easter egg que leva de volta a Vice City. O texto não dá detalhes de como ativá-lo.",
+    "detalle": "",
+    "pasos": [],
+    "src": "692bfca5c1"
+   }
   },
   {
    "id": "yt:X4vsz9ilT_Q",
@@ -3004,6 +3444,20 @@
      "Antes da missão Tourist Trap, depositar $5.000 na Family Savings."
     ],
     "src": "b76cc6d248"
+   },
+   "en": {
+    "titulo": "How to Make Money Fast in Chapter 1",
+    "resumen": "Covers several ways to earn money in Chapter 1: selling shipwreck salvage to Kenton, looting gang hideouts, and a stilt house with cash and cocaine. It also warns that the Tourist Trap mission makes you lose almost all your money except what's in Family Savings.",
+    "detalle": "The video explains several ways to earn money in Chapter 1: selling shipwreck salvage to Kenton, looting gang hideouts, and a stilt house with cash and cocaine.\n\nThe main warning is the Tourist Trap mission: when you start it, you lose almost all your money except what's in Family Savings, so it's best to deposit $5,000 beforehand.",
+    "pasos": [
+     "Complete Island Dreams so Kenton starts messaging you about shipwreck salvage.",
+     "Go to the shipwreck salvage around Key Lento and bring back what you find.",
+     "Sell what you bring from the shipwrecks to Kenton.",
+     "Loot the gang hideouts, marked with yellow mask icons on the map.",
+     "In Corsair Key, find the northernmost stilt house and lift the loose floorboard to get the money.",
+     "Before the Tourist Trap mission, deposit $5,000 in Family Savings."
+    ],
+    "src": "b76cc6d248"
    }
   },
   {
@@ -3027,7 +3481,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "como-subir-al-crucero-en-gta-6-3e872"
+   "slug": "como-subir-al-crucero-en-gta-6-3e872",
+   "pt": {
+    "titulo": "Como subir no cruzeiro em GTA 6",
+    "resumen": "O vídeo explica como embarcar no cruzeiro de Leonida e mostra o que pode ser encontrado no alto. A descrição não detalha os passos concretos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "51fc0d28ca"
+   }
   },
   {
    "id": "yt:sCQb0lUwlB8",
@@ -3163,7 +3624,14 @@
    "detalle": "Recopilación de referencias a protagonistas anteriores de GTA, como Tommy Vercetti, CJ, Niko Bellic, Michael, Franklin y Trevor, repartidas por Vice City y Leonida.\n\nEl video no da ubicaciones concretas de cada guiño.",
    "pasos": [],
    "region": "",
-   "slug": "guinos-a-protagonistas-anteriores-de-gta-11b93"
+   "slug": "guinos-a-protagonistas-anteriores-de-gta-11b93",
+   "pt": {
+    "titulo": "Easter eggs de protagonistas anteriores de GTA",
+    "resumen": "Compilação de referências a Tommy, CJ, Niko, Michael, Franklin e Trevor espalhadas por Vice City e Leonida, sem localizações específicas.",
+    "detalle": "Compilação de referências a protagonistas anteriores de GTA, como Tommy Vercetti, CJ, Niko Bellic, Michael, Franklin e Trevor, espalhadas por Vice City e Leonida.\n\nO vídeo não dá localizações específicas de cada referência.",
+    "pasos": [],
+    "src": "0ea15618a0"
+   }
   },
   {
    "id": "yt:2rvtAZaAaM0",
@@ -3350,7 +3818,14 @@
    "detalle": "",
    "pasos": [],
    "region": "Key Lento",
-   "macro": "Leonida Keys"
+   "macro": "Leonida Keys",
+   "pt": {
+    "titulo": "Atirador de elite secreto em Key Lento",
+    "resumen": "Um atirador de elite em um local secreto do mapa de Key Lento, útil nas primeiras etapas do jogo. O vídeo não explica como chegar lá.",
+    "detalle": "",
+    "pasos": [],
+    "src": "a6d7278eb0"
+   }
   },
   {
    "id": "yt:mith8Uhw3lg",
@@ -3442,7 +3917,17 @@
     "Manejar de noche por Sassafras Road con niebla",
     "Si aparece la mujer fantasma sobre el auto, volver al vehículo para que reaparezca"
    ],
-   "region": ""
+   "region": "",
+   "pt": {
+    "titulo": "Fantasma na Sassafras Road",
+    "resumen": "Dirigindo à noite na neblina pela Sassafras Road, aparece uma mulher fantasma sobre o carro. Ela volta a aparecer ao retornar ao veículo.",
+    "detalle": "",
+    "pasos": [
+     "Dirigir à noite pela Sassafras Road com neblina.",
+     "Se a mulher fantasma aparecer sobre o carro, voltar ao veículo para que ela reapareça."
+    ],
+    "src": "ce41431d93"
+   }
   },
   {
    "id": "yt:JV4fnJDQiG4",
@@ -3512,6 +3997,19 @@
      "Escanear carros com o WAiNK",
      "Vender os carros para Moses, Pay 'n' Spray ou Randy conforme o capítulo",
      "Depositar o dinheiro num caixa eletrônico"
+    ],
+    "src": "f31da0b570"
+   },
+   "en": {
+    "titulo": "Six Ways to Make Money Early On",
+    "resumen": "Early money guide: robbing stores, selling loot to fences, raiding gang hideouts, and stealing cars for Moses, Pay 'n' Spray, or Randy. If you die or get arrested, you lose whatever you're carrying.",
+    "detalle": "Guide with six ways to earn money early on: robbing stores and gas stations, selling loot to fences, raiding gang hideouts, and stealing cars.\n\nLoot doesn't count as money until you sell it, and each type has its own buyer. Moses buys cars without trackers in Chapter 2, Pay 'n' Spray buys cars with trackers, and Randy pays for supercars from his list in Chapter 3. Banks are end-game jobs.\n\nIf you die or get arrested, you lose whatever you're carrying, so it's best to deposit your money at an ATM.",
+    "pasos": [
+     "Rob stores and gas stations",
+     "Sell each type of loot to its fence",
+     "Scan cars with WAiNK",
+     "Sell the cars to Moses, Pay 'n' Spray, or Randy depending on the chapter",
+     "Deposit the cash at an ATM"
     ],
     "src": "f31da0b570"
    }
@@ -3648,6 +4146,13 @@
     "detalle": "",
     "pasos": [],
     "src": "070e5bdf5f"
+   },
+   "en": {
+    "titulo": "Hidden vehicle features in GTA 6",
+    "resumen": "Video about little-known vehicle features; the description does not specify which ones.",
+    "detalle": "",
+    "pasos": [],
+    "src": "070e5bdf5f"
    }
   },
   {
@@ -3675,6 +4180,13 @@
    "pt": {
     "titulo": "Butim secreto com dinheiro, picape e armas",
     "resumen": "Localização secreta com $30.000, uma picape Dually personalizada com luzes azuis, uma SMG Red-Dot lendária, um rifle de precisão e um RPG. O texto não explica como chegar.",
+    "detalle": "",
+    "pasos": [],
+    "src": "3b583f0a60"
+   },
+   "en": {
+    "titulo": "Secret Stash with Cash, Truck and Weapons",
+    "resumen": "A secret location with $30,000, a customized Dually truck with blue lights, a legendary Red-Dot SMG, a sniper rifle and an RPG. The text does not explain how to get there.",
     "detalle": "",
     "pasos": [],
     "src": "3b583f0a60"
@@ -3718,7 +4230,14 @@
      "popularity": 33289,
      "published_at": "2026-11-24T16:15:10Z"
     }
-   ]
+   ],
+   "en": {
+    "titulo": "Maximum Loot in the Cartel Heist",
+    "resumen": "Guide to completing the cartel heist perfectly and getting the most money out of it.",
+    "detalle": "",
+    "pasos": [],
+    "src": "1b138a5407"
+   }
   },
   {
    "id": "yt:wnm6wB1ZZu8",
@@ -3832,6 +4351,16 @@
      "Enter the elevator that has the balloon next to it."
     ],
     "src": "00c4555d90"
+   },
+   "pt": {
+    "titulo": "Palhaço estilo Pennywise em um prédio em construção",
+    "resumen": "Em um complexo de apartamentos em obras aparece um balão ao lado de um elevador fora de serviço. Ao entrar, Jason encontra balões e um palhaço com machete chamado Benny.",
+    "detalle": "Em um complexo de apartamentos em construção aparece um balão ao lado de um elevador supostamente fora de serviço. Ao entrar no elevador, Jason encontra balões e um palhaço com machete chamado Benny, que tem semelhança com Pennywise.\n\nSegundo o vídeo, o elevador pode ser usado para voltar ao lobby depois do encontro, e no telhado há um paraquedas perto de um dos acessos.",
+    "pasos": [
+     "Ir à obra à noite, idealmente por volta das 3:00 da manhã.",
+     "Entrar no elevador que tem o balão ao lado."
+    ],
+    "src": "00c4555d90"
    }
   },
   {
@@ -3931,7 +4460,21 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": ""
+   "region": "",
+   "pt": {
+    "titulo": "11 carros secretos e únicos",
+    "resumen": "Guia de 11 carros únicos e lendários para conseguir. A descrição não detalha modelos nem localizações.",
+    "detalle": "",
+    "pasos": [],
+    "src": "1ce080a741"
+   },
+   "en": {
+    "titulo": "11 Secret and Unique Cars",
+    "resumen": "Guide to 11 unique and legendary cars to get. The description does not detail models or locations.",
+    "detalle": "",
+    "pasos": [],
+    "src": "1ce080a741"
+   }
   },
   {
    "id": "yt:WqrXp44o530",
@@ -4084,7 +4627,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "dodge-charger-de-fast-furious-699a9"
+   "slug": "dodge-charger-de-fast-furious-699a9",
+   "en": {
+    "titulo": "Fast & Furious Dodge Charger",
+    "resumen": "Guide to the location of a 1970 Dodge Charger R/T inspired by Dominic Toretto's car. The description does not explain the exact place or how to get it.",
+    "detalle": "",
+    "pasos": [],
+    "src": "bc30002d43"
+   }
   },
   {
    "id": "yt:BgHEX8IpviA",
@@ -4251,6 +4801,17 @@
      "Jump into the toxic chamber."
     ],
     "src": "1891471787"
+   },
+   "pt": {
+    "titulo": "Aumento permanente de resistência no banheiro",
+    "resumen": "Escanear o cartaz QR \"Don't Flush\" no banheiro de Corsair Key, seguir o Dr. Merle até a estação de tratamento de esgoto e pular na câmara tóxica dá um aumento permanente de resistência.",
+    "detalle": "",
+    "pasos": [
+     "Escanear o cartaz QR \"Don't Flush\" no banheiro de Corsair Key.",
+     "Seguir o Dr. Merle até a estação de tratamento de esgoto.",
+     "Pular na câmara tóxica."
+    ],
+    "src": "1891471787"
    }
   },
   {
@@ -4274,7 +4835,14 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": ""
+   "region": "",
+   "pt": {
+    "titulo": "Como roubar um jato militar",
+    "resumen": "Short que mostra como roubar um jato militar. A descrição não traz passos nem localização.",
+    "detalle": "",
+    "pasos": [],
+    "src": "0283934fcc"
+   }
   },
   {
    "id": "yt:VCfH-Kcd2y0",
@@ -4561,6 +5129,16 @@
      "Procurar o barco próximo."
     ],
     "src": "c0fb7afe5a"
+   },
+   "en": {
+    "titulo": "Dexter Reference at Trinity Apartments",
+    "resumen": "There are Dexter clues on the rooftops of Trinity Apartments and a boat similar to Dexter Morgan's nearby, although the apartment has its door locked.",
+    "detalle": "There are Dexter clues on the rooftops of Trinity Apartments, in Washington Island. Nearby there is a boat similar to Dexter Morgan's, although the apartment has its door locked.",
+    "pasos": [
+     "Go to the rooftops of Trinity Apartments in Washington Island.",
+     "Look for the nearby boat."
+    ],
+    "src": "c0fb7afe5a"
    }
   },
   {
@@ -4595,6 +5173,16 @@
     "pasos": [
      "Ir até a localização indicada no mapa",
      "Registrar o veículo para guardá-lo na garagem"
+    ],
+    "src": "1ce8c3d685"
+   },
+   "en": {
+    "titulo": "Dom's Chevelle Location (Fast & Furious)",
+    "resumen": "Guide with the exact location of Dom's Chevelle and how to register it so it stays permanently in your garage. It also confirms the location of Brian's Eclipse.",
+    "detalle": "",
+    "pasos": [
+     "Go to the location indicated on the map",
+     "Register the vehicle to save it in the garage"
     ],
     "src": "1ce8c3d685"
    }
@@ -4633,6 +5221,17 @@
      "Go to the building entrance",
      "Locate the access keypad",
      "Enter the code shown in the video"
+    ],
+    "src": "b14e2374c9"
+   },
+   "pt": {
+    "titulo": "Localização e código de acesso do Auntie's Place",
+    "resumen": "Guia para encontrar o Auntie's Place e entrar no prédio usando o código do teclado de acesso.",
+    "detalle": "",
+    "pasos": [
+     "Ir até a entrada do prédio",
+     "Localizar o teclado de acesso",
+     "Digitar o código mostrado no vídeo"
     ],
     "src": "b14e2374c9"
    }
@@ -5031,6 +5630,13 @@
     "detalle": "",
     "pasos": [],
     "src": "12c54df731"
+   },
+   "en": {
+    "titulo": "Compilation of 30 Secrets and Easter Eggs (Part 2)",
+    "resumen": "A compilation video of 30 secrets and easter eggs in GTA 6, including a clip of an alien encounter. The description does not detail the findings.",
+    "detalle": "",
+    "pasos": [],
+    "src": "12c54df731"
    }
   },
   {
@@ -5178,6 +5784,13 @@
    "pt": {
     "titulo": "Roubos de joalherias sem polícia",
     "resumen": "Vídeo sobre como fazer roubos a joalherias de forma discreta, sem alertar a polícia, para ganhar dinheiro. A descrição não dá detalhes.",
+    "detalle": "",
+    "pasos": [],
+    "src": "7c5045ff5e"
+   },
+   "en": {
+    "titulo": "Jewelry store robberies without police",
+    "resumen": "Video about how to rob jewelry stores cleanly, without alerting the police, to make money. The description gives no details.",
     "detalle": "",
     "pasos": [],
     "src": "7c5045ff5e"
@@ -5335,6 +5948,13 @@
     "detalle": "",
     "pasos": [],
     "src": "04342c5acb"
+   },
+   "en": {
+    "titulo": "Jason exorcises Lucia in a secret easter egg",
+    "resumen": "A walkthrough with no commentary announces an easter egg in which Jason exorcises a possessed Lucia, but does not detail how it is triggered.",
+    "detalle": "",
+    "pasos": [],
+    "src": "04342c5acb"
    }
   },
   {
@@ -5408,6 +6028,19 @@
      "Registrá-lo numa Pay 'n' Spray por $29.900 a partir do Capítulo 2"
     ],
     "src": "0ab791a14f"
+   },
+   "en": {
+    "titulo": "Royal Ruby Emerus in GTA 6",
+    "resumen": "The Royal Ruby Emerus is located in a guarded mansion on Vespucci Island, Rialto Islands. It can be registered starting in Chapter 2 at a Pay 'n' Spray for $29,900.",
+    "detalle": "The Royal Ruby Emerus is located in a guarded mansion on Vespucci Island, Rialto Islands. There are armed guards on the grounds, so it's worth checking the area first.\n\nIt can be taken at any point in the story, but it can only be registered starting in Chapter 2 at a Pay 'n' Spray for $29,900. In Chapter 1, it can only be stored in the garage. Its reported stats are speed 8.6, acceleration 8.4, and asphalt handling 8.4.",
+    "pasos": [
+     "Reach the mansion with gates on Vespucci Island",
+     "Climb the wall",
+     "Open the door from the inside",
+     "Locate the unlocked car in the garage",
+     "Register it at a Pay 'n' Spray for $29,900 starting from Chapter 2"
+    ],
+    "src": "0ab791a14f"
    }
   },
   {
@@ -5438,6 +6071,13 @@
     "detalle": "",
     "pasos": [],
     "src": "860cf5660c"
+   },
+   "en": {
+    "titulo": "Mercenary LMG in a Container",
+    "resumen": "A container hides the Mercenary LMG, which can be obtained from Chapter 3 by following a specific route. The post does not detail the route.",
+    "detalle": "",
+    "pasos": [],
+    "src": "860cf5660c"
    }
   },
   {
@@ -5465,6 +6105,13 @@
    "pt": {
     "titulo": "Encontros secretos com Mandy e Vicki",
     "resumen": "Interações ocultas de Jason com Mandy e Vicki, sem um sistema de romance completo. O texto não descreve os passos para ativá-las.",
+    "detalle": "",
+    "pasos": [],
+    "src": "f82e1adad5"
+   },
+   "en": {
+    "titulo": "Secret Encounters with Mandy and Vicki",
+    "resumen": "Hidden interactions between Jason and Mandy and Vicki, without a full romance system. The text does not describe the steps to trigger them.",
     "detalle": "",
     "pasos": [],
     "src": "f82e1adad5"
@@ -5504,6 +6151,17 @@
      "Rob Casa De Empeño to get the Buffalo Skull chain.",
      "Get the Snap Gun.",
      "Use the Snap Gun on Richardson Jewelry."
+    ],
+    "src": "683d4378ce"
+   },
+   "pt": {
+    "titulo": "Snap Gun para abrir portas sem alarme",
+    "resumen": "Na missão das joalherias de Yasmani é possível conseguir a Snap Gun, que abre portas sem barulho nem alarmes. Também explica como conseguir o troféu Sneakthief roubando uma joalheria sem ser detectado.",
+    "detalle": "Durante a missão das joalherias de Yasmani é possível conseguir a Snap Gun, uma arma que abre portas sem barulho nem alarmes. O vídeo também explica como obter o troféu Sneakthief roubando uma joalheria sem ser detectado.",
+    "pasos": [
+     "Roubar a Casa De Empeño para obter a corrente Buffalo Skull.",
+     "Conseguir a Snap Gun.",
+     "Usar a Snap Gun na Richardson Jewelry."
     ],
     "src": "683d4378ce"
    }
@@ -5566,6 +6224,13 @@
     "detalle": "",
     "pasos": [],
     "src": "89ecc2734f"
+   },
+   "en": {
+    "titulo": "Three Top Cars in GTA 6",
+    "resumen": "Lists three standout cars: the Royal Ruby Emerus, Penumbra FF and Drifter Elegy. It says some require a theft with specific steps, but the text does not detail them.",
+    "detalle": "",
+    "pasos": [],
+    "src": "89ecc2734f"
    }
   },
   {
@@ -5593,6 +6258,13 @@
    "pt": {
     "titulo": "Os 10 carros mais rápidos e onde encontrá-los",
     "resumen": "Guia com os dez carros mais rápidos e como conseguir todos de graça. A descrição não detalha modelos nem localizações.",
+    "detalle": "",
+    "pasos": [],
+    "src": "e71130f377"
+   },
+   "en": {
+    "titulo": "The 10 fastest cars and where to find them",
+    "resumen": "Guide to the ten fastest cars and how to get them for free. The description does not detail models or locations.",
     "detalle": "",
     "pasos": [],
     "src": "e71130f377"
@@ -5693,7 +6365,14 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": ""
+   "region": "",
+   "pt": {
+    "titulo": "Local secreto com US$ 10.000 e uma submetralhadora lendária",
+    "resumen": "Short que mostra um lugar onde se conseguem US$ 10.000 e uma submetralhadora lendária; não se indica onde fica.",
+    "detalle": "",
+    "pasos": [],
+    "src": "a92291385b"
+   }
   },
   {
    "id": "yt:W1zKJHp9WPo",
@@ -5720,6 +6399,13 @@
    "pt": {
     "titulo": "Guia de dinheiro para o capítulo 2",
     "resumen": "Dicas para ganhar dinheiro no capítulo 2: melhores roubos, carros e oportunidades ocultas.",
+    "detalle": "",
+    "pasos": [],
+    "src": "f1571697f4"
+   },
+   "en": {
+    "titulo": "Chapter 2 money guide",
+    "resumen": "Tips for making money in Chapter 2: best heists, cars, and hidden opportunities.",
     "detalle": "",
     "pasos": [],
     "src": "f1571697f4"
@@ -6082,6 +6768,13 @@
     "detalle": "",
     "pasos": [],
     "src": "2766ff6c8e"
+   },
+   "en": {
+    "titulo": "Iceberg of Easter Eggs and Horror Mysteries",
+    "resumen": "An iceberg-style compilation of horror easter eggs: aliens, ghosts and devils.",
+    "detalle": "",
+    "pasos": [],
+    "src": "2766ff6c8e"
    }
   },
   {
@@ -6109,6 +6802,13 @@
    "pt": {
     "titulo": "Os 10 veículos mais secretos de GTA 6",
     "resumen": "Vídeo que reúne dez veículos ocultos do jogo; a descrição não detalha quais são nem onde estão.",
+    "detalle": "",
+    "pasos": [],
+    "src": "df0db7ef36"
+   },
+   "en": {
+    "titulo": "The 10 Most Secret Vehicles in GTA 6",
+    "resumen": "A video compiling ten hidden vehicles in the game; the description does not detail which ones they are or where they are located.",
     "detalle": "",
     "pasos": [],
     "src": "df0db7ef36"
@@ -6236,6 +6936,16 @@
     "pasos": [
      "Leve equipamento de mergulho.",
      "Explore o fundo do mar até chegar à base."
+    ],
+    "src": "bcb8c50b26"
+   },
+   "en": {
+    "titulo": "Secret Base Under the Ocean",
+    "resumen": "Exploration of a hidden complex under the ocean, with a hidden treasure and easter eggs inside.",
+    "detalle": "It is a hidden complex under the ocean that has a hidden treasure and easter eggs inside.",
+    "pasos": [
+     "Bring diving gear.",
+     "Explore the seabed until you reach the base."
     ],
     "src": "bcb8c50b26"
    }
@@ -6438,6 +7148,13 @@
     "detalle": "Guia do easter egg de abdução alienígena e da missão secreta Alien Dream que o acompanha. Segundo o vídeo, completar a missão concede uma melhoria permanente de saúde, resistência e concentração.",
     "pasos": [],
     "src": "2a33a82271"
+   },
+   "en": {
+    "titulo": "Alien abduction and the Alien Dream secret mission",
+    "resumen": "Guide to the alien abduction easter egg and its associated secret mission. Completing it grants a permanent boost to health, stamina, and focus.",
+    "detalle": "Guide to the alien abduction easter egg and the secret mission Alien Dream that accompanies it. According to the video, completing the mission grants a permanent boost to health, stamina, and focus.",
+    "pasos": [],
+    "src": "2a33a82271"
    }
   },
   {
@@ -6565,6 +7282,13 @@
     "detalle": "",
     "pasos": [],
     "src": "1d2c748d13"
+   },
+   "en": {
+    "titulo": "Christine, the Hidden Killer Car",
+    "resumen": "A car inspired by Christine, the killer car, is hidden on the map. The text does not indicate its location.",
+    "detalle": "",
+    "pasos": [],
+    "src": "1d2c748d13"
    }
   },
   {
@@ -6658,6 +7382,13 @@
     "detalle": "",
     "pasos": [],
     "src": "26cda9a7e7"
+   },
+   "en": {
+    "titulo": "Five ultra-rare hidden cars",
+    "resumen": "French-language video showing five ultra-rare cars hidden in the game, with no detail in the description.",
+    "detalle": "",
+    "pasos": [],
+    "src": "26cda9a7e7"
    }
   },
   {
@@ -6688,6 +7419,13 @@
     "detalle": "",
     "pasos": [],
     "src": "7ddd80bc5c"
+   },
+   "en": {
+    "titulo": "Making Quick Money in Chapter 1",
+    "resumen": "A repeatable method for raking in cash early in the game. The description does not go into detail.",
+    "detalle": "",
+    "pasos": [],
+    "src": "7ddd80bc5c"
    }
   },
   {
@@ -6715,6 +7453,13 @@
    "pt": {
     "titulo": "Mecânicas escondidas que você talvez tenha perdido",
     "resumen": "Resumo de mecânicas e detalhes pouco conhecidos: animações, IA e interações com o ambiente. A descrição não especifica cada uma.",
+    "detalle": "",
+    "pasos": [],
+    "src": "5d7a8e028d"
+   },
+   "en": {
+    "titulo": "Hidden Mechanics You Might Have Missed",
+    "resumen": "A review of little-known mechanics and details: animations, AI, and environmental interactions. The description does not specify each one.",
     "detalle": "",
     "pasos": [],
     "src": "5d7a8e028d"
@@ -6988,6 +7733,13 @@
     "detalle": "",
     "pasos": [],
     "src": "8d82332f3a"
+   },
+   "en": {
+    "titulo": "10 secret locations and hidden NPCs",
+    "resumen": "A tour of 10 secret locations with hidden NPCs and easter eggs.",
+    "detalle": "",
+    "pasos": [],
+    "src": "8d82332f3a"
    }
   },
   {
@@ -7138,6 +7890,13 @@
     "detalle": "A compilation of GTA 6 references and secrets, ranging from RDR2, GTA 5, and Vice City to Silent Hill, Dexter, Mario & Luigi, and Fast & Furious. Among the findings mentioned are a ghost pirate ship, the Kraken, the Skunk Ape, a demonic ritual, and an alien abduction by UFO.",
     "pasos": [],
     "src": "dbc1b7484f"
+   },
+   "pt": {
+    "titulo": "Compilação de easter eggs e referências (parte 1)",
+    "resumen": "Revisa referências a RDR2, GTA 5, Vice City, Silent Hill, Dexter e Mario. Inclui um navio pirata fantasma, o Kraken, o Skunk Ape, um ritual demoníaco e o sequestro alienígena.",
+    "detalle": "Compilação de referências e segredos de GTA 6 que vão de RDR2, GTA 5 e Vice City até Silent Hill, Dexter, Mario & Luigi e Fast & Furious. Entre as descobertas mencionadas aparecem um navio pirata fantasma, o Kraken, o Skunk Ape, um ritual demoníaco e um sequestro alienígena por OVNI.",
+    "pasos": [],
+    "src": "dbc1b7484f"
    }
   },
   {
@@ -7165,6 +7924,13 @@
    "pt": {
     "titulo": "Carros secretos: Eclipse, Charger e carrinho de golfe hot rod",
     "resumen": "Vídeo em que se roubam carros secretos, entre eles um Eclipse estilo Velozes e Furiosos, o Charger do Dom e um carrinho de golfe hot rod.",
+    "detalle": "",
+    "pasos": [],
+    "src": "790da7dce6"
+   },
+   "en": {
+    "titulo": "Secret Cars: Eclipse, Charger and Hot Rod Golf Cart",
+    "resumen": "A video where secret cars are stolen, including a Fast and Furious-style Eclipse, Dom's Charger and a hot rod golf cart.",
     "detalle": "",
     "pasos": [],
     "src": "790da7dce6"
@@ -7196,6 +7962,13 @@
     "titulo": "Como obter o perfil de criminoso profissional",
     "resumen": "Explica o sistema de perfil criminal e os métodos para chegar a criminoso profissional, um para os capítulos 1 e 2 e outro a partir do capítulo 3.",
     "detalle": "O vídeo explica como obter o perfil de criminoso profissional. Mostra um método para os capítulos 1 e 2 e outro diferente a partir do capítulo 3 em diante.",
+    "pasos": [],
+    "src": "25bbeea7ce"
+   },
+   "en": {
+    "titulo": "How to Get the Professional Criminal Profile",
+    "resumen": "Explains the criminal profile system and methods to reach Professional Criminal, one for Chapters 1 and 2 and another from Chapter 3 onward.",
+    "detalle": "The video explains how to get the Professional Criminal profile. It shows one method for Chapters 1 and 2 and a different one from Chapter 3 onward.",
     "pasos": [],
     "src": "25bbeea7ce"
    }
