@@ -156,17 +156,30 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
                                       "Take-Two Interactive. Los videos son de sus autores y se muestran con el reproductor original.")
     if lang == "pt":
         links = (f'<a href="{root}pt/">Início</a><a href="{root}pt/#categorias">Categorias</a>'
-                 f'<a href="{root}pt/guias/">Guias</a><a href="{root}pt/truques/">Truques</a>'
-                 f'<a href="{root}" hreflang="es">Versão em espanhol</a>')
+                 f'<a href="{root}pt/guias/">Guias</a><a href="{root}pt/truques/">Truques</a>')
         cta, foot_txt = "Abrir o mapa", ("Guia não oficial feito por fãs de GTA 6. Não tem relação com a Rockstar Games nem com a "
                                          "Take-Two Interactive. Os vídeos são de seus autores e aparecem com o player original.")
     elif lang == "en":
         links = (f'<a href="{root}en/">Home</a><a href="{root}en/#categorias">Categories</a>'
-                 f'<a href="{root}en/guias/">Guides</a><a href="{root}en/cheats/">Cheats</a>'
-                 f'<a href="{root}" hreflang="es">Spanish version</a>')
+                 f'<a href="{root}en/guias/">Guides</a><a href="{root}en/cheats/">Cheats</a>')
         cta, foot_txt = "Open the map", ("Unofficial guide made by GTA 6 fans. Not affiliated with Rockstar Games or "
                                          "Take-Two Interactive. Videos belong to their creators and play in the original player.")
     map_href = f"{root}mapa/" if lang == "es" else f"{root}{lang}/mapa/"
+    # Selector de idioma: lleva a esta misma página en el otro idioma si existe; si no, a su portada.
+    alt_map = {h: u for h, u in (alternates or [])}
+    base = config.SITE_URL + "/"
+    lang_items, lang_short = [], "ES"
+    for code, hl, short, name in (("es", "es", "ES", "Español"), ("pt", "pt-BR", "PT", "Português"), ("en", "en", "EN", "English")):
+        u = alt_map.get(hl)
+        href = (root + u[len(base):]) if u and u.startswith(base) else (root if code == "es" else f"{root}{code}/")
+        cur = ' aria-current="true"' if code == lang else ""
+        if code == lang:
+            lang_short = short
+        lang_items.append(f'<a href="{href}" hreflang="{hl}" lang="{hl}"{cur}>{name}</a>')
+    lang_label = {"pt": "Idioma", "en": "Language"}.get(lang, "Idioma")
+    lang_sel = (f'<details class="lang"><summary aria-label="{lang_label}: {lang_short}">'
+                '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>'
+                f'{lang_short}</summary><div class="lang-panel">{"".join(lang_items)}</div></details>')
     main = body if bare else f'<div class="wrap{" wide" if wide else ""}">\n{body}\n</div>'
     return f"""<!doctype html>
 <html lang="{ {"pt": "pt-BR", "en": "en"}.get(lang, "es") }">
@@ -200,6 +213,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 {logo(root)}
 <nav class="nav" aria-label="Principal">{links}</nav>
 <span class="online" data-online hidden><i aria-hidden="true"></i><b></b> <span class="on-long">{ {"pt": "pessoas vendo agora", "en": "people here now"}.get(lang, "personas mirando ahora") }</span><span class="on-short">{"online" if lang == "pt" else "online"}</span></span>
+{lang_sel}
 <a class="btn primary sm map-btn" href="{map_href}">{cta}</a>
 <details class="menu"><summary aria-label="Menú">{MENU}</summary><div class="menu-panel"><a href="{map_href}">{"Map" if lang == "en" else "Mapa"}</a>{links}</div></details>
 </div></header>
@@ -210,10 +224,12 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <div class="foot-brand">{logo(root)}
 <p>{foot_txt}</p></div>
 <nav aria-label="Explorar"><h3>Explorar</h3><a href="{root}mapa/">Mapa</a><a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a><a href="{root}guias/">Guías</a><a href="{root}trucos/">Trucos</a><a href="{root}100-por-ciento/">Lista del 100 %</a><a href="{root}lista/">Mi lista</a></nav>
-<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a><a href="{root}pt/" hreflang="pt-BR">Em português</a><a href="{root}en/" hreflang="en">In English</a></nav>
+<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
 <nav aria-label="Redes"><h3>Seguinos</h3>{tg_link("social")}{bsky_link("social")}</nav>
 </div></footer>
 <script>
+document.addEventListener("click", ev => document.querySelectorAll("details.lang[open], details.menu[open]")
+  .forEach(d => {{ if (!d.contains(ev.target)) d.open = false; }}));
 window.wmAgo = (scope = document) => scope.querySelectorAll("time[data-ago]").forEach(t => {{
   const h = (Date.now() - new Date(t.getAttribute("datetime"))) / 36e5;
   if (!(h >= 0)) return;
@@ -410,6 +426,51 @@ def _category_page(cat: str, entries: list[dict]) -> str:
                    canonical=url, root=root, body=body, jsonld=jsonld)
 
 
+ZONE_TXT = {
+    "pt": dict(home="Início", zones="Regiões", h1="Segredos em {r}",
+               intro="Todos os segredos, easter eggs, carros, armas e lugares escondidos de GTA 6 que a comunidade encontrou em {r}.",
+               count="{n} descobertas nesta região, com o passo a passo e o vídeo original.",
+               others="Outras regiões", more="Mais {n} ainda sem tradução: veja em espanhol", map="Ver no mapa"),
+    "en": dict(home="Home", zones="Areas", h1="Secrets in {r}",
+               intro="Every GTA 6 secret, easter egg, car, weapon and hidden place the community found in {r}.",
+               count="{n} discoveries in this area, with the steps and the original video.",
+               others="Other areas", more="{n} more not translated yet: see them in Spanish", map="See it on the map"),
+}
+
+
+def zone_langs(items: list[dict]) -> list[str]:
+    """Idiomas (además del español) en los que la zona tiene al menos un descubrimiento traducido."""
+    from .idiomas import LANGS, translated
+    return [l for l in LANGS if any(translated(e, l) for e in items)]
+
+
+def _zone_alts(slug: str, items: list[dict]) -> list[tuple[str, str]]:
+    from .idiomas import HREFLANG
+    return [("es", f"{config.SITE_URL}/z/{slug}/")] + [
+        (HREFLANG[l], f"{config.SITE_URL}/{l}/z/{slug}/") for l in zone_langs(items)]
+
+
+def _zone_page_lang(region: str, slug: str, entries: list[dict], zones: dict[str, str],
+                    by_zone: dict[str, list[dict]], lang: str) -> str:
+    from .idiomas import _card, translated
+    t = ZONE_TXT[lang]
+    root = "../../../"
+    url = f"{config.SITE_URL}/{lang}/z/{slug}/"
+    done = [e for e in entries if translated(e, lang)]
+    rest = len(entries) - len(done)
+    others = " · ".join(f'<a href="{root}{lang}/z/{s}/">{escape(r)}</a>' for r, s in zones.items()
+                        if r != region and lang in zone_langs(by_zone.get(r, [])))
+    intro = t["intro"].format(r=region)
+    body = f"""<nav class="crumbs"><a href="{root}{lang}/">{t["home"]}</a> › <a href="{root}{lang}/mapa/">{t["zones"]}</a> › {escape(region)}</nav>
+<header class="page-head"><h1>{escape(t["h1"].format(r=region))}</h1>
+<p class="lead">{escape(intro)} {escape(t["count"].format(n=len(done)))}</p></header>
+<div class="grid">{"".join(_card(e, root, _thumb(e), lang) for e in done)}</div>
+{f'<p class="note"><a href="{root}z/{slug}/" hreflang="es">{escape(t["more"].format(n=rest))}</a></p>' if rest else ""}
+<p class="other">{t["others"]}: {others or "—"} · <a href="{root}{lang}/mapa/">{t["map"]}</a></p>"""
+    return _layout(title=f"{t['h1'].format(r=region)} | GTA 6 | {config.SITE_NAME}", description=intro,
+                   canonical=url, root=root, body=body, lang=lang, wide=True, alternates=_zone_alts(slug, entries))
+
+
 def _zone_page(region: str, slug: str, entries: list[dict], zones: dict[str, str]) -> str:
     root = "../../"
     url = f"{config.SITE_URL}/z/{slug}/"
@@ -421,8 +482,9 @@ def _zone_page(region: str, slug: str, entries: list[dict], zones: dict[str, str
 <p class="lead">{escape(intro)} {len(entries)} descubrimientos en esta zona, actualizados varias veces por día.</p>
 <div class="minis">{"".join(_mini_card(e, root) for e in entries)}</div>
 <p class="other">Otras zonas: {others or "pronto vas a ver más zonas acá."}</p>"""
+    alts = _zone_alts(slug, entries)
     return _layout(title=f"Secretos en {region} | GTA 6 | {config.SITE_NAME}", description=intro,
-                   canonical=url, root=root, body=body)
+                   canonical=url, root=root, body=body, alternates=alts if len(alts) > 1 else None)
 
 
 MAP_TXT = {
@@ -453,7 +515,8 @@ def _map_page(by_zone: dict[str, list[dict]], zones: dict[str, str], lang: str =
     url = f"{config.SITE_URL}/mapa/" if es else f"{config.SITE_URL}/{lang}/mapa/"
     counts = {a: len(v) for a, v in by_zone.items()}
     # En español cada burbuja lleva a la página de su zona; en los otros idiomas, a su tarjeta de abajo.
-    links = {a: f"z/{s}/" if es else f"#z-{s}" for a, s in zones.items()}
+    links = {a: (f"z/{s}/" if es else f"{root}{lang}/z/{s}/" if lang in zone_langs(by_zone.get(a, [])) else f"#z-{s}")
+             for a, s in zones.items()}
     cards = []
     for area, (_, _, color, _) in AREAS.items():
         items = by_zone.get(area, [])
@@ -463,7 +526,12 @@ def _map_page(by_zone: dict[str, list[dict]], zones: dict[str, str], lang: str =
                 top.append(f'<li><a href="{root}{lang}/d/{e["slug"]}/">{escape(e[lang]["titulo"])}</a></li>')
             else:
                 top.append(f'<li><a href="{root}d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></li>')
-        head = (f'<a href="{root}z/{zones[area]}/">{escape(area)}</a>' if es and area in zones else escape(area))
+        if area in zones and es:
+            head = f'<a href="{root}z/{zones[area]}/">{escape(area)}</a>'
+        elif area in zones and lang in zone_langs(items):
+            head = f'<a href="{root}{lang}/z/{zones[area]}/">{escape(area)}</a>'
+        else:
+            head = escape(area)
         anchor = f' id="z-{zones[area]}"' if area in zones else ""
         cards.append(f'<article class="area-card"{anchor} style="--c:{color}"><h3>{head} <small>{len(items)}</small></h3>'
                      f'<p>{escape(area_desc(area, lang))}</p>' + (f'<ul>{"".join(top)}</ul>' if top else f'<p class="note">{t["empty"]}</p>')
@@ -675,6 +743,13 @@ def build(entries: list[dict]) -> None:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(_map_page(by_zone, zones, lang), encoding="utf-8")
         urls.append((f"{config.SITE_URL}/{lang}/mapa/", entries[0]["published_at"] if entries else ""))
+        for region, items in by_zone.items():
+            if lang not in zone_langs(items):
+                continue
+            out = docs / lang / "z" / zones[region] / "index.html"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(_zone_page_lang(region, zones[region], items, zones, by_zone, lang), encoding="utf-8")
+            urls.append((f"{config.SITE_URL}/{lang}/z/{zones[region]}/", items[0].get("published_at", "")))
     urls += guias.build(sys.modules[__name__])
     sitemap = "".join(f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d[:10]}</lastmod>" if d else "") + "</url>"
                       for u, d in urls)
