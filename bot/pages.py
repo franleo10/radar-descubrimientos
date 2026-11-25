@@ -605,9 +605,9 @@ def build(entries: list[dict]) -> None:
     from datetime import datetime, timezone
     updated = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     (docs / "index.html").write_text(_layout(
-        title=f"{config.SITE_NAME} · Secretos, easter eggs y mapa de GTA 6",
-        description=("Secretos, easter eggs, lugares ocultos y guías de GTA 6 que encuentra la comunidad, "
-                     "ordenados en un mapa de Leonida y actualizados varias veces por día. Guía no oficial."),
+        title=f"Secretos de GTA 6 explicados paso a paso | {config.SITE_NAME}",
+        description=("Easter eggs, lugares ocultos, autos raros y formas de hacer plata en GTA 6: dónde están y cómo "
+                     "conseguirlos, paso a paso y con el video original. En español, gratis y actualizado cada día."),
         canonical=f"{config.SITE_URL}/", root="", og_type="website", bare=True,
         body=home.home_body(entries, by_cat, by_zone, zones, week, updated)), encoding="utf-8")
 

@@ -217,6 +217,40 @@ def _community(updated: str, n_community: int) -> str:
 </div></section>"""
 
 
+def _what() -> str:
+    """Las tres cosas que se pueden hacer en el sitio, dichas en concreto."""
+    items = [
+        ("1", "Buscá un secreto", "Cada uno tiene su guía: qué es, dónde está y los pasos para conseguirlo, con el video de quien lo encontró.", "descubrimientos/", "Ver todos los secretos"),
+        ("2", "Ubicalo en el mapa", "Mirá en qué zona de Leonida está cada uno y qué secretos tenés cerca de donde estás jugando.", "mapa/", "Abrir el mapa"),
+        ("3", "Llevá la cuenta", "Tildá los que ya hiciste y mirá cuánto te falta. También hay trucos, trofeos y la lista del 100 %.", "lista/", "Mi lista de secretos"),
+    ]
+    lis = "".join(f'<li><span class="wn">{n}</span><b>{t}</b><p>{d}</p><a href="{h}">{c} <span aria-hidden="true">→</span></a></li>'
+                  for n, t, d, h, c in items)
+    return f'<ol class="what" data-reveal data-stagger aria-label="Qué podés hacer en WastedMap">{lis}</ol>'
+
+
+def _sample(entries: list[dict]) -> str:
+    """Una guía real, resumida, para que se vea qué hay adentro de cada secreto."""
+    p = _p()
+    pool = [e for e in entries if len(e.get("pasos") or []) >= 3 and p._thumb(e) and not e.get("spoiler")]
+    if not pool:
+        return ""
+    e = max(pool, key=lambda e: (e.get("confianza") == "alta", e.get("popularity") or 0))
+    steps = "".join(f"<li>{escape(s)}</li>" for s in e["pasos"][:3])
+    more = len(e["pasos"]) - 3
+    return f"""<div class="sample" data-reveal>
+  <p class="sample-tag">Así es cada guía</p>
+  <a class="thumb" href="d/{e["slug"]}/" tabindex="-1" aria-hidden="true"><img loading="lazy" src="{escape(p._thumb(e))}" alt=""><span class="play"></span></a>
+  <div class="sample-body">
+    {meta(e)}
+    <h3><a href="d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></h3>
+    <p>{escape(e.get("resumen", ""))}</p>
+    <ol class="sample-steps">{steps}</ol>
+    <a class="more-link" href="d/{e["slug"]}/">{"Ver la guía completa" + (f" ({more} pasos más)" if more > 0 else "")} <span aria-hidden="true">→</span></a>
+  </div>
+</div>"""
+
+
 def home_body(entries, by_cat, by_zone, zones, week, updated: str) -> str:
     n_conf = sum(1 for e in entries if e.get("confianza") == "alta")
     n_comm = sum(1 for e in entries if e.get("confirmado_por_comunidad"))
@@ -224,20 +258,22 @@ def home_body(entries, by_cat, by_zone, zones, week, updated: str) -> str:
     return f"""{_ticker(entries)}<section class="hero"><div class="wrap">
   <div class="hero-top">
     <div class="hero-copy">
-      <p class="overline"><span class="live" aria-hidden="true"></span>Guía no oficial · actualizada {ago(updated)}</p>
-      <h1 class="h-anim">{_words("Todos los secretos de GTA&nbsp;6 en")} <em>{_words("un solo mapa", 7)}</em></h1>
+      <p class="overline"><span class="live" aria-hidden="true"></span>Guía de GTA 6 en español · actualizada {ago(updated)}</p>
+      <h1 class="h-anim">{_words("Los secretos de GTA&nbsp;6,")} <em>{_words("explicados paso a paso", 4)}</em></h1>
     </div>
     <div class="hero-aside">
-      <p class="lede">Easter eggs, lugares ocultos, autos raros y guías que descubre la comunidad, resumidos en español y con el video original.</p>
+      <p class="lede">Todos los días juntamos los easter eggs, lugares ocultos, autos raros y formas de hacer plata que la gente descubre en el juego, y te contamos <b>dónde están y cómo conseguirlos</b>, con el video original. Gratis y sin registrarte.</p>
       <form class="search" action="descubrimientos/" role="search">
         <label class="sr" for="q">Buscar un secreto</label>
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" name="q" type="search" placeholder="Buscá un secreto: muelle, Cheetah, dinero…" autocomplete="off">
+        <input id="q" name="q" type="search" placeholder="Probá: Cheetah, muelle, plata rápida…" autocomplete="off">
         <button class="btn primary" type="submit">Buscar</button>
       </form>
-      <p class="facts"><b data-count="{len(entries)}">{len(entries)}</b> descubrimientos <i>·</i> <b data-count="{n_conf}">{n_conf}</b> confirmados <i>·</i> <b data-count="{len(by_cat)}">{len(by_cat)}</b> categorías</p>
+      <p class="facts"><b data-count="{len(entries)}">{len(entries)}</b> secretos <i>·</i> <b data-count="{n_conf}">{n_conf}</b> confirmados <i>·</i> nuevos cada día</p>
     </div>
   </div>
+  {_what()}
+  {_sample(entries)}
   {_explorer(by_zone, zones)}
 </div></section>
 {_recent(entries, top_slugs)}
