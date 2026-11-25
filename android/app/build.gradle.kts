@@ -14,11 +14,13 @@ val testInterstitialId = "ca-app-pub-3940256099942544/1033173712"
 fun prop(name: String, fallback: String): String =
     (project.findProperty(name) as String?)?.takeIf { it.isNotBlank() } ?: fallback
 
-// Firma de la versión para Play Store: android/keystore.properties (no se sube al repo).
-val keystoreProps = Properties().apply {
-    val f = rootProject.file("keystore.properties")
-    if (f.exists()) f.inputStream().use { load(it) }
-}
+// Firma de la versión para Play Store: keystore.properties en android/ o en la carpeta WastedMap-firma del
+// usuario (fuera del repo, para que la clave no se suba ni se pierda). storeFile es relativo a ese archivo.
+val keystoreFile = listOf(
+    rootProject.file("keystore.properties"),
+    File(System.getProperty("user.home"), "WastedMap-firma/keystore.properties"),
+).firstOrNull { it.exists() }
+val keystoreProps = Properties().apply { keystoreFile?.inputStream()?.use { load(it) } }
 
 android {
     namespace = "com.wastedmap.app"
@@ -36,7 +38,7 @@ android {
     signingConfigs {
         if (keystoreProps.getProperty("storeFile") != null) {
             create("release") {
-                storeFile = rootProject.file(keystoreProps.getProperty("storeFile"))
+                storeFile = File(keystoreFile!!.parentFile, keystoreProps.getProperty("storeFile"))
                 storePassword = keystoreProps.getProperty("storePassword")
                 keyAlias = keystoreProps.getProperty("keyAlias")
                 keyPassword = keystoreProps.getProperty("keyPassword")
