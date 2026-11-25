@@ -53,6 +53,7 @@ Regras:
 - Tradução fiel e natural, no tom de um site de games brasileiro. Não acrescente nem invente nada.
 - Mantenha como estão os nomes próprios: lugares (Vice City, Leonida, Port Gellhorn...), \
 veículos, armas, personagens, missões e nomes de criadores.
+- Traduza TODOS os campos (título, resumo, explicação e cada passo). Nunca devolva o texto em espanhol.
 - Devolva cada item com o mesmo "id". Se um campo vier vazio, devolva vazio.""",
     "en": """You translate WastedMap's guides into English. WastedMap is a site about the \
 secrets of the video game GTA 6. The original text is in Rioplatense Spanish.
@@ -61,6 +62,7 @@ Rules:
 - Faithful, natural translation in the tone of an English-language gaming site. Do not add or invent anything.
 - Keep proper names as they are: places (Vice City, Leonida, Port Gellhorn...), vehicles, \
 weapons, characters, missions and creator names.
+- Translate EVERY field (title, summary, explanation and each step). Never return the Spanish text.
 - Return each item with the same "id". If a field is empty, return it empty.""",
 }
 
@@ -131,6 +133,23 @@ def alternates(e: dict) -> list[tuple[str, str]]:
     return out
 
 
+def _norm(x: str) -> str:
+    return " ".join((x or "").lower().split())
+
+
+def untranslated(e: dict, r: dict) -> bool:
+    """True si la "traducción" volvió igual al español (pasa a veces): no se guarda y se reintenta después."""
+    if _norm(r.get("titulo")) == _norm(e.get("titulo")):
+        return True
+    if e.get("resumen") and _norm(r.get("resumen")) == _norm(e.get("resumen")):
+        return True
+    if e.get("detalle") and len(e["detalle"]) > 40 and _norm(r.get("detalle")) == _norm(e.get("detalle")):
+        return True
+    src = [_norm(x) for x in e.get("pasos") or []]
+    same = sum(1 for a, b in zip(src, [_norm(x) for x in r.get("pasos") or []]) if a == b and len(a) > 25)
+    return bool(src) and same * 2 > len(src)
+
+
 def translate(entries: list[dict], lang: str) -> None:
     from .pages import indexable
 
@@ -162,7 +181,7 @@ def translate(entries: list[dict], lang: str) -> None:
         by_id = {r["id"]: r for r in json.loads(text)["items"]}
         for e in batch:
             r = by_id.get(e["id"])
-            if r and r["titulo"].strip():
+            if r and r["titulo"].strip() and not untranslated(e, r):
                 e[lang] = {"titulo": r["titulo"].strip(), "resumen": r["resumen"].strip(),
                            "detalle": r["detalle"].strip(), "pasos": [p.strip() for p in r["pasos"] if p.strip()],
                            "src": _src(e)}

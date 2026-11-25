@@ -1551,20 +1551,6 @@
     "Vender los billetes marcados a Yasmani."
    ],
    "region": "",
-   "pt": {
-    "titulo": "Robo rápido al Lombank del centro",
-    "resumen": "Ruta para robar el Lombank del centro por unos 55.000 dólares sin esperar la bóveda principal, vendiendo los billetes marcados a Yasmani. La alarma se activa durante la sección de cajones de efectivo.",
-    "detalle": "Ruta rápida para robar el Lombank del centro, con un botín de unos 55.000 dólares sin esperar la bóveda principal. Los billetes marcados se venden a Yasmani. La alarma se activa durante la sección de cajones de efectivo, así que no es un robo sigiloso.",
-    "pasos": [
-     "Entrar por la puerta trasera.",
-     "Usar el código de la sala de seguridad.",
-     "Abrir la caja fuerte de la oficina.",
-     "Sacar el efectivo de los cajones.",
-     "Escapar.",
-     "Vender los billetes marcados a Yasmani."
-    ],
-    "src": "6ee781cd0d"
-   },
    "slug": "robo-rapido-al-lombank-del-centro-68828",
    "en": {
     "titulo": "Quick Robbery of the Downtown Lombank",
@@ -1663,18 +1649,6 @@
    ],
    "region": "Vice City",
    "macro": "Vice City",
-   "pt": {
-    "titulo": "Diez cosas para hacer primero en el capítulo 3",
-    "resumen": "Guía con varias cosas útiles del capítulo 3: auto deportivo gratis con cochera, Snap Gun, armas legendarias, mejores proveedores, más capacidad bancaria y formas de ganar dinero. Incluye misiones y contenido que se puede perder.",
-    "detalle": "Guía con cosas que conviene hacer primero en el capítulo 3 de Vice City: un auto deportivo gratis con cochera, la Snap Gun, armas legendarias, mejores proveedores, más capacidad bancaria y formas de ganar dinero. También incluye misiones y contenido que se puede perder.",
-    "pasos": [
-     "Conseguir el auto deportivo gratis y el garage (0:22).",
-     "Desbloquear la Snap Gun (2:15).",
-     "Desbloquear a Tyrone (4:35).",
-     "Buscar el búnker secreto con la SMG y el lanzacohetes legendarios (9:23)."
-    ],
-    "src": "83baaa059b"
-   },
    "slug": "diez-cosas-para-hacer-primero-en-el-capitulo-3-0421a",
    "en": {
     "titulo": "Ten Things to Do First in Chapter 3",
@@ -1778,20 +1752,6 @@
    ],
    "region": "Port Gellhorn",
    "macro": "Port Gellhorn",
-   "pt": {
-    "titulo": "Cosas antes de terminar el capítulo 2",
-    "resumen": "Guía con coleccionables del motel Starlet, registro gratuito de auto, garage gratis, dinero rápido en BuckMe, armas únicas, códigos de cajas fuertes y el Vapid Firebug Dominator con nitro.",
-    "detalle": "Guía con coleccionables y recompensas que conviene aprovechar antes de terminar el capítulo 2. Incluye coleccionables del Starlet Motel, el registro gratuito del auto de Moses, un garage gratis, una forma fácil de llegar a 15.000 dólares en BuckMe y el Vapid Firebug Dominator con nitro.",
-    "pasos": [
-     "Buscar los coleccionables del Starlet Motel (0:33).",
-     "Registrar gratis el auto de Moses (2:03).",
-     "Desbloquear el garage gratis (3:11).",
-     "Conseguir 15.000 dólares en BuckMe (3:49).",
-     "Reclamar las armas gratis y las recompensas de bolos de Kingpin (5:23).",
-     "Buscar el auto muscle secreto en La Cascara (6:23)."
-    ],
-    "src": "36dcc6ae4c"
-   },
    "slug": "cosas-antes-de-terminar-el-capitulo-2-bf7f9",
    "en": {
     "titulo": "Things to do before finishing Chapter 2",
@@ -1833,17 +1793,6 @@
     "Ir a la granja industrial para conseguir el auto Dually raro, con el que se remolcan los cajeros."
    ],
    "region": "",
-   "pt": {
-    "titulo": "Tres puntos de dinero rápido al inicio",
-    "resumen": "El video muestra tres lugares para conseguir dinero temprano en el juego, además de autos rarös y armas Legendarias que se pueden conservar. Uno de los autos puede arrancar cajeros automáticos para obtener más dinero.",
-    "detalle": "Video con tres lugares para conseguir dinero temprano en el juego. En el recorrido también se pueden obtener autos raros que son conducibles en los primeros capítulos, entre ellos uno que arranca cajeros automáticos, y variantes Legendarias de armas que se conservan para siempre.",
-    "pasos": [
-     "Ir a Watson Bay para conseguir la Golden Gun y la SUV.",
-     "Ir al Balsero Compound para conseguir la MP5 con supresor y mira.",
-     "Ir a la granja industrial para conseguir el auto Dually raro, con el que se remolcan los cajeros."
-    ],
-    "src": "8b5e9fd973"
-   },
    "slug": "tres-puntos-de-dinero-rapido-al-inicio-38ee8",
    "en": {
     "titulo": "Three Quick Money Spots at the Start",
@@ -1941,18 +1890,6 @@
     "Repetir el intento hasta que la cámara cambie a primera persona."
    ],
    "region": "",
-   "pt": {
-    "titulo": "Primera persona con el control de PS5",
-    "resumen": "Truco para activar la cámara en primera persona usando el panel táctil del mando de PS5, asignando el botón a Cámara en Configuración y cerrando el teléfono mientras se toca rápido el touchpad.",
-    "detalle": "Truco para activar la cámara en primera persona con el panel táctil del mando de PS5. Según el video, puede requerir varios intentos, y conviene guardar la partida antes de probarlo.",
-    "pasos": [
-     "Ir a Configuración > Controlador y asignar el botón del Touch Pad a Cámara (2/2).",
-     "Subirse a um carro e abrir o celular.",
-     "Pressionar Círculo para fechar o celular enquanto toca rápido no touchpad.",
-     "Repetir a tentativa até que a câmera mude para primeira pessoa."
-    ],
-    "src": "0059d846de"
-   },
    "slug": "primera-persona-con-el-control-de-ps5-20738",
    "en": {
     "titulo": "First-Person Mode With the PS5 Controller",
@@ -1988,14 +1925,7 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "pistola-assassin-nipper-38-estilo-james-bond-2b373",
-   "pt": {
-    "titulo": "Pistola Assassin Nipper .38 estilo James Bond",
-    "resumen": "É uma pistola com silenciador escondida no mundo do jogo, com estilo James Bond. O vídeo mostra como encontrá-la.",
-    "detalle": "",
-    "pasos": [],
-    "src": "39e78eee88"
-   }
+   "slug": "pistola-assassin-nipper-38-estilo-james-bond-2b373"
   },
   {
    "id": "yt:9LfgMEEAfl0",
@@ -2408,20 +2338,6 @@
     "Aprender a romper bóvedas (12:14)."
    ],
    "region": "",
-   "pt": {
-    "titulo": "Cosas para hacer antes de terminar el capítulo 3",
-    "resumen": "Lista de cosas útiles del capítulo 3: laptop y contraseña del Bayside, Snap Gun, robos fáciles, autos y armas especiales, tiendas de ropa, gimnasio dúo y bombas pegajosas diarias.",
-    "detalle": "Video con una lista de cosas útiles para hacer antes de terminar el capítulo 3. Incluye la contraseña de la laptop del apartamento Bayside, la Snap Gun, robos fáciles, autos y armas especiales, tiendas de ropa, gimnasio dúo, bombas pegajosas diarias y consejos para romper bóvedas.",
-    "pasos": [
-     "Conseguir la contraseña de la laptop del apartamento Bayside (00:11).",
-     "Desbloquear la Snap Gun (02:00).",
-     "Seguir los consejos de robos y el fácil 35k (02:53).",
-     "Conseguir la supercar y el fusil de asalto del Kingpin (04:28).",
-     "Conseguir la pistola silenciada en la segunda supercar (06:03).",
-     "Aprender a romper bóvedas (12:14)."
-    ],
-    "src": "07a242fb9e"
-   },
    "slug": "cosas-para-hacer-antes-de-terminar-el-capitulo-3-d2074",
    "en": {
     "titulo": "Things to Do Before Finishing Chapter 3",
@@ -2583,19 +2499,6 @@
     "Usar el digicódigo 090607 y la contraseña President Russo 0612 en la computadora."
    ],
    "region": "",
-   "pt": {
-    "titulo": "Bunkers secretos del presidente Russo",
-    "resumen": "Explica cómo abrir los bunkers secretos del presidente Russo con códigos de puerta, cofre y computadora. Las recompensas son la pistola 1922, el fusil Cold War 556, un tanque gratis, la pistola Brainwasher y un Focus permanente.",
-    "detalle": "Los bunkers secretos del presidente Russo se abren con una serie de códigos de puerta, cofre, trampilla y computadora. Todo empieza en el memorial Friends of Freedom de Vice City, donde Jose Bermudez envía al jugador a su apartamento en Little Cuba.\n\nLas recompensas que menciona el video son la pistola 1922, el fusil Cold War 556, un tanque gratis, la pistola Brainwasher y un bonus de Focus permanente.",
-    "pasos": [
-     "Ir al memorial Friends of Freedom de Vice City y al apartamento de Jose Bermudez en Little Cuba.",
-     "Usar el código 010317 en la puerta del bunker presidencial de Sharktooth Island.",
-     "Usar el código 2975 para abrir el cofre con el Protocolo 2.",
-     "Usar el código OBSESS 085355 en la trampilla del segundo bunker cerca de Big Pine.",
-     "Usar el digicódigo 090607 y la contraseña President Russo 0612 en la computadora."
-    ],
-    "src": "6ada84fd70"
-   },
    "slug": "bunkers-secretos-del-presidente-russo-de8b0",
    "en": {
     "titulo": "President Russo's Secret Bunkers",
@@ -3920,16 +3823,6 @@
      "published_at": "2026-11-23T05:30:16Z"
     }
    ],
-   "pt": {
-    "titulo": "Payaso estilo Pennywise en un edificio en construcción",
-    "resumen": "En un complejo de apartamentos en obra aparece un globo junto a un ascensor fuera de servicio. Al entrar, Jason encuentra globos y a un payaso con machete llamado Benny.",
-    "detalle": "En un complejo de apartamentos en construcción aparece un globo junto a un ascensor supuestamente fuera de servicio. Al entrar al ascensor, Jason encuentra globos y a un payaso con machete llamado Benny, que tiene un parecido con Pennywise.\n\nSegún el video, el ascensor puede usarse para volver al lobby después del encuentro, y en el techo hay un paraquedas cerca de uno de los accesos.",
-    "pasos": [
-     "Ir a la obra de noite, idealmente por volta das 3:00 da manhã.",
-     "Entrar no elevador que tem o balão do lado."
-    ],
-    "src": "00c4555d90"
-   },
    "en": {
     "titulo": "Pennywise-Style Clown in an Unfinished Building",
     "resumen": "In an apartment complex under construction, a balloon appears next to an out-of-service elevator. Inside, Jason finds balloons and a machete-wielding clown named Benny.",
@@ -4038,14 +3931,7 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": "",
-   "pt": {
-    "titulo": "11 autos secretos y únicos",
-    "resumen": "Guía de 11 autos únicos y legendarios para conseguir. La descripción no detalla modelos ni ubicaciones.",
-    "detalle": "",
-    "pasos": [],
-    "src": "1ce080a741"
-   }
+   "region": ""
   },
   {
    "id": "yt:WqrXp44o530",
@@ -4198,14 +4084,7 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "dodge-charger-de-fast-furious-699a9",
-   "pt": {
-    "titulo": "Dodge Charger de Fast & Furious",
-    "resumen": "Guia sobre a localização de um Dodge Charger R/T 1970 inspirado no carro de Dominic Toretto. A descrição não explica o local exato nem como conseguir o veículo.",
-    "detalle": "",
-    "pasos": [],
-    "src": "bc30002d43"
-   }
+   "slug": "dodge-charger-de-fast-furious-699a9"
   },
   {
    "id": "yt:BgHEX8IpviA",
@@ -4362,17 +4241,6 @@
     "Saltar en la cámara tóxica."
    ],
    "region": "",
-   "pt": {
-    "titulo": "Aumento permanente de resistencia en el baño",
-    "resumen": "Escanear el cartel QR \"Don't Flush\" en el baño de Corsair Key, seguir al Dr. Merle hasta la planta de aguas residuales y saltar en la cámara tóxica da un aumento permanente de resistencia.",
-    "detalle": "",
-    "pasos": [
-     "Escanear o cartaz QR \"Don't Flush\" no banheiro de Corsair Key.",
-     "Seguir o Dr. Merle até a estação de tratamento de águas residuais.",
-     "Pular na câmara tóxica."
-    ],
-    "src": "1891471787"
-   },
    "en": {
     "titulo": "Permanent Stamina Boost in the Bathroom",
     "resumen": "Scan the \"Don't Flush\" QR sign in the Corsair Key bathroom, follow Dr. Merle to the wastewater plant, and jump into the toxic chamber to get a permanent stamina boost.",
@@ -4757,17 +4625,6 @@
     "Ingresar el código que se muestra en el video"
    ],
    "region": "",
-   "pt": {
-    "titulo": "Ubicación y código de acceso de Auntie's Place",
-    "resumen": "Guía para encontrar Auntie's Place y entrar al edifício usando o código do teclado de acesso.",
-    "detalle": "",
-    "pasos": [
-     "Ir até a entrada do prédio",
-     "Localizar o teclado de acesso",
-     "Digitar o código que aparece no vídeo"
-    ],
-    "src": "b14e2374c9"
-   },
    "en": {
     "titulo": "Auntie's Place location and access code",
     "resumen": "Guide to finding Auntie's Place and entering the building using the code on the access keypad.",
@@ -5639,17 +5496,6 @@
     "Usar la Snap Gun en Richardson Jewelry."
    ],
    "region": "",
-   "pt": {
-    "titulo": "Snap Gun para abrir puertas sin alarma",
-    "resumen": "En la misión de las joyerías de Yasmani se puede conseguir la Snap Gun, que abre puertas sin ruido ni alarmas. También explica cómo sacar el trofeo Sneakthief robando una joyería sin ser detectado.",
-    "detalle": "Durante la misión de las joyerías de Yasmani se puede conseguir la Snap Gun, un arma que abre puertas sin ruido ni alarmas. El video también explica cómo obtener el trofeo Sneakthief robando una joyería sin ser detectado.",
-    "pasos": [
-     "Robar Casa De Empeño para obtener la cadena Buffalo Skull.",
-     "Conseguir la Snap Gun.",
-     "Usar la Snap Gun en Richardson Jewelry."
-    ],
-    "src": "683d4378ce"
-   },
    "en": {
     "titulo": "Snap Gun for Silent Door Opening",
     "resumen": "During Yasmani's jewelry store missions, you can get the Snap Gun, which opens doors without noise or alarms. It also explains how to earn the Sneakthief trophy by robbing a jewelry store undetected.",
@@ -5946,14 +5792,7 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": "",
-   "pt": {
-    "titulo": "24 lugares secretos visitados",
-    "resumen": "Vídeo que percorre 24 locais secretos do mapa.",
-    "detalle": "",
-    "pasos": [],
-    "src": "d22f2fd21f"
-   }
+   "region": ""
   },
   {
    "id": "yt:REfc5kkhLA8",
@@ -6452,16 +6291,6 @@
     "Para conservar el diseño personalizado, usar el truco con Moses o Vice Vinyl."
    ],
    "region": "",
-   "pt": {
-    "titulo": "Eclipse de Paul Walker: Maibatsu Penumbra FF",
-    "resumen": "Localização e desbloqueio do Maibatsu Penumbra FF, homenagem ao carro de Velozes e Furiosos, e como manter seu design personalizado.",
-    "detalle": "Localização e desbloqueio do Maibatsu Penumbra FF, uma homenagem ao carro de Velozes e Furiosos. Para manter seu design personalizado de forma permanente, usa-se o truque com Moses ou Vice Vinyl.",
-    "pasos": [
-     "Ir à localização indicada no vídeo e resgatar o carro.",
-     "Para manter o design personalizado, usar o truque com Moses ou Vice Vinyl."
-    ],
-    "src": "d389f8d500"
-   },
    "en": {
     "titulo": "Paul Walker Eclipse: Maibatsu Penumbra FF",
     "resumen": "Location and unlock details for the Maibatsu Penumbra FF, a tribute to the Fast & Furious car, and how to keep its custom design.",
@@ -6759,14 +6588,7 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "codigo-qr-escondido-9f1f0",
-   "pt": {
-    "titulo": "Código QR escondido",
-    "resumen": "Short que mostra um código QR apresentado como easter egg oculto em GTA 6. A descrição não explica o que ele faz nem onde está.",
-    "detalle": "",
-    "pasos": [],
-    "src": "ed936da28d"
-   }
+   "slug": "codigo-qr-escondido-9f1f0"
   },
   {
    "id": "yt:f0DBLY-wK90",
@@ -7310,13 +7132,6 @@
    "detalle": "Recopilación de referencias y secretos de GTA 6 que van desde RDR2, GTA 5 y Vice City hasta Silent Hill, Dexter, Mario & Luigi y Fast & Furious. Entre los hallazgos mencionados aparecen un barco pirata fantasma, el Kraken, el Skunk Ape, un ritual demoníaco y una abducción alienígena por OVNI.",
    "pasos": [],
    "region": "",
-   "pt": {
-    "titulo": "Recopilación de easter eggs y referencias (parte 1)",
-    "resumen": "Repasa referencias a RDR2, GTA 5, Vice City, Silent Hill, Dexter y Mario. Incluye un barco pirata fantasma, el Kraken, el Skunk Ape, un ritual demoníaco y la abducción alienígena.",
-    "detalle": "Recopilación de referencias y secretos de GTA 6 que van desde RDR2, GTA 5 y Vice City hasta Silent Hill, Dexter, Mario & Luigi y Fast & Furious. Entre los hallazgos mencionados aparecen un barco pirata fantasma, el Kraken, el Skunk Ape, un ritual demoníaco y una abducción alienígena por OVNI.",
-    "pasos": [],
-    "src": "dbc1b7484f"
-   },
    "en": {
     "titulo": "Easter Eggs and References Compilation (Part 1)",
     "resumen": "Covers references to RDR2, GTA 5, Vice City, Silent Hill, Dexter, and Mario. Includes a ghost pirate ship, the Kraken, the Skunk Ape, a demonic ritual, and an alien UFO abduction.",
