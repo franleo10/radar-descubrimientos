@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.WastedMap" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.WastedMap" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/pink</item>
         <item name="colorOnPrimary">@android:color/white</item>
         <item name="colorSecondaryContainer">@color/pink_soft</item>
         <item name="colorOnSecondaryContainer">@color/pink</item>
-        <item name="colorSurface">@color/card</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceContainer">@color/surface</item>
         <item name="colorOnSurface">@color/ink</item>
-        <item name="android:colorBackground">@color/paper</item>
-        <item name="android:windowBackground">@color/paper</item>
+        <item name="colorOnSurfaceVariant">@color/ink2</item>
+        <item name="colorControlNormal">@color/ink</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/card</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="popupMenuStyle">@style/Menu</item>
+    </style>
+
+    <style name="Menu" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_bg</item>
     </style>
 
     <style name="NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
@@ -20,6 +28,7 @@
     <style name="Toolbar.Title" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/ink</item>
+        <item name="android:letterSpacing">-0.01</item>
     </style>
 
     <!-- Pantalla de inicio: el ícono sobre fondo oscuro, como el ícono de la app. -->

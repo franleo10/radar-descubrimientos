@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="paper">#F6F3EE</color>
-    <color name="card">#FFFDF9</color>
-    <color name="line">#E3DCD0</color>
-    <color name="ink">#17131F</color>
-    <color name="ink2">#3D3747</color>
-    <color name="muted">#6E6779</color>
-    <color name="pink">#D61F69</color>
-    <color name="pink_soft">#FBE3EC</color>
+    <!-- Tema oscuro de la app (igual que el estilo que se inyecta en las páginas, assets/app.css). -->
+    <color name="bg">#0E0C15</color>
+    <color name="surface">#14111D</color>
+    <color name="card">#191523</color>
+    <color name="line">#2A2538</color>
+    <color name="ink">#F4F0FA</color>
+    <color name="ink2">#C8C0D6</color>
+    <color name="muted">#958DA7</color>
+    <color name="pink">#FF4F8B</color>
+    <color name="orange">#FFB347</color>
+    <color name="pink_soft">#33FF4F8B</color>
     <color name="night">#0B0A10</color>
+    <!-- Alias que usa el diseño anterior -->
+    <color name="paper">#0E0C15</color>
 </resources>

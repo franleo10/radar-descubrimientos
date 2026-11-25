@@ -4,7 +4,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/card"
+    android:background="@color/surface"
     android:orientation="vertical">
 
     <!-- Barra de arriba: título de la página, atrás y menú (compartir, idioma...). -->
@@ -12,20 +12,21 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/card"
+        android:background="@color/surface"
         app:titleTextAppearance="@style/Toolbar.Title"
         app:menu="@menu/top" />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line" />
+        android:layout_height="2dp"
+        android:alpha="0.85"
+        android:background="@drawable/bar_line" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/paper">
+        android:background="@color/bg">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/refresh"
@@ -109,8 +110,8 @@
         android:id="@+id/nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/card"
-        app:backgroundTint="@color/card"
+        android:background="@color/surface"
+        app:backgroundTint="@color/surface"
         app:elevation="0dp"
         app:itemActiveIndicatorStyle="@style/NavIndicator"
         app:itemIconTint="@color/nav_item"

@@ -6,6 +6,10 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
+import android.view.HapticFeedbackConstants
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.CookieManager
@@ -23,11 +27,14 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import androidx.webkit.WebViewCompat
+import androidx.webkit.WebViewFeature
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.progressindicator.LinearProgressIndicator
 import org.json.JSONArray
+import org.json.JSONObject
 import java.util.Locale
 
 /**
@@ -75,8 +82,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         WindowInsetsControllerCompat(window, root).apply {
-            isAppearanceLightStatusBars = true
-            isAppearanceLightNavigationBars = true
+            isAppearanceLightStatusBars = false
+            isAppearanceLightNavigationBars = false
         }
 
         web = findViewById(R.id.web)
@@ -86,7 +93,8 @@ class MainActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         nav = findViewById(R.id.nav)
         findViewById<MaterialButton>(R.id.retry).setOnClickListener { offline.visibility = View.GONE; web.reload() }
-        refresh.setColorSchemeColors(getColor(R.color.pink))
+        refresh.setColorSchemeColors(getColor(R.color.pink), getColor(R.color.orange))
+        refresh.setProgressBackgroundColorSchemeColor(getColor(R.color.card))
         refresh.setOnRefreshListener { web.reload() }
 
         setupToolbar()
@@ -117,8 +125,9 @@ class MainActivity : AppCompatActivity() {
     // ------------------------------------------------------------------ barra de arriba
 
     private fun setupToolbar() {
-        toolbar.title = getString(R.string.app_name)
+        toolbar.title = brandTitle()
         toolbar.setNavigationContentDescription(R.string.back)
+        toolbar.overflowIcon?.setTint(getColor(R.color.ink))
         toolbar.setNavigationOnClickListener { if (web.canGoBack()) web.goBack() }
         toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
@@ -138,7 +147,10 @@ class MainActivity : AppCompatActivity() {
         val path = url?.let { Uri.parse(it).path } ?: "/"
         val lang = langOf(path)
         val atTab = tabs.getValue(lang).indexOf(path)
-        toolbar.navigationIcon = if (web.canGoBack() && atTab < 0) getDrawable(R.drawable.ic_back) else null
+        toolbar.navigationIcon = if (web.canGoBack() && atTab < 0)
+            getDrawable(R.drawable.ic_back)?.apply { setTint(getColor(R.color.ink)) } else null
+        // En Inicio: el logo y "WastedMap" con "Map" en rosa, como la marca.
+        toolbar.logo = if (atTab == 0) logo else null
         val clean = (title ?: web.title).orEmpty().substringBefore(" | ").trim()
 
         toolbar.menu.findItem(R.id.lang_es).isChecked = lang == "es"
@@ -149,7 +161,7 @@ class MainActivity : AppCompatActivity() {
         // La última pestaña dice "Mi lista" en español y "Lista 100 %" en los otros idiomas (va a otra página).
         nav.menu.findItem(R.id.tab_list).setTitle(if (lang == "es") R.string.tab_list else R.string.tab_list_100)
         toolbar.title = when {
-            atTab == 0 || clean.isEmpty() || clean.startsWith("http") -> getString(R.string.app_name)
+            atTab == 0 || clean.isEmpty() || clean.startsWith("http") -> brandTitle()
             atTab > 0 -> nav.menu.findItem(tabIds[atTab]).title   // en una pestaña: su nombre
             else -> clean
         }
@@ -157,6 +169,19 @@ class MainActivity : AppCompatActivity() {
             syncingTab = true
             nav.selectedItemId = tabIds[atTab]
             syncingTab = false
+        }
+    }
+
+    /** El pin con un poco de aire a la derecha, para que no quede pegado al nombre. */
+    private val logo by lazy {
+        android.graphics.drawable.InsetDrawable(getDrawable(R.drawable.ic_logo),
+            0, 0, (10 * resources.displayMetrics.density).toInt(), 0)
+    }
+
+    private fun brandTitle(): CharSequence {
+        val name = getString(R.string.app_name)          // "WastedMap"
+        return SpannableString(name).apply {
+            setSpan(ForegroundColorSpan(getColor(R.color.pink)), 6, name.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         }
     }
 
@@ -194,6 +219,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupTabs() {
         nav.setOnItemSelectedListener { item ->
             if (!syncingTab) {
+                nav.performHapticFeedback(HapticFeedbackConstants.CONTEXT_CLICK)
                 val lang = langOf(web.url?.let { Uri.parse(it).path } ?: (prefs.getString("lang", "es") ?: "es").let { "/$it/" })
                 web.loadUrl(BuildConfig.SITE + tabs.getValue(lang)[tabIds.indexOf(item.itemId)])
             }
@@ -219,8 +245,23 @@ class MainActivity : AppCompatActivity() {
     private fun isOurs(uri: Uri): Boolean =
         uri.scheme == "https" && (uri.host == site.host || uri.host?.endsWith("." + site.host) == true)
 
-    @SuppressLint("SetJavaScriptEnabled")
+    /** Script que marca la página como "app" y le agrega el estilo propio (assets/app.css). */
+    private val appStyleJs by lazy {
+        val css = assets.open("app.css").bufferedReader().use { it.readText() }
+        "(function(){var d=document.documentElement;if(!d)return;d.classList.add('app');" +
+            "if(document.getElementById('wm-app-css'))return;var s=document.createElement('style');" +
+            "s.id='wm-app-css';s.textContent=${JSONObject.quote(css)};(document.head||d).appendChild(s);})();"
+    }
+    private var styleAtStart = false
+
+    @SuppressLint("SetJavaScriptEnabled", "RequiresFeature")
     private fun setupWebView() {
+        web.setBackgroundColor(getColor(R.color.bg))
+        // Lo ideal: el estilo entra antes de que se dibuje la página (sin parpadeo).
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
+            WebViewCompat.addDocumentStartJavaScript(web, appStyleJs, setOf(BuildConfig.SITE))
+            styleAtStart = true
+        }
         web.settings.apply {
             javaScriptEnabled = true
             domStorageEnabled = true            // "Mi lista", el 100 % y los trofeos se guardan acá
@@ -250,11 +291,20 @@ class MainActivity : AppCompatActivity() {
             override fun onPageStarted(view: WebView, url: String, favicon: Bitmap?) {
                 mainFrameError = false
                 if (!refresh.isRefreshing) progress.visibility = View.VISIBLE
+                if (!styleAtStart) view.evaluateJavascript(appStyleJs, null)
+                // Transición corta entre páginas en lugar del corte seco del navegador.
+                view.animate().alpha(0.4f).setDuration(120).start()
+            }
+
+            override fun onPageCommitVisible(view: WebView, url: String) {
+                if (!styleAtStart) view.evaluateJavascript(appStyleJs, null)
+                view.animate().alpha(1f).setDuration(180).start()
             }
 
             override fun onPageFinished(view: WebView, url: String) {
                 refresh.isRefreshing = false
                 progress.visibility = View.GONE
+                view.animate().alpha(1f).setDuration(120).start()
                 if (!mainFrameError) {
                     offline.visibility = View.GONE
                     prefs.edit().putString("last", url).apply()

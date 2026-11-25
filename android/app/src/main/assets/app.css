@@ -1,0 +1,66 @@
+/* Estilo propio de la app de Android. La app lo inyecta en cada página antes de que se dibuje;
+   la web en el navegador no lo usa. Tema oscuro con el degradado del ícono (rosa -> naranja). */
+html.app{
+  --bg:#0e0c15; --paper:#191523; --sunk:#221d2f;
+  --ink:#f4f0fa; --ink-2:#c8c0d6; --muted:#958da7; --line:#2a2538; --line-2:#3a3349;
+  --pink:#ff4f8b; --pink-hover:#ff6f9f; --pink-soft:rgba(255,79,139,.14);
+  --grad:linear-gradient(100deg,#ff3d8b 0%,#ff7a59 55%,#ffb347 100%);
+  --r:12px; --r-lg:20px;
+  color-scheme:dark;
+}
+html.app body{background:var(--bg);-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
+html.app ::selection{background:rgba(255,79,139,.35)}
+
+/* Títulos: más apretados y con el degradado en la parte destacada */
+html.app h1,html.app h2,html.app h3{letter-spacing:-.025em}
+html.app .hero h1{font-size:40px;line-height:1.02}
+html.app .hero h1 em,html.app .pt-hero h1 em{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* En la portada cada palabra es un bloque animado: el degradado va en cada una */
+html.app .h-anim em{background:none !important;animation:none !important}
+html.app .h-anim em .w{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-bottom:.06em}
+html.app .overline{color:var(--muted);letter-spacing:.12em}
+
+/* Botones: el principal con degradado, el resto como "chips" oscuros */
+html.app .btn{border-radius:999px;border-color:var(--line-2);background:var(--sunk);color:var(--ink);min-height:44px}
+html.app .btn.primary{background:var(--grad);border:0;color:#fff;box-shadow:0 8px 24px -10px rgba(255,61,139,.7)}
+html.app .btn:active{transform:scale(.97)}
+
+/* Tarjetas: fondo elevado, bordes suaves y respuesta al toque */
+html.app .what li,html.app .sample,html.app .card,html.app .g-hub a,html.app .area-card,html.app .box,
+html.app .r-lead,html.app .tk-row,html.app .h-row,html.app .ck-list li,html.app .ml-list li,html.app .mn-row{
+  background:var(--paper);border-color:var(--line);border-radius:var(--r-lg)}
+html.app .card,html.app .g-hub a,html.app .what li,html.app .r-row,html.app .cats a{transition:transform .12s ease}
+html.app .card:active,html.app .g-hub a:active,html.app .what li:active,html.app .r-row:active,html.app .cats a:active{transform:scale(.98)}
+html.app .card{overflow:hidden;border:1px solid var(--line)}
+html.app .card .card-body{padding:14px 16px 16px}
+html.app .thumb,html.app .media{border-radius:16px}
+html.app .what .wn{background:var(--grad);color:#fff}
+html.app .what a,html.app .more-link{color:var(--pink);border-bottom:0}
+html.app .sample-tag{background:var(--grad);color:#fff}
+
+/* Buscador y campos */
+html.app input[type=search],html.app input[type=text],html.app input[type=email],html.app input[type=number],html.app textarea{
+  background:var(--sunk);color:var(--ink);border-color:var(--line-2);border-radius:14px}
+html.app .search{background:var(--paper);border-color:var(--line);border-radius:16px}
+
+/* Etiquetas y chips */
+html.app .tag,html.app .chip{background:var(--sunk);color:var(--ink-2);border-color:var(--line-2);border-radius:999px}
+html.app .tag.warn{background:rgba(255,179,71,.14);color:#ffc874}
+
+/* Secciones: menos espacio que en la web, como una app */
+html.app .sec{padding:44px 0}
+html.app .band-pink{background:linear-gradient(160deg,#3a1328,#1a1020)}
+html.app .band-ink{background:#130f1c}
+html.app hr,html.app .sec + .sec{border-color:var(--line)}
+
+/* Enlaces largos de texto no se subrayan en la app */
+html.app a{text-decoration-color:rgba(255,79,139,.4)}
+
+/* Sin selección accidental al tocar elementos de navegación */
+html.app .what,html.app .cats,html.app .g-hub,html.app .card h3,html.app .btn{-webkit-user-select:none;user-select:none}
+
+/* Cuadros de aviso y estados que en la web son claros: versión oscura */
+html.app .g-warn,html.app .tag.warn,html.app .mn-risk.r2,html.app .spoiler-btn{background:rgba(255,179,71,.12);color:#ffcf86;border-color:rgba(255,179,71,.35)}
+html.app .g-warn b{color:#ffe0ad}
+html.app .tag.ok,html.app .mn-risk.r1,html.app .vote.confirm[aria-pressed="true"],html.app .done-btn[aria-pressed="true"]{background:rgba(74,222,128,.12);color:#86efac;border-color:rgba(74,222,128,.4)}
+html.app .mn-risk.r3{background:rgba(248,113,113,.14);color:#fca5a5}
