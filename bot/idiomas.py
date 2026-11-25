@@ -71,28 +71,36 @@ TXT = {
         spoiler="Contém spoilers · toque para ver", source="Fonte", home="Início",
         note='Resumo feito automaticamente a partir do vídeo original e traduzido do espanhol. Para votar e comentar, veja a <a href="{es}">versão em espanhol</a>.',
         cat_lead="{n} descobertas da comunidade, com os passos e o vídeo original. Atualizado várias vezes por dia.",
-        overline="Guia não oficial · atualizado várias vezes por dia",
-        h1="Todos os segredos de GTA&nbsp;6 em <em>um só mapa</em>",
-        lead="Easter eggs, lugares escondidos, carros raros e guias que a comunidade descobre, resumidos em português e com o vídeo original.",
+        overline="Guia de GTA 6 em português · atualizado todo dia",
+        h1="Os segredos de GTA&nbsp;6, <em>explicados passo a passo</em>",
+        lead="Todo dia juntamos os easter eggs, lugares escondidos, carros raros e formas de ganhar dinheiro que a galera descobre no jogo, e mostramos <b>onde estão e como conseguir</b>, com o vídeo original. Grátis e sem cadastro.",
+        do=[("Procure um segredo", "Cada um tem seu guia: o que é, onde fica e o passo a passo, com o vídeo de quem encontrou.", "#recentes", "Ver os segredos"),
+              ("Veja no mapa", "Descubra em que região de Leonida fica cada um e o que tem perto de onde você está jogando.", "{root}mapa/", "Abrir o mapa"),
+              ("Acompanhe seu progresso", "Marque o que já fez e veja quanto falta: lista dos 100 %, troféus e truques.", "{root}pt/100-por-cento/", "Lista dos 100 %")],
+        what_aria="O que dá para fazer no WastedMap", sample_tag="Assim é cada guia", sample_more="Ver o guia completo", sample_n="mais {n} passos",
         open_map="Abrir o mapa", see_es="Ver em espanhol ({n} guias)",
         by_type="Por tipo de descoberta", recent="Descobertas recentes",
         soon="As descobertas da comunidade estão sendo traduzidas e aparecem aqui aos poucos.",
-        title="{site} · Segredos, easter eggs e mapa de GTA 6",
-        desc="Segredos, easter eggs, lugares escondidos e guias de GTA 6 que a comunidade encontra. Guia não oficial.",
+        title="Segredos de GTA 6 explicados passo a passo | {site}",
+        desc="Easter eggs, lugares escondidos, carros raros e formas de ganhar dinheiro no GTA 6: onde estão e como conseguir, passo a passo e com o vídeo original. Em português, grátis e atualizado todo dia.",
     ),
     "en": dict(
         play="Play video", how="How to do it", what="What it is", unconfirmed="Unconfirmed",
         spoiler="Contains spoilers · tap to reveal", source="Source", home="Home",
         note='Summary written automatically from the original video and translated from Spanish. To vote and comment, see the <a href="{es}">Spanish version</a>.',
         cat_lead="{n} community discoveries, with the steps and the original video. Updated several times a day.",
-        overline="Unofficial guide · updated several times a day",
-        h1="Every GTA&nbsp;6 secret on <em>one map</em>",
-        lead="Easter eggs, hidden places, rare cars and guides the community finds, summarized in English with the original video.",
+        overline="GTA 6 guide · updated every day",
+        h1="GTA&nbsp;6 secrets, <em>explained step by step</em>",
+        lead="Every day we gather the easter eggs, hidden places, rare cars and money methods players find in the game, and tell you <b>where they are and how to get them</b>, with the original video. Free, no sign-up.",
+        do=[("Look up a secret", "Each one has its own guide: what it is, where it is and the steps to get it, with the video from whoever found it.", "#recentes", "See the secrets"),
+              ("Find it on the map", "See which part of Leonida each one is in and what is near where you are playing.", "{root}mapa/", "Open the map"),
+              ("Track your progress", "Tick off what you have done and see what is left: 100% checklist, trophies and cheats.", "{root}en/100-percent/", "100% checklist")],
+        what_aria="What you can do on WastedMap", sample_tag="What every guide looks like", sample_more="Read the full guide", sample_n="{n} more steps",
         open_map="Open the map", see_es="See it in Spanish ({n} discoveries)",
         by_type="By type of discovery", recent="Latest discoveries",
         soon="Community discoveries are being translated and will show up here bit by bit.",
-        title="{site} · GTA 6 secrets, easter eggs and map",
-        desc="GTA 6 secrets, easter eggs, hidden places and guides found by the community. Unofficial guide.",
+        title="GTA 6 secrets explained step by step | {site}",
+        desc="Easter eggs, hidden places, rare cars and money methods in GTA 6: where they are and how to get them, step by step with the original video. Free and updated every day.",
     ),
 }
 
@@ -252,14 +260,16 @@ def build(entries: list[dict], P, lang: str) -> list[tuple[str, str]]:
                         f'<span class="cc">{len(v)}</span><span class="arr" aria-hidden="true">→</span></a></li>'
                         for k, v in sorted(by_cat.items(), key=lambda kv: -len(kv[1])))
     found = (f'<h2 id="categorias">{x["by_type"]}</h2><ul class="cats">{cats_html}</ul>'
-             f'<h2>{x["recent"]}</h2><div class="grid">{"".join(_card(e, root, P._thumb(e), lang) for e in recent[:24])}</div>'
+             f'<h2 id="recentes">{x["recent"]}</h2><div class="grid">{"".join(_card(e, root, P._thumb(e), lang) for e in recent[:24])}</div>'
              if done else f'<p class="note" id="categorias">{x["soon"]}</p>')
     body = f"""<header class="page-head pt-hero">
   <p class="overline">{x["overline"]}</p>
   <h1>{x["h1"]}</h1>
-  <p class="lead">{x["lead"]}</p>
+  <p class="lead lede">{x["lead"]}</p>
   <p class="pt-actions"><a class="btn primary" href="{root}mapa/">{x["open_map"]}</a><a class="btn" href="{root}">{x["see_es"].format(n=len(entries))}</a></p>
 </header>
+{_what(x, root)}
+{_sample(done, P, lang, root)}
 {home_section(root, lang)}
 {found}"""
     out = docs / lang / "index.html"
@@ -270,6 +280,37 @@ def build(entries: list[dict], P, lang: str) -> list[tuple[str, str]]:
     urls.insert(0, (f"{config.SITE_URL}/{lang}/", recent[0].get("published_at", "") if recent else ""))
     print(f"[web] {len(done)} páginas en {lang}")
     return urls
+
+
+def _what(x: dict, root: str) -> str:
+    lis = "".join(f'<li><span class="wn">{i}</span><b>{t}</b><p>{d}</p><a href="{h.format(root=root)}">{c} <span aria-hidden="true">→</span></a></li>'
+                  for i, (t, d, h, c) in enumerate(x["do"], 1))
+    return f'<ol class="what" aria-label="{x["what_aria"]}">{lis}</ol>'
+
+
+def _sample(done: list[dict], P, lang: str, root: str) -> str:
+    """Una guía real ya traducida, resumida, para que se vea qué hay adentro."""
+    pool = [e for e in done if len(e[lang].get("pasos") or []) >= 3 and P._thumb(e) and not e.get("spoiler")]
+    if not pool:
+        return ""
+    e = max(pool, key=lambda e: (e.get("confianza") == "alta", e.get("popularity") or 0))
+    t, x = e[lang], TXT[lang]
+    k, (slug, name, _) = _cat(e, lang)
+    url = f"{root}{lang}/d/{e['slug']}/"
+    steps = "".join(f"<li>{escape(s)}</li>" for s in t["pasos"][:3])
+    more = len(t["pasos"]) - 3
+    extra = f" ({x['sample_n'].format(n=more)})" if more > 0 else ""
+    return f"""<div class="sample">
+  <p class="sample-tag">{x["sample_tag"]}</p>
+  <a class="thumb" href="{url}" tabindex="-1" aria-hidden="true"><img loading="lazy" src="{escape(P._thumb(e))}" alt=""><span class="play"></span></a>
+  <div class="sample-body">
+    <div class="meta"><a class="m-cat" style="--c:{P.CAT_COLOR[k]}" href="{root}{lang}/c/{slug}/">{name}</a></div>
+    <h3><a href="{url}">{escape(t["titulo"])}</a></h3>
+    <p>{escape(t["resumen"])}</p>
+    <ol class="sample-steps">{steps}</ol>
+    <a class="more-link" href="{url}">{x["sample_more"]}{extra} <span aria-hidden="true">→</span></a>
+  </div>
+</div>"""
 
 
 def home_alternates() -> list[tuple[str, str]]:
