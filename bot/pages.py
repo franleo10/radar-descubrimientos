@@ -225,7 +225,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <div class="foot-brand">{logo(root)}
 <p>{foot_txt}</p></div>
 <nav aria-label="Explorar"><h3>Explorar</h3><a href="{root}mapa/">Mapa</a><a href="{root}descubrimientos/">Descubrimientos</a><a href="{root}semana/">Top de la semana</a><a href="{root}guias/">Guías</a><a href="{root}trucos/">Trucos</a><a href="{root}100-por-ciento/">Lista del 100 %</a><a href="{root}lista/">Mi lista</a></nav>
-<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a></nav>
+<nav aria-label="WastedMap"><h3>WastedMap</h3><a href="{root}acerca/">Acerca de</a><a href="{root}privacidad/">Privacidad</a><a href="{root}contacto/">Contacto</a><a href="{root}terminos/">Términos</a></nav>
 <nav aria-label="Redes"><h3>Seguinos</h3>{tg_link("social")}{bsky_link("social")}</nav>
 </div></footer>
 <script>
@@ -754,6 +754,8 @@ def build(entries: list[dict]) -> None:
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(_zone_page_lang(region, zones[region], items, zones, by_zone, lang), encoding="utf-8")
             urls.append((f"{config.SITE_URL}/{lang}/z/{zones[region]}/", items[0].get("published_at", "")))
+    from . import terminos
+    urls += terminos.build(sys.modules[__name__])
     urls += guias.build(sys.modules[__name__])
     sitemap = "".join(f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d[:10]}</lastmod>" if d else "") + "</url>"
                       for u, d in urls)
