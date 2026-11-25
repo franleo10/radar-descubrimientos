@@ -21,7 +21,7 @@ from urllib.parse import quote
 from . import config
 from .brand import bsky_link, logo, tg_cta, tg_link
 from . import home
-from .mapa import AREAS, map_svg
+from .mapa import AREAS, area_desc, map_svg
 
 CATS = {
     "easter_egg": ("easter-eggs", "Easter eggs"),
@@ -166,6 +166,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
                  f'<a href="{root}" hreflang="es">Spanish version</a>')
         cta, foot_txt = "Open the map", ("Unofficial guide made by GTA 6 fans. Not affiliated with Rockstar Games or "
                                          "Take-Two Interactive. Videos belong to their creators and play in the original player.")
+    map_href = f"{root}mapa/" if lang == "es" else f"{root}{lang}/mapa/"
     main = body if bare else f'<div class="wrap{" wide" if wide else ""}">\n{body}\n</div>'
     return f"""<!doctype html>
 <html lang="{ {"pt": "pt-BR", "en": "en"}.get(lang, "es") }">
@@ -199,8 +200,8 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 {logo(root)}
 <nav class="nav" aria-label="Principal">{links}</nav>
 <span class="online" data-online hidden><i aria-hidden="true"></i><b></b> <span class="on-long">{ {"pt": "pessoas vendo agora", "en": "people here now"}.get(lang, "personas mirando ahora") }</span><span class="on-short">{"online" if lang == "pt" else "online"}</span></span>
-<a class="btn primary sm map-btn" href="{root}mapa/">{cta}</a>
-<details class="menu"><summary aria-label="Menú">{MENU}</summary><div class="menu-panel"><a href="{root}mapa/">Mapa</a>{links}</div></details>
+<a class="btn primary sm map-btn" href="{map_href}">{cta}</a>
+<details class="menu"><summary aria-label="Menú">{MENU}</summary><div class="menu-panel"><a href="{map_href}">{"Map" if lang == "en" else "Mapa"}</a>{links}</div></details>
 </div></header>
 <main class="{"home" if bare else "page"}">
 {main}
@@ -424,30 +425,58 @@ def _zone_page(region: str, slug: str, entries: list[dict], zones: dict[str, str
                    canonical=url, root=root, body=body)
 
 
-def _map_page(by_zone: dict[str, list[dict]], zones: dict[str, str]) -> str:
-    root = "../"
-    url = f"{config.SITE_URL}/mapa/"
+MAP_TXT = {
+    "es": dict(home="Inicio", crumb="Mapa", h1="El mapa de los secretos",
+               intro="Explorá los secretos de GTA 6 por zona. Tocá un área para ver todo lo que la comunidad encontró ahí.",
+               note="Mapa esquemático hecho por WastedMap: no es el mapa oficial del juego y las ubicaciones son aproximadas. "
+                    "Cada burbuja agrupa los descubrimientos de esa zona.",
+               empty="Todavía sin secretos acá.", title="Mapa de secretos de GTA 6 por zona"),
+    "pt": dict(home="Início", crumb="Mapa", h1="O mapa dos segredos",
+               intro="Explore os segredos de GTA 6 por região. Toque numa área para ver tudo o que a comunidade encontrou lá.",
+               note="Mapa esquemático feito pelo WastedMap: não é o mapa oficial do jogo e as localizações são aproximadas. "
+                    "Cada bolha agrupa as descobertas daquela região.",
+               empty="Ainda sem segredos aqui.", title="Mapa de segredos de GTA 6 por região"),
+    "en": dict(home="Home", crumb="Map", h1="The secrets map",
+               intro="Explore GTA 6 secrets by area. Tap an area to see everything the community found there.",
+               note="Schematic map made by WastedMap: it is not the official game map and locations are approximate. "
+                    "Each bubble groups the discoveries in that area.",
+               empty="No secrets here yet.", title="GTA 6 secrets map by area"),
+}
+
+
+def _map_page(by_zone: dict[str, list[dict]], zones: dict[str, str], lang: str = "es") -> str:
+    from .idiomas import home_alternates, translated
+    t = MAP_TXT[lang]
+    es = lang == "es"
+    root = "../" if es else "../../"
+    home_url = root if es else f"{root}{lang}/"
+    url = f"{config.SITE_URL}/mapa/" if es else f"{config.SITE_URL}/{lang}/mapa/"
     counts = {a: len(v) for a, v in by_zone.items()}
-    links = {a: f"z/{s}/" for a, s in zones.items()}
-    intro = ("Explorá los secretos de GTA 6 por zona. Tocá un área para ver todo lo que la "
-             "comunidad encontró ahí.")
+    # En español cada burbuja lleva a la página de su zona; en los otros idiomas, a su tarjeta de abajo.
+    links = {a: f"z/{s}/" if es else f"#z-{s}" for a, s in zones.items()}
     cards = []
-    for area, (_, _, color, desc) in AREAS.items():
+    for area, (_, _, color, _) in AREAS.items():
         items = by_zone.get(area, [])
-        top = "".join(f'<li><a href="{root}d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></li>'
-                      for e in sorted(items, key=lambda e: -(e.get("popularity") or 0))[:4])
-        head = (f'<a href="{root}z/{zones[area]}/">{escape(area)}</a>' if area in zones else escape(area))
-        cards.append(f'<article class="area-card" style="--c:{color}"><h3>{head} <small>{len(items)}</small></h3>'
-                     f'<p>{escape(desc)}</p>' + (f'<ul>{top}</ul>' if top else '<p class="note">Todavía sin secretos acá.</p>')
+        top = []
+        for e in sorted(items, key=lambda e: -(e.get("popularity") or 0))[:4]:
+            if not es and translated(e, lang):
+                top.append(f'<li><a href="{root}{lang}/d/{e["slug"]}/">{escape(e[lang]["titulo"])}</a></li>')
+            else:
+                top.append(f'<li><a href="{root}d/{e["slug"]}/">{escape(e.get("titulo", ""))}</a></li>')
+        head = (f'<a href="{root}z/{zones[area]}/">{escape(area)}</a>' if es and area in zones else escape(area))
+        anchor = f' id="z-{zones[area]}"' if area in zones else ""
+        cards.append(f'<article class="area-card"{anchor} style="--c:{color}"><h3>{head} <small>{len(items)}</small></h3>'
+                     f'<p>{escape(area_desc(area, lang))}</p>' + (f'<ul>{"".join(top)}</ul>' if top else f'<p class="note">{t["empty"]}</p>')
                      + '</article>')
-    body = f"""<nav class="crumbs"><a href="{root}">Inicio</a> › Mapa</nav>
-<h1>El mapa de los secretos</h1>
-<p class="lead">{escape(intro)}</p>
-<div class="map-wrap" data-reveal><div class="ex-map">{map_svg(counts, links, root)}<div class="radar" aria-hidden="true"></div></div></div>
-<p class="note">Mapa esquemático hecho por WastedMap: no es el mapa oficial del juego y las ubicaciones son aproximadas. Cada burbuja agrupa los descubrimientos de esa zona.</p>
+    body = f"""<nav class="crumbs"><a href="{home_url}">{t["home"]}</a> › {t["crumb"]}</nav>
+<h1>{t["h1"]}</h1>
+<p class="lead">{escape(t["intro"])}</p>
+<div class="map-wrap" data-reveal><div class="ex-map">{map_svg(counts, links, root if es else "", lang=lang)}<div class="radar" aria-hidden="true"></div></div></div>
+<p class="note">{t["note"]}</p>
 <div class="area-grid">{"".join(cards)}</div>"""
-    return _layout(title=f"Mapa de secretos de GTA 6 por zona | {config.SITE_NAME}", description=intro,
-                   canonical=url, root=root, body=body)
+    alts = [(h, u.rstrip("/") + "/mapa/") for h, u in home_alternates()]
+    return _layout(title=f"{t['title']} | {config.SITE_NAME}", description=t["intro"],
+                   canonical=url, root=root, body=body, lang=lang, alternates=alts)
 
 
 def _week_page(entries: list[dict]) -> str:
@@ -642,6 +671,10 @@ def build(entries: list[dict]) -> None:
     from . import idiomas
     for lang in idiomas.LANGS:
         urls += idiomas.build(entries, sys.modules[__name__], lang)
+        out = docs / lang / "mapa" / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(_map_page(by_zone, zones, lang), encoding="utf-8")
+        urls.append((f"{config.SITE_URL}/{lang}/mapa/", entries[0]["published_at"] if entries else ""))
     urls += guias.build(sys.modules[__name__])
     sitemap = "".join(f"<url><loc>{escape(u)}</loc>" + (f"<lastmod>{d[:10]}</lastmod>" if d else "") + "</url>"
                       for u, d in urls)

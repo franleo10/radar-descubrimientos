@@ -75,7 +75,7 @@ TXT = {
         h1="Os segredos de GTA&nbsp;6, <em>explicados passo a passo</em>",
         lead="Todo dia juntamos os easter eggs, lugares escondidos, carros raros e formas de ganhar dinheiro que a galera descobre no jogo, e mostramos <b>onde estão e como conseguir</b>, com o vídeo original. Grátis e sem cadastro.",
         do=[("Procure um segredo", "Cada um tem seu guia: o que é, onde fica e o passo a passo, com o vídeo de quem encontrou.", "#recentes", "Ver os segredos"),
-              ("Veja no mapa", "Descubra em que região de Leonida fica cada um e o que tem perto de onde você está jogando.", "{root}mapa/", "Abrir o mapa"),
+              ("Veja no mapa", "Descubra em que região de Leonida fica cada um e o que tem perto de onde você está jogando.", "{root}pt/mapa/", "Abrir o mapa"),
               ("Acompanhe seu progresso", "Marque o que já fez e veja quanto falta: lista dos 100 %, troféus e truques.", "{root}pt/100-por-cento/", "Lista dos 100 %")],
         what_aria="O que dá para fazer no WastedMap", sample_tag="Assim é cada guia", sample_more="Ver o guia completo", sample_n="mais {n} passos",
         open_map="Abrir o mapa", see_es="Ver em espanhol ({n} guias)",
@@ -93,7 +93,7 @@ TXT = {
         h1="GTA&nbsp;6 secrets, <em>explained step by step</em>",
         lead="Every day we gather the easter eggs, hidden places, rare cars and money methods players find in the game, and tell you <b>where they are and how to get them</b>, with the original video. Free, no sign-up.",
         do=[("Look up a secret", "Each one has its own guide: what it is, where it is and the steps to get it, with the video from whoever found it.", "#recentes", "See the secrets"),
-              ("Find it on the map", "See which part of Leonida each one is in and what is near where you are playing.", "{root}mapa/", "Open the map"),
+              ("Find it on the map", "See which part of Leonida each one is in and what is near where you are playing.", "{root}en/mapa/", "Open the map"),
               ("Track your progress", "Tick off what you have done and see what is left: 100% checklist, trophies and cheats.", "{root}en/100-percent/", "100% checklist")],
         what_aria="What you can do on WastedMap", sample_tag="What every guide looks like", sample_more="Read the full guide", sample_n="{n} more steps",
         open_map="Open the map", see_es="See it in Spanish ({n} discoveries)",
@@ -266,7 +266,7 @@ def build(entries: list[dict], P, lang: str) -> list[tuple[str, str]]:
   <p class="overline">{x["overline"]}</p>
   <h1>{x["h1"]}</h1>
   <p class="lead lede">{x["lead"]}</p>
-  <p class="pt-actions"><a class="btn primary" href="{root}mapa/">{x["open_map"]}</a><a class="btn" href="{root}">{x["see_es"].format(n=len(entries))}</a></p>
+  <p class="pt-actions"><a class="btn primary" href="{root}{lang}/mapa/">{x["open_map"]}</a><a class="btn" href="{root}">{x["see_es"].format(n=len(entries))}</a></p>
 </header>
 {_what(x, root)}
 {_sample(done, P, lang, root)}

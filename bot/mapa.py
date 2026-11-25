@@ -34,6 +34,37 @@ AREAS = {
     "Hamlet": (*_xy(440, 735), "#a3e635", "Pueblo del sur, camino a los cayos"),
     "Capri": (*_xy(225, 563), "#f87171", "Pueblo costero del oeste"),
 }
+# Descripción corta de cada área en portugués e inglés (la de español está en AREAS).
+AREA_DESC = {
+    "pt": {
+        "Port Gellhorn": "Porto industrial do oeste", "Mount Kalaga": "Parque nacional e montanhas do norte",
+        "Ambrosia": "Cidades do interior e refinaria", "Grassrivers": "Pântanos e rios do sul",
+        "Vice City": "A grande cidade da costa leste", "Leonida Keys": "Cadeia de ilhotas e ilhas",
+        "Vice Beach": "Praias e ilhas em frente a Vice City", "Hamlet": "Cidade do sul, a caminho das ilhotas",
+        "Capri": "Cidade litorânea do oeste",
+    },
+    "en": {
+        "Port Gellhorn": "Industrial port in the west", "Mount Kalaga": "National park and mountains in the north",
+        "Ambrosia": "Inland towns and refinery", "Grassrivers": "Swamps and rivers in the south",
+        "Vice City": "The big city on the east coast", "Leonida Keys": "Chain of keys and islands",
+        "Vice Beach": "Beaches and islands off Vice City", "Hamlet": "Southern town on the way to the keys",
+        "Capri": "Coastal town in the west",
+    },
+}
+SVG_TXT = {
+    "es": dict(one="secreto", many="secretos", soon="Pronto", gulf="GOLFO", ocean="OCÉANO",
+               aria="Mapa esquemático de Leonida con los secretos por zona", sub="Mapa esquemático · WastedMap"),
+    "pt": dict(one="segredo", many="segredos", soon="Em breve", gulf="GOLFO", ocean="OCEANO",
+               aria="Mapa esquemático de Leonida com os segredos por região", sub="Mapa esquemático · WastedMap"),
+    "en": dict(one="secret", many="secrets", soon="Soon", gulf="GULF", ocean="OCEAN",
+               aria="Schematic map of Leonida with secrets by area", sub="Schematic map · WastedMap"),
+}
+
+
+def area_desc(area: str, lang: str = "es") -> str:
+    return AREA_DESC.get(lang, {}).get(area) or AREAS[area][3]
+
+
 # Áreas con el nombre a la izquierda de la burbuja (para que no se pisen con las vecinas).
 _LABEL_LEFT: set[str] = set()
 
@@ -181,8 +212,11 @@ def _compass(x: int, y: int) -> str:
             '<text y="-50" text-anchor="middle">N</text></g>')
 
 
-def map_svg(counts: dict[str, int], links: dict[str, str], root: str, legend: bool = True) -> str:
+def map_svg(counts: dict[str, int], links: dict[str, str], root: str, legend: bool = True, lang: str = "es") -> str:
     """SVG del mapa con una burbuja por área (tamaño según cantidad de secretos)."""
+    T = SVG_TXT.get(lang, SVG_TXT["es"])
+    cartouche = ('<g class="cartouche" transform="translate(530 800)"><rect width="230" height="66" rx="8"/>'
+                 f'<text x="16" y="30" class="t1">LEONIDA</text><text x="16" y="50" class="t2">{T["sub"]}</text></g>')
     tints = []
     grads = []
     for i, (name, (x, y, color, _)) in enumerate(AREAS.items()):
@@ -193,7 +227,7 @@ def map_svg(counts: dict[str, int], links: dict[str, str], root: str, legend: bo
     for i, (name, (x, y, color, desc)) in enumerate(AREAS.items()):
         n = counts.get(name, 0)
         r = min(24 + 4.5 * math.sqrt(n), 58) if n else 20
-        label = f"{n} secreto{'s' if n != 1 else ''}" if n else "Pronto"
+        label = f"{n} {T['one'] if n == 1 else T['many']}" if n else T["soon"]
         inner = (f'<circle cx="{x}" cy="{y}" r="{r + 10:.0f}" fill="none" stroke="{color}" stroke-width="3" class="pulse"/>'
                  f'<circle cx="{x}" cy="{y}" r="{r + 16:.0f}" fill="{color}" opacity=".16" class="halo"/>'
                  f'<circle cx="{x}" cy="{y + 4}" r="{r:.0f}" fill="#000" opacity=".35"/>'
@@ -210,7 +244,7 @@ def map_svg(counts: dict[str, int], links: dict[str, str], root: str, legend: bo
                            f'<g class="area" data-area="{escape(name)}">{inner}</g></a></g>')
         else:
             bubbles.append(f'<g class="pop" style="--i:{i}"><g class="area{"" if n else " off"}" data-area="{escape(name)}">{inner}</g></g>')
-    return f"""<svg class="leonida" viewBox="0 0 800 900" role="img" aria-label="Mapa esquemático de Leonida con los secretos por zona">
+    return f"""<svg class="leonida" viewBox="0 0 800 900" role="img" aria-label="{T['aria']}">
 <defs>
 <radialGradient id="lm-sea" cx=".55" cy=".45" r=".8"><stop offset="0" stop-color="#1a1626"/><stop offset="1" stop-color="#0e0c15"/></radialGradient>
 <linearGradient id="lm-land" x1="0" y1="0" x2=".6" y2="1"><stop offset="0" stop-color="#2a2438"/><stop offset="1" stop-color="#211c2d"/></linearGradient>
@@ -224,7 +258,7 @@ def map_svg(counts: dict[str, int], links: dict[str, str], root: str, legend: bo
 <rect width="800" height="900" fill="url(#lm-sea)"/>
 <rect width="800" height="900" fill="url(#lm-waves)"/>
 <g fill="none" stroke="#fff" stroke-opacity=".04">{"".join(f'<path d="M{x} 0V900"/>' for x in range(100, 800, 100))}{"".join(f'<path d="M0 {y}H800"/>' for y in range(100, 900, 100))}</g>
-<text x="40" y="250" class="sea">GOLFO</text><text x="782" y="250" class="sea" transform="rotate(90 782 250)">OCÉANO</text>
+<text x="40" y="250" class="sea">{T['gulf']}</text><text x="782" y="250" class="sea" transform="rotate(90 782 250)">{T['ocean']}</text>
 <path d="{LAND}" fill="none" stroke="#2ee6d6" stroke-opacity=".22" stroke-width="26" filter="url(#lm-blur)"/>
 <g fill="#2ee6d6" fill-opacity=".12" filter="url(#lm-blur)">{KEYS}</g>
 <path d="{LAND}" fill="url(#lm-land)"/>
@@ -242,6 +276,6 @@ def map_svg(counts: dict[str, int], links: dict[str, str], root: str, legend: bo
 <path d="{LAND}" class="coast" pathLength="1" fill="none" stroke="#ff5c93" stroke-width="2" stroke-opacity=".75" stroke-linejoin="round"/>
 <g fill="url(#lm-land)" stroke="#ff5c93" stroke-width="1.5" stroke-opacity=".6">{KEYS}{BARRIER}</g>
 {_compass(90, 680)}
-{'<g class="cartouche" transform="translate(530 800)"><rect width="230" height="66" rx="8"/><text x="16" y="30" class="t1">LEONIDA</text><text x="16" y="50" class="t2">Mapa esquemático · WastedMap</text></g>' if legend else ""}
+{cartouche if legend else ""}
 {"".join(bubbles)}
 </svg>"""
