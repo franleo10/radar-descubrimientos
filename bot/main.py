@@ -153,6 +153,9 @@ def run(demo: bool) -> None:
         from .social import publish
 
         publish(entries)  # Telegram y Bluesky, sin repetir
+        from .indexnow import submit
+
+        submit()  # avisa a Bing las páginas nuevas o cambiadas
 
 
 if __name__ == "__main__":
