@@ -681,3 +681,9 @@ a.thumb:hover img{transform:scale(1.03)}
 /* Solo dentro de la app de Android, cuando la ley pide ofrecer las opciones de anuncios */
 .app-only{display:none}
 html.app-privacy .app-only{display:inline}
+
+/* Dentro de la app de Android: la app pone su propia barra arriba y la navegación abajo */
+html.app .topbar,html.app .foot,html.app .ticker,html.app .crumbs{display:none}
+html.app .page{padding-top:20px}
+html.app .hero{padding-top:28px}
+html.app .final{padding-bottom:48px}

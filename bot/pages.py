@@ -203,6 +203,7 @@ def _layout(*, title: str, description: str, canonical: str, root: str, body: st
 <link rel="apple-touch-icon" href="{root}apple-touch-icon.png">
 <meta name="theme-color" content="#f6f3ee">
 <link rel="preload" href="{root}fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<script>if(/WastedMapApp/.test(navigator.userAgent))document.documentElement.classList.add("app")</script>
 <link rel="stylesheet" href="{root}site.css?v={_css_version()}">
 <script>document.documentElement.classList.add("fx");setTimeout(()=>{{if(!window.wmToast)document.documentElement.classList.remove("fx")}},4000)</script>
 <script src="{root}fx.js?v={_ver("fx.js")}" defer></script>
