@@ -64,3 +64,7 @@ html.app .g-warn,html.app .tag.warn,html.app .mn-risk.r2,html.app .spoiler-btn{b
 html.app .g-warn b{color:#ffe0ad}
 html.app .tag.ok,html.app .mn-risk.r1,html.app .vote.confirm[aria-pressed="true"],html.app .done-btn[aria-pressed="true"]{background:rgba(74,222,128,.12);color:#86efac;border-color:rgba(74,222,128,.4)}
 html.app .mn-risk.r3{background:rgba(248,113,113,.14);color:#fca5a5}
+
+/* Botones elegidos (filtros, capítulos): en la web son negros; acá van con el degradado */
+html.app .chip[aria-pressed="true"],html.app .capbtns button.on,html.app .tr-filter button.on{background:var(--grad);border-color:transparent;color:#fff}
+html.app .capbtns button,html.app .tr-filter button{background:var(--sunk);color:var(--ink-2);border-color:var(--line-2)}

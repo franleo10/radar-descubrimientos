@@ -101,7 +101,8 @@ class MainActivity : AppCompatActivity() {
         setupTabs()
         setupWebView()
         ads = Ads(this, findViewById(R.id.banner))
-        ads.start()
+        // Solo en la versión de prueba: "--ez capturas true" abre sin anuncios, para las capturas de la tienda.
+        if (!(BuildConfig.DEBUG && intent.getBooleanExtra("capturas", false))) ads.start()
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -165,9 +166,11 @@ class MainActivity : AppCompatActivity() {
             atTab > 0 -> nav.menu.findItem(tabIds[atTab]).title   // en una pestaña: su nombre
             else -> clean
         }
-        if (atTab >= 0 && nav.selectedItemId != tabIds[atTab]) {
+        // Fuera de las pestañas, se marca la sección a la que pertenece la página.
+        val section = if (atTab >= 0) atTab else sectionOf(path)
+        if (nav.selectedItemId != tabIds[section]) {
             syncingTab = true
-            nav.selectedItemId = tabIds[atTab]
+            nav.selectedItemId = tabIds[section]
             syncingTab = false
         }
     }
@@ -182,6 +185,20 @@ class MainActivity : AppCompatActivity() {
         val name = getString(R.string.app_name)          // "WastedMap"
         return SpannableString(name).apply {
             setSpan(ForegroundColorSpan(getColor(R.color.pink)), 6, name.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        }
+    }
+
+    /** Pestaña a la que pertenece una página que no es pestaña: guías -> Guías, zonas -> Mapa, Mi lista. */
+    private fun sectionOf(path: String): Int {
+        val p = path.removePrefix("/pt").removePrefix("/en")
+        val guides = listOf("/trucos/", "/truques/", "/cheats/", "/100-por-ciento/", "/100-por-cento/", "/100-percent/",
+            "/trofeos/", "/trofeus/", "/trophies/", "/no-te-lo-pierdas/", "/nao-perca/", "/missables/",
+            "/ganar-dinero/", "/ganhar-dinheiro/", "/make-money/")
+        return when {
+            p.startsWith("/z/") -> 1
+            guides.any { p.startsWith(it) } -> 2
+            p.startsWith("/lista/") -> 3
+            else -> 0      // secretos, categorías, top de la semana: Inicio
         }
     }
 
