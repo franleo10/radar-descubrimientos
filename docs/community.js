@@ -30,7 +30,8 @@
   function paintComments(list) {
     $(".c-count").textContent = list.length ? `(${list.length})` : "";
     $(".c-list").innerHTML = list.length
-      ? list.map((c) => `<li><div class="c-head"><b>${esc(c.name)}</b><span>${when(c.created)}</span></div><p>${esc(c.body)}</p></li>`).join("")
+      ? list.map((c) => `<li data-id="${Number(c.id) || ""}"><div class="c-head"><b>${esc(c.name)}</b><span>${when(c.created)}</span></div>`
+          + `<p>${esc(c.body)}</p>${c.id ? '<button type="button" class="c-report">Reportar</button>' : ""}</li>`).join("")
       : `<li class="c-empty">Todavía no hay comentarios. ¡Sé el primero en contar si te funcionó!</li>`;
   }
 
@@ -44,6 +45,35 @@
   api(`/api/stats?slug=${encodeURIComponent(slug)}`)
     .then((d) => { state = { ...state, ...d }; paint(); paintComments(d.comments || []); box.hidden = false; })
     .catch(() => { box.hidden = true; });
+
+  // Reportar un comentario: primero se elige el motivo, después se manda.
+  const REASONS = [["spam", "Spam"], ["ofensivo", "Ofensivo"], ["sexual", "Sexual"], ["otro", "Otro"]];
+  $(".c-list").addEventListener("click", async (ev) => {
+    const li = ev.target.closest("li[data-id]");
+    if (!li) return;
+    if (ev.target.closest(".c-report")) {
+      if (li.querySelector(".c-why")) return;
+      const why = document.createElement("div");
+      why.className = "c-why";
+      why.innerHTML = `<span>¿Por qué lo reportás?</span>` +
+        REASONS.map(([k, t]) => `<button type="button" data-why="${k}">${t}</button>`).join("") +
+        `<button type="button" class="c-cancel">Cancelar</button>`;
+      li.appendChild(why);
+      return;
+    }
+    if (ev.target.closest(".c-cancel")) { li.querySelector(".c-why")?.remove(); return; }
+    const w = ev.target.closest("[data-why]");
+    if (!w) return;
+    li.querySelectorAll(".c-why button").forEach((x) => (x.disabled = true));
+    try {
+      await api("/api/report", { id: Number(li.dataset.id), reason: w.dataset.why });
+      li.classList.add("c-reported");
+      li.querySelector(".c-why").outerHTML = '<p class="c-thanks">Gracias por avisar. Lo vamos a revisar.</p>';
+      li.querySelector(".c-report")?.remove();
+    } catch (e) {
+      li.querySelector(".c-why").outerHTML = `<p class="c-thanks err">${esc(e.message)}</p>`;
+    }
+  });
 
   box.addEventListener("click", async (ev) => {
     const b = ev.target.closest("[data-act]");

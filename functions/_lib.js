@@ -74,6 +74,13 @@ const EXTRA_SCHEMA = [
      created INTEGER NOT NULL
    )`,
   "CREATE TABLE IF NOT EXISTS presence (voter TEXT PRIMARY KEY, seen INTEGER NOT NULL)",
+  `CREATE TABLE IF NOT EXISTS reports (
+     comment_id INTEGER NOT NULL,
+     voter      TEXT NOT NULL,
+     reason     TEXT NOT NULL DEFAULT '',
+     created    INTEGER NOT NULL,
+     PRIMARY KEY (comment_id, voter)
+   )`,
 ];
 let schemaReady = false;
 export async function ensureSchema(env) {

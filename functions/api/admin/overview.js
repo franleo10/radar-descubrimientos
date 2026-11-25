@@ -21,7 +21,8 @@ export async function onRequestGet({ env }) {
          (SELECT COUNT(*) FROM (
             SELECT voter FROM reactions WHERE created > ?2 UNION SELECT voter FROM confirms WHERE created > ?2
             UNION SELECT voter FROM comments WHERE created > ?2)) AS people_7d,
-         (SELECT COUNT(*) FROM bans WHERE kind = 'voter') AS bans`, d1, d7),
+         (SELECT COUNT(*) FROM bans WHERE kind = 'voter') AS bans,
+         (SELECT COUNT(DISTINCT r.comment_id) FROM reports r JOIN comments c ON c.id = r.comment_id) AS reported`, d1, d7),
     q(`SELECT day, SUM(c) AS comments, SUM(v) AS votes, SUM(r) AS rejected FROM (
          SELECT (created / 86400000) AS day, 1 AS c, 0 AS v, 0 AS r FROM comments WHERE created > ?1
          UNION ALL SELECT (created / 86400000), 0, 1, 0 FROM reactions WHERE created > ?1

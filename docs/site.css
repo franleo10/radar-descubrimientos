@@ -688,3 +688,14 @@ html.app .page{padding-top:20px}
 html.app .hero{padding-top:28px}
 html.app .final{padding-bottom:48px}
 html.app .pt-actions .btn:not(.primary){display:none}
+
+/* Reportar comentarios */
+.c-report{margin-top:6px;padding:2px 0;border:0;background:none;color:var(--muted);font:500 12.5px var(--font);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.c-report:hover{color:var(--pink)}
+.c-why{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:8px;font-size:13px;color:var(--ink-2)}
+.c-why button{border:1px solid var(--line-2);background:var(--paper);color:var(--ink);border-radius:999px;padding:5px 11px;font:500 13px var(--font);cursor:pointer}
+.c-why button:hover{border-color:var(--pink);color:var(--pink)}
+.c-why .c-cancel{border-color:transparent;background:none;color:var(--muted)}
+.c-thanks{margin:6px 0 0;font-size:13px;color:var(--muted)}
+.c-thanks.err{color:var(--pink-hover)}
+.c-reported > p:not(.c-thanks){opacity:.45}

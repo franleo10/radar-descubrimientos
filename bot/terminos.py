@@ -22,7 +22,7 @@ PAGES = {
 <p>Los videos pertenecen a sus autores y se muestran con el reproductor original de YouTube, que tiene sus propias condiciones. Si sos autor de un video y no querés que aparezca, escribinos a {M} y lo sacamos.</p>
 <h2>Comentarios y votos</h2>
 <p>Podés comentar y votar las guías. Al comentar, sos responsable de lo que escribís y nos das permiso para mostrarlo en el sitio y en la app. No se permiten insultos ni acoso, contenido sexual, discriminación, amenazas, datos personales de otras personas, spam, publicidad, estafas ni trampas para el modo online.</p>
-<p>Los comentarios pasan por una revisión automática antes de publicarse. Podemos rechazar, borrar o editar comentarios, y bloquear a quien no respete estas reglas, sin previo aviso. Si ves un comentario que no cumple las reglas, escribinos a {M} con el enlace de la guía y lo revisamos.</p>
+<p>Los comentarios pasan por una revisión automática antes de publicarse. Podemos rechazar, borrar o editar comentarios, y bloquear a quien no respete estas reglas, sin previo aviso. Si ves un comentario que no cumple las reglas, tocá "Reportar" debajo del comentario o escribinos a {M} y lo revisamos.</p>
 <h2>Anuncios</h2>
 <p>La app para Android muestra anuncios de Google AdMob para cubrir los costos. No respondemos por el contenido de los anuncios ni por los productos de terceros que se promocionan. Cómo se usan los datos para los anuncios lo explica la <a href="../privacidad/">política de privacidad</a>.</p>
 <h2>Uso aceptable</h2>
@@ -44,7 +44,7 @@ PAGES = {
 <p>Os vídeos pertencem aos seus autores e aparecem com o player original do YouTube, que tem suas próprias condições. Se você é autor de um vídeo e não quer que ele apareça, escreva para {M} e nós o retiramos.</p>
 <h2>Comentários e votos</h2>
 <p>Você pode comentar e votar nos guias. Ao comentar, você é responsável pelo que escreve e nos autoriza a mostrar o comentário no site e no app. Não são permitidos insultos ou assédio, conteúdo sexual, discriminação, ameaças, dados pessoais de outras pessoas, spam, publicidade, golpes nem trapaças para o modo online.</p>
-<p>Os comentários passam por uma revisão automática antes de serem publicados. Podemos recusar, apagar ou editar comentários e bloquear quem não respeitar estas regras, sem aviso prévio. Se você vir um comentário que não cumpre as regras, escreva para {M} com o link do guia e nós vamos revisar.</p>
+<p>Os comentários passam por uma revisão automática antes de serem publicados. Podemos recusar, apagar ou editar comentários e bloquear quem não respeitar estas regras, sem aviso prévio. Se você vir um comentário que não cumpre as regras, toque em "Reportar" abaixo do comentário ou escreva para {M} e nós vamos revisar.</p>
 <h2>Anúncios</h2>
 <p>O app para Android mostra anúncios do Google AdMob para cobrir os custos. Não respondemos pelo conteúdo dos anúncios nem pelos produtos de terceiros anunciados. Como os dados são usados para os anúncios está explicado na <a href="../../privacidad/">política de privacidade</a> (em espanhol).</p>
 <h2>Uso aceitável</h2>
@@ -66,7 +66,7 @@ PAGES = {
 <p>Videos belong to their creators and play in YouTube's original player, which has its own terms. If you made a video and don't want it to appear here, email {M} and we'll take it down.</p>
 <h2>Comments and votes</h2>
 <p>You can comment on and vote for guides. When you comment, you are responsible for what you write and you allow us to show it on the website and in the app. Insults or harassment, sexual content, discrimination, threats, other people's personal data, spam, advertising, scams and online-mode cheats are not allowed.</p>
-<p>Comments are checked automatically before they are published. We may reject, delete or edit comments and block anyone who breaks these rules, without notice. If you see a comment that breaks the rules, email {M} with the link to the guide and we'll review it.</p>
+<p>Comments are checked automatically before they are published. We may reject, delete or edit comments and block anyone who breaks these rules, without notice. If you see a comment that breaks the rules, tap "Reportar" (Report) under the comment or email {M} and we'll review it.</p>
 <h2>Ads</h2>
 <p>The Android app shows Google AdMob ads to cover its costs. We are not responsible for ad content or for third-party products being advertised. How data is used for ads is explained in the <a href="../../privacidad/">privacy policy</a> (in Spanish).</p>
 <h2>Acceptable use</h2>

@@ -101,6 +101,7 @@
   <nav class="ad-tabs" id="tabs">
     <button type="button" data-tab="resumen" class="on">Resumen</button>
     <button type="button" data-tab="comentarios">Comentarios <b id="n-com"></b></button>
+    <button type="button" data-tab="reportados">Reportados <b id="n-rep"></b></button>
     <button type="button" data-tab="rechazados">Rechazados <b id="n-rej"></b></button>
     <button type="button" data-tab="bloqueados">Bloqueados</button>
     <button type="button" data-tab="descubrimientos">Descubrimientos</button>
@@ -126,6 +127,11 @@
     </div>
     <ul class="items" id="c-list"></ul>
     <button class="btn-s more" id="c-more" type="button" hidden>Ver más</button>
+  </section>
+
+  <section data-panel="reportados" hidden>
+    <p class="note">Comentarios que la gente reportó desde la guía. Con 3 reportes de personas distintas, el comentario se oculta solo hasta que decidas qué hacer.</p>
+    <ul class="items" id="p-list"></ul>
   </section>
 
   <section data-panel="rechazados" hidden>

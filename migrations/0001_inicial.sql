@@ -54,3 +54,12 @@ CREATE TABLE IF NOT EXISTS rejected (
   created    INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS rejected_by_created ON rejected (created);
+
+-- Reportes de comentarios (también se crea sola desde functions/_lib.js -> ensureSchema).
+CREATE TABLE IF NOT EXISTS reports (
+  comment_id INTEGER NOT NULL,
+  voter      TEXT NOT NULL,           -- huella anónima de quien reporta
+  reason     TEXT NOT NULL DEFAULT '', -- spam, ofensivo, sexual u otro
+  created    INTEGER NOT NULL,
+  PRIMARY KEY (comment_id, voter)
+);

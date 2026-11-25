@@ -71,6 +71,7 @@
     const t = o.totals;
     $("#n-com").textContent = t.comments_24h || "";
     $("#n-rej").textContent = t.rejected_7d || "";
+    $("#n-rep").textContent = t.reported || "";
     const kpi = (label, v, sub = "", warn = false) =>
       `<div class="kpi${warn ? " warn" : ""}"><span>${label}</span><b>${num(v)}</b><small>${sub}</small></div>`;
     $("#kpis").innerHTML = [
@@ -80,6 +81,7 @@
       kpi("Votos", t.votes_24h, `en 24 h · ${num(t.votes_7d)} en 7 días · ${num(t.votes)} en total`),
       kpi("«Me funcionó»", t.confirms_7d, `en 7 días · ${num(t.confirms)} en total`),
       kpi("Personas activas", t.people_7d, "votaron o comentaron en 7 días"),
+      kpi("Reportados", t.reported, "comentarios por revisar", t.reported > 0),
       kpi("Bloqueados", t.bans, "no pueden comentar"),
     ].join("");
 
@@ -184,6 +186,38 @@
       if (reason === null) return;
       await api("bans", { action: "ban", id, reason }); toast("Persona bloqueada: ya no puede comentar."); loadComments(); loaded.bloqueados = false;
     }
+  });
+
+  // ---------------------------------------------------------------- reportados
+  const WHY = { spam: "Spam", ofensivo: "Ofensivo", sexual: "Sexual", otro: "Otro" };
+  async function loadReported() {
+    await loadSite();
+    const d = await api("reports");
+    $("#n-rep").textContent = d.reported.length || "";
+    $("#p-list").innerHTML = d.reported.map((c) => `<li class="it" data-id="${c.id}">
+      <div class="it-h"><b>${esc(c.name)}</b>${c.banned ? '<span class="tag-b">Bloqueado</span>' : ""}
+        <span>${when(c.created)}</span><span>en ${link(c.slug)}</span></div>
+      <div class="why">${c.reports} ${c.reports == 1 ? "reporte" : "reportes"}${c.reports >= 3 ? " · oculto" : ""} · ${(c.reasons || "").split(",").map((r) => WHY[r] || r).join(", ")}</div>
+      <p>${esc(c.body)}</p>
+      <div class="acts"><button type="button" class="danger" data-a="delete">Borrar comentario</button>
+        <button type="button" data-a="dismiss">Está bien, dejarlo</button>
+        ${c.banned ? "" : '<button type="button" class="danger" data-a="ban">Bloquear a esta persona</button>'}</div></li>`).join("")
+      || `<li class="empty">No hay comentarios reportados.</li>`;
+  }
+  $("#p-list").addEventListener("click", async (ev) => {
+    const a = ev.target.closest("[data-a]"); if (!a) return;
+    const li = a.closest("[data-id]"), id = +li.dataset.id;
+    if (a.dataset.a === "delete") {
+      if (!confirm("¿Borrar este comentario? No se puede deshacer.")) return;
+      await api("reports", { action: "delete", id }); drop(li, "No hay comentarios reportados."); toast("Comentario borrado.");
+    } else if (a.dataset.a === "dismiss") {
+      await api("reports", { action: "dismiss", id }); drop(li, "No hay comentarios reportados."); toast("Listo: el comentario vuelve a verse.");
+    } else if (a.dataset.a === "ban") {
+      const reason = prompt("¿Por qué la bloqueás? (opcional, solo lo ves vos)");
+      if (reason === null) return;
+      await api("bans", { action: "ban", id, reason }); toast("Persona bloqueada."); loadReported(); loaded.bloqueados = false;
+    }
+    $("#n-rep").textContent = $("#p-list").querySelectorAll(".it").length || "";
   });
 
   // ---------------------------------------------------------------- rechazados
@@ -303,7 +337,7 @@
     renderDiscoveries();
   });
 
-  const LOADERS = { resumen: loadResumen, comentarios: () => loadComments(), rechazados: () => loadRejected(), bloqueados: loadBans, descubrimientos: loadDiscoveries };
+  const LOADERS = { resumen: loadResumen, comentarios: () => loadComments(), reportados: loadReported, rechazados: () => loadRejected(), bloqueados: loadBans, descubrimientos: loadDiscoveries };
 
   // ---------------------------------------------------------------- entrar y salir
   function logout(msg = "") {
