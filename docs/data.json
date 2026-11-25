@@ -1,6 +1,6 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-25T15:06:27Z",
+ "updated_at": "2026-11-25T15:10:00Z",
  "entries": [
   {
    "id": "yt:Bi3xOEuJWJk",
@@ -32,7 +32,23 @@
     "Vender todos los billetes marcados"
    ],
    "region": "",
-   "slug": "como-ganar-mucho-dinero-robando-cajeros-2f400"
+   "slug": "como-ganar-mucho-dinero-robando-cajeros-2f400",
+   "pt": {
+    "titulo": "Como ganhar muito dinheiro roubando caixas eletrônicos",
+    "resumen": "Guia que explica um método de dinheiro rápido: roubar caixas eletrônicos com Jason e Lucia usando um inibidor de tinta, bombas remotas e um veículo melhorado, e depois vender as notas marcadas. A publicação promete entre 150.000 e 200.000 por hora.",
+    "detalle": "Guia de um método de dinheiro rápido: roubar caixas eletrônicos com Jason e Lucia. Usa um inibidor de tinta, bombas remotas e um veículo melhorado, e depois as notas marcadas são vendidas. A publicação promete entre 150.000 e 200.000 por hora, dado que não foi verificado.\n\nO vídeo indica como encontrar os caixas eletrônicos e como evitar a polícia, mas não detalha as localizações concretas nos dados.",
+    "pasos": [
+     "Conseguir o Dye Pack Jammer",
+     "Comprar bombas remotas para Jason e Lucia",
+     "Escolher o melhor veículo e melhorá-lo",
+     "Procurar caixas eletrônicos",
+     "Roubar os caixas eletrônicos com o veículo melhorado",
+     "Trocar de personagem quando as cargas acabarem",
+     "Evitar a polícia",
+     "Vender todas as notas marcadas"
+    ],
+    "src": "3b5856ff57"
+   }
   },
   {
    "id": "yt:y3XvJyBlKhw",
@@ -64,7 +80,22 @@
    ],
    "region": "Port Gellhorn",
    "macro": "Port Gellhorn",
-   "slug": "objetos-secretos-del-capitulo-2-en-port-gellhorn-03dc9"
+   "slug": "objetos-secretos-del-capitulo-2-en-port-gellhorn-03dc9",
+   "pt": {
+    "titulo": "Itens secretos do capítulo 2 em Port Gellhorn",
+    "resumen": "Guia de itens ocultos do capítulo 2: um Mustang com revólver, um Dominator, uma SMG, um rifle de assalto, uma escopeta, um taco lendário e cofres com dinheiro.",
+    "detalle": "Guia de itens ocultos do capítulo 2 em Port Gellhorn. Inclui um Couch Potato Mustang com revólver .357, um Dominator, uma Scrapper SMG, um rifle Clunker, uma escopeta Gutterball Moreland 850 e um taco de beisebol lendário, além de cofres com dinheiro.\n\nAs combinações dos cofres citadas são 6969 (motel), 6823 (Boatworks) e 0300 (boliche). Cada local é explicado nas marcações de tempo do vídeo.",
+    "pasos": [
+     "Seguir as marcações de tempo do vídeo para cada local",
+     "Procurar o Couch Potato Mustang .357",
+     "Procurar a Scrapper SMG",
+     "Procurar o Clunker Assault Rifle",
+     "Procurar a Gutterball Moreland 850",
+     "Procurar o Legendary Baseball Bat",
+     "Abrir o cofre do motel com o código 6969, o de Boatworks com 6823 e o do boliche com 0300"
+    ],
+    "src": "a5b040ab3c"
+   }
   },
   {
    "id": "yt:1wVmcMOLx8o",
@@ -100,7 +131,17 @@
     ],
     "src": "cea9b59830"
    },
-   "slug": "otro-boost-de-salud-permanente-en-laboratorio-secreto-cfad1"
+   "slug": "otro-boost-de-salud-permanente-en-laboratorio-secreto-cfad1",
+   "en": {
+    "titulo": "Another Permanent Health Boost in a Secret Lab",
+    "resumen": "Shows a hidden lab with a syringe that grants permanent health to the character who uses it. Includes weapons and money along the way.",
+    "detalle": "Shows a hidden lab with a syringe that grants permanent health to the character who uses it. The boost only applies to that character.\n\nAlong the way there are also weapons and money to pick up.",
+    "pasos": [
+     "Enter the hidden lab through the rooftop entrance.",
+     "Take the syringe."
+    ],
+    "src": "cea9b59830"
+   }
   },
   {
    "id": "yt:9BYalGApxjo",
@@ -334,7 +375,14 @@
    "detalle": "Según el resumen, se trata de un botín oculto con 30.000 dólares, un fusil de asalto dorado con silenciador, un Kamacho Black Moth, un reloj raro y otros objetos.\n\nLa descripción no detalla la ubicación exacta, aunque el texto dice que explica dónde encontrarlo.",
    "pasos": [],
    "region": "",
-   "slug": "botin-escondido-con-30-000-dolares-y-auto-raro-37fe8"
+   "slug": "botin-escondido-con-30-000-dolares-y-auto-raro-37fe8",
+   "pt": {
+    "titulo": "Butim escondido com US$ 30.000 e carro raro",
+    "resumen": "Descreve um butim escondido com US$ 30.000, um fuzil de assalto dourado com silenciador, um Kamacho Black Moth e um relógio raro.",
+    "detalle": "Segundo o resumo, trata-se de um butim escondido com US$ 30.000, um fuzil de assalto dourado com silenciador, um Kamacho Black Moth, um relógio raro e outros itens.\n\nA descrição não detalha a localização exata, embora o texto diga que o vídeo explica onde encontrá-lo.",
+    "pasos": [],
+    "src": "5a30fad48d"
+   }
   },
   {
    "id": "yt:grMx8x-Xrl8",
@@ -406,7 +454,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "ubicacion-secreta-del-francotirador-y-paracaidas-10cfc"
+   "slug": "ubicacion-secreta-del-francotirador-y-paracaidas-10cfc",
+   "pt": {
+    "titulo": "Localização secreta do atirador de elite e paraquedas",
+    "resumen": "O título anuncia uma localização secreta com um atirador de elite e um paraquedas. A descrição não traz detalhes.",
+    "detalle": "",
+    "pasos": [],
+    "src": "6a83be1199"
+   }
   },
   {
    "id": "yt:sCZPxhaYWyg",
@@ -436,7 +491,14 @@
     "pasos": [],
     "src": "cb4029d1ce"
    },
-   "slug": "piloto-automatico-en-el-bote-61c4d"
+   "slug": "piloto-automatico-en-el-bote-61c4d",
+   "en": {
+    "titulo": "Autopilot on the boat",
+    "resumen": "According to the title, the boat can be put on autopilot in GTA 6. The description does not give any steps.",
+    "detalle": "",
+    "pasos": [],
+    "src": "cb4029d1ce"
+   }
   },
   {
    "id": "yt:FeZgt7pZ7NI",
@@ -513,7 +575,19 @@
     "Vender los billetes marcados en un punto de entrega"
    ],
    "region": "",
-   "slug": "billetes-marcados-y-codigos-de-caja-fuerte-en-robos-7095d"
+   "slug": "billetes-marcados-y-codigos-de-caja-fuerte-en-robos-7095d",
+   "pt": {
+    "titulo": "Notas marcadas e códigos de cofre em assaltos",
+    "resumen": "Dicas sobre assaltos a bancos: conferir a lista de assaltos no mapa, usar o foco para identificar o funcionário que conhece o código do cofre e vender as notas marcadas em um ponto de entrega.",
+    "detalle": "Dicas para assaltos a bancos: conferir a lista de assaltos no mapa, usar o foco para identificar o funcionário que conhece o código do cofre e vender as notas marcadas em um ponto de entrega. As notas marcadas (dye pack) podem explodir e estragar o butim.\n\nOs dados não indicam uma região específica do mapa.",
+    "pasos": [
+     "Conferir no mapa a lista de assaltos",
+     "Ver Segurança e Valor do butim antes de roubar",
+     "Usar o Foco (L3 + R3 no PS5) para ver quem tem o código do cofre",
+     "Vender as notas marcadas em um ponto de entrega"
+    ],
+    "src": "e926e3df83"
+   }
   },
   {
    "id": "yt:wz05ndJGnK4",
@@ -764,7 +838,14 @@
     "pasos": [],
     "src": "b300dd6279"
    },
-   "slug": "trucos-ocultos-y-consejos-iniciales-c75a6"
+   "slug": "trucos-ocultos-y-consejos-iniciales-c75a6",
+   "en": {
+    "titulo": "Hidden Tricks and Early Game Tips",
+    "resumen": "A list of tricks including using binoculars, stealing several vehicles at once, fast travel, free bikes early on, and hidden melee attacks. The description only shows the title of each trick.",
+    "detalle": "",
+    "pasos": [],
+    "src": "b300dd6279"
+   }
   },
   {
    "id": "yt:8LoN8KZyqw4",
@@ -858,7 +939,21 @@
     "Vender el dinero marcado a un fence."
    ],
    "region": "",
-   "slug": "robo-silencioso-al-lombank-bayside-cf8d9"
+   "slug": "robo-silencioso-al-lombank-bayside-cf8d9",
+   "pt": {
+    "titulo": "Assalto silencioso ao Lombank Bayside",
+    "resumen": "Método para roubar o Lombank Bayside sem acionar o alarme, abrir o cofre com o código e fugir sem nível de procura alto. As notas marcadas são vendidas a um fence depois de obter o Dye Pack Jammer.",
+    "detalle": "É um método para roubar o Lombank Bayside sem acionar o alarme e sem gerar um nível de procura alto. Segundo o vídeo, é um dos bancos mais fáceis para conseguir dinheiro rápido.\n\nO dinheiro marcado pode ser vendido a um fence depois de obter o Dye Pack Jammer, que é conseguido na missão Credit Check.",
+    "pasos": [
+     "Conseguir o Dye Pack Jammer na missão Credit Check.",
+     "Entrar no banco em silêncio e pegar a gaveta de dinheiro.",
+     "Obter o código do cofre.",
+     "Abrir o cofre.",
+     "Fugir sem gerar um nível de procura alto.",
+     "Vender o dinheiro marcado a um fence."
+    ],
+    "src": "15e1937c11"
+   }
   },
   {
    "id": "yt:3oV89ktLD2Q",
@@ -881,7 +976,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "25-vehiculos-secretos-y-ultra-raros-localizaciones-82cd8"
+   "slug": "25-vehiculos-secretos-y-ultra-raros-localizaciones-82cd8",
+   "pt": {
+    "titulo": "25 veículos secretos e ultra raros (localizações)",
+    "resumen": "Vídeo em francês que mostra 25 veículos escondidos, desde as mansões de Vice City até o interior de Leonida, alguns vigiados e outro que exige um truque para acessar.",
+    "detalle": "",
+    "pasos": [],
+    "src": "8b3b1eff4d"
+   }
   },
   {
    "id": "yt:_MVzCJFWcuQ",
@@ -963,7 +1065,14 @@
     "pasos": [],
     "src": "379e0c95e3"
    },
-   "slug": "como-conseguir-el-bugatti-gratis-d6fc7"
+   "slug": "como-conseguir-el-bugatti-gratis-d6fc7",
+   "en": {
+    "titulo": "How to Get the Bugatti for Free",
+    "resumen": "Explains how to get the Bugatti (Truffade Thrax) for free. The post does not detail the steps.",
+    "detalle": "",
+    "pasos": [],
+    "src": "379e0c95e3"
+   }
   },
   {
    "id": "yt:ZMiTvENe9G0",
@@ -1103,7 +1212,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "cuatro-easter-eggs-nuevos-en-leonida-y-vice-city-cb9b6"
+   "slug": "cuatro-easter-eggs-nuevos-en-leonida-y-vice-city-cb9b6",
+   "pt": {
+    "titulo": "Quatro easter eggs novos em Leonida e Vice City",
+    "resumen": "Compilação de easter eggs: um elevador com palhaço, uma armadilha estilo Jogos Mortais, um ritual e um portal para Vice City ligado a Tommy Vercetti. O vídeo não detalha os passos na descrição.",
+    "detalle": "",
+    "pasos": [],
+    "src": "3d81f3bbe3"
+   }
   },
   {
    "id": "yt:Fk5I_rnIIO8",
@@ -1126,7 +1242,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "easter-egg-del-ovni-en-la-casa-espacial-f8e59"
+   "slug": "easter-egg-del-ovni-en-la-casa-espacial-f8e59",
+   "pt": {
+    "titulo": "Easter egg do OVNI na casa espacial",
+    "resumen": "Short que mostra um easter egg com um OVNI na casa espacial do jogo, segundo o título.",
+    "detalle": "",
+    "pasos": [],
+    "src": "6fca58d92d"
+   }
   },
   {
    "id": "yt:CsrjBC8kI1U",
@@ -1664,7 +1787,17 @@
     ],
     "src": "7b3a80ab1c"
    },
-   "slug": "armas-y-secretos-del-capitulo-2-df870"
+   "slug": "armas-y-secretos-del-capitulo-2-df870",
+   "en": {
+    "titulo": "Chapter 2 Weapons and Secrets",
+    "resumen": "Lists exclusive weapons such as Kingpin's special Moreland 850, the Clunker 556 from Brooks Boatworks, and a Bret rifle, plus safes with codes. It does not explain how to reach each one.",
+    "detalle": "A guide to exclusive weapons and secrets in Chapter 2: Kingpin's special Moreland 850, the Clunker 556 from Brooks Boatworks, and an exclusive Bret rifle. It also mentions safes with codes, the Red Dead Redemption hat, and a decision with Kyle that can change his story.\n\nThe summary clarifies that it does not explain how to reach each weapon. The locations are on the map in the video, which is not detailed in the data.",
+    "pasos": [
+     "Open the safe with the code 0300",
+     "Open the safe with the code 6823"
+    ],
+    "src": "7b3a80ab1c"
+   }
   },
   {
    "id": "yt:90ZyeSdyPPk",
@@ -1805,7 +1938,14 @@
     "pasos": [],
     "src": "19cbf7e2a1"
    },
-   "slug": "porsche-rosa-secreto-gratis-71e53"
+   "slug": "porsche-rosa-secreto-gratis-71e53",
+   "en": {
+    "titulo": "Free Secret Pink Porsche",
+    "resumen": "Shows how to unlock a pink custom Pfister Growler (Porsche) without a code. Mentions a collectible behind the car.",
+    "detalle": "",
+    "pasos": [],
+    "src": "19cbf7e2a1"
+   }
   },
   {
    "id": "yt:I_w2oNU0gMU",
@@ -1951,7 +2091,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "mclaren-senna-violeta-de-un-millon-de-dolares-28aa2"
+   "slug": "mclaren-senna-violeta-de-un-millon-de-dolares-28aa2",
+   "pt": {
+    "titulo": "McLaren Senna roxo de um milhão de dólares",
+    "resumen": "O vídeo diz mostrar onde fica um McLaren Senna roxo de um milhão de dólares que pode ser conseguido de graça. A descrição não inclui passos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "92e3ff5096"
+   }
   },
   {
    "id": "yt:JeODIeea_Sk",
@@ -2184,6 +2331,13 @@
     "detalle": "",
     "pasos": [],
     "src": "b739df716d"
+   },
+   "en": {
+    "titulo": "How to Get the Buckingham Jubilee",
+    "resumen": "Luxury SUV vehicle inspired by the Rolls-Royce Cullinan, with a sale value of $9,200 and a registration cost of $34,900. The post does not describe the exact location or the steps to obtain it.",
+    "detalle": "",
+    "pasos": [],
+    "src": "b739df716d"
    }
   },
   {
@@ -2211,6 +2365,13 @@
    "pt": {
     "titulo": "Bebida misteriosa e um easter egg com o elevador",
     "resumen": "Segundo o vídeo, beber uma bebida misteriosa em um estabelecimento deixa o jogador inconsciente, e os funcionários o jogam de um helicóptero como se fosse uma brincadeira. Também são mencionados o elevador e o easter egg do palhaço de vídeos anteriores.",
+    "detalle": "",
+    "pasos": [],
+    "src": "427ab5658a"
+   },
+   "en": {
+    "titulo": "Mysterious Drink and an Elevator Easter Egg",
+    "resumen": "According to the video, drinking a mysterious beverage at a venue knocks the player unconscious, and the employees toss them out of a helicopter as if it were a joke. The elevator and the clown easter egg from previous videos are also mentioned.",
     "detalle": "",
     "pasos": [],
     "src": "427ab5658a"
@@ -2352,6 +2513,13 @@
     "detalle": "",
     "pasos": [],
     "src": "b4fd06785e"
+   },
+   "en": {
+    "titulo": "Five Secrets and Hidden Missions",
+    "resumen": "A roundup of five curiosities: an encounter with an alien on a secret mission, a giant crab, a Backrooms-style dimension, a mysterious egg, and a reference to the Red Hulk. The video does not explain how to reach each one in the text.",
+    "detalle": "",
+    "pasos": [],
+    "src": "b4fd06785e"
    }
   },
   {
@@ -2466,7 +2634,21 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "pistola-assassin-nipper-38-estilo-james-bond-2b373"
+   "slug": "pistola-assassin-nipper-38-estilo-james-bond-2b373",
+   "pt": {
+    "titulo": "Pistola Assassin Nipper .38 estilo James Bond",
+    "resumen": "É uma pistola com silenciador escondida no mundo do jogo, com estilo de James Bond. O vídeo mostra como encontrá-la.",
+    "detalle": "",
+    "pasos": [],
+    "src": "39e78eee88"
+   },
+   "en": {
+    "titulo": "James Bond-Style Assassin Nipper .38 Pistol",
+    "resumen": "A suppressed pistol hidden in the game world, styled after James Bond. The video shows how to find it.",
+    "detalle": "",
+    "pasos": [],
+    "src": "39e78eee88"
+   }
   },
   {
    "id": "yt:9LfgMEEAfl0",
@@ -2489,7 +2671,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "auto-muscle-car-oculto-en-leonida-21be2"
+   "slug": "auto-muscle-car-oculto-en-leonida-21be2",
+   "pt": {
+    "titulo": "Muscle car oculto em Leonida",
+    "resumen": "Suposta localização secreta de um muscle car raro no mapa de Leonida. A descrição não diz o local exato nem os passos, então a descoberta é vaga.",
+    "detalle": "",
+    "pasos": [],
+    "src": "6d86f95d81"
+   }
   },
   {
    "id": "yt:f_E3azCCR1Y",
@@ -2573,7 +2762,14 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "fusil-del-narco-en-una-mansion-7b719"
+   "slug": "fusil-del-narco-en-una-mansion-7b719",
+   "pt": {
+    "titulo": "Fuzil do narco em uma mansão",
+    "resumen": "Um fuzil associado ao narcotráfico está escondido em uma mansão do GTA 6, e o vídeo também menciona um superesportivo na garagem.",
+    "detalle": "",
+    "pasos": [],
+    "src": "06d1b14f4c"
+   }
   },
   {
    "id": "yt:nelwMraqfKo",
@@ -2597,7 +2793,14 @@
    "pasos": [],
    "region": "Ocean Beach",
    "macro": "Vice Beach",
-   "slug": "robar-cajas-fuertes-de-fleeca-y-lombank-en-ocean-beach-978a6"
+   "slug": "robar-cajas-fuertes-de-fleeca-y-lombank-en-ocean-beach-978a6",
+   "pt": {
+    "titulo": "Roubar os cofres da Fleeca e da Lombank em Ocean Beach",
+    "resumen": "Método para ganhar dinheiro roubando os cofres dos bancos Fleeca e Lombank em Ocean Beach, Vice City, que estão entre os assaltos que mais pagam.",
+    "detalle": "",
+    "pasos": [],
+    "src": "45ec15538d"
+   }
   },
   {
    "id": "yt:ktux0reqfPA",
@@ -2624,6 +2827,13 @@
    "pt": {
     "titulo": "Cinco segredos e easter eggs em Leonida",
     "resumen": "Compilação de eventos aleatórios e segredos: um urso polar que escapa de um caminhão, um fantasma no farol de Little Harden, uma mulher fantasma em Lummex County, um resgate de urso em um parque nacional e um ritual com chefe em Port Gellhorn.",
+    "detalle": "",
+    "pasos": [],
+    "src": "d8b66785b5"
+   },
+   "en": {
+    "titulo": "Five Secrets and Easter Eggs in Leonida",
+    "resumen": "A roundup of random events and secrets: a polar bear escaping from a truck, a ghost at the Little Harden lighthouse, a ghost woman in Lummex County, a bear rescue in a national park, and a boss ritual in Port Gellhorn.",
     "detalle": "",
     "pasos": [],
     "src": "d8b66785b5"
@@ -2793,6 +3003,13 @@
     "detalle": "",
     "pasos": [],
     "src": "04429a4ce3"
+   },
+   "en": {
+    "titulo": "Mario and Luigi Caps",
+    "resumen": "Easter egg featuring caps inspired by Mario and Luigi, with the initial of the name embroidered on them. The post does not explain how to find them.",
+    "detalle": "",
+    "pasos": [],
+    "src": "04429a4ce3"
    }
   },
   {
@@ -2908,6 +3125,13 @@
    "pt": {
     "titulo": "Como conseguir a Slim Jim",
     "resumen": "Guia que explica como obter a Slim Jim, um item para roubar carros com mais facilidade. A publicação não detalha os passos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "e3e10528cd"
+   },
+   "en": {
+    "titulo": "How to get the Slim Jim",
+    "resumen": "Guide explaining how to obtain the Slim Jim, an item for stealing cars more easily. The post does not detail the steps.",
     "detalle": "",
     "pasos": [],
     "src": "e3e10528cd"
@@ -3234,7 +3458,14 @@
    "detalle": "Hot rod coleccionable de los diez del juego, escondido en un contenedor.\n\nLos datos no indican en qué zona del mapa está el contenedor, así que la ubicación exacta queda en el short.",
    "pasos": [],
    "region": "",
-   "slug": "hot-rod-escondido-en-un-contenedor-76422"
+   "slug": "hot-rod-escondido-en-un-contenedor-76422",
+   "pt": {
+    "titulo": "Hot rod escondido em um contêiner",
+    "resumen": "O short mostra um hot rod colecionável dos dez do jogo, escondido em um contêiner.",
+    "detalle": "Hot rod colecionável dos dez do jogo, escondido em um contêiner.\n\nOs dados não indicam em qual área do mapa está o contêiner, então a localização exata fica no short.",
+    "pasos": [],
+    "src": "69f73a0b51"
+   }
   },
   {
    "id": "yt:YjLmqquRTBY",
@@ -3263,6 +3494,13 @@
     "titulo": "Três carros de luxo em uma mansão de Starfish Island",
     "resumen": "Uma mansão escondida em Starfish Island tem três garagens com carros caros: um Buckingham Windsor Drop, um Gallivanter Baller ST-D e um Pegassi Vitello. É preciso superar a segurança e os requisitos de acesso da mansão.",
     "detalle": "Em uma mansão escondida em Starfish Island há três garagens com carros caros: um Buckingham Windsor Drop, inspirado no Rolls-Royce, um Gallivanter Baller ST-D e um Pegassi Vitello.\n\nPara acessar, é preciso superar a segurança da mansão e cumprir os requisitos de acesso aos veículos. A descrição não detalha como fazer isso.",
+    "pasos": [],
+    "src": "aad009db3d"
+   },
+   "en": {
+    "titulo": "Three Luxury Cars in a Starfish Island Mansion",
+    "resumen": "A hidden mansion on Starfish Island has three garages with expensive cars: a Buckingham Windsor Drop, a Gallivanter Baller ST-D, and a Pegassi Vitello. You must get past the mansion's security and access requirements.",
+    "detalle": "A hidden mansion on Starfish Island has three garages with expensive cars: a Buckingham Windsor Drop, inspired by the Rolls-Royce, a Gallivanter Baller ST-D, and a Pegassi Vitello.\n\nTo gain access, you must get past the mansion's security and meet the access requirements for the vehicles. The description does not explain how to do this.",
     "pasos": [],
     "src": "aad009db3d"
    }
@@ -3295,7 +3533,20 @@
    ],
    "region": "Vice City",
    "slug": "granja-de-dinero-en-el-escondite-de-los-guardia-brothers-1bacf",
-   "macro": "Vice City"
+   "macro": "Vice City",
+   "pt": {
+    "titulo": "Fazenda de dinheiro no esconderijo dos Guardia Brothers",
+    "resumen": "Método para ganhar mais de $50.000 saqueando o esconderijo de uma gangue em Vice City sem alertar a polícia, entrando pelo telhado.",
+    "detalle": "Método para ganhar mais de $50.000 saqueando o esconderijo dos Guardia Brothers, uma gangue em Vice City.\n\nSegundo a descrição, o esconderijo é repetível e pode ser saqueado sem alertar a polícia, entrando pelo telhado. O vídeo mostra como eliminar em silêncio todos os membros da gangue, abrir o cofre sem código nem explosivos e pegar as sacolas de butim.",
+    "pasos": [
+     "Entrar pelo telhado, pela escotilha escondida.",
+     "Eliminar em silêncio todos os membros da gangue.",
+     "Saquear o cofre.",
+     "Pegar as sacolas de butim.",
+     "Repetir o processo se quiser farmar mais dinheiro."
+    ],
+    "src": "f13ce34fc9"
+   }
   },
   {
    "id": "yt:J2XXYc9zKoA",
@@ -3667,6 +3918,16 @@
      "Jogar o ovo de Páscoa de lá."
     ],
     "src": "d80cd141a9"
+   },
+   "en": {
+    "titulo": "Easter Egg on an Antenna That Triggers a Cutscene",
+    "resumen": "A stream clip shows ElRubius throwing an easter egg from the top of an antenna, which would unlock a secret cutscene.",
+    "detalle": "",
+    "pasos": [
+     "Climb to the top of an antenna.",
+     "Throw the easter egg from there."
+    ],
+    "src": "d80cd141a9"
    }
   },
   {
@@ -3690,7 +3951,14 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": ""
+   "region": "",
+   "pt": {
+    "titulo": "Seis controles ocultos de GTA 6",
+    "resumen": "Short que mostra seis controles pouco conhecidos do jogo; a descrição não os detalha.",
+    "detalle": "",
+    "pasos": [],
+    "src": "e31eb1f60f"
+   }
   },
   {
    "id": "yt:8oxKAffn_Jc",
@@ -3794,6 +4062,13 @@
     "detalle": "",
     "pasos": [],
     "src": "ae6ef952dd"
+   },
+   "en": {
+    "titulo": "T-Rex easter egg",
+    "resumen": "French-language short showing an easter egg with a T-Rex in GTA VI. The description does not give steps to find it.",
+    "detalle": "",
+    "pasos": [],
+    "src": "ae6ef952dd"
    }
   },
   {
@@ -3861,6 +4136,16 @@
      "Completar os desafios do local."
     ],
     "src": "1e6045f860"
+   },
+   "en": {
+    "titulo": "Permanent Focus Boost at the Shooting Range",
+    "resumen": "The shooting range at Rodgers Ranch lets you earn a maximum, permanent Focus boost by completing its challenges, along with other rewards.",
+    "detalle": "",
+    "pasos": [
+     "Enter the shooting range at Rodgers Ranch.",
+     "Complete the challenges at the location."
+    ],
+    "src": "1e6045f860"
    }
   },
   {
@@ -3888,6 +4173,13 @@
    "pt": {
     "titulo": "Easter egg do Mario no local de meditação",
     "resumen": "No local de meditação Water Wheel há um easter egg do Mario que, ao ser completado, dá chapéus especiais para Jason e Lucia.",
+    "detalle": "",
+    "pasos": [],
+    "src": "7114528eea"
+   },
+   "en": {
+    "titulo": "Mario easter egg at the meditation spot",
+    "resumen": "At the Water Wheel meditation spot there is a Mario easter egg that, when completed, grants special hats for Jason and Lucia.",
     "detalle": "",
     "pasos": [],
     "src": "7114528eea"
@@ -3954,6 +4246,13 @@
    "pt": {
     "titulo": "Ponto secreto do GTR R34 Skyline",
     "resumen": "O título indica um lugar secreto onde aparece um GTR R34 Skyline, mas a descrição não explica a localização nem os passos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "c7942b0f63"
+   },
+   "en": {
+    "titulo": "GTR R34 Skyline secret spot",
+    "resumen": "The title points to a secret location where a GTR R34 Skyline appears, but the description does not explain the location or the steps.",
     "detalle": "",
     "pasos": [],
     "src": "c7942b0f63"
@@ -4048,6 +4347,16 @@
      "Resgatar o Grotti Cheetah como recompensa."
     ],
     "src": "159393193a"
+   },
+   "en": {
+    "titulo": "How to Get the Grotti Cheetah for Free",
+    "resumen": "The Grotti Cheetah is the reward for completing the mural 1010 mission. The guide shows the five murals and how to unlock the car.",
+    "detalle": "The Grotti Cheetah is the reward for completing the mural 1010 mission. According to the description, you don't need to spend any money: finishing the mission is enough to keep the car.\n\nThe guide goes through the intro and the five murals before showing the moment the car is unlocked.",
+    "pasos": [
+     "Complete the mural 1010 mission by looking at the five murals (intro, murals 1 to 5).",
+     "Claim the Grotti Cheetah as the reward."
+    ],
+    "src": "159393193a"
    }
   },
   {
@@ -4075,6 +4384,13 @@
    "pt": {
     "titulo": "Todos os quartos secretos com loot",
     "resumen": "Guia de quartos secretos com loot, incluindo dinheiro e armas do início do jogo.",
+    "detalle": "",
+    "pasos": [],
+    "src": "79be0a5db4"
+   },
+   "en": {
+    "titulo": "All the secret rooms with loot",
+    "resumen": "Guide to secret rooms with loot, including early money and weapons.",
     "detalle": "",
     "pasos": [],
     "src": "79be0a5db4"
@@ -4504,6 +4820,13 @@
     "detalle": "",
     "pasos": [],
     "src": "3d3ad5a678"
+   },
+   "en": {
+    "titulo": "Three Secret Weapon Locations",
+    "resumen": "A Short showing three places with hidden weapons in GTA 6. The description does not specify which ones or where they are.",
+    "detalle": "",
+    "pasos": [],
+    "src": "3d3ad5a678"
    }
   },
   {
@@ -4631,6 +4954,13 @@
    "en": {
     "titulo": "Fast & Furious Dodge Charger",
     "resumen": "Guide to the location of a 1970 Dodge Charger R/T inspired by Dominic Toretto's car. The description does not explain the exact place or how to get it.",
+    "detalle": "",
+    "pasos": [],
+    "src": "bc30002d43"
+   },
+   "pt": {
+    "titulo": "Dodge Charger de Fast & Furious",
+    "resumen": "Guia sobre a localização de um Dodge Charger R/T 1970 inspirado no carro de Dominic Toretto. A descrição não explica o local exato nem como consegui-lo.",
     "detalle": "",
     "pasos": [],
     "src": "bc30002d43"
@@ -4763,6 +5093,13 @@
     "detalle": "",
     "pasos": [],
     "src": "da162aabb9"
+   },
+   "en": {
+    "titulo": "Six hidden mechanics in GTA 6",
+    "resumen": "Short covering six lesser-known mechanics; they are not detailed in the description.",
+    "detalle": "",
+    "pasos": [],
+    "src": "da162aabb9"
    }
   },
   {
@@ -4872,6 +5209,13 @@
     "detalle": "",
     "pasos": [],
     "src": "8e9ec7a577"
+   },
+   "en": {
+    "titulo": "Locations of Rare Cars",
+    "resumen": "A guide that tours the map to find unique and rare vehicles. The description does not specify which ones or where they are.",
+    "detalle": "",
+    "pasos": [],
+    "src": "8e9ec7a577"
    }
   },
   {
@@ -4899,6 +5243,13 @@
    "pt": {
     "titulo": "Easter egg do OVNI",
     "resumen": "Vídeo que mostra um easter egg com um OVNI. Não há detalhes na descrição.",
+    "detalle": "",
+    "pasos": [],
+    "src": "daae7642ab"
+   },
+   "en": {
+    "titulo": "UFO Easter Egg",
+    "resumen": "Video showing a UFO easter egg. There are no details in the description.",
     "detalle": "",
     "pasos": [],
     "src": "daae7642ab"
@@ -5364,6 +5715,20 @@
      "Monarch Avarus: levar explosivos para enfrentar os motociclistas."
     ],
     "src": "30a2bff744"
+   },
+   "en": {
+    "titulo": "Three Gang Vehicles You Can Steal Early",
+    "resumen": "Three gang vehicles that can be stolen in Chapter 2: the Vapid Smuggler Caracara, the Dominator, and the LCC Monarch Avarus. You first need to unlock Moses, the car fence.",
+    "detalle": "Three gang vehicles that can be stolen early, in Chapter 2: the Vapid Smuggler Caracara, the Dominator, and the LCC Monarch Avarus. To make them available, you first need to unlock Moses, the car fence, who lets you register them as your own.\n\nThe Caracara is an off-road SUV found in a house raided by police, in northern Port Gellhorn. The Dominator is parked in front of the gang's building, in western Port Gellhorn, next to the water. The Monarch Avarus is located at a biker clubhouse in Ambrosia, in the bar's courtyard.\n\nNote: customizing the Caracara at the off-road shop removes its rare variant.",
+    "pasos": [
+     "Unlock Moses, the car fence, before stealing the vehicles.",
+     "Caracara: enter the police-raided house in northern Port Gellhorn and take the safe code inside.",
+     "Caracara: take the SUV that is in the middle of the property.",
+     "Dominator: go to western Port Gellhorn, parked in front of the gang's building, next to the water.",
+     "Monarch Avarus: go to the biker clubhouse in Ambrosia, in the bar's courtyard.",
+     "Monarch Avarus: bring explosives to deal with the bikers."
+    ],
+    "src": "30a2bff744"
    }
   },
   {
@@ -5431,6 +5796,13 @@
     "detalle": "",
     "pasos": [],
     "src": "d359767fca"
+   },
+   "en": {
+    "titulo": "Three Hidden Cars",
+    "resumen": "Shows three hidden cars and says the rarest one only appears under a condition that is not revealed in the post.",
+    "detalle": "",
+    "pasos": [],
+    "src": "d359767fca"
    }
   },
   {
@@ -5460,7 +5832,20 @@
     "Registrarlo como vehículo personal por $21.900 si querés conservarlo."
    ],
    "region": "",
-   "slug": "como-conseguir-el-vapid-hustler-32-en-gta-6-091c6"
+   "slug": "como-conseguir-el-vapid-hustler-32-en-gta-6-091c6",
+   "pt": {
+    "titulo": "Como conseguir o Vapid Hustler 32 em GTA 6",
+    "resumen": "Guia do carro raro Vapid Hustler 32 (hot rod dos anos 30) com localizações em Leonida e a missão oculta \"Dubious Provenance\" do capítulo 3. Ele pode ser registrado como veículo pessoal por $21.900.",
+    "detalle": "Guia do Vapid Hustler 32, um carro raro do tipo hot rod dos anos 30 que pode ser encontrado em Leonida, com localizações em Capri, Key Lento e Ilha Catalina.\n\nSegundo a descrição, em Capri também aparece uma variante personalizada chamada Red Hot Hustler, em um hotel de frente para a praia. Registrá-lo como veículo pessoal custa $21.900, e o valor de venda em desmanche ou fence fica entre $5.825 e $6.545.\n\nSe você confiar em Benedict Halifax na missão oculta \"Dubious Provenance\", a descrição diz que você também ganha um relógio Crowex Octaine Bobby Ambrose, dinheiro extra e joias para vender.",
+    "pasos": [
+     "Procurar o carro estacionado ou circulando em Capri, Key Lento ou Ilha Catalina.",
+     "No capítulo 3, completar \"Dealer's Choice\".",
+     "Confiar em Benedict Halifax e completar a história dele.",
+     "Saquear o depósito de armazenamento dele.",
+     "Registrar o carro como veículo pessoal por $21.900 se você quiser ficar com ele."
+    ],
+    "src": "7f9f21cf4c"
+   }
   },
   {
    "id": "yt:CdYIk_8AEC8",
@@ -5520,7 +5905,14 @@
    "detalle": "Son cinco autos raros que se pueden llevar gratis. Están repartidos en varias zonas: el Progen Royal Ruby Emerus está en la mansión de la isla Vespucci, sin cerradura ni rastreador. El Progen Purple Drank Emerus está en Chatfield Storage, en la isla Waxman, con nitro pero muy custodiado.\n\nEl Pegassi Charred Toros se encuentra en el patio de una trap house en La Perle, sin rastreador. Los dos Bravado Gauntlet están en garajes de Ambrosia: el Copperheads tiene rastreador estándar, así que conviene registrarlo en un Pay 'n' Spray; el Devil's Rope está en un garaje de bikers y se puede entrar por el techo sin pelear.\n\nEl video es la parte 1 de 2, y la descripción menciona que la parte 2 incluye otros cinco autos.",
    "pasos": [],
    "region": "",
-   "slug": "5-autos-raros-que-podes-llevarte-gratis-en-gta-6-f572a"
+   "slug": "5-autos-raros-que-podes-llevarte-gratis-en-gta-6-f572a",
+   "pt": {
+    "titulo": "5 carros raros que você pode levar de graça no GTA 6",
+    "resumen": "Lista de carros raros que podem ser pegos sem custo, com a localização e observações sobre rastreador, trava ou vigilância. A parte 1 cobre cinco das dez localizações.",
+    "detalle": "São cinco carros raros que podem ser levados de graça. Estão espalhados por várias áreas: o Progen Royal Ruby Emerus está na mansão da ilha Vespucci, sem fechadura nem rastreador. O Progen Purple Drank Emerus está no Chatfield Storage, na ilha Waxman, com nitro, mas muito vigiado.\n\nO Pegassi Charred Toros fica no pátio de uma trap house em La Perle, sem rastreador. Os dois Bravado Gauntlet estão em garagens de Ambrosia: o Copperheads tem rastreador padrão, então convém registrá-lo em um Pay 'n' Spray; o Devil's Rope está em uma garagem de bikers e pode ser acessado pelo teto sem precisar lutar.\n\nO vídeo é a parte 1 de 2, e a descrição menciona que a parte 2 traz outros cinco carros.",
+    "pasos": [],
+    "src": "f87a8da947"
+   }
   },
   {
    "id": "yt:mUL7QDiHzIE",
@@ -5547,6 +5939,13 @@
    "pt": {
     "titulo": "Easter eggs de terror: Pé Grande, mulher sobre um carro e criatura demoníaca",
     "resumen": "Mostra três eventos assustadores espalhados por Leonida: Pé Grande, a aparição de uma mulher sobre um carro e uma criatura demoníaca.",
+    "detalle": "",
+    "pasos": [],
+    "src": "c93552aa9d"
+   },
+   "en": {
+    "titulo": "Horror Easter Eggs: Bigfoot, Woman on a Car, and Demonic Creature",
+    "resumen": "Shows three terrifying events scattered across Leonida: Bigfoot, the appearance of a woman on a car, and a demonic creature.",
     "detalle": "",
     "pasos": [],
     "src": "c93552aa9d"
@@ -5985,6 +6384,13 @@
     "detalle": "",
     "pasos": [],
     "src": "ea48b635e1"
+   },
+   "en": {
+    "titulo": "Lesser-known easter eggs, part 5",
+    "resumen": "A compilation of lesser-known easter eggs. The description does not detail which ones they are.",
+    "detalle": "",
+    "pasos": [],
+    "src": "ea48b635e1"
    }
   },
   {
@@ -6191,6 +6597,13 @@
    "pt": {
     "titulo": "Locais com dinheiro escondido em Leonida",
     "resumen": "Guia de esconderijos, cofres e tesouros submarinos com dinheiro espalhados pelo mapa. A descrição é genérica e não cita locais específicos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "88fbf3b070"
+   },
+   "en": {
+    "titulo": "Places with hidden money in Leonida",
+    "resumen": "Guide to stashes, safes and underwater treasures with money scattered across the map. The description is generic and does not name specific places.",
     "detalle": "",
     "pasos": [],
     "src": "88fbf3b070"
@@ -6478,7 +6891,21 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": ""
+   "region": "",
+   "pt": {
+    "titulo": "24 lugares secretos visitados",
+    "resumen": "Vídeo que percorre 24 locais secretos do mapa.",
+    "detalle": "",
+    "pasos": [],
+    "src": "d22f2fd21f"
+   },
+   "en": {
+    "titulo": "24 Secret Locations Visited",
+    "resumen": "Video that tours 24 secret locations on the map.",
+    "detalle": "",
+    "pasos": [],
+    "src": "d22f2fd21f"
+   }
   },
   {
    "id": "yt:REfc5kkhLA8",
@@ -6547,6 +6974,13 @@
    "pt": {
     "titulo": "Hotel assombrado secreto",
     "resumen": "Um short mostra um hotel oculto com ar assombrado. O texto não detalha a localização nem como chegar lá.",
+    "detalle": "",
+    "pasos": [],
+    "src": "c08a4c4741"
+   },
+   "en": {
+    "titulo": "Secret Haunted Hotel",
+    "resumen": "A short showing a hidden hotel with a haunted atmosphere. The text does not detail the location or how to get there.",
     "detalle": "",
     "pasos": [],
     "src": "c08a4c4741"
@@ -7010,6 +7444,16 @@
      "To keep the custom design, use the trick with Moses or Vice Vinyl."
     ],
     "src": "d389f8d500"
+   },
+   "pt": {
+    "titulo": "Eclipse de Paul Walker: Maibatsu Penumbra FF",
+    "resumen": "Localização e desbloqueio do Maibatsu Penumbra FF, homenagem ao carro de Velozes e Furiosos, e como manter seu visual personalizado.",
+    "detalle": "Localização e desbloqueio do Maibatsu Penumbra FF, uma homenagem ao carro de Velozes e Furiosos. Para manter o visual personalizado de forma permanente, use o truque com Moses ou Vice Vinyl.",
+    "pasos": [
+     "Ir até o local indicado no vídeo e resgatar o carro.",
+     "Para manter o visual personalizado, usar o truque com Moses ou Vice Vinyl."
+    ],
+    "src": "d389f8d500"
    }
   },
   {
@@ -7037,6 +7481,13 @@
    "pt": {
     "titulo": "Como saber quais prédios podem ser visitados",
     "resumen": "Truque do mapa para identificar facilmente quais edifícios são acessíveis e quais não são.",
+    "detalle": "",
+    "pasos": [],
+    "src": "cc0572f1d8"
+   },
+   "en": {
+    "titulo": "How to Tell Which Buildings Can Be Entered",
+    "resumen": "A map trick to easily identify which buildings are accessible and which are not.",
     "detalle": "",
     "pasos": [],
     "src": "cc0572f1d8"
@@ -7070,6 +7521,13 @@
     "detalle": "",
     "pasos": [],
     "src": "a81e832c39"
+   },
+   "en": {
+    "titulo": "Michael's Ringtone",
+    "resumen": "Short showing an easter egg with Michael's ringtone from GTA 5 inside GTA 6. There is no text with details.",
+    "detalle": "",
+    "pasos": [],
+    "src": "a81e832c39"
    }
   },
   {
@@ -7097,6 +7555,13 @@
    "pt": {
     "titulo": "Dois lowriders raros desde o início, incluindo o Albany Manana dourado",
     "resumen": "Mostra a localização de dois lowriders únicos que podem ser conseguidos desde o começo do jogo, entre eles um Albany Manana dourado.",
+    "detalle": "",
+    "pasos": [],
+    "src": "0dc2fcc512"
+   },
+   "en": {
+    "titulo": "Two Rare Lowriders from the Start, Including the Gold Albany Manana",
+    "resumen": "Shows the location of two unique lowriders that can be obtained from the start of the game, including a gold Albany Manana.",
     "detalle": "",
     "pasos": [],
     "src": "0dc2fcc512"
@@ -7185,6 +7650,13 @@
     "detalle": "",
     "pasos": [],
     "src": "9128b0a3e8"
+   },
+   "en": {
+    "titulo": "Alien easter egg",
+    "resumen": "Spanish-language video claiming to have found an easter egg with an alien in GTA 6. The text does not explain what it is or how to get there.",
+    "detalle": "",
+    "pasos": [],
+    "src": "9128b0a3e8"
    }
   },
   {
@@ -7252,6 +7724,13 @@
     "detalle": "",
     "pasos": [],
     "src": "afe8373a57"
+   },
+   "en": {
+    "titulo": "25+ Hidden Features the Game Doesn't Explain",
+    "resumen": "A list of hidden controls, interactions, and mechanics that the game does not teach, based on r/GTA6 threads.",
+    "detalle": "",
+    "pasos": [],
+    "src": "afe8373a57"
    }
   },
   {
@@ -7312,7 +7791,21 @@
    "detalle": "",
    "pasos": [],
    "region": "",
-   "slug": "codigo-qr-escondido-9f1f0"
+   "slug": "codigo-qr-escondido-9f1f0",
+   "pt": {
+    "titulo": "Código QR escondido",
+    "resumen": "Short que mostra um código QR apresentado como easter egg oculto em GTA 6. A descrição não explica o que ele faz nem onde está.",
+    "detalle": "",
+    "pasos": [],
+    "src": "ed936da28d"
+   },
+   "en": {
+    "titulo": "Hidden QR Code",
+    "resumen": "Short showing a QR code presented as a hidden easter egg in GTA 6. The description does not explain what it does or where it is.",
+    "detalle": "",
+    "pasos": [],
+    "src": "ed936da28d"
+   }
   },
   {
    "id": "yt:f0DBLY-wK90",
@@ -7349,6 +7842,13 @@
    "pt": {
     "titulo": "O chapéu do Arthur Morgan",
     "resumen": "Vídeo que mostra a localização secreta do chapéu do Arthur Morgan (Red Dead Redemption 2). Não há descrição com detalhes.",
+    "detalle": "",
+    "pasos": [],
+    "src": "de9c674926"
+   },
+   "en": {
+    "titulo": "Arthur Morgan's Hat",
+    "resumen": "Video showing the secret location of Arthur Morgan's hat (Red Dead Redemption 2). There is no detailed description.",
     "detalle": "",
     "pasos": [],
     "src": "de9c674926"
@@ -7490,7 +7990,18 @@
     "Derrotar al cangrejo gigante",
     "Buscar el arma legendaria en la caja fuerte del mapa"
    ],
-   "region": ""
+   "region": "",
+   "pt": {
+    "titulo": "Caranguejo gigante e arma lendária em Leonida",
+    "resumen": "Easter egg em Leonida em que é preciso derrotar um caranguejo gigante para encontrar uma arma lendária escondida no mapa. A descrição não detalha a localização exata.",
+    "detalle": "É um easter egg de Leonida: há um caranguejo gigante escondido no mapa. Ao derrotá-lo, você pode encontrar uma arma lendária, um item especial do mapa.\n\nSegundo os capítulos do vídeo, depois de derrotar o caranguejo é preciso ir ao cofre do mapa para buscar a arma secreta.",
+    "pasos": [
+     "Encontrar o esconderijo do caranguejo gigante",
+     "Derrotar o caranguejo gigante",
+     "Buscar a arma lendária no cofre do mapa"
+    ],
+    "src": "0de4e13996"
+   }
   },
   {
    "id": "yt:mMRxTcvckls",
@@ -7554,6 +8065,13 @@
    "pt": {
     "titulo": "Easter egg do Satanás",
     "resumen": "Vídeo em alemão que promete mostrar como ativar um easter egg do Satanás no GTA 6. O texto não detalha os passos; o conteúdo estaria no vídeo.",
+    "detalle": "",
+    "pasos": [],
+    "src": "818ef75d99"
+   },
+   "en": {
+    "titulo": "Satan Easter Egg",
+    "resumen": "German-language video that promises to show how to activate a Satan easter egg in GTA 6. The text does not detail the steps; the content is in the video.",
     "detalle": "",
     "pasos": [],
     "src": "818ef75d99"
