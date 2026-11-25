@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WastedMap</string>
+    <string name="offline_title">Sin conexión</string>
+    <string name="offline_text">Revisá tu internet y probá de nuevo.</string>
+    <string name="retry">Reintentar</string>
+</resources>

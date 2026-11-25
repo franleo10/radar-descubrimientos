@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WastedMap" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorAccent">@color/pink</item>
+        <item name="android:windowBackground">@color/paper</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/paper</item>
+    </style>
+
+    <!-- Pantalla de inicio: el ícono sobre fondo oscuro, como el ícono de la app. -->
+    <style name="Theme.WastedMap.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/night</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.WastedMap</item>
+    </style>
+</resources>

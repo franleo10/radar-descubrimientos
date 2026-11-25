@@ -677,3 +677,7 @@ a.thumb:hover img{transform:scale(1.03)}
 .lang-panel a[aria-current]::after{content:"✓"}
 @media (max-width:860px){.lang{margin-left:auto}.bar .map-btn{margin-left:0}}
 @media (max-width:400px){.lang summary{padding:0 8px}.lang summary svg{display:none}}
+
+/* Solo dentro de la app de Android, cuando la ley pide ofrecer las opciones de anuncios */
+.app-only{display:none}
+html.app-privacy .app-only{display:inline}
