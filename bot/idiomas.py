@@ -138,9 +138,8 @@ def _norm(x: str) -> str:
 
 
 def untranslated(e: dict, r: dict) -> bool:
-    """True si la "traducción" volvió igual al español (pasa a veces): no se guarda y se reintenta después."""
-    if _norm(r.get("titulo")) == _norm(e.get("titulo")):
-        return True
+    """True si la "traducción" volvió igual al español (pasa a veces): no se guarda y se reintenta después.
+    El título solo no cuenta: hay nombres que se escriben igual en los dos idiomas ("Código QR escondido")."""
     if e.get("resumen") and _norm(r.get("resumen")) == _norm(e.get("resumen")):
         return True
     if e.get("detalle") and len(e["detalle"]) > 40 and _norm(r.get("detalle")) == _norm(e.get("detalle")):
