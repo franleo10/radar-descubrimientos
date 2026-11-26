@@ -1,7 +1,164 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-26T13:54:01Z",
+ "updated_at": "2026-11-26T23:00:15Z",
  "entries": [
+  {
+   "id": "yt:CXw3pPTAr5g",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=CXw3pPTAr5g",
+   "video_id": "CXw3pPTAr5g",
+   "author": "Arekkz Gaming",
+   "published_at": "2026-11-26T22:00:04Z",
+   "title_original": "GTA 6 - SECRET Hairstyles, Makeup & Tattoos You Don't Want to Miss! (Hidden Magazine Locations)",
+   "popularity": 2743,
+   "thumbnail": "https://i.ytimg.com/vi/CXw3pPTAr5g/hqdefault.jpg",
+   "categoria": "coleccionable",
+   "titulo": "Peinados, maquillaje y tatuajes secretos",
+   "resumen": "Se desbloquean opciones extra de peinado, maquillaje, barba y tatuajes para Jason y Lucia escaneando revistas escondidas por Leonida.",
+   "zona": "Leonida",
+   "como_conseguirlo": "Encontrar y escanear las revistas escondidas repartidas por Leonida; cada una desbloquea una opción de personalización.",
+   "spoiler": false,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "Escaneando revistas escondidas repartidas por Leonida se desbloquean opciones extra de personalización para Jason y Lucia, como peinados, maquillaje, barba y tatuajes.\n\nLa descripción muestra varias de las opciones secretas, por ejemplo peinados para Lucia, maquillajes para Lucia, cortes de pelo y barba para Jason y tatuajes con nombres como The Freedom Raft o Graffiti Point.",
+   "pasos": [
+    "Encontrar las revistas escondidas repartidas por Leonida",
+    "Escanear cada revista para desbloquear su opción de personalización"
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Penteados, maquiagem e tatuagens secretas",
+    "resumen": "Desbloqueiam-se opções extras de penteado, maquiagem, barba e tatuagens para Jason e Lucia escaneando revistas escondidas por Leonida.",
+    "detalle": "Escaneando revistas escondidas espalhadas por Leonida, desbloqueiam-se opções extras de personalização para Jason e Lucia, como penteados, maquiagem, barba e tatuagens.\n\nA descrição mostra várias das opções secretas, por exemplo penteados para Lucia, maquiagens para Lucia, cortes de cabelo e barba para Jason e tatuagens com nomes como The Freedom Raft ou Graffiti Point.",
+    "pasos": [
+     "Encontrar as revistas escondidas espalhadas por Leonida",
+     "Escanear cada revista para desbloquear sua opção de personalização"
+    ],
+    "src": "5eae33e79d"
+   },
+   "en": {
+    "titulo": "Secret Hairstyles, Makeup, and Tattoos",
+    "resumen": "Unlocks extra hairstyle, makeup, beard, and tattoo options for Jason and Lucia by scanning magazines hidden around Leonida.",
+    "detalle": "Scanning hidden magazines scattered around Leonida unlocks extra customization options for Jason and Lucia, such as hairstyles, makeup, beards, and tattoos.\n\nThe description shows several of the secret options, for example hairstyles for Lucia, makeup for Lucia, haircuts and beards for Jason, and tattoos with names such as The Freedom Raft or Graffiti Point.",
+    "pasos": [
+     "Find the hidden magazines scattered around Leonida",
+     "Scan each magazine to unlock its customization option"
+    ],
+    "src": "5eae33e79d"
+   },
+   "slug": "peinados-maquillaje-y-tatuajes-secretos-98ab9"
+  },
+  {
+   "id": "yt:wKdO-5nYBqk",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=wKdO-5nYBqk",
+   "video_id": "wKdO-5nYBqk",
+   "author": "Aiming4Gaming",
+   "published_at": "2026-11-26T15:51:35Z",
+   "title_original": "How To Get an Early Legendary Shotgun In GTA 6!",
+   "popularity": 3151,
+   "thumbnail": "https://i.ytimg.com/vi/wKdO-5nYBqk/hqdefault.jpg",
+   "categoria": "arma",
+   "titulo": "Escopeta legendaria temprana: Gorse 425",
+   "resumen": "Guía para conseguir la escopeta secreta Smuggler Gorse 425, presentada como una de las mejores escopetas cortas tempranas del juego. No se detallan los pasos en la descripción.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Guía para conseguir la escopeta secreta Smuggler Gorse 425, que según el video es una de las mejores escopetas cortas tempranas del juego.\n\nLa descripción no detalla dónde encontrarla ni los pasos para obtenerla.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Escopeta lendária no início: Gorse 425",
+    "resumen": "Guia para conseguir a escopeta secreta Smuggler Gorse 425, apresentada como uma das melhores espingardas de cano curto do início do jogo. Os passos não são detalhados na descrição.",
+    "detalle": "Guia para conseguir a escopeta secreta Smuggler Gorse 425, que, segundo o vídeo, é uma das melhores escopetas de cano curto do início do jogo.\n\nA descrição não detalha onde encontrá-la nem os passos para obtê-la.",
+    "pasos": [],
+    "src": "f31b418df1"
+   },
+   "en": {
+    "titulo": "Early Legendary Shotgun: Gorse 425",
+    "resumen": "A guide to obtaining the secret Smuggler Gorse 425 shotgun, presented as one of the best early-game shotguns in the game. The steps are not detailed in the description.",
+    "detalle": "Guide to obtaining the secret Smuggler Gorse 425 shotgun, which according to the video is one of the best early-game pump shotguns in the game.\n\nThe description does not detail where to find it or the steps to obtain it.",
+    "pasos": [],
+    "src": "f31b418df1"
+   },
+   "slug": "escopeta-legendaria-temprana-gorse-425-b4502"
+  },
+  {
+   "id": "yt:W0BaSHpYp8c",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=W0BaSHpYp8c",
+   "video_id": "W0BaSHpYp8c",
+   "author": "Digo Lemos",
+   "published_at": "2026-11-26T15:00:27Z",
+   "title_original": "Achei todas as 6 garrafas secretas de GTA 6 (Final inesperado) #gta6 #eastereggs #gta",
+   "popularity": 3587,
+   "thumbnail": "https://i.ytimg.com/vi/W0BaSHpYp8c/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Las 6 botellas secretas y sus mensajes",
+   "resumen": "Un video que explica dónde están seis botellas escondidas en las islas del mapa, con mensajes dentro y un final de la búsqueda. La descripción no detalla las ubicaciones concretas.",
+   "zona": "Islas del mapa",
+   "como_conseguirlo": "Seguir el video para llegar a cada botella en los puntos marcados como Terceira y Outra.",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Video que muestra dónde están seis botellas escondidas en las islas del mapa, con cartas o mensajes dentro de cada una, y el final de esta búsqueda.\n\nLa descripción no indica las ubicaciones exactas de las botellas, solo menciona que hay que llegar a los puntos marcados como Terceira y Outra.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "As 6 garrafas secretas e suas mensagens",
+    "resumen": "Um vídeo que explica onde estão seis garrafas escondidas nas ilhas do mapa, com mensagens dentro e o final dessa busca. A descrição não detalha as localizações exatas.",
+    "detalle": "Vídeo que mostra onde estão seis garrafas escondidas nas ilhas do mapa, com cartas ou mensagens dentro de cada uma, e o final dessa busca.\n\nA descrição não indica as localizações exatas das garrafas, só menciona que é preciso chegar aos pontos marcados como Terceira e Outra.",
+    "pasos": [],
+    "src": "b0b5e62580"
+   },
+   "en": {
+    "titulo": "The 6 Secret Bottles and Their Messages",
+    "resumen": "A video showing where six hidden bottles are located across the islands of the map, with messages inside and the ending of this search. The description does not detail the exact locations.",
+    "detalle": "Video showing where six hidden bottles are located across the islands of the map, with letters or messages inside each one, and the ending of this search.\n\nThe description does not give the exact locations of the bottles, only mentioning that you need to reach the marked points called Terceira and Outra.",
+    "pasos": [],
+    "src": "b0b5e62580"
+   },
+   "slug": "las-6-botellas-secretas-y-sus-mensajes-392e5"
+  },
+  {
+   "id": "yt:s-w5p_3Cb4Y",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=s-w5p_3Cb4Y",
+   "video_id": "s-w5p_3Cb4Y",
+   "author": "Purception",
+   "published_at": "2026-11-26T07:02:42Z",
+   "title_original": "How to do the UFO quest in GTA6 | EASTER EGG",
+   "popularity": 6671,
+   "thumbnail": "https://i.ytimg.com/vi/s-w5p_3Cb4Y/hqdefault.jpg",
+   "categoria": "mision",
+   "titulo": "Misión del easter egg del ovni",
+   "resumen": "Guía de la misión oculta del ovni, con el punto de inicio. La descripción es genérica y no detalla los pasos.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Missão do easter egg da nave espacial",
+    "resumen": "Guia da missão oculta da nave espacial (UFO), com o ponto de início. A descrição é genérica e não detalha os passos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "899c5931c2"
+   },
+   "en": {
+    "titulo": "UFO Easter Egg Mission",
+    "resumen": "Guide to the hidden UFO mission, including its starting point. The description is generic and does not detail the steps.",
+    "detalle": "",
+    "pasos": [],
+    "src": "899c5931c2"
+   },
+   "slug": "mision-del-easter-egg-del-ovni-b1f33"
+  },
   {
    "id": "yt:ayLw3KxQJok",
    "source": "youtube",
@@ -65,6 +222,218 @@
    "slug": "ubicacion-de-partes-de-autos-clasicos-wyman-41d16"
   },
   {
+   "id": "yt:ZbCHRYhjU7s",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=ZbCHRYhjU7s",
+   "video_id": "ZbCHRYhjU7s",
+   "author": "Imack Studios",
+   "published_at": "2026-11-26T05:04:22Z",
+   "title_original": "How To Find ALL 34 LUXURY WATCH LOCATIONS in GTA 6! (Full Guide)",
+   "popularity": 11869,
+   "thumbnail": "https://i.ytimg.com/vi/ZbCHRYhjU7s/hqdefault.jpg",
+   "categoria": "coleccionable",
+   "titulo": "Guía de los 34 relojes de lujo",
+   "resumen": "Guía en video para encontrar los 34 relojes de lujo repartidos por Leonida. La descripción no detalla ubicaciones concretas.",
+   "zona": "Leonida",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Guia dos 34 relógios de luxo",
+    "resumen": "Guia em vídeo para encontrar os 34 relógios de luxo espalhados por Leonida. A descrição não detalha localizações específicas.",
+    "detalle": "",
+    "pasos": [],
+    "src": "60b7dfdf3d"
+   },
+   "en": {
+    "titulo": "Guide to the 34 Luxury Watches",
+    "resumen": "Video guide to finding the 34 luxury watches scattered around Leonida. The description does not detail specific locations.",
+    "detalle": "",
+    "pasos": [],
+    "src": "60b7dfdf3d"
+   },
+   "slug": "guia-de-los-34-relojes-de-lujo-79cfb"
+  },
+  {
+   "id": "yt:DmJic-Nlf2Y",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=DmJic-Nlf2Y",
+   "video_id": "DmJic-Nlf2Y",
+   "author": "LunarGaming",
+   "published_at": "2026-11-26T05:00:39Z",
+   "title_original": "GTA 6 – How To Make 140K An Hour From ATM Robberies (Complete Guide)",
+   "popularity": 13518,
+   "thumbnail": "https://i.ytimg.com/vi/DmJic-Nlf2Y/hqdefault.jpg",
+   "categoria": "mecanica_truco",
+   "titulo": "Robo de cajeros automáticos para ganar dinero",
+   "resumen": "Guía para ganar dinero robando cajeros automáticos en el capítulo 3, con un vehículo de remolque gratis y el Gunrunner Kamacho. Explica el uso del inhibidor de tinta (Dye Pack Jammer) y dónde vender el dinero sucio.",
+   "zona": "Capítulo 3",
+   "como_conseguirlo": "Desbloquear los robos de cajeros en el capítulo 3, usar un vehículo de remolque, robar cajeros con bombas pegajosas y vender el dinero sucio en el lugar indicado en el video.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Robar cajeros automáticos es un método para ganar dinero en el capítulo 3. El creador afirma haber ganado $140.000 en una hora con este método.\n\nLa guía explica cómo desbloquear los robos de cajeros, dónde conseguir un vehículo de remolque gratis y dónde está el Gunrunner Kamacho. También muestra el uso de bombas pegajosas para robar cajeros y el uso del inhibidor de tinta (Dye Pack Jammer) para que no se pierda el dinero. Por último, indica dónde vender el dinero sucio para obtener mejor retorno.",
+   "pasos": [
+    "Desbloquear los robos de cajeros en el capítulo 3",
+    "Conseguir un vehículo de remolque gratis",
+    "Usar el Gunrunner Kamacho para el robo",
+    "Robar cajeros con bombas pegajosas",
+    "Usar el Dye Pack Jammer para evitar perder el dinero",
+    "Recoger las bolsas de dinero",
+    "Vender el dinero sucio en el lugar indicado en el video"
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Roubo de caixas eletrônicos para ganhar dinheiro",
+    "resumen": "Guia para ganhar dinheiro roubando caixas eletrônicos no capítulo 3, com um veículo de reboque grátis e o Gunrunner Kamacho. Explica o uso do inibidor de tinta (Dye Pack Jammer) e onde vender o dinheiro sujo.",
+    "detalle": "Roubar caixas eletrônicos é um método para ganhar dinheiro no capítulo 3. O criador afirma ter ganhado $140.000 em uma hora com esse método.\n\nO guia explica como desbloquear os roubos de caixas eletrônicos, onde conseguir um veículo de reboque grátis e onde fica o Gunrunner Kamacho. Também mostra o uso de bombas grudentas para roubar caixas eletrônicos e o uso do inibidor de tinta (Dye Pack Jammer) para não perder o dinheiro. Por fim, indica onde vender o dinheiro sujo para obter um retorno melhor.",
+    "pasos": [
+     "Desbloquear os roubos de caixas eletrônicos no capítulo 3",
+     "Conseguir um veículo de reboque grátis",
+     "Usar o Gunrunner Kamacho para o roubo",
+     "Roubar caixas eletrônicos com bombas grudentas",
+     "Usar o Dye Pack Jammer para evitar perder o dinheiro",
+     "Recolher as sacolas de dinheiro",
+     "Vender o dinheiro sujo no lugar indicado no vídeo"
+    ],
+    "src": "d823393168"
+   },
+   "en": {
+    "titulo": "ATM Robbery for Easy Money",
+    "resumen": "Guide to making money by robbing ATMs in Chapter 3, with a free tow truck and the Gunrunner Kamacho. Explains how to use the Dye Pack Jammer and where to launder the dirty money.",
+    "detalle": "Robbing ATMs is a method for making money in Chapter 3. The creator claims to have earned $140,000 in one hour with this method.\n\nThe guide explains how to unlock ATM robberies, where to get a free tow truck, and where to find the Gunrunner Kamacho. It also shows the use of sticky bombs to rob ATMs and the Dye Pack Jammer (ink inhibitor) so the money isn't lost. Finally, it indicates where to sell the dirty money for a better return.",
+    "pasos": [
+     "Unlock ATM robberies in Chapter 3",
+     "Get a free tow truck",
+     "Use the Gunrunner Kamacho for the robbery",
+     "Rob ATMs with sticky bombs",
+     "Use the Dye Pack Jammer to avoid losing the money",
+     "Collect the money bags",
+     "Sell the dirty money at the location shown in the video"
+    ],
+    "src": "d823393168"
+   },
+   "slug": "robo-de-cajeros-automaticos-para-ganar-dinero-2976b"
+  },
+  {
+   "id": "yt:nQHwbGcymFg",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=nQHwbGcymFg",
+   "video_id": "nQHwbGcymFg",
+   "author": "TheProfessional",
+   "published_at": "2026-11-26T04:05:58Z",
+   "title_original": "How To Rob The Docks In GTA 6, All Scoop Crates, How To Get 2 Unique Guns And A Rare Super Car",
+   "popularity": 13206,
+   "thumbnail": "https://i.ytimg.com/vi/nQHwbGcymFg/hqdefault.jpg",
+   "categoria": "coleccionable",
+   "titulo": "Contenedores especiales en los muelles",
+   "resumen": "Guía para robar los contenedores del muelle, incluyendo cajas con equipo de buceo, un revólver único, una ametralladora M60 única, un auto Dominator y el superdeportivo Emerus. Se muestran también cajas de cocaína, ácido y dinero.",
+   "zona": "Muelles",
+   "como_conseguirlo": "Obtener el cortador eléctrico y un helicóptero, localizar los contenedores en los muelles y robar las cajas Scoop según el orden del video (desde 0:00 hasta 10:05).",
+   "spoiler": false,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "En los muelles hay contenedores especiales que se pueden robar. Entre el contenido aparecen cajas con equipo de buceo, un revólver único, una ametralladora M60 única, un Dominator único y el superdeportivo Emerus, además de cajas de cocaína, ácido y dinero.\n\nLa guía indica que antes hay que conseguir el cortador eléctrico y un helicóptero. Para ubicar los contenedores, el video muestra cómo reconocerlos y sigue un orden que va desde 0:00 hasta 10:05, que incluye también un contenedor fuera de los muelles con un Coquette.",
+   "pasos": [
+    "Obtener el cortador eléctrico",
+    "Conseguir un helicóptero",
+    "Localizar los contenedores en los muelles",
+    "Robar las cajas Scoop siguiendo el orden del video (desde 0:00 hasta 10:05)"
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Contêineres especiais nos portos",
+    "resumen": "Guia para roubar os contêineres do porto, incluindo caixas com equipamento de mergulho, um revólver único, uma metralhadora M60 única, um carro Dominator e o superesportivo Emerus. Também mostra caixas de cocaína, ácido e dinheiro.",
+    "detalle": "Nos portos há contêineres especiais que podem ser roubados. Entre o conteúdo aparecem caixas com equipamento de mergulho, um revólver único, uma metralhadora M60 única, um Dominator único e o superesportivo Emerus, além de caixas de cocaína, ácido e dinheiro.\n\nO guia indica que antes é preciso conseguir o cortador elétrico e um helicóptero. Para localizar os contêineres, o vídeo mostra como reconhecê-los e segue uma ordem que vai de 0:00 a 10:05, que também inclui um contêiner fora dos portos com um Coquette.",
+    "pasos": [
+     "Obter o cortador elétrico",
+     "Conseguir um helicóptero",
+     "Localizar os contêineres nos portos",
+     "Roubar as caixas Scoop seguindo a ordem do vídeo (de 0:00 a 10:05)"
+    ],
+    "src": "096155e240"
+   },
+   "en": {
+    "titulo": "Special Containers at the Docks",
+    "resumen": "Guide to robbing the dock containers, including crates with diving gear, a unique revolver, a unique M60 machine gun, a Dominator, and the Emerus supercar. Also shows crates of cocaine, acid, and cash.",
+    "detalle": "At the docks there are special containers that can be robbed. Among the contents are crates with diving gear, a unique revolver, a unique M60 machine gun, a unique Dominator, and the Emerus supercar, as well as crates of cocaine, acid, and cash.\n\nThe guide says you first need to get the electric cutter and a helicopter. To locate the containers, the video shows how to recognize them and follows an order from 0:00 to 10:05, which also includes a container outside the docks with a Coquette.",
+    "pasos": [
+     "Get the electric cutter",
+     "Get a helicopter",
+     "Locate the containers at the docks",
+     "Rob the Scoop crates following the video's order (from 0:00 to 10:05)"
+    ],
+    "src": "096155e240"
+   },
+   "slug": "contenedores-especiales-en-los-muelles-679fd"
+  },
+  {
+   "id": "yt:XVwiUeL0DHU",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=XVwiUeL0DHU",
+   "video_id": "XVwiUeL0DHU",
+   "author": "SlimeGamingX",
+   "published_at": "2026-11-26T03:58:42Z",
+   "title_original": "How to Get the SECRET Pink Growler CAR FREE in GTA 6 #gta6 (Muffin's Laptop Puzzle)",
+   "popularity": 3846,
+   "thumbnail": "https://i.ytimg.com/vi/XVwiUeL0DHU/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Cómo conseguir el Pink Growler gratis",
+   "resumen": "Vanessa's Pink Growler, un deportivo de 15.000 dólares, se obtiene sin pagar resolviendo un puzzle de laptop en el departamento del Capítulo 3. Hay que descubrir la contraseña a partir de pistas y así se abre un garaje secreto.",
+   "zona": "Departamento del Capítulo 3",
+   "como_conseguirlo": "En el departamento del Capítulo 3, resolver el puzzle de la laptop descifrando la contraseña con las pistas de Muffins, Queen y 15; el garaje secreto con el Pink Growler aparece tras resolverlo.",
+   "spoiler": false,
+   "confianza": "media",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=oqNPMGOxLrk",
+     "video_id": "oqNPMGOxLrk",
+     "author": "HELLOO",
+     "popularity": 2008,
+     "published_at": "2026-11-26T18:12:52Z"
+    }
+   ],
+   "enriched": true,
+   "detalle": "Vanessa's Pink Growler es un deportivo de 15.000 dólares que se puede conseguir sin pagar, resolviendo un puzzle de laptop en el departamento del Capítulo 3.\n\nPara abrir el garaje secreto hay que descubrir la contraseña a partir de pistas relacionadas con Muffins, Queen y 15. Al resolverlo, aparece el garaje donde está el Pink Growler.",
+   "pasos": [
+    "Ir al departamento del Capítulo 3.",
+    "Usar la laptop del departamento para abrir el puzzle.",
+    "Descifrar la contraseña combinando las pistas de Muffins, Queen y 15.",
+    "Ir al garaje secreto que se revela y tomar el Pink Growler."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Como conseguir o Pink Growler de graça",
+    "resumen": "O Vanessa's Pink Growler, um esportivo de 15.000 dólares, pode ser obtido sem pagar resolvendo um quebra-cabeça de laptop no apartamento do Capítulo 3. É preciso descobrir a senha a partir de pistas e assim se abre uma garagem secreta.",
+    "detalle": "O Vanessa's Pink Growler é um esportivo de 15.000 dólares que pode ser conseguido sem pagar, resolvendo um quebra-cabeça de laptop no apartamento do Capítulo 3.\n\nPara abrir a garagem secreta é preciso descobrir a senha a partir de pistas relacionadas a Muffins, Queen e 15. Ao resolver o quebra-cabeça, aparece a garagem onde está o Pink Growler.",
+    "pasos": [
+     "Ir ao apartamento do Capítulo 3.",
+     "Usar o laptop do apartamento para abrir o quebra-cabeça.",
+     "Descobrir a senha combinando as pistas de Muffins, Queen e 15.",
+     "Ir à garagem secreta que se revela e pegar o Pink Growler."
+    ],
+    "src": "443a8ed33c"
+   },
+   "en": {
+    "titulo": "How to Get the Pink Growler for Free",
+    "resumen": "Vanessa's Pink Growler, a $15,000 sports car, can be obtained without paying by solving a laptop puzzle in the Chapter 3 apartment. You have to figure out the password from clues, which opens a secret garage.",
+    "detalle": "Vanessa's Pink Growler is a $15,000 sports car that can be obtained for free by solving a laptop puzzle in the Chapter 3 apartment.\n\nTo open the secret garage, you have to figure out the password from clues related to Muffins, Queen, and 15. Once solved, the garage containing the Pink Growler appears.",
+    "pasos": [
+     "Go to the Chapter 3 apartment.",
+     "Use the apartment's laptop to open the puzzle.",
+     "Decipher the password by combining the clues from Muffins, Queen, and 15.",
+     "Go to the secret garage that is revealed and take the Pink Growler."
+    ],
+    "src": "443a8ed33c"
+   },
+   "slug": "como-conseguir-el-pink-growler-gratis-7411c"
+  },
+  {
    "id": "yt:KL4uz9eRMs4",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=KL4uz9eRMs4",
@@ -106,6 +475,43 @@
     "src": "8ea05a48e8"
    },
    "slug": "super-autos-secretos-y-unicos-parte-3-3897a"
+  },
+  {
+   "id": "yt:8PtTcBYnkbE",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=8PtTcBYnkbE",
+   "video_id": "8PtTcBYnkbE",
+   "author": "Imack Studios",
+   "published_at": "2026-11-26T02:59:45Z",
+   "title_original": "HOW TO GET THE FASTEST SPORT BIKE IN GTA 6!",
+   "popularity": 7879,
+   "thumbnail": "https://i.ytimg.com/vi/8PtTcBYnkbE/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Ubicación de la moto deportiva más rápida",
+   "resumen": "Guía que dice mostrar dónde encontrar la moto deportiva más rápida en Vice City y Leonida y cómo conseguirla. La descripción no detalla los pasos.",
+   "zona": "Vice City y Leonida",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Localização da moto esportiva mais rápida",
+    "resumen": "Guia que diz mostrar onde encontrar a moto esportiva mais rápida em Vice City e Leonida e como consegui-la. A descrição não detalha os passos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "d90d66b0bb"
+   },
+   "en": {
+    "titulo": "Location of the Fastest Sport Bike",
+    "resumen": "Guide that says it shows where to find the fastest sport bike in Vice City and Leonida and how to get it. The description does not detail the steps.",
+    "detalle": "",
+    "pasos": [],
+    "src": "d90d66b0bb"
+   },
+   "slug": "ubicacion-de-la-moto-deportiva-mas-rapida-ee459"
   },
   {
    "id": "yt:e7XJhrlnOEQ",
@@ -163,6 +569,80 @@
    "slug": "50-mecanicas-ocultas-de-gta-6-fbe9a"
   },
   {
+   "id": "yt:U6TYd8hA9mU",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=U6TYd8hA9mU",
+   "video_id": "U6TYd8hA9mU",
+   "author": "Incredilags",
+   "published_at": "2026-11-26T01:46:59Z",
+   "title_original": "GTA 6 - Complete Bank Robbery Guide ($150K, Deposit Boxes, Vault Access, and Safe Codes)",
+   "popularity": 4800,
+   "thumbnail": "https://i.ytimg.com/vi/U6TYd8hA9mU/hqdefault.jpg",
+   "categoria": "dinero",
+   "titulo": "Guía de robo a bancos",
+   "resumen": "Guía de robos a bancos pequeños y grandes con cajas de seguridad, acceso a bóvedas y códigos de cajas fuertes, con un botín de unos 150 mil dólares. El índice del video indica los pasos, pero el texto no detalla los métodos.",
+   "zona": "",
+   "como_conseguirlo": "Seguir los atracos a bancos pequeños y grandes descriptos en el video (preparación, robo, escape).",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Guía en video sobre robos a bancos en GTA 6, que cubre la preparación del golpe, los atracos a bancos pequeños y grandes, el acceso a bóvedas y cajas de seguridad, y el escape con el botín. Según el título, el video menciona un botín de unos 150 mil dólares y códigos de cajas fuertes.\n\nLa descripción solo trae el índice del video y no detalla los métodos concretos, así que para los pasos específicos hace falta mirar el video.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Guia de assalto a bancos",
+    "resumen": "Guia de assaltos a bancos pequenos e grandes com cofres, acesso a cofres de segurança e códigos de cofres, com um saque de cerca de 150 mil dólares. O índice do vídeo indica os passos, mas o texto não detalha os métodos.",
+    "detalle": "Guia em vídeo sobre assaltos a bancos em GTA 6, que cobre a preparação do golpe, os assaltos a bancos pequenos e grandes, o acesso a cofres e cofres de segurança, e a fuga com o saque. Segundo o título, o vídeo menciona um saque de cerca de 150 mil dólares e códigos de cofres.\n\nA descrição traz apenas o índice do vídeo e não detalha os métodos específicos, então para os passos exatos é preciso assistir ao vídeo.",
+    "pasos": [],
+    "src": "e8d44aa153"
+   },
+   "en": {
+    "titulo": "Bank Robbery Guide",
+    "resumen": "A guide to robbing small and large banks, covering safe deposit boxes, vault access and safe codes, with a haul of around $150,000. The video's chapter list outlines the steps, but the text does not detail the methods.",
+    "detalle": "Video guide on bank robberies in GTA 6, covering how to prepare the heist, robbing small and large banks, accessing vaults and safe deposit boxes, and escaping with the loot. According to the title, the video mentions a haul of around $150,000 and safe codes.\n\nThe description only includes the video's chapter list and does not detail the specific methods, so you'll need to watch the video for the exact steps.",
+    "pasos": [],
+    "src": "e8d44aa153"
+   },
+   "slug": "guia-de-robo-a-bancos-0b065"
+  },
+  {
+   "id": "yt:VcsrApeybuI",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=VcsrApeybuI",
+   "video_id": "VcsrApeybuI",
+   "author": "IGN",
+   "published_at": "2026-11-26T00:28:21Z",
+   "title_original": "GTA 6 - How to Get Three Free Rocket Launchers Early Game",
+   "popularity": 45081,
+   "thumbnail": "https://i.ytimg.com/vi/VcsrApeybuI/hqdefault.jpg",
+   "categoria": "arma",
+   "titulo": "Tres lanzacohetes gratis al inicio del juego",
+   "resumen": "Guía que indica que hay tres lugares relativamente fáciles para conseguir un lanzacohetes H-AT temprano en el juego. La descripción no dice dónde están.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Três lança-foguetes grátis no início do jogo",
+    "resumen": "Guia que indica que há três lugares relativamente fáceis para conseguir um lança-foguetes H-AT no início do jogo. A descrição não diz onde estão.",
+    "detalle": "",
+    "pasos": [],
+    "src": "a78d392bd7"
+   },
+   "en": {
+    "titulo": "Three Free Rocket Launchers Early in the Game",
+    "resumen": "Guide stating there are three relatively easy places to get an H-AT rocket launcher early in the game. The description does not say where they are.",
+    "detalle": "",
+    "pasos": [],
+    "src": "a78d392bd7"
+   },
+   "slug": "tres-lanzacohetes-gratis-al-inicio-del-juego-90aa5"
+  },
+  {
    "id": "yt:fmrcHE8N1uk",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=fmrcHE8N1uk",
@@ -198,6 +678,89 @@
     "src": "08a29e7197"
    },
    "slug": "100-mecanicas-ocultas-de-gta-6-a184d"
+  },
+  {
+   "id": "yt:D0g8hUzSzxU",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=D0g8hUzSzxU",
+   "video_id": "D0g8hUzSzxU",
+   "author": "hella-flush",
+   "published_at": "2026-11-25T23:55:05Z",
+   "title_original": "GTA 6 - Truffade Thrax Customization & How To Get It (Bugatti Divo) In Euroform Automotive",
+   "popularity": 20029,
+   "thumbnail": "https://i.ytimg.com/vi/D0g8hUzSzxU/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Personalización del Truffade Thrax en Euroform Automotive",
+   "resumen": "Video sobre personalizar el Truffade Thrax (Bugatti Divo) y cómo conseguirlo en Euroform Automotive. La descripción no incluye los pasos.",
+   "zona": "Euroform Automotive",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Personalização do Truffade Thrax na Euroform Automotive",
+    "resumen": "Vídeo sobre como personalizar o Truffade Thrax (Bugatti Divo) e como consegui-lo na Euroform Automotive. A descrição não inclui os passos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "6e41135ba2"
+   },
+   "en": {
+    "titulo": "Customizing the Truffade Thrax at Euroform Automotive",
+    "resumen": "Video about customizing the Truffade Thrax (Bugatti Divo) and how to get it at Euroform Automotive. The description does not include the steps.",
+    "detalle": "",
+    "pasos": [],
+    "src": "6e41135ba2"
+   },
+   "slug": "personalizacion-del-truffade-thrax-en-euroform-automotive-48ddb"
+  },
+  {
+   "id": "yt:B68Nfjm8Tjk",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=B68Nfjm8Tjk",
+   "video_id": "B68Nfjm8Tjk",
+   "author": "Arekkz Gaming",
+   "published_at": "2026-11-25T23:00:04Z",
+   "title_original": "GTA 6 - MUST HAVE Black Eagle Rifle Location!",
+   "popularity": 25988,
+   "thumbnail": "https://i.ytimg.com/vi/B68Nfjm8Tjk/hqdefault.jpg",
+   "categoria": "arma",
+   "titulo": "Ubicación del rifle Black Eagle M306 TMR",
+   "resumen": "Rifle de precisión gratuito con silenciador integrado y mira ajustable, ubicado dentro del depósito de Black Eagle en Balsero.",
+   "zona": "Depósito de Black Eagle, Balsero",
+   "como_conseguirlo": "Ir al depósito de Black Eagle en Balsero y buscar el Black Eagle Import M306 TMR dentro del lugar.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "El Black Eagle Import M306 TMR es un rifle de precisión gratuito que viene con silenciador integrado y mira ajustable. Está dentro del depósito de Black Eagle, en Balsero.",
+   "pasos": [
+    "Ir al depósito de Black Eagle en Balsero",
+    "Buscar el Black Eagle Import M306 TMR dentro del lugar"
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Localização do rifle Black Eagle M306 TMR",
+    "resumen": "Rifle de precisão grátis com silenciador integrado e mira ajustável, localizado dentro do depósito da Black Eagle em Balsero.",
+    "detalle": "O Black Eagle Import M306 TMR é um rifle de precisão grátis que vem com silenciador integrado e mira ajustável. Ele está dentro do depósito da Black Eagle, em Balsero.",
+    "pasos": [
+     "Ir ao depósito da Black Eagle em Balsero",
+     "Procurar o Black Eagle Import M306 TMR dentro do local"
+    ],
+    "src": "77d5d3fbce"
+   },
+   "en": {
+    "titulo": "Location of the Black Eagle M306 TMR Rifle",
+    "resumen": "Free precision rifle with a built-in suppressor and adjustable scope, located inside the Black Eagle depot in Balsero.",
+    "detalle": "The Black Eagle Import M306 TMR is a free precision rifle that comes with a built-in suppressor and an adjustable scope. It is inside the Black Eagle depot in Balsero.",
+    "pasos": [
+     "Go to the Black Eagle depot in Balsero",
+     "Look for the Black Eagle Import M306 TMR inside the location"
+    ],
+    "src": "77d5d3fbce"
+   },
+   "slug": "ubicacion-del-rifle-black-eagle-m306-tmr-79a2a"
   },
   {
    "id": "yt:ler0cfPLAnE",
@@ -1112,8 +1675,7 @@
     "Llevar el auto a un Pay 'n' Spray para registrarlo.",
     "Guardar el auto en el refugio."
    ],
-   "region": "Rialto Island",
-   "macro": "Vice Beach",
+   "region": "",
    "pt": {
     "titulo": "Easter egg do Mitsubishi Eclipse de Velozes e Furiosos",
     "resumen": "Suposto carro de Paul Walker escondido em uma mansão de Rialto Island. Para ficar com ele é preciso registrá-lo em uma Pay 'n' Spray e guardá-lo em um esconderijo.",
@@ -1922,6 +2484,14 @@
    "spoiler": true,
    "confianza": "media",
    "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=5WHXnQ3_Myc",
+     "video_id": "5WHXnQ3_Myc",
+     "author": "Level Up Bytes",
+     "popularity": 10695,
+     "published_at": "2026-11-26T09:02:34Z"
+    },
     {
      "source": "youtube",
      "url": "https://www.youtube.com/watch?v=egVg5C0awOU",
@@ -5119,43 +5689,6 @@
    }
   },
   {
-   "id": "yt:-mzJSlSHK-A",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=-mzJSlSHK-A",
-   "video_id": "-mzJSlSHK-A",
-   "author": "Caspahz",
-   "published_at": "2026-11-23T16:23:00Z",
-   "title_original": "How to Get the MOST EXPENSIVE Car in GTA 6 for FREE – Thrax (Bugatti Divo), Any Chapter, No Tracker!",
-   "popularity": 16078,
-   "thumbnail": "https://i.ytimg.com/vi/-mzJSlSHK-A/hqdefault.jpg",
-   "categoria": "vehiculo",
-   "titulo": "Cómo conseguir el Truffade Thrax",
-   "resumen": "El Truffade Thrax es el superdeportivo más caro del juego, equivalente al Bugatti Divo. La guía dice que los pasos están en el video, pero la descripción no los incluye.",
-   "zona": "Vice City y Leonida",
-   "como_conseguirlo": "",
-   "spoiler": false,
-   "confianza": "media",
-   "enriched": true,
-   "detalle": "El Truffade Thrax es el superdeportivo más caro del juego y equivale al Bugatti Divo. Según los datos, es de clase Super, con tracción AWD y 2 plazas.\n\nLa guía promete explicar los pasos para conseguirlo sin tracker, pero la descripción del video no los incluye.",
-   "pasos": [],
-   "region": "",
-   "slug": "como-conseguir-el-truffade-thrax-dddc3",
-   "pt": {
-    "titulo": "Como conseguir o Truffade Thrax",
-    "resumen": "O Truffade Thrax é o superesportivo mais caro do jogo, equivalente ao Bugatti Divo. O guia diz que os passos estão no vídeo, mas a descrição não os inclui.",
-    "detalle": "O Truffade Thrax é o superesportivo mais caro do jogo e equivale ao Bugatti Divo. Segundo os dados, é da classe Super, com tração AWD e 2 lugares.\n\nO guia promete explicar os passos para conseguir o carro sem rastreador, mas a descrição do vídeo não os inclui.",
-    "pasos": [],
-    "src": "9e0fa69d0f"
-   },
-   "en": {
-    "titulo": "How to Get the Truffade Thrax",
-    "resumen": "The Truffade Thrax is the most expensive supercar in the game, equivalent to the Bugatti Divo. The guide says the steps are in the video, but the description doesn't include them.",
-    "detalle": "The Truffade Thrax is the most expensive supercar in the game and is equivalent to the Bugatti Divo. According to the data, it is in the Super class, with AWD and 2 seats.\n\nThe guide promises to explain the steps to get it without a tracker, but the video description does not include them.",
-    "pasos": [],
-    "src": "9e0fa69d0f"
-   }
-  },
-  {
    "id": "yt:FQBMtoX3I8g",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=FQBMtoX3I8g",
@@ -5190,44 +5723,6 @@
     "detalle": "Collectible hot rod, one of the ten in the game, hidden in a container.\n\nThe data doesn't indicate which area of the map the container is in, so the exact location is left to the short.",
     "pasos": [],
     "src": "69f73a0b51"
-   }
-  },
-  {
-   "id": "yt:YjLmqquRTBY",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=YjLmqquRTBY",
-   "video_id": "YjLmqquRTBY",
-   "author": "Savage",
-   "published_at": "2026-11-23T15:31:34Z",
-   "title_original": "GTA 6 Has 3 SECRET LUXURY CARS in ONE Location!",
-   "popularity": 4610,
-   "thumbnail": "https://i.ytimg.com/vi/YjLmqquRTBY/hqdefault.jpg",
-   "categoria": "vehiculo",
-   "titulo": "Tres autos de lujo en una mansión de Starfish Island",
-   "resumen": "Una mansión oculta en Starfish Island tiene tres garajes con autos caros: un Buckingham Windsor Drop, un Gallivanter Baller ST-D y un Pegassi Vitello. Hay que superar la seguridad y los requisitos de acceso de la mansión.",
-   "zona": "Starfish Island",
-   "como_conseguirlo": "Encontrar la mansión oculta en Starfish Island, superar su seguridad y acceder a los garajes para robar los vehículos. El video no detalla los pasos exactos.",
-   "spoiler": false,
-   "confianza": "media",
-   "enriched": true,
-   "detalle": "En una mansión oculta de Starfish Island hay tres garajes con autos caros: un Buckingham Windsor Drop, inspirado en Rolls-Royce, un Gallivanter Baller ST-D y un Pegassi Vitello.\n\nPara acceder hay que superar la seguridad de la mansión y cumplir con los requisitos de acceso a los vehículos. La descripción no detalla cómo hacerlo.",
-   "pasos": [],
-   "region": "Starfish Island",
-   "macro": "Vice Beach",
-   "slug": "tres-autos-de-lujo-en-una-mansion-de-starfish-island-3ceb8",
-   "pt": {
-    "titulo": "Três carros de luxo em uma mansão de Starfish Island",
-    "resumen": "Uma mansão escondida em Starfish Island tem três garagens com carros caros: um Buckingham Windsor Drop, um Gallivanter Baller ST-D e um Pegassi Vitello. É preciso superar a segurança e os requisitos de acesso da mansão.",
-    "detalle": "Em uma mansão escondida em Starfish Island há três garagens com carros caros: um Buckingham Windsor Drop, inspirado no Rolls-Royce, um Gallivanter Baller ST-D e um Pegassi Vitello.\n\nPara acessar, é preciso superar a segurança da mansão e cumprir os requisitos de acesso aos veículos. A descrição não detalha como fazer isso.",
-    "pasos": [],
-    "src": "aad009db3d"
-   },
-   "en": {
-    "titulo": "Three Luxury Cars in a Starfish Island Mansion",
-    "resumen": "A hidden mansion on Starfish Island has three garages with expensive cars: a Buckingham Windsor Drop, a Gallivanter Baller ST-D, and a Pegassi Vitello. You must get past the mansion's security and access requirements.",
-    "detalle": "A hidden mansion on Starfish Island has three garages with expensive cars: a Buckingham Windsor Drop, inspired by the Rolls-Royce, a Gallivanter Baller ST-D, and a Pegassi Vitello.\n\nTo gain access, you must get past the mansion's security and meet the access requirements for the vehicles. The description does not explain how to do this.",
-    "pasos": [],
-    "src": "aad009db3d"
    }
   },
   {
@@ -9409,6 +9904,14 @@
    "fuentes_extra": [
     {
      "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=Bj24fFcH5QA",
+     "video_id": "Bj24fFcH5QA",
+     "author": "TGG",
+     "popularity": 37906,
+     "published_at": "2026-11-26T14:00:34Z"
+    },
+    {
+     "source": "youtube",
      "url": "https://www.youtube.com/watch?v=MktVJRzKLBs",
      "video_id": "MktVJRzKLBs",
      "author": "LegoUnlocked",
@@ -9422,6 +9925,14 @@
      "author": "GiosephTheGamer",
      "popularity": 10574,
      "published_at": "2026-11-22T17:00:33Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=dMrwVO1mO14",
+     "video_id": "dMrwVO1mO14",
+     "author": "Legacy Gaming",
+     "popularity": 5792,
+     "published_at": "2026-11-26T02:12:32Z"
     },
     {
      "source": "youtube",
@@ -9717,7 +10228,17 @@
     "detalle": "",
     "pasos": [],
     "src": "7ddd80bc5c"
-   }
+   },
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=B3FNUiNA9ss",
+     "video_id": "B3FNUiNA9ss",
+     "author": "Venom Aimz",
+     "popularity": 7547,
+     "published_at": "2026-11-26T12:00:18Z"
+    }
+   ]
   },
   {
    "id": "yt:MXMw7g_V_E4",
@@ -9998,11 +10519,35 @@
    "fuentes_extra": [
     {
      "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=-mzJSlSHK-A",
+     "video_id": "-mzJSlSHK-A",
+     "author": "Caspahz",
+     "popularity": 16078,
+     "published_at": "2026-11-23T16:23:00Z"
+    },
+    {
+     "source": "youtube",
      "url": "https://www.youtube.com/watch?v=3yvv6aOYK-U",
      "video_id": "3yvv6aOYK-U",
      "author": "Ewiee",
      "popularity": 15153,
      "published_at": "2026-11-22T18:00:14Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=YjLmqquRTBY",
+     "video_id": "YjLmqquRTBY",
+     "author": "Savage",
+     "popularity": 4610,
+     "published_at": "2026-11-23T15:31:34Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=dkcwJDkqG5I",
+     "video_id": "dkcwJDkqG5I",
+     "author": "Shattered0_0",
+     "popularity": 4074,
+     "published_at": "2026-11-26T14:02:15Z"
     }
    ],
    "slug": "donde-encontrar-el-truffade-thrax-95ec5",
@@ -10291,7 +10836,17 @@
     "detalle": "The video explains how to get the Professional Criminal profile. It shows one method for Chapters 1 and 2 and a different one from Chapter 3 onward.",
     "pasos": [],
     "src": "25bbeea7ce"
-   }
+   },
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=KBILUhDXBcg",
+     "video_id": "KBILUhDXBcg",
+     "author": "TheProfessional",
+     "popularity": 11316,
+     "published_at": "2026-11-26T07:22:35Z"
+    }
+   ]
   }
  ]
 }
