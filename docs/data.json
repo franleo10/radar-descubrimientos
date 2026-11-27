@@ -1,7 +1,239 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-27T08:29:45Z",
+ "updated_at": "2026-11-27T19:29:29Z",
  "entries": [
+  {
+   "id": "yt:059Yvvdcc1s",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=059Yvvdcc1s",
+   "video_id": "059Yvvdcc1s",
+   "author": "SNIR",
+   "published_at": "2026-11-27T17:00:29Z",
+   "title_original": "99 % des joueurs de GTA 6 ont Raté ça ! (Ferrari MANQUABLE, Secret Vice City PS2, Radios SECRÈTES)",
+   "popularity": 5685,
+   "thumbnail": "https://i.ytimg.com/vi/059Yvvdcc1s/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Ferrari secreta Grotti Cheetah 1010",
+   "resumen": "Una Ferrari secreta (Grotti Cheetah 1010) que se desbloquea resolviendo el enigma de las frescos 1010 en el garaje secreto de Saltor Towing. Es gratis y se puede perder si no se consigue en el capítulo 3.",
+   "zona": "Saltor Towing",
+   "como_conseguirlo": "Resolver el enigma de las frescos 1010 y entrar al garaje secreto de Saltor Towing durante el capítulo 3.",
+   "spoiler": true,
+   "confianza": "media",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=dN2IB_Xll_U",
+     "video_id": "dN2IB_Xll_U",
+     "author": "Caspahz",
+     "popularity": 4483,
+     "published_at": "2026-11-23T07:50:58Z"
+    }
+   ],
+   "enriched": true,
+   "detalle": "La Ferrari secreta Grotti Cheetah 1010 se desbloquea resolviendo el enigma de los frescos 1010 y entrando al garaje secreto de Saltor Towing. Es gratuita.\n\nSegún los datos, se puede perder si no se consigue durante el capítulo 3.",
+   "pasos": [
+    "Resolver el enigma de los frescos 1010.",
+    "Entrar al garaje secreto de Saltor Towing durante el capítulo 3."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Ferrari secreta Grotti Cheetah 1010",
+    "resumen": "Uma Ferrari secreta (Grotti Cheetah 1010) que é desbloqueada ao resolver o enigma dos afrescos 1010 na garagem secreta da Saltor Towing. É grátis e pode ser perdida se não for conseguida no capítulo 3.",
+    "detalle": "A Ferrari secreta Grotti Cheetah 1010 é desbloqueada ao resolver o enigma dos afrescos 1010 e entrar na garagem secreta da Saltor Towing. É gratuita.\n\nSegundo as informações, ela pode ser perdida se não for conseguida durante o capítulo 3.",
+    "pasos": [
+     "Resolver o enigma dos afrescos 1010.",
+     "Entrar na garagem secreta da Saltor Towing durante o capítulo 3."
+    ],
+    "src": "52a5852c24"
+   },
+   "en": {
+    "titulo": "Secret Grotti Cheetah 1010 Ferrari",
+    "resumen": "A secret Ferrari (Grotti Cheetah 1010) that is unlocked by solving the 1010 fresco puzzle in the secret garage at Saltor Towing. It is free and can be lost if not obtained in Chapter 3.",
+    "detalle": "The secret Ferrari Grotti Cheetah 1010 is unlocked by solving the 1010 fresco puzzle and entering the secret garage at Saltor Towing. It is free.\n\nAccording to the details, it can be lost if not obtained during Chapter 3.",
+    "pasos": [
+     "Solve the 1010 fresco puzzle.",
+     "Enter the secret garage at Saltor Towing during Chapter 3."
+    ],
+    "src": "52a5852c24"
+   },
+   "slug": "ferrari-secreta-grotti-cheetah-1010-3a01f"
+  },
+  {
+   "id": "yt:dFStBhWRHBA",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=dFStBhWRHBA",
+   "video_id": "dFStBhWRHBA",
+   "author": "HELLOO",
+   "published_at": "2026-11-27T12:49:26Z",
+   "title_original": "How to Get the Custom Bentley GT in GTA 6",
+   "popularity": 2535,
+   "thumbnail": "https://i.ytimg.com/vi/dFStBhWRHBA/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Bentley GT personalizado",
+   "resumen": "Video corto que muestra dónde encontrar y cómo conseguir un Bentley GT personalizado. La descripción no detalla la ubicación.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Bentley GT personalizado",
+    "resumen": "Vídeo curto que mostra onde encontrar e como conseguir um Bentley GT personalizado. A descrição não detalha a localização.",
+    "detalle": "",
+    "pasos": [],
+    "src": "1ae8ba00a2"
+   },
+   "en": {
+    "titulo": "Custom Bentley GT",
+    "resumen": "Short video showing where to find and how to get a custom Bentley GT. The description does not detail the location.",
+    "detalle": "",
+    "pasos": [],
+    "src": "1ae8ba00a2"
+   },
+   "slug": "bentley-gt-personalizado-60dd7"
+  },
+  {
+   "id": "yt:jj14qc7r8NU",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=jj14qc7r8NU",
+   "video_id": "jj14qc7r8NU",
+   "author": "6IX CLIPS",
+   "published_at": "2026-11-27T07:38:16Z",
+   "title_original": "GTA 6 Secrets #50: Clunker 556 Location: Brooks Boatworks",
+   "popularity": 3318,
+   "thumbnail": "https://i.ytimg.com/vi/jj14qc7r8NU/hqdefault.jpg",
+   "categoria": "arma",
+   "titulo": "Clunker 556 en Brooks Boatworks",
+   "resumen": "Un fusil de asalto sin culata, el Clunker 556, custodiado por hombres armados en Brooks Boatworks. Está en el edificio pequeño a la derecha del principal.",
+   "zona": "Brooks Boatworks, cerca de Port Gellhorn",
+   "como_conseguirlo": "Entrar por el lado este de Brooks Boatworks atravesando la reja rota. El fusil está en el edificio pequeño a la derecha del principal. Hay un Smuggler Caracara estacionado afuera.",
+   "spoiler": true,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "En Brooks Boatworks, cerca de Port Gellhorn, hay un fusil de asalto sin culata llamado Clunker 556. Está custodiado por hombres armados.\n\nEl fusil está en el edificio pequeño a la derecha del principal. Afuera hay un Smuggler Caracara estacionado.",
+   "pasos": [
+    "Entrar por el lado este de Brooks Boatworks atravesando la reja rota.",
+    "Ir al edificio pequeño a la derecha del principal.",
+    "Tomar el Clunker 556 del interior."
+   ],
+   "region": "Port Gellhorn",
+   "macro": "Port Gellhorn",
+   "pt": {
+    "titulo": "Clunker 556 na Brooks Boatworks",
+    "resumen": "Um fuzil de assalto sem coronha, o Clunker 556, guardado por homens armados na Brooks Boatworks. Está no prédio pequeno à direita do principal.",
+    "detalle": "Na Brooks Boatworks, perto de Port Gellhorn, há um fuzil de assalto sem coronha chamado Clunker 556. Ele é guardado por homens armados.\n\nO fuzil está no prédio pequeno à direita do principal. Do lado de fora há um Smuggler Caracara estacionado.",
+    "pasos": [
+     "Entrar pelo lado leste da Brooks Boatworks atravessando o portão quebrado.",
+     "Ir ao prédio pequeno à direita do principal.",
+     "Pegar o Clunker 556 do interior."
+    ],
+    "src": "53d5fb8a63"
+   },
+   "en": {
+    "titulo": "Clunker 556 at Brooks Boatworks",
+    "resumen": "A stockless assault rifle, the Clunker 556, guarded by armed men at Brooks Boatworks. It is in the small building to the right of the main one.",
+    "detalle": "At Brooks Boatworks, near Port Gellhorn, there is a stockless assault rifle called the Clunker 556. It is guarded by armed men.\n\nThe rifle is in the small building to the right of the main one. Outside there is a parked Smuggler Caracara.",
+    "pasos": [
+     "Enter from the east side of Brooks Boatworks by going through the broken fence.",
+     "Go to the small building to the right of the main one.",
+     "Take the Clunker 556 from inside."
+    ],
+    "src": "53d5fb8a63"
+   },
+   "slug": "clunker-556-en-brooks-boatworks-b7ce8"
+  },
+  {
+   "id": "yt:jlyFrTzgKTQ",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=jlyFrTzgKTQ",
+   "video_id": "jlyFrTzgKTQ",
+   "author": "Misleading",
+   "published_at": "2026-11-27T06:20:16Z",
+   "title_original": "GTA 6’s HUGE Tallaloko Easter Egg! Secret Weapon + $67,200",
+   "popularity": 26854,
+   "thumbnail": "https://i.ytimg.com/vi/jlyFrTzgKTQ/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Sala secreta de Tallaloko",
+   "resumen": "Una sala secreta relacionada con Tallaloko que, según el video, da un cuchillo Tallaloko y joyas por 67.200 dólares, además de un coleccionable en la planta baja.",
+   "zona": "Instalaciones submarinas, cabaña",
+   "como_conseguirlo": "Seguir la ruta: instalaciones submarinas, la caja fuerte del meteorito, la foto del email de Poppers y la puerta de la cabaña. Caja fuerte con código 80085 y puerta de la cabaña con código 7304.",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es una sala secreta relacionada con Tallaloko. Según el video, en esa ruta se obtienen un cuchillo Tallaloko y joyas por 67.200 dólares, además de un coleccionable en la planta baja.\n\nLa ruta pasa por las instalaciones submarinas, la caja fuerte del meteorito, la foto del email de Poppers y la puerta de la cabaña. La caja fuerte tiene el código 80085 y la puerta de la cabaña el código 7304.",
+   "pasos": [
+    "Ir a las instalaciones submarinas.",
+    "Abrir la caja fuerte del meteorito con el código 80085.",
+    "Buscar la foto del email de Poppers.",
+    "Abrir la puerta de la cabaña con el código 7304."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Sala secreta do Tallaloko",
+    "resumen": "Uma sala secreta relacionada ao Tallaloko que, segundo o vídeo, dá uma faca Tallaloko e joias por 67.200 dólares, além de um colecionável no térreo.",
+    "detalle": "É uma sala secreta relacionada ao Tallaloko. Segundo o vídeo, nessa rota se obtêm uma faca Tallaloko e joias por 67.200 dólares, além de um colecionável no térreo.\n\nA rota passa pelas instalações submarinas, pelo cofre do meteorito, pela foto do e-mail do Poppers e pela porta da cabana. O cofre tem o código 80085 e a porta da cabana o código 7304.",
+    "pasos": [
+     "Ir às instalações submarinas.",
+     "Abrir o cofre do meteorito com o código 80085.",
+     "Procurar a foto do e-mail do Poppers.",
+     "Abrir a porta da cabana com o código 7304."
+    ],
+    "src": "c465098b99"
+   },
+   "en": {
+    "titulo": "Tallaloko's Secret Room",
+    "resumen": "A secret room related to Tallaloko that, according to the video, gives a Tallaloko knife and jewelry worth $67,200, plus a collectible on the ground floor.",
+    "detalle": "This is a secret room related to Tallaloko. According to the video, this route gives a Tallaloko knife and jewelry worth $67,200, plus a collectible on the ground floor.\n\nThe route passes through the underwater facility, the meteorite safe, the photo from Poppers' email, and the cabin door. The safe code is 80085 and the cabin door code is 7304.",
+    "pasos": [
+     "Go to the underwater facility.",
+     "Open the meteorite safe with the code 80085.",
+     "Find the photo from Poppers' email.",
+     "Open the cabin door with the code 7304."
+    ],
+    "src": "c465098b99"
+   },
+   "slug": "sala-secreta-de-tallaloko-8f3ba"
+  },
+  {
+   "id": "yt:W5L459RZG6w",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=W5L459RZG6w",
+   "video_id": "W5L459RZG6w",
+   "author": "TGG",
+   "published_at": "2026-11-27T05:34:18Z",
+   "title_original": "GTA 6: How to Get SECRET Legendary Weapons Early! (RPG, Grenade Launcher, Snipers & Gold Guns)",
+   "popularity": 30098,
+   "thumbnail": "https://i.ytimg.com/vi/W5L459RZG6w/hqdefault.jpg",
+   "categoria": "arma",
+   "titulo": "Armas legendarias secretas tempranas",
+   "resumen": "Guía para obtener armas legendarias y secretas antes de lo normal, como sniper SM69, Kingfisher, Gorse, lanzacohetes y rifle dorado. La descripción en el video tiene marcas de tiempo, pero no explica los pasos para conseguirlas.",
+   "zona": "",
+   "como_conseguirlo": "Seguir las marcas de tiempo del video para ver cada arma; el texto no detalla los pasos.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es una guía para conseguir armas legendarias y secretas antes de lo normal. Según las marcas de tiempo del video, incluye sniper SM69, Kingfisher Laird, pistola silenciada Assassin, escopeta Smuggler Gorse, revólver y sniper legendarios, lanzagranadas, rifle legendario, lanzacohetes y rifle dorado.\n\nEl texto no explica los pasos para conseguir cada arma.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Armas lendárias secretas antecipadas",
+    "resumen": "Guia para obter armas lendárias e secretas antes do normal, como o sniper SM69, Kingfisher, Gorse, lança-foguetes e rifle dourado. A descrição do vídeo tem marcações de tempo, mas não explica os passos para consegui-las.",
+    "detalle": "É um guia para conseguir armas lendárias e secretas antes do normal. Segundo as marcações de tempo do vídeo, inclui o sniper SM69, Kingfisher Laird, pistola silenciada Assassin, espingarda Smuggler Gorse, revólver e sniper lendários, lança-granadas, rifle lendário, lança-foguetes e rifle dourado.\n\nO texto não explica os passos para conseguir cada arma.",
+    "pasos": [],
+    "src": "8a0800137b"
+   },
+   "en": {
+    "titulo": "Early Secret Legendary Weapons",
+    "resumen": "A guide to getting secret and legendary weapons earlier than usual, such as the SM69 sniper, Kingfisher, Gorse, rocket launcher, and gold rifle. The video description has timestamps, but it does not explain the steps to get them.",
+    "detalle": "This is a guide to getting secret and legendary weapons earlier than usual. According to the video's timestamps, it covers the SM69 sniper, Kingfisher Laird, Assassin silenced pistol, Smuggler Gorse shotgun, legendary revolver and sniper, grenade launcher, legendary rifle, rocket launcher, and gold rifle.\n\nThe text does not explain the steps to get each weapon.",
+    "pasos": [],
+    "src": "8a0800137b"
+   },
+   "slug": "armas-legendarias-secretas-tempranas-10235"
+  },
   {
    "id": "yt:0yJ4KPK0wQc",
    "source": "youtube",
@@ -25,8 +257,7 @@
     "Bucear en el océano cerca de Mariana.",
     "Buscar los restos en el fondo."
    ],
-   "region": "Mariana County",
-   "macro": "Grassrivers",
+   "region": "",
    "pt": {
     "titulo": "Esqueleto de monstro marinho em frente a Mariana",
     "resumen": "No oceano em frente ao condado de Mariana há um esqueleto gigante de monstro marinho no fundo. É uma das descobertas submarinas numeradas do jogo.",
@@ -48,6 +279,43 @@
     "src": "413ffcd19c"
    },
    "slug": "esqueleto-de-monstruo-marino-frente-a-mariana-4531b"
+  },
+  {
+   "id": "yt:bOSxNr7QPkw",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=bOSxNr7QPkw",
+   "video_id": "bOSxNr7QPkw",
+   "author": "FlayHQ",
+   "published_at": "2026-11-27T02:08:10Z",
+   "title_original": "Get the Carbon Fiber Black Widow McLaren for FREE in GTA 6! (No Tracker)",
+   "popularity": 70190,
+   "thumbnail": "https://i.ytimg.com/vi/bOSxNr7QPkw/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Emerus Black Widow de fibra de carbono sin rastreador",
+   "resumen": "Versión especial del superauto inspirado en McLaren, con fibra de carbono y sin rastreador, que según el video se puede obtener gratis. El texto no detalla los pasos.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Emerus Black Widow de fibra de carbono sem rastreador",
+    "resumen": "Versão especial do superesportivo inspirado na McLaren, com fibra de carbono e sem rastreador, que, segundo o vídeo, pode ser obtida de graça. O texto não detalha os passos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "79cfe18f25"
+   },
+   "en": {
+    "titulo": "Emerus Black Widow Carbon Fiber Without Tracker",
+    "resumen": "A special version of the McLaren-inspired supercar, with carbon fiber and no tracker, which according to the video can be obtained for free. The text does not detail the steps.",
+    "detalle": "",
+    "pasos": [],
+    "src": "79cfe18f25"
+   },
+   "slug": "emerus-black-widow-de-fibra-de-carbono-sin-rastreador-738ca"
   },
   {
    "id": "yt:SVLtbwxhEro",
@@ -96,6 +364,56 @@
    "slug": "agacharse-en-el-auto-y-menu-del-vehiculo-7e912"
   },
   {
+   "id": "yt:rFndV2t6Kg4",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=rFndV2t6Kg4",
+   "video_id": "rFndV2t6Kg4",
+   "author": "FlayHQ",
+   "published_at": "2026-11-26T23:01:45Z",
+   "title_original": "This SECRET Garage in GTA 6 Has INSANE Loot!",
+   "popularity": 35873,
+   "thumbnail": "https://i.ytimg.com/vi/rFndV2t6Kg4/hqdefault.jpg",
+   "categoria": "ubicacion_secreta",
+   "titulo": "Garaje secreto en Vice City con botín",
+   "resumen": "Un garaje escondido al norte de Tequesta, en Vice City, con un fusil silenciado legendario con mira roja, un lanzagranadas y chaleco antibalas. Hay también una caja fuerte para saquear y el lugar no tiene guardias.",
+   "zona": "Vice City, al norte de Tequesta",
+   "como_conseguirlo": "Ir al norte de Tequesta en Vice City, caminar a través de la pila de papel higiénico para encontrar el escondite y saquear la caja fuerte.",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es un garaje secreto escondido al norte de Tequesta, en Vice City. Dentro hay un fusil de asalto silenciado legendario con mira roja, un lanzagranadas y un chaleco antibalas.\n\nTambién hay una caja fuerte para saquear y, según el video, el lugar no tiene guardias.",
+   "pasos": [
+    "Ir al norte de Tequesta en Vice City.",
+    "Caminar a través de la pila de papel higiénico para encontrar el escondite.",
+    "Saquear la caja fuerte."
+   ],
+   "region": "Vice City",
+   "macro": "Vice City",
+   "pt": {
+    "titulo": "Garagem secreta em Vice City com saque",
+    "resumen": "Uma garagem escondida ao norte de Tequesta, em Vice City, com um rifle de assalto silenciado lendário com mira vermelha, um lança-granadas e colete à prova de balas. Há também um cofre para saquear e o local não tem guardas.",
+    "detalle": "É uma garagem secreta escondida ao norte de Tequesta, em Vice City. Dentro há um rifle de assalto silenciado lendário com mira vermelha, um lança-granadas e um colete à prova de balas.\n\nTambém há um cofre para saquear e, segundo o vídeo, o local não tem guardas.",
+    "pasos": [
+     "Ir ao norte de Tequesta em Vice City.",
+     "Caminhar pela pilha de papel higiênico para encontrar o esconderijo.",
+     "Saquear o cofre."
+    ],
+    "src": "e83b109b23"
+   },
+   "en": {
+    "titulo": "Secret Vice City Garage with Loot",
+    "resumen": "A hidden garage north of Tequesta in Vice City, with a legendary silenced assault rifle with a red sight, a grenade launcher, and a body armor vest. There is also a safe to loot, and the location has no guards.",
+    "detalle": "This is a secret garage hidden north of Tequesta in Vice City. Inside there is a legendary silenced assault rifle with a red sight, a grenade launcher, and a body armor vest.\n\nThere is also a safe to loot and, according to the video, the location has no guards.",
+    "pasos": [
+     "Go north of Tequesta in Vice City.",
+     "Walk through the pile of toilet paper to find the hideout.",
+     "Loot the safe."
+    ],
+    "src": "e83b109b23"
+   },
+   "slug": "garaje-secreto-en-vice-city-con-botin-b1d44"
+  },
+  {
    "id": "yt:jCyz4iFx8cg",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=jCyz4iFx8cg",
@@ -133,6 +451,43 @@
    "slug": "controles-ocultos-de-gta-6-f1e82"
   },
   {
+   "id": "yt:GyztLOcP3ec",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=GyztLOcP3ec",
+   "video_id": "GyztLOcP3ec",
+   "author": "TJRH",
+   "published_at": "2026-11-26T21:40:22Z",
+   "title_original": "How to Get a Police Outfit in GTA 6!",
+   "popularity": 3887,
+   "thumbnail": "https://i.ytimg.com/vi/GyztLOcP3ec/hqdefault.jpg",
+   "categoria": "otro",
+   "titulo": "Cómo conseguir ropa de policía",
+   "resumen": "Tutorial para armar un uniforme de policía con ropa disponible en el juego, incluyendo un gorro de policía real y lentes de aviador con bandera de EE. UU.",
+   "zona": "",
+   "como_conseguirlo": "Combinar las prendas indicadas en el video; obtener el gorro de un oficial y completar con los lentes de aviador de la bandera.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Como conseguir roupa de policial",
+    "resumen": "Tutorial para montar um uniforme de policial com roupas disponíveis no jogo, incluindo um boné de policial real e óculos aviador com bandeira dos EUA.",
+    "detalle": "",
+    "pasos": [],
+    "src": "ccd22fa405"
+   },
+   "en": {
+    "titulo": "How to Get Police Clothing",
+    "resumen": "A tutorial on putting together a police uniform with clothing available in the game, including a real police cap and aviator glasses with a US flag.",
+    "detalle": "",
+    "pasos": [],
+    "src": "ccd22fa405"
+   },
+   "slug": "como-conseguir-ropa-de-policia-1acdb"
+  },
+  {
    "id": "yt:7mLV3R5wJDQ",
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=7mLV3R5wJDQ",
@@ -155,8 +510,7 @@
     "Ir al garaje en Casanova Island.",
     "Abrir las cajas fuertes, comer para ganar salud o volar el lugar con una bomba adhesiva."
    ],
-   "region": "Casanova Island",
-   "macro": "Vice Beach",
+   "region": "",
    "pt": {
     "titulo": "Fazenda de bots escondida na Casanova Island",
     "resumen": "Garagem secreta na Casanova Island com servidores, celulares e cofres. Dá para abrir os cofres, comer para ganhar vida e explodir o lugar com uma bomba adesiva.",
@@ -289,6 +643,157 @@
     "src": "5282607f46"
    },
    "slug": "como-conseguir-el-porsche-53808"
+  },
+  {
+   "id": "yt:uvTfcHsdfBQ",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=uvTfcHsdfBQ",
+   "video_id": "uvTfcHsdfBQ",
+   "author": "Robbin Rams",
+   "published_at": "2026-11-26T20:16:21Z",
+   "title_original": "I Found the Secret Bonnie & Clyde Hideout in GTA 6",
+   "popularity": 22098,
+   "thumbnail": "https://i.ytimg.com/vi/uvTfcHsdfBQ/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Escondite de Bonnie y Clyde con Martha",
+   "resumen": "Un escondite de forajidos con Martha y Lyle que lleva a una pistola rara de 1922 y a un Vamos de 1974 oxidado en Leonida.",
+   "zona": "Norte de Moreau (cabaña); Rockledge Rd en Bonanza (cobertizo)",
+   "como_conseguirlo": "La pistola 1922 está dentro de la chimenea de la cabaña de los forajidos, al norte de Moreau. El Vamos 1974 está dentro del cobertizo abandonado sobre Rockledge Rd, en Bonanza.",
+   "spoiler": true,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "Es un escondite de forajidos con Martha y Lyle, una referencia a Bonnie y Clyde. Allí se consiguen una pistola rara de 1922 y un Declasse Vamos de 1974 oxidado.\n\nLa pistola 1922 está dentro de la chimenea de la cabaña de los forajidos, al norte de Moreau. El Vamos 1974 está dentro del cobertizo abandonado sobre Rockledge Rd, en Bonanza.",
+   "pasos": [
+    "Ir a la cabaña de los forajidos, al norte de Moreau.",
+    "Buscar la pistola 1922 dentro de la chimenea.",
+    "Ir al cobertizo abandonado sobre Rockledge Rd, en Bonanza.",
+    "Buscar el Vamos 1974 dentro del cobertizo."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Esconderijo de Bonnie e Clyde com Martha",
+    "resumen": "Um esconderijo de foragidos com Martha e Lyle que leva a uma pistola rara de 1922 e a um Vamos de 1974 enferrujado em Leonida.",
+    "detalle": "É um esconderijo de foragidos com Martha e Lyle, uma referência a Bonnie e Clyde. Lá se conseguem uma pistola rara de 1922 e um Declasse Vamos de 1974 enferrujado.\n\nA pistola 1922 está dentro da chaminé da cabana dos foragidos, ao norte de Moreau. O Vamos 1974 está dentro do galpão abandonado na Rockledge Rd, em Bonanza.",
+    "pasos": [
+     "Ir à cabana dos foragidos, ao norte de Moreau.",
+     "Procurar a pistola 1922 dentro da chaminé.",
+     "Ir ao galpão abandonado na Rockledge Rd, em Bonanza.",
+     "Procurar o Vamos 1974 dentro do galpão."
+    ],
+    "src": "4013c12485"
+   },
+   "en": {
+    "titulo": "Bonnie and Clyde Hideout with Martha",
+    "resumen": "An outlaw hideout with Martha and Lyle that leads to a rare 1922 pistol and a rusted 1974 Vamos in Leonida.",
+    "detalle": "This is an outlaw hideout with Martha and Lyle, a reference to Bonnie and Clyde. There you can get a rare 1922 pistol and a rusted 1974 Declasse Vamos.\n\nThe 1922 pistol is inside the fireplace of the outlaws' cabin, north of Moreau. The 1974 Vamos is inside the abandoned shed on Rockledge Rd, in Bonanza.",
+    "pasos": [
+     "Go to the outlaws' cabin, north of Moreau.",
+     "Look for the 1922 pistol inside the fireplace.",
+     "Go to the abandoned shed on Rockledge Rd, in Bonanza.",
+     "Look for the 1974 Vamos inside the shed."
+    ],
+    "src": "4013c12485"
+   },
+   "slug": "escondite-de-bonnie-y-clyde-con-martha-e6d60"
+  },
+  {
+   "id": "yt:Csb4qCNQ83A",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=Csb4qCNQ83A",
+   "video_id": "Csb4qCNQ83A",
+   "author": "Ray Snakeyes",
+   "published_at": "2026-11-26T20:15:39Z",
+   "title_original": "GTA 6: HAZ LOS ATRACOS PERFECTOS Y GANA MUCHO DINERO",
+   "popularity": 47588,
+   "thumbnail": "https://i.ytimg.com/vi/Csb4qCNQ83A/hqdefault.jpg",
+   "categoria": "mision",
+   "titulo": "Atracos perfectos y trabajos de Yasmani",
+   "resumen": "Guía de cómo ganar dinero con atracos a bancos y camiones blindados, desbloqueando las cámaras acorazadas con Yasmani. Incluye consejos para escapar de la policía y una ruta para atracar varios bancos.",
+   "zona": "Cámaras acorazadas (Yasmani), furgón de seguridad",
+   "como_conseguirlo": "Desbloquear las cámaras acorazadas con Yasmani, luego preparar y ejecutar los atracos siguiendo las técnicas del video.",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es una guía para ganar mucho dinero con atracos a bancos y camiones blindados. Para acceder a las cámaras acorazadas hay que desbloquearlas antes con Yasmani, y el video explica técnicas, preparativos y cómo escapar de la policía.\n\nTambién incluye un furgón de seguridad, actividades del Capítulo 3, joyerías, cajas fuertes y una ruta para atracar varios bancos.",
+   "pasos": [
+    "Desbloquear las cámaras acorazadas con Yasmani.",
+    "Preparar los atracos siguiendo los preparativos del video.",
+    "Ejecutar los atracos con las técnicas del video y escapar de la policía."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Assaltos perfeitos e trabalhos do Yasmani",
+    "resumen": "Guia de como ganhar dinheiro com assaltos a bancos e carros-fortes, desbloqueando os cofres blindados com o Yasmani. Inclui dicas para fugir da polícia e uma rota para assaltar vários bancos.",
+    "detalle": "É um guia para ganhar muito dinheiro com assaltos a bancos e carros-fortes. Para acessar os cofres blindados, é preciso desbloqueá-los antes com o Yasmani, e o vídeo explica técnicas, preparativos e como fugir da polícia.\n\nTambém inclui uma van de segurança, atividades do Capítulo 3, joalherias, cofres e uma rota para assaltar vários bancos.",
+    "pasos": [
+     "Desbloquear os cofres blindados com o Yasmani.",
+     "Preparar os assaltos seguindo os preparativos do vídeo.",
+     "Executar os assaltos com as técnicas do vídeo e fugir da polícia."
+    ],
+    "src": "dac4a5fa89"
+   },
+   "en": {
+    "titulo": "Perfect Heists and Yasmani Jobs",
+    "resumen": "A guide to making big money from bank and armored truck heists by unlocking the armored vaults with Yasmani. It includes tips for escaping the police and a route for robbing several banks.",
+    "detalle": "This is a guide to making big money from bank and armored truck heists. To access the armored vaults, you first have to unlock them with Yasmani, and the video explains techniques, preparations, and how to escape the police.\n\nIt also includes a security van, Chapter 3 activities, jewelry stores, safes, and a route for robbing several banks.",
+    "pasos": [
+     "Unlock the armored vaults with Yasmani.",
+     "Prepare the heists by following the preparations shown in the video.",
+     "Carry out the heists using the techniques from the video and escape the police."
+    ],
+    "src": "dac4a5fa89"
+   },
+   "slug": "atracos-perfectos-y-trabajos-de-yasmani-0b120"
+  },
+  {
+   "id": "yt:3iR9aEQVHxY",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=3iR9aEQVHxY",
+   "video_id": "3iR9aEQVHxY",
+   "author": "LaazrGaming",
+   "published_at": "2026-11-26T19:59:40Z",
+   "title_original": "GTA 6 BuckMe Fully Explained - How To INCREASE Bank Limit, Withdraw, Deposit Money, Black Card!",
+   "popularity": 11544,
+   "thumbnail": "https://i.ytimg.com/vi/3iR9aEQVHxY/hqdefault.jpg",
+   "categoria": "dinero",
+   "titulo": "Cómo usar BuckMe y aumentar el límite del banco",
+   "resumen": "Explica la app bancaria BuckMe: cómo desbloquearla con la misión del Capítulo 1 en Fleeca Bank, cómo depositar y retirar, y cómo subir los límites con los capítulos y la cuenta Family Savings.",
+   "zona": "Key Lento (Fleeca Bank), Leonida, Vice City",
+   "como_conseguirlo": "Completar la misión 'Buck Me' del Capítulo 1 en Fleeca Bank de Key Lento para desbloquear BuckMe; los límites suben al avanzar por los capítulos 2, 3 y 4.",
+   "spoiler": true,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "BuckMe es la app bancaria del juego. Se desbloquea con la misión 'Buck Me' del Capítulo 1 en Fleeca Bank de Key Lento, y los límites de la cuenta suben al avanzar por los capítulos 2, 3 y 4.\n\nSegún el video, la cuenta corriente tiene un tope de 15.000 dólares y la de ahorro de 5.000. Las compras con menos de 1.000 dólares se pagan con efectivo de bolsillo, y las de 1.000 o más se descuentan de la cuenta BuckMe. Tampoco se puede depositar dinero desde el teléfono como en GTA 5.",
+   "pasos": [
+    "Completar la misión 'Buck Me' del Capítulo 1 en Fleeca Bank de Key Lento para desbloquear BuckMe.",
+    "Usar el BuckMe ATM Finder para ubicar cajeros cercanos.",
+    "Avanzar por los capítulos 2, 3 y 4 para subir los límites."
+   ],
+   "region": "",
+   "macro": "Leonida Keys",
+   "pt": {
+    "titulo": "Como usar o BuckMe e aumentar o limite do banco",
+    "resumen": "Explica o app bancário BuckMe: como desbloqueá-lo com a missão do Capítulo 1 no Fleeca Bank, como depositar e sacar, e como aumentar os limites com os capítulos e a conta Family Savings.",
+    "detalle": "BuckMe é o app bancário do jogo. Ele é desbloqueado com a missão 'Buck Me' do Capítulo 1 no Fleeca Bank de Key Lento, e os limites da conta aumentam conforme você avança pelos capítulos 2, 3 e 4.\n\nSegundo o vídeo, a conta corrente tem teto de 15.000 dólares e a poupança de 5.000. Compras de menos de 1.000 dólares são pagas com dinheiro do bolso, e as de 1.000 ou mais são descontadas da conta BuckMe. Também não é possível depositar dinheiro pelo celular como no GTA 5.",
+    "pasos": [
+     "Completar a missão 'Buck Me' do Capítulo 1 no Fleeca Bank de Key Lento para desbloquear o BuckMe.",
+     "Usar o BuckMe ATM Finder para localizar caixas eletrônicos próximos.",
+     "Avançar pelos capítulos 2, 3 e 4 para aumentar os limites."
+    ],
+    "src": "0877e80f02"
+   },
+   "en": {
+    "titulo": "How to Use BuckMe and Raise Your Bank Limit",
+    "resumen": "Explains the BuckMe banking app: how to unlock it with the Chapter 1 mission at Fleeca Bank, how to deposit and withdraw, and how to raise limits with chapters and the Family Savings account.",
+    "detalle": "BuckMe is the game's banking app. It is unlocked with the Chapter 1 mission 'Buck Me' at the Fleeca Bank in Key Lento, and account limits increase as you progress through Chapters 2, 3, and 4.\n\nAccording to the video, the checking account has a cap of $15,000 and the savings account a cap of $5,000. Purchases under $1,000 are paid with pocket cash, and those of $1,000 or more are deducted from the BuckMe account. You also cannot deposit money from your phone like in GTA 5.",
+    "pasos": [
+     "Complete the Chapter 1 mission 'Buck Me' at the Fleeca Bank in Key Lento to unlock BuckMe.",
+     "Use the BuckMe ATM Finder to locate nearby ATMs.",
+     "Progress through Chapters 2, 3, and 4 to raise the limits."
+    ],
+    "src": "0877e80f02"
+   },
+   "slug": "como-usar-buckme-y-aumentar-el-limite-del-banco-c479a"
   },
   {
    "id": "yt:UIIvelLCR7I",
@@ -3647,6 +4152,14 @@
    "fuentes_extra": [
     {
      "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=2ASRt8ixGmw",
+     "video_id": "2ASRt8ixGmw",
+     "author": "Rayi19",
+     "popularity": 11241,
+     "published_at": "2026-11-26T20:03:56Z"
+    },
+    {
+     "source": "youtube",
      "url": "https://www.youtube.com/watch?v=bqJ1qr2PKnQ",
      "video_id": "bqJ1qr2PKnQ",
      "author": "LunarGaming",
@@ -3662,8 +4175,7 @@
     "Localizar el barco fantasma usando los prismáticos.",
     "Obtener el Cuchillo Maldito desde el naufragio hundido."
    ],
-   "region": "Little Hardin Island",
-   "macro": "Ambrosia",
+   "region": "",
    "pt": {
     "titulo": "Easter egg do farol assombrado e a Faca Amaldiçoada",
     "resumen": "Na Ilha Little Hardin há um farol assombrado com um navio fantasma; seguindo as pistas, obtém-se uma faca verde única de um naufrágio afundado.",
@@ -4654,8 +5166,7 @@
     "Infiltrarse en el complejo fortificado sobreviviendo a las minas terrestres y a los drones de seguridad.",
     "Completar la misión secundaria \"Retest Freddie's Defenses\" para desbloquear el clima de huracán."
    ],
-   "region": "Leonard County",
-   "macro": "Ambrosia",
+   "region": "",
    "pt": {
     "titulo": "Clima de furacão desbloqueável",
     "resumen": "Encontrar o bunker apocalíptico do Freddie no norte do condado de Leonard e completar a missão secundária \"Retest Freddie's Defenses\" libera tempestades tropicais e furacões no modo livre de Leonida e Vice City.",
@@ -5886,8 +6397,7 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": "Ocean Beach",
-   "macro": "Vice Beach",
+   "region": "",
    "slug": "robar-cajas-fuertes-de-fleeca-y-lombank-en-ocean-beach-978a6",
    "pt": {
     "titulo": "Roubar os cofres da Fleeca e da Lombank em Ocean Beach",
@@ -5966,8 +6476,7 @@
     "Desbloquear el servicio requerido por el rastreador avanzado.",
     "Registrar el Truffade Thrax como vehículo personal."
    ],
-   "region": "Hamlet",
-   "macro": "Hamlet",
+   "region": "",
    "slug": "truffade-thrax-en-un-transportador-en-hamlet-a0948",
    "pt": {
     "titulo": "Truffade Thrax em um cegonha em Hamlet",
@@ -6501,9 +7010,8 @@
     "Bucear bajo la boya.",
     "Entrar al laboratorio submarino."
    ],
-   "region": "Little Hardin Island",
+   "region": "",
    "slug": "laboratorio-submarino-oculto-burg-b2cc0",
-   "macro": "Ambrosia",
    "pt": {
     "titulo": "Laboratório submarino oculto (Burg)",
     "resumen": "Primeiro laboratório submarino secreto dos cinco mencionados, escondido sob uma boia amarela. Lá há chats de laptop, um meteorito e uma pulseira antiga.",
@@ -7203,8 +7711,7 @@
    "enriched": true,
    "detalle": "",
    "pasos": [],
-   "region": "Key Lento",
-   "macro": "Leonida Keys",
+   "region": "",
    "pt": {
     "titulo": "Atirador de elite secreto em Key Lento",
     "resumen": "Um atirador de elite em um local secreto do mapa de Key Lento, útil nas primeiras etapas do jogo. O vídeo não explica como chegar lá.",
@@ -7439,52 +7946,6 @@
      "Deposit the cash at an ATM"
     ],
     "src": "f31da0b570"
-   }
-  },
-  {
-   "id": "yt:dN2IB_Xll_U",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=dN2IB_Xll_U",
-   "video_id": "dN2IB_Xll_U",
-   "author": "Caspahz",
-   "published_at": "2026-11-23T07:50:58Z",
-   "title_original": "How to Get the FREE Grotti Cheetah in GTA 6 (1010 Mural Mission Reward)",
-   "popularity": 4483,
-   "thumbnail": "https://i.ytimg.com/vi/dN2IB_Xll_U/hqdefault.jpg",
-   "categoria": "mision",
-   "titulo": "Cómo conseguir el Grotti Cheetah gratis",
-   "resumen": "El Grotti Cheetah es la recompensa de completar la misión del mural 1010. La guía muestra los cinco murales y cómo desbloquear el auto.",
-   "zona": "",
-   "como_conseguirlo": "Completar la misión del mural 1010 viendo los cinco murales (intro, mural 1 al 5) y reclamar el Grotti Cheetah como recompensa.",
-   "spoiler": false,
-   "confianza": "media",
-   "slug": "como-conseguir-el-grotti-cheetah-gratis-a772b",
-   "enriched": true,
-   "detalle": "El Grotti Cheetah es la recompensa de completar la misión del mural 1010. Según la descripción, no hace falta gastar dinero: alcanza con terminar la misión para quedarse con el auto.\n\nLa guía recorre la introducción y los cinco murales antes de mostrar el momento en que se desbloquea el auto.",
-   "pasos": [
-    "Completar la misión del mural 1010 mirando los cinco murales (intro, mural 1 al 5).",
-    "Reclamar el Grotti Cheetah como recompensa."
-   ],
-   "region": "",
-   "pt": {
-    "titulo": "Como conseguir o Grotti Cheetah de graça",
-    "resumen": "O Grotti Cheetah é a recompensa por completar a missão do mural 1010. O guia mostra os cinco murais e como desbloquear o carro.",
-    "detalle": "O Grotti Cheetah é a recompensa por completar a missão do mural 1010. Segundo a descrição, não é preciso gastar dinheiro: basta terminar a missão para ficar com o carro.\n\nO guia percorre a introdução e os cinco murais antes de mostrar o momento em que o carro é desbloqueado.",
-    "pasos": [
-     "Completar a missão do mural 1010 olhando os cinco murais (intro, mural 1 ao 5).",
-     "Resgatar o Grotti Cheetah como recompensa."
-    ],
-    "src": "159393193a"
-   },
-   "en": {
-    "titulo": "How to Get the Grotti Cheetah for Free",
-    "resumen": "The Grotti Cheetah is the reward for completing the mural 1010 mission. The guide shows the five murals and how to unlock the car.",
-    "detalle": "The Grotti Cheetah is the reward for completing the mural 1010 mission. According to the description, you don't need to spend any money: finishing the mission is enough to keep the car.\n\nThe guide goes through the intro and the five murals before showing the moment the car is unlocked.",
-    "pasos": [
-     "Complete the mural 1010 mission by looking at the five murals (intro, murals 1 to 5).",
-     "Claim the Grotti Cheetah as the reward."
-    ],
-    "src": "159393193a"
    }
   },
   {
@@ -8522,8 +8983,7 @@
     "Atravesar la zona bajo el agua",
     "Llegar hasta el final para volver al mundo normal"
    ],
-   "region": "Lummox County",
-   "macro": "Mount Kalaga",
+   "region": "",
    "pt": {
     "titulo": "Easter egg da viagem psicodélica (Mushroom Trip)",
     "resumen": "Um objeto misterioso transporta Jason para um mundo surreal com plataformas flutuantes. Ao terminá-lo, obtém-se uma melhoria permanente de resistência e uma tatuagem nova.",
@@ -8574,9 +9034,8 @@
     "Ir a los tejados de Trinity Apartments en Washington Island.",
     "Buscar el bote cercano."
    ],
-   "region": "Washington Island",
+   "region": "",
    "slug": "referencia-a-dexter-en-trinity-apartments-40f97",
-   "macro": "Vice Beach",
    "pt": {
     "titulo": "Referência a Dexter no Trinity Apartments",
     "resumen": "Há pistas de Dexter nos telhados do Trinity Apartments e um barco parecido com o de Dexter Morgan por perto, embora o apartamento tenha a porta trancada.",
@@ -9546,8 +10005,7 @@
     "Ubicar el auto desbloqueado en el garaje",
     "Registrarlo en un Pay 'n' Spray por $29,900 desde el Capítulo 2"
    ],
-   "region": "Vespucci",
-   "macro": "Vice City",
+   "region": "",
    "pt": {
     "titulo": "Royal Ruby Emerus no GTA 6",
     "resumen": "Carro Royal Ruby Emerus que fica numa mansão com vigilância em Vespucci Island, Rialto Islands. Pode ser registrado a partir do Capítulo 2 numa Pay 'n' Spray por $29.900.",
@@ -10304,9 +10762,8 @@
     "Entrar por el garaje, no por la puerta principal.",
     "Usar la Key Cloner para arrancar el Urus dorado."
    ],
-   "region": "Casanova Island",
+   "region": "",
    "slug": "como-conseguir-el-urus-dorado-e437c",
-   "macro": "Vice Beach",
    "pt": {
     "titulo": "Como conseguir o Urus dourado",
     "resumen": "O Lamborghini Urus dourado (Pegassi Lustrous Toros) fica em uma casa da Casanova Island e exige a chave clonadora, que é desbloqueada no capítulo 3.",
@@ -10467,8 +10924,7 @@
     "Perder el nivel de búsqueda.",
     "Vender las joyas a un reducidor."
    ],
-   "region": "Vice-Dale",
-   "macro": "Vice City",
+   "region": "",
    "pt": {
     "titulo": "Roubo na joalheria Icegem Diamonds",
     "resumen": "Como roubar a joalheria Icegem Diamonds & Watches, que paga até 25.000 dólares por assalto, escapar da polícia e vender o butim.",
@@ -11491,8 +11947,7 @@
     "Mantener la velocidad sin dañar el auto para evitar que el rastreador avanzado avise a la policía.",
     "Entregar el Zorrusso en el punto de Randy."
    ],
-   "region": "Ocean Beach",
-   "macro": "Vice Beach",
+   "region": "",
    "pt": {
     "titulo": "Como desbloquear o clonador de chaves",
     "resumen": "Durante a missão Randy Clonin' Keys, Makin' Gs do capítulo 3, o clonador de chaves é instalado no celular e permite roubar um Pegassi Zorrusso sem chave. É preciso escapar do rastreador avançado antes de entregá-lo.",
