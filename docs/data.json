@@ -1,52 +1,442 @@
 {
  "site_name": "WastedMap",
- "updated_at": "2026-11-26T23:00:15Z",
+ "updated_at": "2026-11-27T08:29:45Z",
  "entries": [
   {
-   "id": "yt:CXw3pPTAr5g",
+   "id": "yt:0yJ4KPK0wQc",
    "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=CXw3pPTAr5g",
-   "video_id": "CXw3pPTAr5g",
-   "author": "Arekkz Gaming",
-   "published_at": "2026-11-26T22:00:04Z",
-   "title_original": "GTA 6 - SECRET Hairstyles, Makeup & Tattoos You Don't Want to Miss! (Hidden Magazine Locations)",
-   "popularity": 2743,
-   "thumbnail": "https://i.ytimg.com/vi/CXw3pPTAr5g/hqdefault.jpg",
-   "categoria": "coleccionable",
-   "titulo": "Peinados, maquillaje y tatuajes secretos",
-   "resumen": "Se desbloquean opciones extra de peinado, maquillaje, barba y tatuajes para Jason y Lucia escaneando revistas escondidas por Leonida.",
-   "zona": "Leonida",
-   "como_conseguirlo": "Encontrar y escanear las revistas escondidas repartidas por Leonida; cada una desbloquea una opción de personalización.",
+   "url": "https://www.youtube.com/watch?v=0yJ4KPK0wQc",
+   "video_id": "0yJ4KPK0wQc",
+   "author": "ZacCoxTV",
+   "published_at": "2026-11-27T02:21:34Z",
+   "title_original": "GTA 6 SEA MONSTER LOCATION (EASTER EGG) #gta6 #gtavi",
+   "popularity": 4906,
+   "thumbnail": "https://i.ytimg.com/vi/0yJ4KPK0wQc/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Esqueleto de monstruo marino frente a Mariana",
+   "resumen": "En el océano frente al condado de Mariana hay un esqueleto gigante de monstruo marino en el fondo. Es uno de los descubrimientos submarinos numerados del juego.",
+   "zona": "Océano frente al condado de Mariana",
+   "como_conseguirlo": "Bucear en el océano cerca de Mariana y buscar los restos en el fondo.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "En el océano frente al condado de Mariana hay un esqueleto gigante de monstruo marino en el fondo. Es uno de los descubrimientos submarinos numerados del juego, en este caso el número 1 de 33.",
+   "pasos": [
+    "Bucear en el océano cerca de Mariana.",
+    "Buscar los restos en el fondo."
+   ],
+   "region": "Mariana County",
+   "macro": "Grassrivers",
+   "pt": {
+    "titulo": "Esqueleto de monstro marinho em frente a Mariana",
+    "resumen": "No oceano em frente ao condado de Mariana há um esqueleto gigante de monstro marinho no fundo. É uma das descobertas submarinas numeradas do jogo.",
+    "detalle": "No oceano em frente ao condado de Mariana há um esqueleto gigante de monstro marinho no fundo. É uma das descobertas submarinas numeradas do jogo, neste caso a número 1 de 33.",
+    "pasos": [
+     "Mergulhar no oceano perto de Mariana.",
+     "Procurar os restos no fundo."
+    ],
+    "src": "413ffcd19c"
+   },
+   "en": {
+    "titulo": "Sea monster skeleton off Mariana",
+    "resumen": "In the ocean off Mariana County there's a giant sea monster skeleton on the seafloor. It's one of the game's numbered underwater discoveries.",
+    "detalle": "In the ocean off Mariana County there's a giant sea monster skeleton on the seafloor. It's one of the game's numbered underwater discoveries, in this case number 1 of 33.",
+    "pasos": [
+     "Dive into the ocean near Mariana.",
+     "Look for the remains on the seafloor."
+    ],
+    "src": "413ffcd19c"
+   },
+   "slug": "esqueleto-de-monstruo-marino-frente-a-mariana-4531b"
+  },
+  {
+   "id": "yt:SVLtbwxhEro",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=SVLtbwxhEro",
+   "video_id": "SVLtbwxhEro",
+   "author": "dimfected",
+   "published_at": "2026-11-26T23:15:16Z",
+   "title_original": "GTA 6 Has Hidden Car Controls You Should Know About! #gta6 #gaming",
+   "popularity": 253209,
+   "thumbnail": "https://i.ytimg.com/vi/SVLtbwxhEro/hqdefault.jpg",
+   "categoria": "mecanica_truco",
+   "titulo": "Agacharse en el auto y menú del vehículo",
+   "resumen": "Se puede mantener Círculo para que Jason se agache dentro del auto y así evitar que la policía lo vea. También hay un menú de vehículo para controlar las ventanillas y otras funciones.",
+   "zona": "",
+   "como_conseguirlo": "Mantener Círculo para agacharse dentro del auto. Mantener abajo en la cruceta y mover el stick derecho hacia arriba para abrir el menú del vehículo (en PS5).",
    "spoiler": false,
    "confianza": "alta",
    "enriched": true,
-   "detalle": "Escaneando revistas escondidas repartidas por Leonida se desbloquean opciones extra de personalización para Jason y Lucia, como peinados, maquillaje, barba y tatuajes.\n\nLa descripción muestra varias de las opciones secretas, por ejemplo peinados para Lucia, maquillajes para Lucia, cortes de pelo y barba para Jason y tatuajes con nombres como The Freedom Raft o Graffiti Point.",
+   "detalle": "El video muestra dos controles del vehículo en GTA 6 con el mando DualSense de PS5. Manteniendo Círculo, Jason Duval se agacha dentro del auto, lo que puede ayudar a que no lo vean cuando la policía lo busca.\n\nAdemás, manteniendo abajo en la cruceta y moviendo el stick derecho hacia arriba se abre el menú del vehículo, desde donde se controlan las ventanillas y otras funciones del auto.",
    "pasos": [
-    "Encontrar las revistas escondidas repartidas por Leonida",
-    "Escanear cada revista para desbloquear su opción de personalización"
+    "Mantener Círculo para agacharse dentro del auto.",
+    "Mantener abajo en la cruceta y mover el stick derecho hacia arriba para abrir el menú del vehículo (en PS5)."
    ],
    "region": "",
    "pt": {
-    "titulo": "Penteados, maquiagem e tatuagens secretas",
-    "resumen": "Desbloqueiam-se opções extras de penteado, maquiagem, barba e tatuagens para Jason e Lucia escaneando revistas escondidas por Leonida.",
-    "detalle": "Escaneando revistas escondidas espalhadas por Leonida, desbloqueiam-se opções extras de personalização para Jason e Lucia, como penteados, maquiagem, barba e tatuagens.\n\nA descrição mostra várias das opções secretas, por exemplo penteados para Lucia, maquiagens para Lucia, cortes de cabelo e barba para Jason e tatuagens com nomes como The Freedom Raft ou Graffiti Point.",
+    "titulo": "Agachar no carro e menu do veículo",
+    "resumen": "Você pode segurar Círculo para o Jason se agachar dentro do carro e, assim, evitar que a polícia o veja. Também há um menu de veículo para controlar os vidros e outras funções.",
+    "detalle": "O vídeo mostra dois controles do veículo no GTA 6 com o controle DualSense do PS5. Segurando Círculo, Jason Duval se agacha dentro do carro, o que pode ajudar a não ser visto quando a polícia o procura.\n\nALém disso, segurando para baixo no direcional e movendo o analógico direito para cima, abre-se o menu do veículo, de onde se controlam os vidros e outras funções do carro.",
     "pasos": [
-     "Encontrar as revistas escondidas espalhadas por Leonida",
-     "Escanear cada revista para desbloquear sua opção de personalização"
+     "Segure Círculo para se agachar dentro do carro.",
+     "Segure para baixo no direcional e mova o analógico direito para cima para abrir o menu do veículo (no PS5)."
     ],
-    "src": "5eae33e79d"
+    "src": "7f12a5ef9b"
    },
    "en": {
-    "titulo": "Secret Hairstyles, Makeup, and Tattoos",
-    "resumen": "Unlocks extra hairstyle, makeup, beard, and tattoo options for Jason and Lucia by scanning magazines hidden around Leonida.",
-    "detalle": "Scanning hidden magazines scattered around Leonida unlocks extra customization options for Jason and Lucia, such as hairstyles, makeup, beards, and tattoos.\n\nThe description shows several of the secret options, for example hairstyles for Lucia, makeup for Lucia, haircuts and beards for Jason, and tattoos with names such as The Freedom Raft or Graffiti Point.",
+    "titulo": "Crouching in the car and vehicle menu",
+    "resumen": "Holding Circle makes Jason crouch inside the car to avoid being seen by the police. There is also a vehicle menu to control the windows and other functions.",
+    "detalle": "The video shows two vehicle controls in GTA 6 using the PS5 DualSense controller. Holding Circle makes Jason Duval crouch inside the car, which can help keep him from being spotted when the police are searching for him.\n\nAdditionally, holding down on the D-pad and pushing the right stick up opens the vehicle menu, where you can control the windows and other car functions.",
     "pasos": [
-     "Find the hidden magazines scattered around Leonida",
-     "Scan each magazine to unlock its customization option"
+     "Hold Circle to crouch inside the car.",
+     "Hold down on the D-pad and push the right stick up to open the vehicle menu (on PS5)."
     ],
-    "src": "5eae33e79d"
+    "src": "7f12a5ef9b"
    },
-   "slug": "peinados-maquillaje-y-tatuajes-secretos-98ab9"
+   "slug": "agacharse-en-el-auto-y-menu-del-vehiculo-7e912"
+  },
+  {
+   "id": "yt:jCyz4iFx8cg",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=jCyz4iFx8cg",
+   "video_id": "jCyz4iFx8cg",
+   "author": "Vice City Files",
+   "published_at": "2026-11-26T21:49:46Z",
+   "title_original": "5 Hidden Controls GTA 6 Never Tells You #gta6",
+   "popularity": 8175,
+   "thumbnail": "https://i.ytimg.com/vi/jCyz4iFx8cg/hqdefault.jpg",
+   "categoria": "mecanica_truco",
+   "titulo": "Controles ocultos de GTA 6",
+   "resumen": "Short que menciona controles poco conocidos: apagar la radio sin menú, dejar el motor encendido, agacharse para esquivar a la policía y voltear el auto para que maneje solo. Lo presenta de forma muy breve.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Short que menciona controles poco conocidos: apagar la radio sin menú, dejar el motor encendido, agacharse para esquivar a la policía y voltear el auto para que maneje solo. Lo presenta de forma muy breve.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Controles ocultos do GTA 6",
+    "resumen": "Short que menciona controles pouco conhecidos: desligar o rádio sem menu, deixar o motor ligado, agachar para escapar da polícia e virar o carro para que ele dirija sozinho. Apresenta tudo de forma bem breve.",
+    "detalle": "Short que menciona controles pouco conhecidos: desligar o rádio sem menu, deixar o motor ligado, agachar para escapar da polícia e virar o carro para que ele dirija sozinho. Apresenta tudo de forma bem breve.",
+    "pasos": [],
+    "src": "d94a1b5b4d"
+   },
+   "en": {
+    "titulo": "Hidden GTA 6 controls",
+    "resumen": "Short that mentions little-known controls: turning off the radio without a menu, leaving the engine running, crouching to dodge the police and flipping the car so it drives itself. It is presented very briefly.",
+    "detalle": "Short that mentions little-known controls: turning off the radio without a menu, leaving the engine running, crouching to dodge the police and flipping the car so it drives itself. It is presented very briefly.",
+    "pasos": [],
+    "src": "d94a1b5b4d"
+   },
+   "slug": "controles-ocultos-de-gta-6-f1e82"
+  },
+  {
+   "id": "yt:7mLV3R5wJDQ",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=7mLV3R5wJDQ",
+   "video_id": "7mLV3R5wJDQ",
+   "author": "Cejota",
+   "published_at": "2026-11-26T21:28:55Z",
+   "title_original": "EASTER EGG SECRETO GTA 6: Encontré una GRANJA DE BOTS escondida😱  #gta6",
+   "popularity": 2175,
+   "thumbnail": "https://i.ytimg.com/vi/7mLV3R5wJDQ/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Granja de bots escondida en Casanova Island",
+   "resumen": "Garaje secreto en Casanova Island con servidores, móviles y cajas fuertes. Se puede abrir las cajas, comer para ganar salud y volar el lugar con una bomba adhesiva.",
+   "zona": "Casanova Island (Rialto Islands, Vice-Dale)",
+   "como_conseguirlo": "Ir al garaje en Casanova Island; el video no indica coordenadas exactas.",
+   "spoiler": false,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "Es un garaje escondido en Casanova Island (Rialto Islands, Vice-Dale) que funciona como una granja de bots. Adentro hay una pared de celulares conectados, racks de servidores, un pantallazo azul de error y pósits con una contraseña pegados al monitor.\n\nEn el lugar se pueden abrir las cajas fuertes y comer para ganar salud y adrenalina. También se puede volar el garaje con una bomba adhesiva.",
+   "pasos": [
+    "Ir al garaje en Casanova Island.",
+    "Abrir las cajas fuertes, comer para ganar salud o volar el lugar con una bomba adhesiva."
+   ],
+   "region": "Casanova Island",
+   "macro": "Vice Beach",
+   "pt": {
+    "titulo": "Fazenda de bots escondida na Casanova Island",
+    "resumen": "Garagem secreta na Casanova Island com servidores, celulares e cofres. Dá para abrir os cofres, comer para ganhar vida e explodir o lugar com uma bomba adesiva.",
+    "detalle": "É uma garagem escondida na Casanova Island (Rialto Islands, Vice-Dale) que funciona como uma fazenda de bots. Lá dentro há uma parede de celulares conectados, racks de servidores, uma tela azul de erro e post-its com uma senha colados no monitor.\n\nNo local dá para abrir os cofres e comer para ganhar vida e adrenalina. Também é possível explodir a garagem com uma bomba adesiva.",
+    "pasos": [
+     "Ir até a garagem na Casanova Island.",
+     "Abrir os cofres, comer para ganhar vida ou explodir o lugar com uma bomba adesiva."
+    ],
+    "src": "a6dc4b07e5"
+   },
+   "en": {
+    "titulo": "Bot farm hidden in Casanova Island",
+    "resumen": "Secret garage on Casanova Island with servers, phones, and safes. You can open the safes, eat to gain health, and blow up the place with a sticky bomb.",
+    "detalle": "It's a hidden garage on Casanova Island (Rialto Islands, Vice-Dale) that works as a bot farm. Inside there's a wall of connected phones, server racks, a blue error screen, and sticky notes with a password stuck to the monitor.\n\nInside the place you can open the safes and eat to gain health and adrenaline. You can also blow up the garage with a sticky bomb.",
+    "pasos": [
+     "Go to the garage on Casanova Island.",
+     "Open the safes, eat to gain health, or blow up the place with a sticky bomb."
+    ],
+    "src": "a6dc4b07e5"
+   },
+   "slug": "granja-de-bots-escondida-en-casanova-island-ddc45"
+  },
+  {
+   "id": "yt:vnAY4w-JBko",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=vnAY4w-JBko",
+   "video_id": "vnAY4w-JBko",
+   "author": "Angel OB",
+   "published_at": "2026-11-26T21:11:54Z",
+   "title_original": "EL SECRETO ALIENÍGENA DE GTA 6 👽",
+   "popularity": 119188,
+   "thumbnail": "https://i.ytimg.com/vi/vnAY4w-JBko/hqdefault.jpg",
+   "categoria": "mision",
+   "titulo": "Misión secreta alienígena",
+   "resumen": "Supuesta misión secreta donde hay que encontrar a una persona abducida y rescatar a un pequeño alienígena en una base secreta. Según el video, el final incluye una recompensa inesperada.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es una supuesta misión secreta con temática alienígena. Según el video, hay que encontrar a una persona abducida por extraterrestres y llegar a una misteriosa base secreta.\n\nAllí se puede rescatar a un pequeño alienígena. Según el video, al final los extraterrestres devuelven el favor de una manera inesperada.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Missão secreta alienígena",
+    "resumen": "Suposta missão secreta em que é preciso encontrar uma pessoa abduzida e resgatar um pequeno alienígena em uma base secreta. Segundo o vídeo, o final inclui uma recompensa inesperada.",
+    "detalle": "É uma suposta missão secreta com temática alienígena. Segundo o vídeo, é preciso encontrar uma pessoa abduzida por extraterrestres e chegar a uma misteriosa base secreta.\n\nLá é possível resgatar um pequeno alienígena. Segundo o vídeo, no final os extraterrestres retribuem o favor de um jeito inesperado.",
+    "pasos": [],
+    "src": "db8125441e"
+   },
+   "en": {
+    "titulo": "Alien secret mission",
+    "resumen": "Supposed secret mission where you have to find an abducted person and rescue a little alien at a secret base. According to the video, the ending includes an unexpected reward.",
+    "detalle": "It is a supposed secret mission with an alien theme. According to the video, you have to find a person abducted by extraterrestrials and reach a mysterious secret base.\n\nThere, you can rescue a little alien. According to the video, in the end the extraterrestrials return the favor in an unexpected way.",
+    "pasos": [],
+    "src": "db8125441e"
+   },
+   "slug": "mision-secreta-alienigena-2ca87"
+  },
+  {
+   "id": "yt:LeXCniux-2Y",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=LeXCniux-2Y",
+   "video_id": "LeXCniux-2Y",
+   "author": "Dave's Domain",
+   "published_at": "2026-11-26T20:49:48Z",
+   "title_original": "GTA 6 - Hidden Car Location - '77 Pheonix #gta6shorts",
+   "popularity": 3548,
+   "thumbnail": "https://i.ytimg.com/vi/LeXCniux-2Y/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Ubicación oculta del '77 Phoenix",
+   "resumen": "Short que muestra la ubicación escondida de un auto '77 Phoenix. El texto es mínimo y no explica dónde está.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Localização escondida do '77 Phoenix",
+    "resumen": "Short que mostra a localização escondida de um carro '77 Phoenix. O texto é mínimo e não explica onde ele está.",
+    "detalle": "",
+    "pasos": [],
+    "src": "e8acf60910"
+   },
+   "en": {
+    "titulo": "Hidden location of the '77 Phoenix",
+    "resumen": "Short showing the hidden location of a '77 Phoenix car. The text is minimal and doesn't explain where it is.",
+    "detalle": "",
+    "pasos": [],
+    "src": "e8acf60910"
+   },
+   "slug": "ubicacion-oculta-del-77-phoenix-e3619"
+  },
+  {
+   "id": "yt:bPI7WaBwqYM",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=bPI7WaBwqYM",
+   "video_id": "bPI7WaBwqYM",
+   "author": "DIEZ",
+   "published_at": "2026-11-26T20:30:37Z",
+   "title_original": "How To Get The PORSCHE in GTA6 🏎️ #gta6 #gta6tips",
+   "popularity": 2823,
+   "thumbnail": "https://i.ytimg.com/vi/bPI7WaBwqYM/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Cómo conseguir el Porsche",
+   "resumen": "El short anuncia dónde está el Porsche y cómo conseguirlo, pero el texto no incluye los pasos.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Como conseguir o Porsche",
+    "resumen": "O vídeo curto mostra onde fica o Porsche e como consegui-lo, mas o texto não inclui os passos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "5282607f46"
+   },
+   "en": {
+    "titulo": "How to Get the Porsche",
+    "resumen": "The Short announces where the Porsche is and how to get it, but the text does not include the steps.",
+    "detalle": "",
+    "pasos": [],
+    "src": "5282607f46"
+   },
+   "slug": "como-conseguir-el-porsche-53808"
+  },
+  {
+   "id": "yt:UIIvelLCR7I",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=UIIvelLCR7I",
+   "video_id": "UIIvelLCR7I",
+   "author": "CTG Clips",
+   "published_at": "2026-11-26T19:47:16Z",
+   "title_original": "Get the Rare BMW M2 (Burning Cypher) in GTA 6 🔥 #gta6",
+   "popularity": 8621,
+   "thumbnail": "https://i.ytimg.com/vi/UIIvelLCR7I/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Übermacht Burning Cypher, auto raro",
+   "resumen": "Short que muestra cómo conseguir el Übermacht Burning Cypher, un auto raro inspirado en el BMW M2. La descripción no dice dónde está.",
+   "zona": "",
+   "como_conseguirlo": "Ver el short; la descripción no da pasos.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Short que muestra cómo conseguir el Übermacht Burning Cypher, un auto raro inspirado en el BMW M2. La descripción no dice dónde está.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Übermacht Burning Cypher, carro raro",
+    "resumen": "Short que mostra como conseguir o Übermacht Burning Cypher, um carro raro inspirado no BMW M2. A descrição não diz onde ele está.",
+    "detalle": "Short que mostra como conseguir o Übermacht Burning Cypher, um carro raro inspirado no BMW M2. A descrição não diz onde ele está.",
+    "pasos": [],
+    "src": "fb7e4560cd"
+   },
+   "en": {
+    "titulo": "Übermacht Burning Cypher, rare car",
+    "resumen": "Short showing how to get the Übermacht Burning Cypher, a rare car inspired by the BMW M2. The description doesn't say where it is.",
+    "detalle": "Short showing how to get the Übermacht Burning Cypher, a rare car inspired by the BMW M2. The description doesn't say where it is.",
+    "pasos": [],
+    "src": "fb7e4560cd"
+   },
+   "slug": "ubermacht-burning-cypher-auto-raro-bd947"
+  },
+  {
+   "id": "yt:7yL8eVLfTBw",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=7yL8eVLfTBw",
+   "video_id": "7yL8eVLfTBw",
+   "author": "TJRH",
+   "published_at": "2026-11-26T19:25:32Z",
+   "title_original": "10 Hidden Clothing Items in GTA 6!",
+   "popularity": 11460,
+   "thumbnail": "https://i.ytimg.com/vi/7yL8eVLfTBw/hqdefault.jpg",
+   "categoria": "coleccionable",
+   "titulo": "Prendas ocultas de ropa en GTA 6",
+   "resumen": "TJRH muestra diez prendas y accesorios escondidos, como gorras inspiradas en Mario y Luigi y el sombrero de vaquero de Arthur Morgan. Los lugares y la forma de obtenerlos se explican en el video, no en el texto.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "TJRH muestra diez prendas y accesorios escondidos, como gorras inspiradas en Mario y Luigi y el sombrero de vaquero de Arthur Morgan. Los lugares y la forma de obtenerlos se explican en el video, no en el texto.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Roupas ocultas no GTA 6",
+    "resumen": "O canal TJRH mostra dez peças de roupa e acessórios escondidos, como bonés inspirados em Mario e Luigi e o chapéu de cowboy de Arthur Morgan. Os locais e a forma de obtê-los são explicados no vídeo, não no texto.",
+    "detalle": "O canal TJRH mostra dez peças de roupa e acessórios escondidos, como bonés inspirados em Mario e Luigi e o chapéu de cowboy de Arthur Morgan. Os locais e a forma de obtê-los são explicados no vídeo, não no texto.",
+    "pasos": [],
+    "src": "4d642f8aa1"
+   },
+   "en": {
+    "titulo": "Hidden clothing items in GTA 6",
+    "resumen": "TJRH shows ten hidden garments and accessories, such as caps inspired by Mario and Luigi and Arthur Morgan's cowboy hat. The locations and how to get them are explained in the video, not in the text.",
+    "detalle": "TJRH shows ten hidden garments and accessories, such as caps inspired by Mario and Luigi and Arthur Morgan's cowboy hat. The locations and how to get them are explained in the video, not in the text.",
+    "pasos": [],
+    "src": "4d642f8aa1"
+   },
+   "slug": "prendas-ocultas-de-ropa-en-gta-6-08680"
+  },
+  {
+   "id": "yt:jVmszL2FyXs",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=jVmszL2FyXs",
+   "video_id": "jVmszL2FyXs",
+   "author": "SNIR",
+   "published_at": "2026-11-26T17:00:33Z",
+   "title_original": "GTA 6 : 25+ Mécaniques Cachées INCROYABLES que Tu Dois Connaître ABSOLUMENT",
+   "popularity": 56617,
+   "thumbnail": "https://i.ytimg.com/vi/jVmszL2FyXs/hqdefault.jpg",
+   "categoria": "mecanica_truco",
+   "titulo": "Mecánicas ocultas de GTA 6 (compilado)",
+   "resumen": "Compilado en francés que muestra mecánicas poco explicadas, como el uso de caddies, saltar al agua, silbar a enemigos, apuntar en primera persona y combos de cuerpo a cuerpo de Jason y Lucia. No detalla pasos para cada una.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es un compilado en francés con mecánicas poco explicadas de GTA 6. Entre ellas aparecen usar carritos de supermercado, nadar con el tubo de snorkel, silbar a los enemigos, tirar el ancla de los botes, apuntar en primera persona y hacer carreras conduciendo dos autos con Lucia.\n\nTambién muestra combos de combate cuerpo a cuerpo de Jason (suplex, proyecciones) y de Lucia (estrangulamiento, judo, romper brazos). No detalla pasos para cada una.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Mecânicas ocultas do GTA 6 (compilado)",
+    "resumen": "Compilado em francês que mostra mecânicas pouco explicadas, como o uso de carrinhos de supermercado, pular na água, assobiar para inimigos, mirar em primeira pessoa e combos de luta corporal de Jason e Lucia. Não detalha os passos de cada uma.",
+    "detalle": "É um compilado em francês com mecânicas pouco explicadas do GTA 6. Entre elas aparecem usar carrinhos de supermercado, nadar com o tubo de snorkel, assobiar para os inimigos, jogar a âncora dos barcos, mirar em primeira pessoa e fazer corridas dirigindo dois carros com a Lucia.\n\nTambém mostra combos de luta corporal do Jason (suplex, projeções) e da Lucia (estrangulamento, judô, quebrar braços). Não detalha os passos de cada uma.",
+    "pasos": [],
+    "src": "de9d44c303"
+   },
+   "en": {
+    "titulo": "Hidden GTA 6 mechanics (compilation)",
+    "resumen": "French-language compilation showing little-explained mechanics, such as using shopping carts, jumping into water, whistling at enemies, first-person aiming and Jason and Lucia's melee combos. It does not detail steps for each one.",
+    "detalle": "It is a French-language compilation of little-explained GTA 6 mechanics. These include using shopping carts, swimming with the snorkel tube, whistling at enemies, dropping boat anchors, first-person aiming, and racing while driving two cars with Lucia.\n\nIt also shows Jason's melee combat combos (suplex, throws) and Lucia's (chokehold, judo, arm breaking). It does not detail steps for each one.",
+    "pasos": [],
+    "src": "de9d44c303"
+   },
+   "slug": "mecanicas-ocultas-de-gta-6-compilado-651fe"
+  },
+  {
+   "id": "yt:rMcc7zTYUT8",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=rMcc7zTYUT8",
+   "video_id": "rMcc7zTYUT8",
+   "author": "IGN",
+   "published_at": "2026-11-26T16:30:23Z",
+   "title_original": "The Definitive Proof That GTA 6 and Red Dead Redemption Share The Same Universe",
+   "popularity": 108177,
+   "thumbnail": "https://i.ytimg.com/vi/rMcc7zTYUT8/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Easter eggs de Red Dead Redemption en GTA 6",
+   "resumen": "IGN reúne siete referencias a Red Dead Redemption escondidas en Leonida, como sombreros, armas, nombres de calles y placas. La publicación no detalla la ubicación exacta de cada una.",
+   "zona": "Leonida",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "IGN reunió siete referencias a Red Dead Redemption escondidas en Leonida, entre ellas sombreros, armas, nombres de calles y placas de matrícula. La publicación todavía no detalla la ubicación exacta de cada una.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Easter eggs de Red Dead Redemption no GTA 6",
+    "resumen": "A IGN reúne sete referências a Red Dead Redemption escondidas em Leonida, como chapéus, armas, nomes de ruas e placas. A publicação não detalha a localização exata de cada uma.",
+    "detalle": "A IGN reuniu sete referências a Red Dead Redemption escondidas em Leonida, entre elas chapéus, armas, nomes de ruas e placas de matrícula. A publicação ainda não detalha a localização exata de cada uma.",
+    "pasos": [],
+    "src": "9a24962068"
+   },
+   "en": {
+    "titulo": "Red Dead Redemption easter eggs in GTA 6",
+    "resumen": "IGN gathers seven Red Dead Redemption references hidden in Leonida, such as hats, weapons, street names and license plates. The publication does not detail the exact location of each one.",
+    "detalle": "IGN gathered seven Red Dead Redemption references hidden in Leonida, including hats, weapons, street names and license plates. The publication does not yet detail the exact location of each one.",
+    "pasos": [],
+    "src": "9a24962068"
+   },
+   "slug": "easter-eggs-de-red-dead-redemption-en-gta-6-7e290"
   },
   {
    "id": "yt:wKdO-5nYBqk",
@@ -121,6 +511,485 @@
     "src": "b0b5e62580"
    },
    "slug": "las-6-botellas-secretas-y-sus-mensajes-392e5"
+  },
+  {
+   "id": "yt:0l22doSQfO8",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=0l22doSQfO8",
+   "video_id": "0l22doSQfO8",
+   "author": "GTA Secretos",
+   "published_at": "2026-11-26T15:00:26Z",
+   "title_original": "LANZACOHETES GRATIS en un BÚNKER secreto de GTA 6 🚀",
+   "popularity": 3759,
+   "thumbnail": "https://i.ytimg.com/vi/0l22doSQfO8/hqdefault.jpg",
+   "categoria": "arma",
+   "titulo": "Lanzacohetes gratis en búnker secreto",
+   "resumen": "Short que muestra un lanzacohetes que se puede conseguir gratis en un búnker secreto. Se puede ir cuando se quiera.",
+   "zona": "Búnker secreto (ubicación no especificada)",
+   "como_conseguirlo": "Ir al búnker secreto cuando se quiera; el video no detalla la ubicación ni los pasos.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Lança-foguetes grátis em bunker secreto",
+    "resumen": "Short que mostra um lança-foguetes que pode ser conseguido de graça em um bunker secreto. Dá para ir quando quiser.",
+    "detalle": "",
+    "pasos": [],
+    "src": "6359c61f56"
+   },
+   "en": {
+    "titulo": "Free rocket launcher in secret bunker",
+    "resumen": "Short showing a rocket launcher that can be obtained for free in a secret bunker. You can go whenever you want.",
+    "detalle": "",
+    "pasos": [],
+    "src": "6359c61f56"
+   },
+   "slug": "lanzacohetes-gratis-en-bunker-secreto-137c7"
+  },
+  {
+   "id": "yt:84-i0QCLAO4",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=84-i0QCLAO4",
+   "video_id": "84-i0QCLAO4",
+   "author": "ABH MOBILE",
+   "published_at": "2026-11-26T14:30:59Z",
+   "title_original": "I BROKE INTO a SECRET GARAGE in GTA 6… NOBODY EXPECTED THIS! 😳🏍️",
+   "popularity": 5974,
+   "thumbnail": "https://i.ytimg.com/vi/84-i0QCLAO4/hqdefault.jpg",
+   "categoria": "ubicacion_secreta",
+   "titulo": "Garaje secreto con moto",
+   "resumen": "El video muestra que el autor entró a un garaje misterioso y encontró algo en su interior, pero no revela qué es. La publicación no da la ubicación.",
+   "zona": "",
+   "como_conseguirlo": "",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "El autor entra a un garaje misterioso y encuentra algo adentro, pero el video no revela qué es. La publicación no da la ubicación.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Garagem secreta com moto",
+    "resumen": "O vídeo mostra que o autor entrou em uma garagem misteriosa e encontrou algo lá dentro, mas não revela o que é. A publicação não informa a localização.",
+    "detalle": "O autor entra em uma garagem misteriosa e encontra algo lá dentro, mas o vídeo não revela o que é. A publicação não informa a localização.",
+    "pasos": [],
+    "src": "ea2408b7aa"
+   },
+   "en": {
+    "titulo": "Secret garage with a motorcycle",
+    "resumen": "The video shows the creator entering a mysterious garage and finding something inside, but doesn't reveal what it is. The post doesn't give the location.",
+    "detalle": "The creator enters a mysterious garage and finds something inside, but the video doesn't reveal what it is. The post doesn't give the location.",
+    "pasos": [],
+    "src": "ea2408b7aa"
+   },
+   "slug": "garaje-secreto-con-moto-d48e4"
+  },
+  {
+   "id": "yt:NXLJmViglqA",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=NXLJmViglqA",
+   "video_id": "NXLJmViglqA",
+   "author": "Imack Studios",
+   "published_at": "2026-11-26T14:13:19Z",
+   "title_original": "HOW TO GET PEGASSI INFERNUS LOCATION GTA 6!",
+   "popularity": 3179,
+   "thumbnail": "https://i.ytimg.com/vi/NXLJmViglqA/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Cómo conseguir el Pegassi Infernus",
+   "resumen": "Guía en video que dice mostrar la ubicación del Pegassi Infernus, un superdeportivo, en Leonida. La descripción es genérica y no detalla los pasos concretos.",
+   "zona": "Leonida",
+   "como_conseguirlo": "Ver el video para la ubicación exacta; la descripción no da pasos concretos.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Como conseguir o Pegassi Infernus",
+    "resumen": "Guia em vídeo que diz mostrar a localização do Pegassi Infernus, um superesportivo, em Leonida. A descrição é genérica e não detalha os passos concretos.",
+    "detalle": "",
+    "pasos": [],
+    "src": "c7766bc488"
+   },
+   "en": {
+    "titulo": "How to get the Pegassi Infernus",
+    "resumen": "Video guide that claims to show the location of the Pegassi Infernus, a supercar, in Leonida. The description is generic and doesn't detail the specific steps.",
+    "detalle": "",
+    "pasos": [],
+    "src": "c7766bc488"
+   },
+   "slug": "como-conseguir-el-pegassi-infernus-34953"
+  },
+  {
+   "id": "yt:GVyCl_Euhmo",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=GVyCl_Euhmo",
+   "video_id": "GVyCl_Euhmo",
+   "author": "GameSpot",
+   "published_at": "2026-11-26T14:00:39Z",
+   "title_original": "Hidden Control Options In GTA 6",
+   "popularity": 37878,
+   "thumbnail": "https://i.ytimg.com/vi/GVyCl_Euhmo/hqdefault.jpg",
+   "categoria": "mecanica_truco",
+   "titulo": "Comandos ocultos de control en GTA 6",
+   "resumen": "GameSpot muestra varios comandos poco explicados, como conducir con piloto automático, derrapar, cambiar a primera persona, hacer que la pareja te siga y hacer distraer silbando. El video los demuestra uno por uno con marcas de tiempo.",
+   "zona": "",
+   "como_conseguirlo": "Ver el video en los timestamps indicados; la descripción no detalla las combinaciones de botones.",
+   "spoiler": false,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "GameSpot reúne varios comandos ocultos de GTA 6 que el juego no explica, demostrados uno por uno con marcas de tiempo en el video. Entre ellos están conducir con piloto automático, derrapar y hacer burnout, cambiar a primera persona, hacer que la pareja te siga, distraer enemigos silbando, cambiar de manos y empujar vehículos a mano.\n\nLa descripción no detalla las combinaciones de botones, así que para saber cómo se hace cada uno hay que ver el video en los tiempos indicados.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Comandos ocultos de controle no GTA 6",
+    "resumen": "A GameSpot mostra vários comandos pouco explicados, como dirigir com piloto automático, derrapar, trocar para primeira pessoa, fazer a parceira te seguir e distrair com assobios. O vídeo os demonstra um por um com marcações de tempo.",
+    "detalle": "A GameSpot reúne vários comandos ocultos do GTA 6 que o jogo não explica, demonstrados um por um com marcações de tempo no vídeo. Entre eles estão dirigir com piloto automático, derrapar e fazer burnout, trocar para primeira pessoa, fazer a parceira te seguir, distrair inimigos assobiando, trocar de mão e empurrar veículos à mão.\n\nA descrição não detalha as combinações de botões, então, para saber como fazer cada um, é preciso assistir ao vídeo nos tempos indicados.",
+    "pasos": [],
+    "src": "4539727267"
+   },
+   "en": {
+    "titulo": "Hidden control commands in GTA 6",
+    "resumen": "GameSpot shows several little-explained commands, such as driving on autopilot, drifting, switching to first person, making your partner follow you and distracting enemies by whistling. The video demonstrates them one by one with timestamps.",
+    "detalle": "GameSpot gathers several hidden GTA 6 commands that the game does not explain, demonstrated one by one with timestamps in the video. These include driving on autopilot, drifting and doing burnouts, switching to first person, making your partner follow you, distracting enemies by whistling, switching hands, and pushing vehicles by hand.\n\nThe description does not detail the button combinations, so to learn how to do each one you need to watch the video at the indicated times.",
+    "pasos": [],
+    "src": "4539727267"
+   },
+   "slug": "comandos-ocultos-de-control-en-gta-6-87d7b"
+  },
+  {
+   "id": "yt:xQffvYRZk0o",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=xQffvYRZk0o",
+   "video_id": "xQffvYRZk0o",
+   "author": "Genie",
+   "published_at": "2026-11-26T13:52:07Z",
+   "title_original": "GTA 6 Has 2 Secret Radio Stations!",
+   "popularity": 6214,
+   "thumbnail": "https://i.ytimg.com/vi/xQffvYRZk0o/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Dos emisoras de radio secretas",
+   "resumen": "Genie describe dos emisoras ocultas: The Vault Radio, con mezclas de DJ, y The Sniper of La Perle, una mixtape haitiana. Cada una se desbloquea visitando lugares específicos de Vice City.",
+   "zona": "Vice City",
+   "como_conseguirlo": "Para The Vault Radio: entrar a The Vault y subir al piso de arriba. Para The Sniper of La Perle: visitar Drip Drops, Twa Ponya Tattoo y Aunt Zola's Soul Food, y después ir al club de striptease Jack of Hearts.",
+   "spoiler": true,
+   "confianza": "media",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=ZOoc6__r_Is",
+     "video_id": "ZOoc6__r_Is",
+     "author": "Maka91Productions",
+     "popularity": 2721,
+     "published_at": "2026-11-23T17:54:51Z"
+    }
+   ],
+   "enriched": true,
+   "detalle": "Hay dos emisoras ocultas en Vice City. The Vault Radio tiene mezclas de DJ y se desbloquea entrando a The Vault y subiendo al piso de arriba.\n\nThe Sniper of La Perle es una mixtape haitiana. Para desbloquearla hay que visitar Drip Drops, Twa Ponya Tattoo y Aunt Zola's Soul Food, y después ir al club de striptease Jack of Hearts.",
+   "pasos": [
+    "Entrar a The Vault y subir al piso de arriba para The Vault Radio.",
+    "Visitar Drip Drops, Twa Ponya Tattoo y Aunt Zola's Soul Food.",
+    "Ir al club de striptease Jack of Hearts para The Sniper of La Perle."
+   ],
+   "region": "Vice City",
+   "macro": "Vice City",
+   "pt": {
+    "titulo": "Duas estações de rádio secretas",
+    "resumen": "A Genie descreve duas estações ocultas: The Vault Radio, com mixes de DJ, e The Sniper of La Perle, uma mixtape haitiana. Cada uma é desbloqueada visitando locais específicos de Vice City.",
+    "detalle": "Há duas estações ocultas em Vice City. The Vault Radio tem mixes de DJ e é desbloqueada entrando no The Vault e subindo para o andar de cima.\n\nThe Sniper of La Perle é uma mixtape haitiana. Para desbloqueá-la, é preciso visitar Drip Drops, Twa Ponya Tattoo e Aunt Zola's Soul Food e, depois, ir ao clube de striptease Jack of Hearts.",
+    "pasos": [
+     "Entrar no The Vault e subir para o andar de cima para ouvir The Vault Radio.",
+     "Visitar Drip Drops, Twa Ponya Tattoo e Aunt Zola's Soul Food.",
+     "Ir ao clube de striptease Jack of Hearts para ouvir The Sniper of La Perle."
+    ],
+    "src": "ebe4a29d72"
+   },
+   "en": {
+    "titulo": "Two secret radio stations",
+    "resumen": "Genie describes two hidden stations: The Vault Radio, with DJ mixes, and The Sniper of La Perle, a Haitian mixtape. Each one is unlocked by visiting specific places in Vice City.",
+    "detalle": "There are two hidden stations in Vice City. The Vault Radio has DJ mixes and is unlocked by entering The Vault and going up to the upper floor.\n\nThe Sniper of La Perle is a Haitian mixtape. To unlock it, you have to visit Drip Drops, Twa Ponya Tattoo and Aunt Zola's Soul Food, and then go to the Jack of Hearts strip club.",
+    "pasos": [
+     "Enter The Vault and go up to the upper floor for The Vault Radio.",
+     "Visit Drip Drops, Twa Ponya Tattoo and Aunt Zola's Soul Food.",
+     "Go to the Jack of Hearts strip club for The Sniper of La Perle."
+    ],
+    "src": "ebe4a29d72"
+   },
+   "slug": "dos-emisoras-de-radio-secretas-46e59"
+  },
+  {
+   "id": "yt:kfvVWRYJKPA",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=kfvVWRYJKPA",
+   "video_id": "kfvVWRYJKPA",
+   "author": "KingAlexHD",
+   "published_at": "2026-11-26T13:40:27Z",
+   "title_original": "How to Get SECRET Ford Cultivator Sandking Truck Location in GTA 6! (EASY STEPS)",
+   "popularity": 2457,
+   "thumbnail": "https://i.ytimg.com/vi/kfvVWRYJKPA/hqdefault.jpg",
+   "categoria": "vehiculo",
+   "titulo": "Camioneta Vapid Cultivator Sandking secreta",
+   "resumen": "Guía en video de una camioneta todoterreno personalizada con camuflaje y neumáticos grandes, que se puede encontrar en un lugar secreto. Tiene un valor de venta de 14.145 dólares y un costo de registro de 6.300.",
+   "zona": "",
+   "como_conseguirlo": "Ver el video para la ubicación; la descripción no detalla los pasos.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Es una camioneta todoterreno personalizada Vapid Cultivator Sandking, con diseño de camuflaje, neumáticos grandes, suspensión elevada y barra de luces en el techo. Se encuentra en un lugar secreto, pero los datos no dicen dónde. Su valor de venta es de 14.145 dólares y el costo de registro es de 6.300.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Caminhonete Vapid Cultivator Sandking secreta",
+    "resumen": "Guia em vídeo de uma caminhonete off-road personalizada com camuflagem e pneus grandes, que pode ser encontrada em um lugar secreto. Tem valor de venda de US$ 14.145 e custo de registro de US$ 6.300.",
+    "detalle": "É uma caminhonete off-road personalizada Vapid Cultivator Sandking, com design de camuflagem, pneus grandes, suspensão elevada e barra de luzes no teto. Fica em um lugar secreto, mas os dados não informam onde. Seu valor de venda é de US$ 14.145 e o custo de registro é de US$ 6.300.",
+    "pasos": [],
+    "src": "0cde774dc7"
+   },
+   "en": {
+    "titulo": "Secret Vapid Cultivator Sandking Truck",
+    "resumen": "Video guide to a customized off-road truck with camo paint and big tires, which can be found in a secret location. It has a sale value of $14,145 and a registration cost of $6,300.",
+    "detalle": "It is a customized Vapid Cultivator Sandking off-road truck, with camo design, big tires, raised suspension and a roof light bar. It is found in a secret location, but the data does not say where. Its sale value is $14,145 and the registration cost is $6,300.",
+    "pasos": [],
+    "src": "0cde774dc7"
+   },
+   "slug": "camioneta-vapid-cultivator-sandking-secreta-20cf5"
+  },
+  {
+   "id": "yt:0g034x2chqg",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=0g034x2chqg",
+   "video_id": "0g034x2chqg",
+   "author": "Full GTA Bro",
+   "published_at": "2026-11-26T13:00:38Z",
+   "title_original": "El \"entrenamiento secreto\" de GTA 6 no tiene truco",
+   "popularity": 3727,
+   "thumbnail": "https://i.ytimg.com/vi/0g034x2chqg/hqdefault.jpg",
+   "categoria": "mecanica_truco",
+   "titulo": "Entrenamiento en el porche de Jason",
+   "resumen": "Las pesas gratis del porche de Jason sirven para entrenar, con un tope diario. Tomar proteína después de entrenar reduce el descanso un 50 %, según el juego.",
+   "zona": "Porche de Jason",
+   "como_conseguirlo": "Entrenar con las pesas gratis del porche de Jason; tomar proteína después de entrenar para reducir el descanso un 50 %. Saltearse entrenamientos hace perder fuerza.",
+   "spoiler": false,
+   "confianza": "alta",
+   "enriched": true,
+   "detalle": "El llamado \"entrenamiento secreto\" de GTA 6 son las pesas gratis del porche de Jason. El juego pone un tope diario de entrenamiento: al llegar al límite te manda a descansar y el saco de boxeo también se corta.\n\nTomar proteína después de entrenar reduce el descanso un 50 %, según el propio juego. En cambio, saltearse entrenamientos hace perder fuerza, y entrenar con hambre o cansado rinde menos.",
+   "pasos": [
+    "Entrenar con las pesas gratis del porche de Jason.",
+    "Tomar proteína después de entrenar para reducir el descanso un 50 %."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Treino na varanda do Jason",
+    "resumen": "Os halteres grátis da varanda do Jason servem para treinar, com um limite diário. Tomar proteína depois do treino reduz o descanso em 50%, segundo o jogo.",
+    "detalle": "O chamado \"treino secreto\" de GTA 6 são os halteres grátis da varanda do Jason. O jogo define um limite diário de treino: ao atingi-lo, ele manda você descansar e o saco de boxe também para de funcionar.\n\nTomar proteína depois do treino reduz o descanso em 50%, segundo o próprio jogo. Já pular treinos faz você perder força, e treinar com fome ou cansado rende menos.",
+    "pasos": [
+     "Treinar com os halteres grátis da varanda do Jason.",
+     "Tomar proteína depois do treino para reduzir o descanso em 50%."
+    ],
+    "src": "4a3b6f7b66"
+   },
+   "en": {
+    "titulo": "Training on Jason's porch",
+    "resumen": "The free weights on Jason's porch can be used for training, with a daily cap. Taking protein after training reduces rest time by 50%, according to the game.",
+    "detalle": "The so-called \"secret training\" in GTA 6 is the free weights on Jason's porch. The game sets a daily training limit: when you reach it, it tells you to rest, and the punching bag also stops working.\n\nTaking protein after training reduces rest time by 50%, according to the game itself. On the other hand, skipping workouts makes you lose strength, and training while hungry or tired gives less benefit.",
+    "pasos": [
+     "Train with the free weights on Jason's porch.",
+     "Take protein after training to reduce rest time by 50%."
+    ],
+    "src": "4a3b6f7b66"
+   },
+   "slug": "entrenamiento-en-el-porche-de-jason-1129e"
+  },
+  {
+   "id": "yt:JJt6XwtXBQA",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=JJt6XwtXBQA",
+   "video_id": "JJt6XwtXBQA",
+   "author": "GTA 6 Secretos",
+   "published_at": "2026-11-26T13:00:36Z",
+   "title_original": "Si NO vas a buscar a LUCÍA en GTA 6 pasa ESTO 😳💔 #gta6 #gta",
+   "popularity": 5076,
+   "thumbnail": "https://i.ytimg.com/vi/JJt6XwtXBQA/hqdefault.jpg",
+   "categoria": "mision",
+   "titulo": "Llamada de Lucía tras salir de la cárcel",
+   "resumen": "Al salir de la cárcel, Lucía llama para que pases a buscarla antes de las 14:00 (hora del juego). Si llegás tarde, ella se va en autobús y la relación baja. Según el video, sin ella no se avanza al capítulo 2.",
+   "zona": "",
+   "como_conseguirlo": "Al salir de la cárcel, responder la llamada de Lucía y pasar a buscarla antes de las 14:00 hora del juego.",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Al salir de la cárcel, Lucía llama para que pases a buscarla antes de las 14:00 (hora del juego, que se ve en el móvil). Si llegás tarde, ella se va en autobús y la relación baja. Sin ella no se pasa al capítulo 2, aunque según la descripción algunos jugadores la dejan esperando hasta 30 horas para explorar con Jason.",
+   "pasos": [
+    "Al salir de la cárcel, responder la llamada de Lucía.",
+    "Pasar a buscarla antes de las 14:00, hora del juego."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Ligação da Lucía após sair da prisão",
+    "resumen": "Ao sair da prisão, a Lucía liga para você buscá-la antes das 14:00 (horário do jogo). Se você chegar atrasado, ela vai de ônibus e a relação cai. Segundo o vídeo, sem ela não se avança para o capítulo 2.",
+    "detalle": "Ao sair da prisão, a Lucía liga para você buscá-la antes das 14:00 (horário do jogo, que aparece no celular). Se você chegar atrasado, ela vai de ônibus e a relação cai. Sem ela não se passa para o capítulo 2, embora, segundo a descrição, alguns jogadores a deixem esperando até 30 horas para explorar com o Jason.",
+    "pasos": [
+     "Ao sair da prisão, atender a ligação da Lucía.",
+     "Buscá-la antes das 14:00, horário do jogo."
+    ],
+    "src": "8f93f40244"
+   },
+   "en": {
+    "titulo": "Lucia's call after leaving prison",
+    "resumen": "When you leave prison, Lucia calls asking you to pick her up before 2:00 PM (game time). If you're late, she leaves by bus and the relationship drops. According to the video, you can't progress to chapter 2 without her.",
+    "detalle": "When you leave prison, Lucia calls asking you to pick her up before 2:00 PM (game time, shown on your phone). If you're late, she leaves by bus and the relationship drops. You can't move on to chapter 2 without her, although according to the description, some players leave her waiting for up to 30 hours to explore with Jason.",
+    "pasos": [
+     "When you leave prison, answer Lucia's call.",
+     "Pick her up before 2:00 PM, game time."
+    ],
+    "src": "8f93f40244"
+   },
+   "slug": "llamada-de-lucia-tras-salir-de-la-carcel-8758e"
+  },
+  {
+   "id": "yt:W5zCLplgrMU",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=W5zCLplgrMU",
+   "video_id": "W5zCLplgrMU",
+   "author": "Robbin Rams",
+   "published_at": "2026-11-26T12:55:31Z",
+   "title_original": "I Found a New Secret Meteorite Mystery in GTA 6",
+   "popularity": 24472,
+   "thumbnail": "https://i.ytimg.com/vi/W5zCLplgrMU/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Nuevo misterio de meteorito en Leonida",
+   "resumen": "Robbin Rams dice haber encontrado un segundo meteorito misterioso en Leonida, distinto del que está bajo el agua cerca de un centro de investigación. La publicación no describe la ubicación exacta.",
+   "zona": "Leonida",
+   "como_conseguirlo": "",
+   "spoiler": true,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "Robbin Rams dice haber encontrado un segundo meteorito misterioso en Leonida, distinto del que está bajo el agua cerca de un centro de investigación. La publicación no describe la ubicación exacta.",
+   "pasos": [],
+   "region": "",
+   "pt": {
+    "titulo": "Novo mistério do meteorito em Leonida",
+    "resumen": "Robbin Rams diz ter encontrado um segundo meteorito misterioso em Leonida, diferente do que está debaixo d'água perto de um centro de pesquisa. A publicação não descreve a localização exata.",
+    "detalle": "Robbin Rams diz ter encontrado um segundo meteorito misterioso em Leonida, diferente do que está debaixo d'água perto de um centro de pesquisa. A publicação não descreve a localização exata.",
+    "pasos": [],
+    "src": "7a4a962e2f"
+   },
+   "en": {
+    "titulo": "New meteorite mystery in Leonida",
+    "resumen": "Robbin Rams says he found a second mysterious meteorite in Leonida, different from the one underwater near a research center. The post doesn't describe the exact location.",
+    "detalle": "Robbin Rams says he found a second mysterious meteorite in Leonida, different from the one underwater near a research center. The post doesn't describe the exact location.",
+    "pasos": [],
+    "src": "7a4a962e2f"
+   },
+   "slug": "nuevo-misterio-de-meteorito-en-leonida-32dd4"
+  },
+  {
+   "id": "yt:HF5j9HqZ7cg",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=HF5j9HqZ7cg",
+   "video_id": "HF5j9HqZ7cg",
+   "author": "I Segreti del Mercante",
+   "published_at": "2026-11-26T12:15:01Z",
+   "title_original": "GTA 6 easter egg: Jason SUONA il vecchio GTA 🎹",
+   "popularity": 30871,
+   "thumbnail": "https://i.ytimg.com/vi/HF5j9HqZ7cg/hqdefault.jpg",
+   "categoria": "easter_egg",
+   "titulo": "Jason toca el piano en una villa",
+   "resumen": "En una villa hay una sala de ensayo oculta detrás de la puerta lateral del garaje, con batería, amplificadores y teclados. Si te acercás al teclado y apretás el botón, Jason se sienta a tocar música de los GTA viejos.",
+   "zona": "Villa con sala de ensayo oculta, detrás de la puerta lateral del garaje",
+   "como_conseguirlo": "Entrar a la villa, pasar por la puerta lateral del garaje, acercarse al teclado y presionar el botón de interacción.",
+   "spoiler": false,
+   "confianza": "media",
+   "enriched": true,
+   "detalle": "En una villa hay una sala de ensayo oculta detrás de la puerta lateral del garaje, con batería, amplificadores y teclados. Si te acercás al teclado y apretás el botón, Jason se sienta a tocar música de los GTA viejos.",
+   "pasos": [
+    "Entrar a la villa.",
+    "Pasar por la puerta lateral del garaje.",
+    "Acercarse al teclado y presionar el botón de interacción."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Jason toca piano em uma mansão",
+    "resumen": "Em uma mansão há uma sala de ensaio escondida atrás da porta lateral da garagem, com bateria, amplificadores e teclados. Se você se aproximar do teclado e apertar o botão, Jason se senta para tocar músicas dos GTA antigos.",
+    "detalle": "Em uma mansão há uma sala de ensaio escondida atrás da porta lateral da garagem, com bateria, amplificadores e teclados. Se você se aproximar do teclado e apertar o botão, Jason se senta para tocar músicas dos GTA antigos.",
+    "pasos": [
+     "Entrar na mansão.",
+     "Passar pela porta lateral da garagem.",
+     "Aproximar-se do teclado e pressionar o botão de interação."
+    ],
+    "src": "7dbdce2f7a"
+   },
+   "en": {
+    "titulo": "Jason plays the piano in a villa",
+    "resumen": "In a villa there is a hidden rehearsal room behind the side door of the garage, with drums, amplifiers and keyboards. If you approach the keyboard and press the button, Jason sits down to play music from the old GTA games.",
+    "detalle": "In a villa there is a hidden rehearsal room behind the side door of the garage, with drums, amplifiers and keyboards. If you approach the keyboard and press the button, Jason sits down to play music from the old GTA games.",
+    "pasos": [
+     "Enter the villa.",
+     "Go through the side door of the garage.",
+     "Approach the keyboard and press the interaction button."
+    ],
+    "src": "7dbdce2f7a"
+   },
+   "slug": "jason-toca-el-piano-en-una-villa-cc40e"
+  },
+  {
+   "id": "yt:srsp0F-ctBU",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=srsp0F-ctBU",
+   "video_id": "srsp0F-ctBU",
+   "author": "Schlayer",
+   "published_at": "2026-11-26T09:56:48Z",
+   "title_original": "Did You Find These HIDDEN Magazines in GTA 6? #gta6 #easteregg",
+   "popularity": 37912,
+   "thumbnail": "https://i.ytimg.com/vi/srsp0F-ctBU/hqdefault.jpg",
+   "categoria": "coleccionable",
+   "titulo": "Revistas que desbloquean peinados y barbas",
+   "resumen": "Hay revistas repartidas por el mapa que dan acceso a peinados y barbas exclusivos en las barberías. Una vez conseguidas, se aplican en cualquier barbería de Leonida.",
+   "zona": "Repartidas por el mapa de Leonida",
+   "como_conseguirlo": "Encontrar las revistas escondidas en el mapa y después aplicar el nuevo look en cualquier barbería.",
+   "spoiler": false,
+   "confianza": "media",
+   "fuentes_extra": [
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=CXw3pPTAr5g",
+     "video_id": "CXw3pPTAr5g",
+     "author": "Arekkz Gaming",
+     "popularity": 2743,
+     "published_at": "2026-11-26T22:00:04Z"
+    }
+   ],
+   "enriched": true,
+   "detalle": "Hay revistas repartidas por el mapa que desbloquean peinados y barbas exclusivos para el personaje. Una vez conseguidas, el nuevo look se puede aplicar en cualquier barbería de Leonida.\n\nLa descripción no indica la ubicación exacta de las revistas, aunque menciona coordenadas que no aparecen en los datos.",
+   "pasos": [
+    "Encontrar las revistas escondidas en el mapa.",
+    "Aplicar el nuevo look en cualquier barbería de Leonida."
+   ],
+   "region": "",
+   "pt": {
+    "titulo": "Revistas que desbloqueiam cortes de cabelo e barbas",
+    "resumen": "Há revistas espalhadas pelo mapa que liberam cortes de cabelo e barbas exclusivos nas barbearias. Depois de conseguidas, é possível aplicá-los em qualquer barbearia de Leonida.",
+    "detalle": "Há revistas espalhadas pelo mapa que desbloqueiam cortes de cabelo e barbas exclusivos para o personagem. Depois de conseguidas, o novo visual pode ser aplicado em qualquer barbearia de Leonida.\n\nA descrição não indica a localização exata das revistas, embora mencione coordenadas que não aparecem nos dados.",
+    "pasos": [
+     "Encontrar as revistas escondidas no mapa.",
+     "Aplicar o novo visual em qualquer barbearia de Leonida."
+    ],
+    "src": "2b53f27961"
+   },
+   "en": {
+    "titulo": "Magazines that unlock haircuts and beards",
+    "resumen": "There are magazines scattered around the map that give access to exclusive haircuts and beards at barbershops. Once obtained, they can be applied at any barbershop in Leonida.",
+    "detalle": "There are magazines scattered around the map that unlock exclusive haircuts and beards for the character. Once obtained, the new look can be applied at any barbershop in Leonida.\n\nThe description does not indicate the exact location of the magazines, although it mentions coordinates that do not appear in the data.",
+    "pasos": [
+     "Find the magazines hidden on the map.",
+     "Apply the new look at any barbershop in Leonida."
+    ],
+    "src": "2b53f27961"
+   },
+   "slug": "revistas-que-desbloquean-peinados-y-barbas-2f6bd"
   },
   {
    "id": "yt:s-w5p_3Cb4Y",
@@ -2123,6 +2992,14 @@
      "author": "Dan Allen Gaming",
      "popularity": 12463,
      "published_at": "2026-11-23T15:48:36Z"
+    },
+    {
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=b-pL8bRJFsE",
+     "video_id": "b-pL8bRJFsE",
+     "author": "Vandal",
+     "popularity": 7288,
+     "published_at": "2026-11-26T17:30:11Z"
     },
     {
      "source": "youtube",
@@ -5431,44 +6308,6 @@
     "detalle": "The video shows the map locations of 12 ultra-rare, hidden vehicles, along with their resale price and spawn conditions.\n\nIt also explains how to store them in the garage so they can be used as personal vehicles.",
     "pasos": [],
     "src": "64c1e055f4"
-   }
-  },
-  {
-   "id": "yt:ZOoc6__r_Is",
-   "source": "youtube",
-   "url": "https://www.youtube.com/watch?v=ZOoc6__r_Is",
-   "video_id": "ZOoc6__r_Is",
-   "author": "Maka91Productions",
-   "published_at": "2026-11-23T17:54:51Z",
-   "title_original": "GTA 6 - How to Unlock 2 Secret Radio Stations (The Sniper of La Perle: Kodak Black & The Vault)",
-   "popularity": 2721,
-   "thumbnail": "https://i.ytimg.com/vi/ZOoc6__r_Is/hqdefault.jpg",
-   "categoria": "coleccionable",
-   "titulo": "Cómo desbloquear dos emisoras de radio secretas",
-   "resumen": "El video explica cómo desbloquear dos emisoras de radio secretas, necesarias para el 100% de completitud. Los logros listados indican que se consiguen completando misiones o actividades específicas.",
-   "zona": "La Perle",
-   "como_conseguirlo": "Según la lista de logros del video, completar actividades específicas del juego; el detalle paso a paso está en el video.",
-   "spoiler": false,
-   "confianza": "media",
-   "enriched": true,
-   "detalle": "El video explica cómo desbloquear dos emisoras de radio secretas, necesarias para llegar al 100% de completitud.\n\nLa zona indicada es La Perle. Según la lista de logros del video, las emisoras se consiguen completando actividades específicas del juego, pero el paso a paso detallado no figura en los datos y está en el video.",
-   "pasos": [],
-   "region": "Vice City",
-   "slug": "como-desbloquear-dos-emisoras-de-radio-secretas-bf974",
-   "macro": "Vice City",
-   "pt": {
-    "titulo": "Como desbloquear duas estações de rádio secretas",
-    "resumen": "O vídeo explica como desbloquear duas estações de rádio secretas, necessárias para 100% de conclusão. As conquistas listadas indicam que são obtidas completando missões ou atividades específicas.",
-    "detalle": "O vídeo explica como desbloquear duas estações de rádio secretas, necessárias para chegar a 100% de conclusão.\n\nA área indicada é La Perle. Segundo a lista de conquistas do vídeo, as estações são obtidas completando atividades específicas do jogo, mas o passo a passo detalhado não consta nos dados e está no vídeo.",
-    "pasos": [],
-    "src": "da0d323398"
-   },
-   "en": {
-    "titulo": "How to Unlock Two Secret Radio Stations",
-    "resumen": "The video explains how to unlock two secret radio stations, which are needed for 100% completion. The listed achievements indicate they are earned by completing specific missions or activities.",
-    "detalle": "The video explains how to unlock two secret radio stations, which are needed to reach 100% completion.\n\nThe indicated area is La Perle. According to the video's achievement list, the stations are earned by completing specific activities in the game, but the detailed step-by-step is not included in the data and is shown in the video.",
-    "pasos": [],
-    "src": "da0d323398"
    }
   },
   {
